@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S1 reading 複習</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Baloo+2:wght@700;800&display=swap');
+
+  :root {
+    --sky: #87CEEB;
+    --grass: #5CB85C;
+    --sun: #FFD700;
+    --orange: #FF8C00;
+    --red: #E74C3C;
+    --brown: #8B4513;
+    --white: #FFFEF0;
+    --dark: #2C3E50;
+    --pink: #FF6B9D;
+    --purple: #9B59B6;
+    --teal: #1ABC9C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(180deg, #87CEEB 0%, #c8f0ff 40%, #a8e6a3 70%, #5CB85C 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Floating clouds */
+  .cloud {
+    position: fixed;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    animation: floatCloud linear infinite;
+    z-index: 0;
+  }
+  .cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+  }
+  .cloud-1 { width: 120px; height: 40px; top: 8%; animation-duration: 20s; }
+  .cloud-1::before { width: 60px; height: 60px; top: -25px; left: 15px; }
+  .cloud-1::after { width: 40px; height: 40px; top: -15px; right: 20px; }
+  .cloud-2 { width: 80px; height: 30px; top: 18%; animation-duration: 28s; animation-delay: -10s; }
+  .cloud-2::before { width: 40px; height: 40px; top: -18px; left: 10px; }
+  .cloud-2::after { width: 30px; height: 30px; top: -10px; right: 15px; }
+  .cloud-3 { width: 100px; height: 35px; top: 5%; animation-duration: 35s; animation-delay: -5s; }
+  .cloud-3::before { width: 50px; height: 50px; top: -22px; left: 12px; }
+  .cloud-3::after { width: 35px; height: 35px; top: -12px; right: 18px; }
+
+  @keyframes floatCloud {
+    from { left: -200px; }
+    to { left: 110%; }
+  }
+
+  /* Birds flying */
+  .bird {
+    position: fixed;
+    font-size: 28px;
+    animation: birdFly linear infinite;
+    z-index: 1;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+  }
+  .bird-1 { top: 12%; animation-duration: 12s; animation-delay: 0s; }
+  .bird-2 { top: 22%; animation-duration: 15s; animation-delay: -6s; }
+  .bird-3 { top: 7%; animation-duration: 18s; animation-delay: -3s; }
+
+  @keyframes birdFly {
+    0% { left: -60px; transform: scaleX(1); }
+    100% { left: 110%; transform: scaleX(1); }
+  }
+
+  /* Main layout */
+  .app {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 25px 20px 20px;
+    animation: bounceIn 0.8s ease;
+  }
+  .header h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.8em;
+    color: white;
+    text-shadow: 3px 3px 0px #FF8C00, 5px 5px 0px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+  }
+  .header .subtitle {
+    font-size: 1.1em;
+    color: #2C3E50;
+    font-weight: 700;
+    background: rgba(255,255,255,0.7);
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 20px;
+    margin-top: 8px;
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Tab navigation */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .tab {
+    background: rgba(255,255,255,0.6);
+    border: 3px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--dark);
+  }
+  .tab:hover { transform: translateY(-3px); background: rgba(255,255,255,0.9); }
+  .tab.active {
+    background: white;
+    color: var(--orange);
+    border-color: var(--orange);
+    box-shadow: 0 4px 12px rgba(255,140,0,0.3);
+    transform: translateY(-3px);
+  }
+
+  /* Cards */
+  .card {
+    background: rgba(255,255,255,0.92);
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    animation: slideUp 0.5s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .card h2 {
+    font-family: 'Baloo 2', cursive;
+    color: var(--dark);
+    font-size: 1.5em;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Story summary */
+  .story-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #fff9f0, #fff);
+    border-left: 5px solid var(--orange);
+    transition: transform 0.2s;
+  }
+  .story-step:hover { transform: translateX(5px); }
+  .story-step .step-num {
+    background: var(--orange);
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2em;
+    font-weight: 800;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .story-step p { font-size: 1em; color: var(--dark); line-height: 1.5; }
+  .story-step .en { font-weight: 700; color: var(--dark); }
+  .story-step .zh { font-size: 0.88em; color: #888; }
+
+  /* Vocab grid */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .vocab-card {
+    background: linear-gradient(135deg, #fff, #f0f8ff);
+    border-radius: 16px;
+    padding: 14px 10px;
+    text-align: center;
+    border: 3px solid #e0f0ff;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .vocab-card:hover { transform: scale(1.06); border-color: var(--teal); }
+  .vocab-card .emoji { font-size: 2.2em; margin-bottom: 6px; display: block; }
+  .vocab-card .word { font-family: 'Baloo 2', cursive; font-size: 1.05em; font-weight: 800; color: var(--dark); }
+  .vocab-card .meaning { font-size: 0.8em; color: #888; margin-top: 3px; }
+  .vocab-card .flip-side {
+    position: absolute; inset: 0;
+    background: var(--teal);
+    border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  .vocab-card:hover .flip-side { opacity: 1; }
+
+  /* GAMES */
+  .game-section { display: none; }
+  .game-section.active { display: block; }
+
+  /* Game 1: Word Match */
+  #game-match .match-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .match-col { display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 130px; }
+  .match-item {
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    border: 3px solid transparent;
+    text-align: center;
+    transition: all 0.3s;
+    user-select: none;
+  }
+  .match-word { background: #fff3e0; border-color: #FFD700; color: var(--dark); }
+  .match-def { background: #e8f5e9; border-color: #5CB85C; color: var(--dark); font-size: 0.9em; }
+  .match-item.selected { transform: scale(1.05); box-shadow: 0 4px 15px rgba(255,140,0,0.4); border-color: var(--orange); }
+  .match-item.correct { background: #c8f7c5; border-color: #27AE60; color: #155724; }
+  .match-item.wrong { background: #ffd6d6; border-color: var(--red); animation: shake 0.4s; }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+  }
+
+  /* Game 2: Fill in blanks */
+  .sentence-area { display: flex; flex-direction: column; gap: 14px; }
+  .sentence-item {
+    background: #f8f9ff;
+    border-radius: 14px;
+    padding: 16px;
+    border: 2px solid #e0e8ff;
+    font-size: 1.05em;
+    line-height: 2;
+  }
+  .blank-input {
+    border: none;
+    border-bottom: 3px solid var(--orange);
+    background: transparent;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--red);
+    width: 100px;
+    text-align: center;
+    outline: none;
+  }
+  .word-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .word-chip {
+    background: var(--sun);
+    color: var(--dark);
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 0.95em;
+    transition: all 0.2s;
+  }
+  .word-chip:hover { background: var(--orange); color: white; transform: scale(1.05); }
+  .word-chip.used { opacity: 0.4; pointer-events: none; }
+
+  /* Game 3: Order the story */
+  .order-area { display: flex; flex-direction: column; gap: 10px; }
+  .order-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 3px solid #ddd;
+    border-radius: 14px;
+    padding: 12px 16px;
+    cursor: grab;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .order-item:hover { border-color: var(--purple); box-shadow: 0 4px 12px rgba(155,89,182,0.2); }
+  .order-item.dragging { opacity: 0.5; border-color: var(--purple); }
+  .order-item .drag-icon { font-size: 1.3em; }
+  .order-item .order-text { font-weight: 700; font-size: 1em; color: var(--dark); flex: 1; }
+  .order-num {
+    background: var(--purple);
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1em;
+  }
+
+  /* Game 4: Q&A Quiz */
+  .quiz-q {
+    background: linear-gradient(135deg, #fff9f0, #fff0f8);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 14px;
+    border-left: 5px solid var(--pink);
+  }
+  .quiz-q .question { font-weight: 700; font-size: 1.05em; color: var(--dark); margin-bottom: 10px; }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+  .quiz-opt {
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid #ffd6e8;
+    background: white;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95em;
+  }
+  .quiz-opt:hover { border-color: var(--pink); background: #fff0f8; }
+  .quiz-opt.correct { background: #c8f7c5; border-color: #27AE60; }
+  .quiz-opt.wrong { background: #ffd6d6; border-color: var(--red); }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    font-size: 1.05em;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    margin: 5px;
+  }
+  .btn-primary { background: var(--orange); color: white; box-shadow: 0 4px 12px rgba(255,140,0,0.35); }
+  .btn-primary:hover { background: #ff6a00; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255,140,0,0.45); }
+  .btn-green { background: var(--grass); color: white; box-shadow: 0 4px 12px rgba(92,184,92,0.35); }
+  .btn-green:hover { transform: translateY(-2px); }
+  .btn-purple { background: var(--purple); color: white; }
+  .btn-purple:hover { background: #8E44AD; transform: translateY(-2px); }
+
+  /* Score display */
+  .score-board {
+    text-align: center;
+    padding: 16px;
+    background: linear-gradient(135deg, #fff9c4, #fff0f0);
+    border-radius: 16px;
+    margin-top: 16px;
+    font-family: 'Baloo 2', cursive;
+  }
+  .score-board .score-num { font-size: 2em; color: var(--orange); font-weight: 800; }
+  .stars { font-size: 1.8em; }
+
+  /* Result popup */
+  .popup-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center; justify-content: center;
+  }
+  .popup-overlay.show { display: flex; }
+  .popup {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    text-align: center;
+    max-width: 320px;
+    width: 90%;
+    animation: popIn 0.4s ease;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  }
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.08); }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .popup .big-emoji { font-size: 4em; margin-bottom: 12px; }
+  .popup h3 { font-family: 'Baloo 2', cursive; font-size: 1.6em; color: var(--dark); }
+  .popup p { color: #888; margin-top: 6px; }
+
+  /* Responsive */
+  @media(max-width: 500px) {
+    .vocab-grid { grid-template-columns: repeat(2, 1fr); }
+    .header h1 { font-size: 2em; }
+    .match-area { flex-direction: column; }
+  }
+
+  .section-content { display: none; }
+  .section-content.active { display: block; }
+  
+  /* Progress dots */
+  .progress-dots {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #ddd; transition: all 0.3s; }
+  .dot.filled { background: var(--orange); transform: scale(1.2); }
+
+  .highlight { color: var(--orange); font-weight: 800; }
+  .badge {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Tree decoration */
+  .deco-tree {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 100px;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- Decorations -->
+<div class="cloud cloud-1"></div>
+<div class="cloud cloud-2"></div>
+<div class="cloud cloud-3"></div>
+<div class="bird bird-1">🐦</div>
+<div class="bird bird-2">🐤</div>
+<div class="bird bird-3">🦅</div>
+<div class="deco-tree">🌳</div>
+
+<div class="app">
+  <!-- Header -->
+  <div class="header">
+    <h1>🐣 Fly Away! 🐦</h1>
+    <div class="subtitle">Unit 1 複習 · 7歲小朋友版</div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('review')">📖 複習重點</button>
+    <button class="tab" onclick="switchTab('vocab')">🔤 單字卡</button>
+    <button class="tab" onclick="switchTab('games')">🎮 複習遊戲</button>
+  </div>
+
+  <!-- REVIEW TAB -->
+  <div id="tab-review" class="section-content active">
+
+    <!-- Story -->
+    <div class="card">
+      <h2>📚 故事「Fly Away!」大綱</h2>
+      <div class="story-step">
+        <div class="step-num">1</div>
+        <div>
+          <p class="en">🪹 A mother and father bird <span class="highlight">make a nest</span>.</p>
+          <p class="zh">鳥媽媽和鳥爸爸築一個巢。</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-num">2</div>
+        <div>
+          <p class="en">🥚 The mother bird <span class="highlight">lays four eggs</span> and keeps them <span class="highlight">warm</span>.</p>
+          <p class="zh">鳥媽媽生了四顆蛋，讓牠們保持溫暖。</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-num">3</div>
+        <div>
+          <p class="en">🐍 A <span class="highlight">snake</span> wants to eat the eggs! The mother bird stops it with her <span class="highlight">beak</span>.</p>
+          <p class="zh">蛇想吃蛋！鳥媽媽用嘴喙阻止牠。</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-num">4</div>
+        <div>
+          <p class="en">🐣 The baby birds <span class="highlight">come out of the eggs</span>. Parents give them <span class="highlight">worms</span>.</p>
+          <p class="zh">小鳥從蛋裡出來了。爸媽給牠們吃蟲子。</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-num">5</div>
+        <div>
+          <p class="en">🪶 Little birds grow <span class="highlight">feathers</span>. Parents keep them <span class="highlight">safe</span>.</p>
+          <p class="zh">小鳥長出羽毛。爸媽保護牠們安全。</p>
+        </div>
+      </div>
+      <div class="story-step">
+        <div class="step-num">6</div>
+        <div>
+          <p class="en">🕊️ Soon the birds are big and strong. It's time to <span class="highlight">fly away</span>!</p>
+          <p class="zh">小鳥長大又強壯，是時候飛走了！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Sentences -->
+    <div class="card">
+      <h2>💬 重要句子</h2>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="background:#fff9f0;border-radius:12px;padding:12px 16px;border-left:4px solid var(--sun);">
+          <div style="font-weight:800;color:var(--dark);">Mother birds <span style="color:var(--orange);">lay</span> eggs.</div>
+          <div style="color:#888;font-size:0.88em;margin-top:3px;">鳥媽媽生蛋。</div>
+        </div>
+        <div style="background:#f0fff4;border-radius:12px;padding:12px 16px;border-left:4px solid var(--grass);">
+          <div style="font-weight:800;color:var(--dark);">When baby birds grow feathers, they <span style="color:var(--grass);">leave</span> the nest.</div>
+          <div style="color:#888;font-size:0.88em;margin-top:3px;">小鳥長出羽毛後，牠們離開鳥巢。</div>
+        </div>
+        <div style="background:#f8f0ff;border-radius:12px;padding:12px 16px;border-left:4px solid var(--purple);">
+          <div style="font-weight:800;color:var(--dark);">Little birds fly away when they are <span style="color:var(--purple);">strong</span>.</div>
+          <div style="color:#888;font-size:0.88em;margin-top:3px;">小鳥長強壯了就飛走了。</div>
+        </div>
+        <div style="background:#fff0f8;border-radius:12px;padding:12px 16px;border-left:4px solid var(--pink);">
+          <div style="font-weight:800;color:var(--dark);">I grow and get <span style="color:var(--pink);">smarter / taller / bigger / stronger</span>.</div>
+          <div style="color:#888;font-size:0.88em;margin-top:3px;">我成長並且變得更聰明/更高/更大/更強壯。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story Order -->
+    <div class="card">
+      <h2>🔢 故事順序</h2>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+        <div style="text-align:center;background:#fff9f0;border-radius:14px;padding:12px 10px;border:2px solid #FFD700;min-width:80px;">
+          <div style="font-size:1.6em;">🥚</div>
+          <div style="font-size:0.75em;font-weight:700;color:var(--dark);margin-top:4px;">1. lay eggs</div>
+        </div>
+        <div style="font-size:1.8em;display:flex;align-items:center;color:#ccc;">→</div>
+        <div style="text-align:center;background:#fff0f0;border-radius:14px;padding:12px 10px;border:2px solid #E74C3C;min-width:80px;">
+          <div style="font-size:1.6em;">🐍</div>
+          <div style="font-size:0.75em;font-weight:700;color:var(--dark);margin-top:4px;">2. stop the snake</div>
+        </div>
+        <div style="font-size:1.8em;display:flex;align-items:center;color:#ccc;">→</div>
+        <div style="text-align:center;background:#f0f8ff;border-radius:14px;padding:12px 10px;border:2px solid #5CB85C;min-width:80px;">
+          <div style="font-size:1.6em;">🐛</div>
+          <div style="font-size:0.75em;font-weight:700;color:var(--dark);margin-top:4px;">3. eat worms</div>
+        </div>
+        <div style="font-size:1.8em;display:flex;align-items:center;color:#ccc;">→</div>
+        <div style="text-align:center;background:#f8f0ff;border-radius:14px;padding:12px 10px;border:2px solid #9B59B6;min-width:80px;">
+          <div style="font-size:1.6em;">🪶</div>
+          <div style="font-size:0.75em;font-weight:700;color:var(--dark);margin-top:4px;">4. grow feathers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOCAB TAB -->
+  <div id="tab-vocab" class="section-content">
+    <div class="card">
+      <h2>🔤 單字卡 <span style="font-size:0.7em;color:#888;">（把滑鼠移上去看中文）</span></h2>
+      <div class="vocab-grid">
+        <div class="vocab-card">
+          <span class="emoji">🥚</span>
+          <div class="word">lay (eggs)</div>
+          <div class="meaning">生（蛋）</div>
+          <div class="flip-side">🥚<br>生蛋</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">🔥</span>
+          <div class="word">warm</div>
+          <div class="meaning">溫暖的</div>
+          <div class="flip-side">🔥<br>溫暖的</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">🦅</span>
+          <div class="word">beak</div>
+          <div class="meaning">鳥嘴</div>
+          <div class="flip-side">🦅<br>鳥嘴</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">🪶</span>
+          <div class="word">feather</div>
+          <div class="meaning">羽毛</div>
+          <div class="flip-side">🪶<br>羽毛</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">✈️</span>
+          <div class="word">leave</div>
+          <div class="meaning">離開</div>
+          <div class="flip-side">✈️<br>離開</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">🛡️</span>
+          <div class="word">safe</div>
+          <div class="meaning">安全的</div>
+          <div class="flip-side">🛡️<br>安全的</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">📈</span>
+          <div class="word">taller</div>
+          <div class="meaning">更高的</div>
+          <div class="flip-side">📈<br>更高的</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">💪</span>
+          <div class="word">stronger</div>
+          <div class="meaning">更強壯</div>
+          <div class="flip-side">💪<br>更強壯</div>
+        </div>
+        <div class="vocab-card">
+          <span class="emoji">🧠</span>
+          <div class="word">smarter</div>
+          <div class="meaning">更聰明</div>
+          <div class="flip-side">🧠<br>更聰明</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMES TAB -->
+  <div id="tab-games" class="section-content">
+    
+    <!-- Game selection -->
+    <div id="game-select" class="card">
+      <h2>🎮 選一個遊戲！</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <button class="btn btn-primary" style="width:100%;text-align:left;padding:16px 20px;" onclick="startGame('match')">
+          🔗 配對遊戲 &nbsp;—&nbsp; 把單字和中文配起來！
+        </button>
+        <button class="btn btn-green" style="width:100%;text-align:left;padding:16px 20px;" onclick="startGame('fill')">
+          ✏️ 填空遊戲 &nbsp;—&nbsp; 選出正確的單字填進去！
+        </button>
+        <button class="btn btn-purple" style="width:100%;text-align:left;padding:16px 20px;" onclick="startGame('order')">
+          🔢 排列遊戲 &nbsp;—&nbsp; 把故事順序排正確！
+        </button>
+        <button class="btn" style="width:100%;text-align:left;padding:16px 20px;background:var(--pink);color:white;" onclick="startGame('quiz')">
+          ❓ 問答測驗 &nbsp;—&nbsp; 回答關於故事的問題！
+        </button>
+      </div>
+    </div>
+
+    <!-- GAME 1: Match -->
+    <div id="game-match" class="game-section">
+      <div class="card">
+        <h2>🔗 配對遊戲</h2>
+        <p style="color:#888;margin-bottom:14px;font-size:0.9em;">先點左邊的英文，再點右邊對應的中文！</p>
+        <div class="match-area">
+          <div class="match-col" id="match-left"></div>
+          <div class="match-col" id="match-right"></div>
+        </div>
+        <div class="score-board" id="match-score" style="display:none;">
+          <div class="stars" id="match-stars">⭐⭐⭐</div>
+          <div class="score-num" id="match-score-num">0/6</div>
+          <div>配對完成！</div>
+        </div>
+        <div style="text-align:center;margin-top:16px;">
+          <button class="btn btn-primary" onclick="resetMatch()">🔄 再玩一次</button>
+          <button class="btn" style="background:#ddd;" onclick="showGameSelect()">← 選其他遊戲</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAME 2: Fill -->
+    <div id="game-fill" class="game-section">
+      <div class="card">
+        <h2>✏️ 填空遊戲</h2>
+        <p style="color:#888;margin-bottom:14px;font-size:0.9em;">點下面的單字把它填進句子裡！</p>
+        <div class="word-choices" id="fill-chips"></div>
+        <div class="sentence-area" id="fill-sentences" style="margin-top:14px;"></div>
+        <div class="score-board" id="fill-score" style="display:none;">
+          <div class="stars">🎉🎉🎉</div>
+          <div style="font-size:1.1em;font-weight:700;color:var(--grass);">答完了！好棒！</div>
+        </div>
+        <div style="text-align:center;margin-top:16px;">
+          <button class="btn btn-green" onclick="resetFill()">🔄 再玩一次</button>
+          <button class="btn" style="background:#ddd;" onclick="showGameSelect()">← 選其他遊戲</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAME 3: Order -->
+    <div id="game-order" class="game-section">
+      <div class="card">
+        <h2>🔢 排列遊戲</h2>
+        <p style="color:#888;margin-bottom:14px;font-size:0.9em;">把故事的順序排正確！拖拉排列，或點 ↑↓ 移動！</p>
+        <div class="order-area" id="order-list"></div>
+        <div style="text-align:center;margin-top:16px;">
+          <button class="btn btn-purple" onclick="checkOrder()">✅ 檢查答案！</button>
+          <button class="btn" style="background:#ddd;" onclick="resetOrder()">🔄 重排</button>
+          <button class="btn" style="background:#eee;" onclick="showGameSelect()">← 選其他遊戲</button>
+        </div>
+        <div id="order-result" style="display:none;" class="score-board">
+          <div class="stars" id="order-stars"></div>
+          <div id="order-msg" style="font-weight:700;font-size:1.05em;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAME 4: Quiz -->
+    <div id="game-quiz" class="game-section">
+      <div class="card">
+        <h2>❓ 問答測驗</h2>
+        <p style="color:#888;margin-bottom:14px;font-size:0.9em;">選出正確答案！</p>
+        <div id="quiz-questions"></div>
+        <div style="text-align:center;margin-top:16px;">
+          <button class="btn" style="background:var(--pink);color:white;" onclick="checkQuiz()">✅ 檢查答案！</button>
+          <button class="btn" style="background:#ddd;" onclick="resetQuiz()">🔄 再玩一次</button>
+          <button class="btn" style="background:#eee;" onclick="showGameSelect()">← 選其他遊戲</button>
+        </div>
+        <div id="quiz-result" style="display:none;" class="score-board">
+          <div class="stars" id="quiz-stars"></div>
+          <div class="score-num" id="quiz-score-num"></div>
+          <div id="quiz-msg"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Result Popup -->
+<div class="popup-overlay" id="popup">
+  <div class="popup">
+    <div class="big-emoji" id="popup-emoji">🎉</div>
+    <h3 id="popup-title">太棒了！</h3>
+    <p id="popup-msg">你完成了！</p>
+    <button class="btn btn-primary" onclick="closePopup()" style="margin-top:16px;">謝謝！😊</button>
+  </div>
+</div>
+
+<script>
+// ---- TAB SWITCHING ----
+function switchTab(tab) {
+  document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ---- GAME NAVIGATION ----
+function startGame(game) {
+  document.getElementById('game-select').style.display = 'none';
+  document.querySelectorAll('.game-section').forEach(s => s.classList.remove('active'));
+  document.getElementById('game-' + game).classList.add('active');
+  if (game === 'match') initMatch();
+  if (game === 'fill') initFill();
+  if (game === 'order') initOrder();
+  if (game === 'quiz') initQuiz();
+}
+
+function showGameSelect() {
+  document.getElementById('game-select').style.display = 'block';
+  document.querySelectorAll('.game-section').forEach(s => s.classList.remove('active'));
+}
+
+// ---- GAME 1: MATCH ----
+const matchData = [
+  { en: 'lay eggs', zh: '生蛋 🥚' },
+  { en: 'warm', zh: '溫暖 🔥' },
+  { en: 'beak', zh: '鳥嘴 🦅' },
+  { en: 'feather', zh: '羽毛 🪶' },
+  { en: 'safe', zh: '安全 🛡️' },
+  { en: 'leave', zh: '離開 ✈️' },
+];
+let selectedLeft = null, selectedRight = null, matchedCount = 0;
+let matchPairs = {};
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function initMatch() {
+  matchedCount = 0;
+  selectedLeft = null; selectedRight = null;
+  matchPairs = {};
+  document.getElementById('match-score').style.display = 'none';
+
+  const leftCol = document.getElementById('match-left');
+  const rightCol = document.getElementById('match-right');
+  leftCol.innerHTML = ''; rightCol.innerHTML = '';
+
+  const shuffledLeft = shuffle(matchData);
+  const shuffledRight = shuffle(matchData);
+
+  shuffledLeft.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'match-item match-word';
+    el.textContent = item.en;
+    el.dataset.val = item.en;
+    el.onclick = () => selectLeft(el);
+    leftCol.appendChild(el);
+  });
+
+  shuffledRight.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'match-item match-def';
+    el.textContent = item.zh;
+    el.dataset.val = item.en;
+    el.onclick = () => selectRight(el);
+    rightCol.appendChild(el);
+  });
+}
+
+function selectLeft(el) {
+  if (el.classList.contains('correct')) return;
+  document.querySelectorAll('#match-left .match-item').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedLeft = el;
+  if (selectedRight) checkMatch();
+}
+
+function selectRight(el) {
+  if (el.classList.contains('correct')) return;
+  document.querySelectorAll('#match-right .match-item').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedRight = el;
+  if (selectedLeft) checkMatch();
+}
+
+function checkMatch() {
+  if (selectedLeft.dataset.val === selectedRight.dataset.val) {
+    selectedLeft.classList.remove('selected');
+    selectedLeft.classList.add('correct');
+    selectedRight.classList.remove('selected');
+    selectedRight.classList.add('correct');
+    matchedCount++;
+    if (matchedCount === matchData.length) {
+      document.getElementById('match-score').style.display = 'block';
+      document.getElementById('match-score-num').textContent = matchedCount + '/' + matchData.length;
+      showPopup('🏆', '全部配對成功！', '你好厲害！所有單字都認識了！🎉');
+    }
+  } else {
+    selectedLeft.classList.add('wrong');
+    selectedRight.classList.add('wrong');
+    setTimeout(() => {
+      selectedLeft.classList.remove('wrong', 'selected');
+      selectedRight.classList.remove('wrong', 'selected');
+      selectedLeft = null; selectedRight = null;
+    }, 600);
+    return;
+  }
+  selectedLeft = null; selectedRight = null;
+}
+
+function resetMatch() { initMatch(); }
+
+// ---- GAME 2: FILL ----
+const fillData = [
+  { sentence: 'Mother birds ___ eggs.', answer: 'lay', before: 'Mother birds ', after: ' eggs.' },
+  { sentence: 'The mother bird keeps them ___.', answer: 'warm', before: 'The mother bird keeps them ', after: '.' },
+  { sentence: 'The mother bird stops the snake with her ___.', answer: 'beak', before: 'The mother bird stops the snake with her ', after: '.' },
+  { sentence: 'Little birds grow ___.', answer: 'feathers', before: 'Little birds grow ', after: '.' },
+  { sentence: 'Their parents keep them ___.', answer: 'safe', before: 'Their parents keep them ', after: '.' },
+  { sentence: 'Baby birds ___ the nest when they are big.', answer: 'leave', before: 'Baby birds ', after: ' the nest when they are big.' },
+];
+const fillWords = ['lay', 'warm', 'beak', 'feathers', 'safe', 'leave'];
+let fillAnswers = {};
+let fillActiveBlank = null;
+
+function initFill() {
+  fillAnswers = {};
+  fillActiveBlank = null;
+  document.getElementById('fill-score').style.display = 'none';
+
+  // Render chips
+  const chips = document.getElementById('fill-chips');
+  chips.innerHTML = shuffle(fillWords).map(w =>
+    `<button class="word-chip" id="chip-${w}" onclick="selectChip('${w}')">${w}</button>`
+  ).join('');
+
+  // Render sentences
+  const area = document.getElementById('fill-sentences');
+  area.innerHTML = fillData.map((item, i) =>
+    `<div class="sentence-item">
+      ${item.before}<span id="blank-${i}" class="blank-input" style="display:inline-block;min-width:80px;cursor:pointer;padding:2px 8px;border-radius:8px;border-bottom:3px solid var(--orange);" onclick="activateBlank(${i})">
+        ${fillAnswers[i] || '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'}
+      </span>${item.after}
+      <span id="check-${i}" style="margin-left:6px;display:none;"></span>
+    </div>`
+  ).join('');
+}
+
+function activateBlank(i) {
+  document.querySelectorAll('.sentence-item span[id^="blank-"]').forEach(el => {
+    el.style.background = '';
+    el.style.borderColor = 'var(--orange)';
+  });
+  fillActiveBlank = i;
+  const el = document.getElementById('blank-' + i);
+  el.style.background = '#fff9c4';
+  el.style.borderColor = '#FF8C00';
+}
+
+function selectChip(word) {
+  if (fillActiveBlank === null) {
+    // Auto-select first empty blank
+    for (let i = 0; i < fillData.length; i++) {
+      if (!fillAnswers[i]) { fillActiveBlank = i; break; }
+    }
+    if (fillActiveBlank === null) return;
+  }
+  // If blank already has answer, put old word back
+  if (fillAnswers[fillActiveBlank]) {
+    const oldWord = fillAnswers[fillActiveBlank];
+    document.getElementById('chip-' + oldWord).classList.remove('used');
+  }
+  fillAnswers[fillActiveBlank] = word;
+  document.getElementById('chip-' + word).classList.add('used');
+  
+  // Update blank display
+  const blankEl = document.getElementById('blank-' + fillActiveBlank);
+  blankEl.textContent = word;
+
+  // Check if correct
+  if (fillData[fillActiveBlank].answer === word) {
+    blankEl.style.color = 'var(--grass)';
+    blankEl.style.background = '#c8f7c5';
+    blankEl.style.borderColor = 'var(--grass)';
+  } else {
+    blankEl.style.color = 'var(--red)';
+    blankEl.style.background = '#ffd6d6';
+    blankEl.style.borderColor = 'var(--red)';
+  }
+
+  fillActiveBlank = null;
+
+  // Check completion
+  const allFilled = Object.keys(fillAnswers).length === fillData.length;
+  const allCorrect = fillData.every((item, i) => fillAnswers[i] === item.answer);
+  if (allFilled && allCorrect) {
+    document.getElementById('fill-score').style.display = 'block';
+    showPopup('⭐', '全部答對了！', '你真的太厲害了！每個句子都填對了！');
+  }
+}
+
+function resetFill() { initFill(); }
+
+// ---- GAME 3: ORDER ----
+const orderData = [
+  { emoji: '🥚', text: 'The mother bird lays eggs.', correctPos: 0 },
+  { emoji: '🐍', text: 'The mother bird stops the snake.', correctPos: 1 },
+  { emoji: '🐛', text: 'Baby birds come out and eat worms.', correctPos: 2 },
+  { emoji: '🪶', text: 'Little birds grow feathers.', correctPos: 3 },
+];
+let orderItems = [];
+
+function initOrder() {
+  orderItems = shuffle([...orderData]);
+  document.getElementById('order-result').style.display = 'none';
+  renderOrder();
+}
+
+function renderOrder() {
+  const list = document.getElementById('order-list');
+  list.innerHTML = orderItems.map((item, i) =>
+    `<div class="order-item" id="order-${i}">
+      <span class="drag-icon">${item.emoji}</span>
+      <span class="order-text">${item.text}</span>
+      <div style="display:flex;gap:4px;">
+        ${i > 0 ? `<button onclick="moveOrder(${i},-1)" style="background:var(--purple);color:white;border:none;border-radius:8px;padding:4px 8px;cursor:pointer;font-size:1em;">↑</button>` : '<div style="width:32px"></div>'}
+        ${i < orderItems.length-1 ? `<button onclick="moveOrder(${i},1)" style="background:var(--teal);color:white;border:none;border-radius:8px;padding:4px 8px;cursor:pointer;font-size:1em;">↓</button>` : '<div style="width:32px"></div>'}
+      </div>
+    </div>`
+  ).join('');
+}
+
+function moveOrder(i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= orderItems.length) return;
+  [orderItems[i], orderItems[j]] = [orderItems[j], orderItems[i]];
+  renderOrder();
+}
+
+function checkOrder() {
+  const correct = orderItems.every((item, i) => item.correctPos === i);
+  const resultEl = document.getElementById('order-result');
+  resultEl.style.display = 'block';
+  if (correct) {
+    document.getElementById('order-stars').textContent = '⭐⭐⭐⭐';
+    document.getElementById('order-msg').textContent = '✅ 正確！故事順序全對了！🎉';
+    document.getElementById('order-msg').style.color = 'var(--grass)';
+    showPopup('🏆', '排列正確！', '故事順序全對了！你好棒！');
+  } else {
+    document.getElementById('order-stars').textContent = '💪';
+    document.getElementById('order-msg').textContent = '❌ 還沒對！再想想看。提示：從生蛋開始！';
+    document.getElementById('order-msg').style.color = 'var(--red)';
+  }
+}
+
+function resetOrder() { initOrder(); }
+
+// ---- GAME 4: QUIZ ----
+const quizData = [
+  {
+    q: 'What does the mother bird lay in the nest?',
+    opts: ['Worms 🐛', 'Eggs 🥚', 'Feathers 🪶', 'Beaks 🦅'],
+    correct: 1
+  },
+  {
+    q: 'What wants to eat the eggs?',
+    opts: ['A cat 🐱', 'A dog 🐶', 'A snake 🐍', 'A bird 🐦'],
+    correct: 2
+  },
+  {
+    q: 'How does the mother bird stop the snake?',
+    opts: ['With her feathers', 'With her wings', 'With her beak', 'With her feet'],
+    correct: 2
+  },
+  {
+    q: 'What do baby birds grow?',
+    opts: ['Eggs 🥚', 'Feathers 🪶', 'Worms 🐛', 'Nests 🪹'],
+    correct: 1
+  },
+  {
+    q: 'When do the little birds fly away?',
+    opts: ['When they are hungry', 'When they are big and strong', 'When they are cold', 'When they are scared'],
+    correct: 1
+  },
+];
+let quizSelected = {};
+
+function initQuiz() {
+  quizSelected = {};
+  document.getElementById('quiz-result').style.display = 'none';
+  const container = document.getElementById('quiz-questions');
+  container.innerHTML = quizData.map((q, qi) =>
+    `<div class="quiz-q">
+      <div class="question">Q${qi+1}: ${q.q}</div>
+      <div class="quiz-options">
+        ${q.opts.map((opt, oi) =>
+          `<button class="quiz-opt" id="quiz-${qi}-${oi}" onclick="selectQuiz(${qi},${oi})">${opt}</button>`
+        ).join('')}
+      </div>
+    </div>`
+  ).join('');
+}
+
+function selectQuiz(qi, oi) {
+  // Clear previous selection for this question
+  quizData[qi].opts.forEach((_, i) => {
+    const el = document.getElementById(`quiz-${qi}-${i}`);
+    el.classList.remove('correct', 'wrong');
+    el.style.background = '';
+    el.style.borderColor = '#ffd6e8';
+  });
+  quizSelected[qi] = oi;
+  document.getElementById(`quiz-${qi}-${oi}`).style.background = '#fff0f8';
+  document.getElementById(`quiz-${qi}-${oi}`).style.borderColor = 'var(--pink)';
+}
+
+function checkQuiz() {
+  let score = 0;
+  quizData.forEach((q, qi) => {
+    const sel = quizSelected[qi];
+    q.opts.forEach((_, oi) => {
+      const el = document.getElementById(`quiz-${qi}-${oi}`);
+      el.style.background = '';
+      el.style.borderColor = '#ffd6e8';
+    });
+    if (sel !== undefined) {
+      if (sel === q.correct) {
+        document.getElementById(`quiz-${qi}-${sel}`).classList.add('correct');
+        score++;
+      } else {
+        document.getElementById(`quiz-${qi}-${sel}`).classList.add('wrong');
+        document.getElementById(`quiz-${qi}-${q.correct}`).classList.add('correct');
+      }
+    } else {
+      document.getElementById(`quiz-${qi}-${q.correct}`).classList.add('correct');
+    }
+  });
+
+  const result = document.getElementById('quiz-result');
+  result.style.display = 'block';
+  const stars = score >= 5 ? '⭐⭐⭐' : score >= 3 ? '⭐⭐' : '⭐';
+  document.getElementById('quiz-stars').textContent = stars;
+  document.getElementById('quiz-score-num').textContent = score + ' / ' + quizData.length;
+  const msgs = ['再多讀幾次故事！📖', '不錯喔！繼續加油！💪', '答得好！快要滿分了！🎯', '太棒了！全對！🏆'];
+  document.getElementById('quiz-msg').textContent = score >= 5 ? msgs[3] : score >= 4 ? msgs[2] : score >= 2 ? msgs[1] : msgs[0];
+  if (score >= 4) showPopup('⭐', score + '/' + quizData.length + ' 分！', score >= 5 ? '全部答對！你真的太棒了！' : '答得很好！繼續加油！');
+}
+
+function resetQuiz() { initQuiz(); }
+
+// ---- POPUP ----
+function showPopup(emoji, title, msg) {
+  document.getElementById('popup-emoji').textContent = emoji;
+  document.getElementById('popup-title').textContent = title;
+  document.getElementById('popup-msg').textContent = msg;
+  document.getElementById('popup').classList.add('show');
+}
+function closePopup() {
+  document.getElementById('popup').classList.remove('show');
+}
+</script>
+</body>
+</html>
