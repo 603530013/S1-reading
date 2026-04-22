@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family and Friends 複習</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Baloo+2:wght@700;800&display=swap');
+:root{
+  --green:#16a34a;--gl:#f0fdf4;--gd:#14532d;--gm:#dcfce7;
+  --dark:#1e293b;--gray:#64748b;--sun:#fbbf24;
+  --ok:#22c55e;--err:#ef4444;--teal:#14b8a6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;background:linear-gradient(180deg,#f0fdf4 0%,#dcfce7 100%)}
+
+/* ── LANDING ── */
+#landing{min-height:100vh;background:linear-gradient(160deg,#15803d 0%,#16a34a 50%,#4ade80 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:24px 16px;position:relative;overflow:hidden}
+#landing::before{content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+.ltitle{font-family:'Baloo 2',cursive;font-size:2.3em;color:white;text-shadow:3px 3px 0 rgba(0,0,0,.2);text-align:center;margin-bottom:2px;position:relative}
+.lsub{color:rgba(255,255,255,.82);font-size:.93em;margin-bottom:28px;text-align:center;position:relative}
+.home-link{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.2);color:white;border:none;border-radius:20px;padding:7px 14px;font-family:'Baloo 2',cursive;font-size:.85em;cursor:pointer;text-decoration:none;backdrop-filter:blur(4px)}
+.home-link:hover{background:rgba(255,255,255,.35)}
+
+/* Unit grid */
+.ugrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:420px;position:relative}
+.ugrid-full{grid-column:1/-1}
+.ubtn{border:none;border-radius:16px;padding:14px 16px;cursor:pointer;font-family:'Baloo 2',cursive;
+  display:flex;align-items:center;gap:11px;transition:transform .2s,box-shadow .2s;
+  box-shadow:0 5px 14px rgba(0,0,0,.18);color:white}
+.ubtn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 9px 22px rgba(0,0,0,.26)}
+.ubtn .icon{font-size:1.55em}
+.ubtn .un{font-size:.68em;opacity:.85}
+.ubtn .uname{font-size:.88em;font-weight:800}
+.u-ff1{background:linear-gradient(135deg,#16a34a,#15803d)}
+.u-all{background:linear-gradient(135deg,#f59e0b,#16a34a)}
+.landing-note{color:rgba(255,255,255,.65);font-size:.78em;margin-top:18px;text-align:center;position:relative}
+
+/* ── APP ── */
+#app{display:none;max-width:820px;margin:0 auto;padding:13px}
+.aheader{display:flex;align-items:center;gap:9px;margin-bottom:14px;flex-wrap:wrap}
+.backbtn{background:white;border:none;border-radius:50%;width:38px;height:38px;font-size:1.1em;
+  cursor:pointer;box-shadow:0 3px 9px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.backbtn:hover{transform:scale(1.1)}
+.atitle{font-family:'Baloo 2',cursive;font-size:1.3em;color:var(--dark)}
+.abadge{background:var(--green);color:white;padding:3px 10px;border-radius:11px;font-size:.74em;font-weight:700;font-family:'Baloo 2',cursive}
+
+/* Tabs */
+.tabs{display:flex;gap:5px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.tab{background:rgba(255,255,255,.7);border:2.5px solid white;border-radius:18px;padding:7px 14px;
+  font-family:'Baloo 2',cursive;font-size:.88em;font-weight:700;cursor:pointer;transition:all .22s;color:var(--dark)}
+.tab.active{background:white;transform:translateY(-2px);box-shadow:0 4px 11px rgba(0,0,0,.11);color:var(--green);border-color:var(--green)}
+
+/* Card */
+.card{background:rgba(255,255,255,.93);border-radius:19px;padding:18px;margin-bottom:14px;box-shadow:0 5px 18px rgba(0,0,0,.09);animation:sup .38s ease}
+@keyframes sup{from{transform:translateY(18px);opacity:0}to{transform:translateY(0);opacity:1}}
+.card h2{font-family:'Baloo 2',cursive;font-size:1.2em;color:var(--dark);margin-bottom:12px}
+.card h3{font-family:'Baloo 2',cursive;font-size:1em;color:var(--gd);margin:14px 0 8px}
+
+/* Pill label */
+.pill{font-family:'Baloo 2',cursive;font-size:.9em;padding:4px 12px;border-radius:11px;
+  display:inline-block;margin-bottom:8px;font-weight:800;background:var(--gl);color:var(--gd)}
+.pill-gold{background:#fef9c3;color:#854d0e}
+.pill-blue{background:#eff6ff;color:#1e40af}
+
+/* Grammar table */
+.gtable{width:100%;border-collapse:collapse;font-size:.88em;border-radius:12px;overflow:hidden;margin-bottom:10px}
+.gtable thead tr{background:var(--green);color:white}
+.gtable th{padding:8px 10px;font-family:'Baloo 2',cursive;text-align:left}
+.gtable tbody tr:nth-child(odd){background:var(--gl)}
+.gtable tbody tr:nth-child(even){background:white}
+.gtable td{padding:7px 10px;color:var(--dark)}
+.gtable .en{font-weight:700;color:var(--gd)}
+.gtable .zh{color:var(--gray);font-size:.88em}
+.gtable .note{font-size:.8em;color:#94a3b8}
+
+/* Dialogue box */
+.dialogue{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.dbubble{display:flex;align-items:flex-start;gap:9px}
+.dbubble.right{flex-direction:row-reverse}
+.davatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.3em}
+.dtext{background:#f1f5f9;border-radius:14px;padding:9px 13px;font-size:.92em;color:var(--dark);max-width:85%;line-height:1.5}
+.dbubble.right .dtext{background:var(--gl);color:var(--gd)}
+.dtext b{color:var(--green)}
+.dname{font-size:.72em;color:#94a3b8;margin-bottom:2px}
+
+/* Key points list */
+.kp-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.kp-list li{display:flex;align-items:flex-start;gap:9px;padding:9px 12px;
+  border-radius:11px;background:var(--gl);border-left:4px solid var(--green);font-size:.92em}
+.kp-list li .en{font-weight:700;color:var(--dark)}
+.kp-list li .zh{font-size:.85em;color:var(--gray);margin-top:2px}
+.kp-list .num{background:var(--green);color:white;font-family:'Baloo 2',cursive;
+  font-weight:800;font-size:.9em;min-width:24px;height:24px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* ── GAMES ── */
+.gsel-grid{display:flex;flex-direction:column;gap:9px}
+.gsbtn{border:none;border-radius:13px;padding:13px 15px;font-family:'Baloo 2',cursive;
+  font-size:.95em;font-weight:700;cursor:pointer;text-align:left;color:white;
+  transition:transform .2s,box-shadow .2s;box-shadow:0 4px 10px rgba(0,0,0,.13)}
+.gsbtn:hover{transform:translateY(-2px);box-shadow:0 7px 14px rgba(0,0,0,.2)}
+.gsb1{background:linear-gradient(135deg,#16a34a,#0d9488)}
+.gsb2{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+.gsb3{background:linear-gradient(135deg,#8b5cf6,#ec4899)}
+.gamesec{display:none}.gamesec.active{display:block}
+
+/* --- GAME 1: FILL IN THE BLANK --- */
+.sentence-group{margin-bottom:18px}
+.sentence-group .sg-title{font-family:'Baloo 2',cursive;font-size:.88em;color:var(--gray);
+  margin-bottom:7px;padding:3px 10px;background:#f8fafc;border-radius:8px;display:inline-block}
+.fill-sentence{background:#f8f9ff;border:2px solid #e0e8ff;border-radius:12px;
+  padding:13px 15px;margin-bottom:8px;font-size:1em;line-height:2.4;color:var(--dark)}
+.hint-tag{display:inline-block;background:#fef3c7;color:#92400e;border-radius:10px;
+  padding:2px 9px;font-size:.78em;font-weight:700;margin-right:6px;
+  font-family:'Baloo 2',cursive;border:1.5px solid #fde68a;vertical-align:middle}
+.hint-tag.near{background:#dbeafe;color:#1e40af;border-color:#93c5fd}
+.hint-tag.far{background:#fce7f3;color:#9f1239;border-color:#fbcfe8}
+.blank{display:inline-block;min-width:80px;border-bottom:3px solid var(--sun);
+  text-align:center;padding:0 6px;border-radius:4px 4px 0 0;cursor:pointer;
+  font-family:'Baloo 2',cursive;font-weight:700;font-size:.95em;
+  background:rgba(251,191,36,.08);transition:all .2s;vertical-align:middle}
+.blank.active{background:#fef9c3;border-color:var(--green);box-shadow:0 2px 8px rgba(22,163,74,.2)}
+.blank.correct{background:#dcfce7;border-color:var(--ok);color:var(--gd)}
+.blank.wrong{background:#fee2e2;border-color:var(--err);color:#991b1b}
+.word-bank{display:flex;flex-wrap:wrap;gap:7px;padding:12px;background:#f8fafc;
+  border-radius:12px;border:2px dashed #d1fae5;margin-top:10px}
+.wb-chip{background:var(--green);color:white;border:none;border-radius:20px;
+  padding:6px 16px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.9em;
+  cursor:pointer;transition:all .18s;box-shadow:0 2px 6px rgba(22,163,74,.3)}
+.wb-chip:hover{background:var(--gd);transform:scale(1.05)}
+.wb-chip.used{opacity:.32;pointer-events:none;background:#94a3b8}
+.wb-label{font-size:.8em;color:var(--gray);font-weight:700;width:100%;margin-bottom:2px}
+
+/* --- GAME 2: ERROR CORRECTION --- */
+.error-sentence{background:#fff;border:2px solid #fde68a;border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.error-sentence .es-top{font-size:.88em;color:var(--gray);margin-bottom:8px;font-weight:700}
+.error-sentence .es-sentence{font-size:1.05em;color:var(--dark);font-weight:600;line-height:1.8;margin-bottom:10px;letter-spacing:.02em}
+.error-sentence .es-sentence .err-word{
+  display:inline-block;border-bottom:3px dotted #f59e0b;color:#92400e;cursor:pointer;
+  border-radius:4px;padding:0 2px;transition:background .2s;position:relative}
+.error-sentence .es-sentence .err-word:hover{background:#fef9c3}
+.err-inputs{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.err-field{display:flex;align-items:center;gap:6px}
+.err-field label{font-size:.8em;color:var(--gray);font-weight:700;white-space:nowrap}
+.err-input{border:2px solid #e2e8f0;border-radius:8px;padding:5px 10px;
+  font-family:'Baloo 2',cursive;font-size:.9em;font-weight:700;
+  color:var(--dark);width:130px;outline:none;transition:border .2s}
+.err-input:focus{border-color:var(--green)}
+.err-input.correct{background:#dcfce7;border-color:var(--ok);color:var(--gd)}
+.err-input.wrong{background:#fee2e2;border-color:var(--err);color:#991b1b}
+.err-answer-reveal{font-size:.83em;color:var(--ok);font-weight:700;margin-top:6px;display:none}
+
+/* --- GAME 3: QUIZ --- */
+.quiz-item{background:#fafafa;border-radius:13px;padding:13px;margin-bottom:10px;border-left:5px solid var(--green)}
+.qi-q{font-weight:700;font-size:.95em;color:var(--dark);margin-bottom:8px}
+.qi-opts{display:flex;flex-direction:column;gap:6px}
+.qi-opt{padding:8px 13px;border-radius:10px;border:2px solid #e2e8f0;background:white;
+  cursor:pointer;font-weight:700;transition:all .18s;text-align:left;
+  font-family:'Nunito',sans-serif;font-size:.88em}
+.qi-opt:hover{border-color:var(--green);background:var(--gl)}
+.qi-opt.cor{background:#dcfce7;border-color:var(--ok)}
+.qi-opt.wrg{background:#fee2e2;border-color:var(--err)}
+
+/* Shared */
+.btn{display:inline-block;padding:9px 18px;border-radius:17px;font-family:'Baloo 2',cursive;
+  font-weight:700;font-size:.9em;cursor:pointer;border:none;transition:all .22s;margin:3px}
+.bg{background:var(--green);color:white}.bg:hover{transform:translateY(-2px)}
+.bp{background:#8b5cf6;color:white}.bp:hover{transform:translateY(-2px)}
+.br{background:#e2e8f0;color:var(--dark)}.br:hover{background:#cbd5e1}
+.bt{background:var(--teal);color:white}.bt:hover{transform:translateY(-2px)}
+.sboard{text-align:center;padding:12px;border-radius:12px;margin-top:11px;
+  background:linear-gradient(135deg,#f0fdf4,#dcfce7);font-family:'Baloo 2',cursive}
+.snum{font-size:1.7em;font-weight:800;color:var(--green)}.stars{font-size:1.5em}
+
+/* Popup */
+.pov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.44);z-index:999;align-items:center;justify-content:center}
+.pov.show{display:flex}
+.pop{background:white;border-radius:20px;padding:26px;text-align:center;max-width:275px;width:90%;
+  animation:pin .3s ease;box-shadow:0 12px 34px rgba(0,0,0,.2)}
+@keyframes pin{from{transform:scale(.5);opacity:0}70%{transform:scale(1.07)}to{transform:scale(1);opacity:1}}
+.pop .be{font-size:3.3em;margin-bottom:8px}
+.pop h3{font-family:'Baloo 2',cursive;font-size:1.38em;color:var(--dark)}
+.pop p{color:#888;margin-top:4px;font-size:.9em}
+
+.sec{display:none}.sec.active{display:block}
+@media(max-width:500px){.ltitle{font-size:1.85em}.ugrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="landing">
+  <a class="home-link" href="index.html">← 首頁</a>
+  <div class="ltitle">📚 Family and Friends</div>
+  <div class="lsub">選擇 Unit 開始複習！</div>
+  <div class="ugrid">
+    <button class="ubtn u-ff1 ugrid-full" onclick="enter('ff1')">
+      <span class="icon">🏫</span>
+      <div><div class="un">Unit 1</div><div class="uname">Our new things</div></div>
+    </button>
+    <!-- 加入更多 unit 按鈕時在這裡新增 -->
+    <button class="ubtn u-all ugrid-full" onclick="enterAll()">
+      <span class="icon">⭐</span>
+      <div><div class="un">全部</div><div class="uname">一起複習！</div></div>
+    </button>
+  </div>
+  <p class="landing-note">更多 Unit 陸續加入中…</p>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="aheader">
+    <button class="backbtn" onclick="goBack()">←</button>
+    <div class="atitle" id="atitle">複習</div>
+    <span class="abadge" id="abadge"></span>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="stab('review',this)">📖 重點複習</button>
+    <button class="tab" onclick="stab('games',this)">🎮 練習遊戲</button>
+  </div>
+
+  <!-- REVIEW TAB -->
+  <div id="sec-review" class="sec active">
+
+    <!-- Unit 1 -->
+    <div id="rv-ff1" style="display:none">
+
+      <!-- Grammar Point -->
+      <div class="card">
+        <h2>📐 文法重點：This / That / These / Those</h2>
+        <div class="pill">近 vs 遠 · 單數 vs 複數</div>
+        <table class="gtable">
+          <thead><tr><th></th><th>單數（1個）</th><th>複數（2個以上）</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>近的（here）</b></td>
+              <td><span class="en">This is</span> a computer.<br><span class="zh">這是一台電腦。</span></td>
+              <td><span class="en">These are</span> tables.<br><span class="zh">這些是桌子。</span></td>
+            </tr>
+            <tr>
+              <td><b>遠的（there）</b></td>
+              <td><span class="en">That is</span> a board.<br><span class="zh">那是一個黑板。</span></td>
+              <td><span class="en">Those are</span> coat hooks.<br><span class="zh">那些是衣鉤。</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 記住</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">This / That + <b>is</b>（單數）</div><div class="zh">This is my book. / That is a pen.</div></div></li>
+          <li><span class="num">2</span><div><div class="en">These / Those + <b>are</b>（複數）</div><div class="zh">These are chairs. / Those are bags.</div></div></li>
+        </ul>
+      </div>
+
+      <!-- Story dialogue -->
+      <div class="card">
+        <h2>🎭 故事對話：Our new things</h2>
+        <div class="pill">6 個場景</div>
+        <div class="dialogue">
+          <div class="dbubble">
+            <div class="davatar">👩‍🏫</div>
+            <div><div class="dname">Teacher</div>
+            <div class="dtext">Look! <b>These are</b> your new tables and chairs.</div></div>
+          </div>
+          <div class="dbubble">
+            <div class="davatar">👩‍🏫</div>
+            <div><div class="dname">Teacher</div>
+            <div class="dtext"><b>Those are</b> your new coat hooks.</div></div>
+          </div>
+          <div class="dbubble right">
+            <div class="davatar">🧒</div>
+            <div><div class="dname">Student</div>
+            <div class="dtext">Animals! 🐾</div></div>
+          </div>
+          <div class="dbubble">
+            <div class="davatar">👩‍🏫</div>
+            <div><div class="dname">Teacher</div>
+            <div class="dtext"><b>That is</b> our new board. And <b>this is</b> the new computer. Look!</div></div>
+          </div>
+          <div class="dbubble right">
+            <div class="davatar">🧒</div>
+            <div><div class="dname">Students</div>
+            <div class="dtext">Wow! 😲</div></div>
+          </div>
+          <div class="dbubble">
+            <div class="davatar">👩‍🏫</div>
+            <div><div class="dname">Teacher</div>
+            <div class="dtext">Do you like our new things?</div></div>
+          </div>
+          <div class="dbubble right">
+            <div class="davatar">🧒</div>
+            <div><div class="dname">Students</div>
+            <div class="dtext"><b>Yes, we do!</b> 🙋</div></div>
+          </div>
+          <div class="dbubble">
+            <div class="davatar">👩‍🏫</div>
+            <div><div class="dname">Teacher</div>
+            <div class="dtext">And is <b>this</b> a new teddy bear, Rosy?</div></div>
+          </div>
+          <div class="dbubble right">
+            <div class="davatar">👧</div>
+            <div><div class="dname">Rosy</div>
+            <div class="dtext">No… <b>This is</b> my new pencil case. Look, new pencils and pens! ✏️</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fluency Time -->
+      <div class="card">
+        <h2>💬 Fluency Time：Finding things</h2>
+        <div class="pill pill-blue">找東西的對話</div>
+        <div class="dialogue" style="margin-top:10px">
+          <div class="dbubble right">
+            <div class="davatar">👧</div>
+            <div><div class="dname">Kate</div>
+            <div class="dtext">Dad, <b>I can't find</b> my pencil case.</div></div>
+          </div>
+          <div class="dbubble">
+            <div class="davatar">👨</div>
+            <div><div class="dname">Dad</div>
+            <div class="dtext">Look <b>under</b> your pillow.</div></div>
+          </div>
+          <div class="dbubble right">
+            <div class="davatar">👧</div>
+            <div><div class="dname">Kate</div>
+            <div class="dtext"><b>It isn't there.</b></div></div>
+          </div>
+          <div class="dbubble">
+            <div class="davatar">👨</div>
+            <div><div class="dname">Dad</div>
+            <div class="dtext"><b>Here it is.</b> It's <b>under</b> your bed.</div></div>
+          </div>
+          <div class="dbubble right">
+            <div class="davatar">👧</div>
+            <div><div class="dname">Kate</div>
+            <div class="dtext">Thanks, Dad! 😊</div></div>
+          </div>
+        </div>
+        <div class="pill" style="margin-top:10px">🔑 重要句型</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">A</span><div><div class="en">I can't find my ____.</div><div class="zh">我找不到我的___。</div></div></li>
+          <li><span class="num">B</span><div><div class="en">Look under / in / on your ____.</div><div class="zh">看看你的___下面/裡面/上面。</div></div></li>
+          <li><span class="num">C</span><div><div class="en">It isn't there. / Here it is.</div><div class="zh">那裡沒有。/ 在這裡！</div></div></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 新 Unit 的 review card 在這裡加入 -->
+
+  </div>
+
+  <!-- GAMES TAB -->
+  <div id="sec-games" class="sec">
+
+    <!-- Game selector -->
+    <div id="gsel" class="card">
+      <h2>🎮 選擇練習！</h2>
+      <div class="gsel-grid">
+        <button class="gsbtn gsb1" onclick="sg('fill')">✏️ 填空練習 — 選出正確的單字填入句子！</button>
+        <button class="gsbtn gsb2" onclick="sg('error')">🔍 改錯練習 — 找出句子裡的錯誤！</button>
+        <button class="gsbtn gsb3" onclick="sg('quiz')">❓ 問答測驗 — 選出正確答案！</button>
+      </div>
+    </div>
+
+    <!-- FILL GAME -->
+    <div id="gm-fill" class="gamesec">
+      <div class="card">
+        <h2>✏️ 填空練習</h2>
+        <p style="color:var(--gray);font-size:.85em;margin-bottom:12px">先點藍色空格選取，再點下面的單字填入！</p>
+        <div id="fill-area"></div>
+        <div class="sboard" id="fill-score" style="display:none">
+          <div class="stars">🎉🎉🎉</div>
+          <div style="font-weight:700;color:var(--green);font-size:1.05em">全部填對了！太棒了！</div>
+        </div>
+        <div style="text-align:center;margin-top:12px">
+          <button class="btn bg" onclick="resetFill()">🔄 再試一次</button>
+          <button class="btn br" onclick="sgs()">← 選遊戲</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ERROR GAME -->
+    <div id="gm-error" class="gamesec">
+      <div class="card">
+        <h2>🔍 改錯練習</h2>
+        <p style="color:var(--gray);font-size:.85em;margin-bottom:6px">每個句子裡有 <b>2–3 個錯誤</b>。</p>
+        <p style="color:var(--gray);font-size:.85em;margin-bottom:14px">找出錯的地方（<span style="border-bottom:3px dotted #f59e0b;color:#92400e;padding:0 3px">底線</span>）並寫出正確答案！</p>
+        <div id="error-area"></div>
+        <div style="text-align:center;margin-top:12px">
+          <button class="btn bt" onclick="checkErrors()">✅ 檢查答案</button>
+          <button class="btn bg" onclick="resetErrors()">🔄 再試一次</button>
+          <button class="btn br" onclick="sgs()">← 選遊戲</button>
+        </div>
+        <div class="sboard" id="error-score" style="display:none;margin-top:10px">
+          <div class="stars" id="error-stars"></div>
+          <div class="snum" id="error-snum"></div>
+          <div id="error-msg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ GAME -->
+    <div id="gm-quiz" class="gamesec">
+      <div class="card">
+        <h2>❓ 問答測驗</h2>
+        <p style="color:var(--gray);font-size:.85em;margin-bottom:12px">選出正確答案！</p>
+        <div id="quiz-area"></div>
+        <div style="text-align:center;margin-top:12px">
+          <button class="btn bt" onclick="checkQuiz()">✅ 檢查答案</button>
+          <button class="btn bg" onclick="resetQuiz()">🔄 再玩</button>
+          <button class="btn br" onclick="sgs()">← 選遊戲</button>
+        </div>
+        <div class="sboard" id="quiz-score" style="display:none">
+          <div class="stars" id="quiz-stars"></div>
+          <div class="snum" id="quiz-snum"></div>
+          <div id="quiz-msg"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="pov" id="pop">
+  <div class="pop">
+    <div class="be" id="pe">🎉</div>
+    <h3 id="pt"></h3><p id="pm"></p>
+    <button class="btn bg" onclick="cpop()" style="margin-top:11px">太棒了！😊</button>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════
+// DATA — Unit ff1
+// ══════════════════════════════════
+
+// Fill-in-the-blank data
+// Each group has a title + sentences with blanks
+const FILL_DATA = {
+  ff1: [
+    {
+      title: 'This / That / These / Those',
+      sentences: [
+        { hint: '👉 在這裡 · 1個',  hintType:'near', before: '', after: ' is my new pencil case. ✏️',           ans: 'This'  },
+        { hint: '👈 在那裡 · 1個',  hintType:'far',  before: '', after: ' is our new board. 📋',                 ans: 'That'  },
+        { hint: '👉 在這裡 · 多個',  hintType:'near', before: '', after: ' are your new tables. 🪑🪑',           ans: 'These' },
+        { hint: '👈 在那裡 · 多個',  hintType:'far',  before: '', after: ' are your new coat hooks. 🧥🧥',       ans: 'Those' },
+        { hint: '👉 在這裡 · 1個',  hintType:'near', before: '', after: ' is the new computer. Look! 💻',       ans: 'This'  },
+        { hint: '🎒 名詞（東西）',                    before: 'Do you like our new ', after: '?',               ans: 'things'},
+      ],
+      wordBank: ['This','That','These','Those','things']
+    },
+    {
+      title: 'Finding things (Fluency Time)',
+      sentences: [
+        { hint: '🔍 動詞（找）',     before: "I can't ",      after: ' my pencil case.',                ans: 'find'  },
+        { hint: '📍 介系詞（在…下面）', before: 'Look ',         after: ' your pillow.',                   ans: 'under' },
+        { hint: '❌ 否定（不是）',    before: 'It ',           after: ' there.',                          ans: "isn't" },
+        { hint: '👉 代名詞',         before: 'Here ',         after: ' is. It\'s under your bed.',      ans: 'it' },
+      ],
+      wordBank: ['find','under','isn\'t','it']
+    }
+  ]
+};
+
+// Error correction data
+// errors: array of {word, correct, reason}
+const ERROR_DATA = {
+  ff1: [
+    {
+      sentence: 'this is my new pencil case.',
+      errors: [
+        { word: 'this', correct: 'This', reason: '句首大寫' }
+      ]
+    },
+    {
+      sentence: 'Those is your new coat hooks.',
+      errors: [
+        { word: 'is', correct: 'are', reason: 'Those 後面用 are（複數）' }
+      ]
+    },
+    {
+      sentence: 'these are new Table.',
+      errors: [
+        { word: 'these', correct: 'These', reason: '句首大寫' },
+        { word: 'Table', correct: 'tables', reason: '普通名詞不大寫；複數加 s' }
+      ]
+    },
+    {
+      sentence: 'That are our new board.',
+      errors: [
+        { word: 'are', correct: 'is', reason: 'That 後面用 is（單數）' }
+      ]
+    },
+    {
+      sentence: 'I cant find my pencil case',
+      errors: [
+        { word: 'cant', correct: "can't", reason: '縮寫需要有省略符號' },
+        { word: 'case', correct: 'case.', reason: '句尾需要句號' }
+      ]
+    },
+    {
+      sentence: 'look under you pillow.',
+      errors: [
+        { word: 'look', correct: 'Look', reason: '句首大寫' },
+        { word: 'you', correct: 'your', reason: '應該用 your（你的）' }
+      ]
+    }
+  ]
+};
+
+// Quiz data
+const QUIZ_DATA = {
+  ff1: [
+    { q: '__ is my new pencil case. (near, 1 thing)',
+      opts: ['This','That','These','Those'], c: 0 },
+    { q: '__ are your new tables. (near, many things)',
+      opts: ['This','That','These','Those'], c: 2 },
+    { q: '__ is our new board. (far, 1 thing)',
+      opts: ['This','That','These','Those'], c: 1 },
+    { q: '__ are your new coat hooks. (far, many things)',
+      opts: ['This','That','These','Those'], c: 3 },
+    { q: 'Do you like our new things? — __, we do.',
+      opts: ['No','Yes','Not','That'], c: 1 },
+    { q: "I can't __ my pencil case.",
+      opts: ['look','find','see','take'], c: 1 },
+    { q: "It isn't there. = It is __ there.",
+      opts: ['not','no','isn','don\'t'], c: 0 },
+    { q: 'Which sentence is correct?',
+      opts: [
+        'Those is my bags.',
+        'This are new tables.',
+        'These are new chairs.',
+        'That are a computer.'
+      ], c: 2 }
+  ]
+};
+
+// ══════════════════════════════════
+// STATE
+// ══════════════════════════════════
+let currentUnit = 'ff1';
+let fillActive  = null;  // {groupIdx, sentIdx}
+let fillAnswers = {};    // key: 'g-s', value: word chosen
+let quizSel     = {};
+
+// ══════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════
+function enter(key) {
+  currentUnit = key;
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  const titles = { ff1: 'Unit 1 · Our new things' };
+  document.getElementById('atitle').textContent = titles[key] || key;
+  document.getElementById('abadge').textContent = '📚 ' + (key === 'ff1' ? 'Unit 1' : key.toUpperCase());
+  document.querySelectorAll('[id^="rv-"]').forEach(el => el.style.display = 'none');
+  const rv = document.getElementById('rv-' + key);
+  if (rv) rv.style.display = 'block';
+  stab('review', document.querySelectorAll('.tab')[0]);
+}
+function enterAll() {
+  enter('ff1'); // currently only ff1 — extend when more units added
+}
+function goBack() {
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('landing').style.display = 'flex';
+}
+function stab(id, el) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  if (el) el.classList.add('active');
+  if (id === 'games') sgs();
+}
+function sgs() {
+  document.getElementById('gsel').style.display = 'block';
+  document.querySelectorAll('.gamesec').forEach(g => g.classList.remove('active'));
+}
+function sg(g) {
+  document.getElementById('gsel').style.display = 'none';
+  document.querySelectorAll('.gamesec').forEach(s => s.classList.remove('active'));
+  document.getElementById('gm-' + g).classList.add('active');
+  if (g === 'fill')  initFill();
+  if (g === 'error') initError();
+  if (g === 'quiz')  initQuiz();
+}
+function spop(e, t, m) { document.getElementById('pe').textContent=e; document.getElementById('pt').textContent=t; document.getElementById('pm').textContent=m; document.getElementById('pop').classList.add('show'); }
+function cpop() { document.getElementById('pop').classList.remove('show'); }
+
+// ══════════════════════════════════
+// GAME 1: FILL IN THE BLANK
+// ══════════════════════════════════
+function initFill() {
+  fillActive  = null;
+  fillAnswers = {};
+  document.getElementById('fill-score').style.display = 'none';
+
+  const groups = FILL_DATA[currentUnit] || [];
+  const area   = document.getElementById('fill-area');
+  area.innerHTML = '';
+
+  groups.forEach((group, gi) => {
+    const grpDiv = document.createElement('div');
+    grpDiv.className = 'sentence-group';
+
+    // Title + word bank
+    const titleEl = document.createElement('div');
+    titleEl.className = 'sg-title';
+    titleEl.textContent = group.title;
+    grpDiv.appendChild(titleEl);
+
+    // Sentences
+    group.sentences.forEach((s, si) => {
+      const key = gi + '-' + si;
+      const div = document.createElement('div');
+      div.className = 'fill-sentence';
+      const hintHTML = s.hint
+        ? `<span class="hint-tag ${s.hintType||''}">${s.hint}</span>`
+        : '';
+      div.innerHTML = hintHTML + s.before +
+        `<span class="blank" id="bk-${key}" onclick="activateBlank('${key}',${gi},${si})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>` +
+        s.after;
+      grpDiv.appendChild(div);
+    });
+
+    // Word bank
+    const bankDiv = document.createElement('div');
+    bankDiv.className = 'word-bank';
+    bankDiv.innerHTML = '<span class="wb-label">單字庫：</span>';
+    const usedWords = new Set();
+    group.wordBank.forEach(w => {
+      if (!usedWords.has(w)) {
+        usedWords.add(w);
+        const btn = document.createElement('button');
+        btn.className = 'wb-chip';
+        btn.id = 'wc-' + gi + '-' + encodeURIComponent(w);
+        btn.textContent = w;
+        btn.onclick = () => pickWord(gi, w);
+        bankDiv.appendChild(btn);
+      }
+    });
+    grpDiv.appendChild(bankDiv);
+    area.appendChild(grpDiv);
+  });
+}
+
+function activateBlank(key, gi, si) {
+  // Clear all active
+  document.querySelectorAll('.blank').forEach(b => {
+    b.classList.remove('active');
+  });
+  fillActive = { key, gi, si };
+  const bk = document.getElementById('bk-' + key);
+  if (bk) bk.classList.add('active');
+}
+
+function pickWord(gi, word) {
+  if (!fillActive || fillActive.gi !== gi) {
+    // Auto-select first empty blank in this group
+    const groups = FILL_DATA[currentUnit];
+    const group  = groups[gi];
+    for (let si = 0; si < group.sentences.length; si++) {
+      const k = gi + '-' + si;
+      if (!fillAnswers[k]) {
+        fillActive = { key: k, gi, si };
+        break;
+      }
+    }
+    if (!fillActive || fillActive.gi !== gi) return;
+  }
+
+  const { key, gi: g, si: s } = fillActive;
+  const groups   = FILL_DATA[currentUnit];
+  const sentence = groups[g].sentences[s];
+  const bk       = document.getElementById('bk-' + key);
+
+  // Words can be reused across blanks (e.g. "This" used in 2 sentences)
+  fillAnswers[key] = word;
+
+  bk.textContent = word;
+  bk.classList.remove('active', 'correct', 'wrong');
+  if (word === sentence.ans) {
+    bk.classList.add('correct');
+  } else {
+    bk.classList.add('wrong');
+  }
+  fillActive = null;
+
+  // Check all done
+  const total   = FILL_DATA[currentUnit].reduce((n, g) => n + g.sentences.length, 0);
+  let allCorrect = true;
+  let filled = 0;
+  FILL_DATA[currentUnit].forEach((group, gi) => {
+    group.sentences.forEach((s, si) => {
+      const k = gi + '-' + si;
+      if (fillAnswers[k]) filled++;
+      if (fillAnswers[k] !== s.ans) allCorrect = false;
+    });
+  });
+  if (filled === total && allCorrect) {
+    document.getElementById('fill-score').style.display = 'block';
+    spop('🎉', '全部填對了！', '每個空格都答對了！超厲害！');
+  }
+}
+
+function resetFill() { initFill(); }
+
+// ══════════════════════════════════
+// GAME 2: ERROR CORRECTION
+// ══════════════════════════════════
+function initError() {
+  document.getElementById('error-score').style.display = 'none';
+  const data = ERROR_DATA[currentUnit] || [];
+  const area = document.getElementById('error-area');
+  area.innerHTML = '';
+
+  data.forEach((item, idx) => {
+    const div = document.createElement('div');
+    div.className = 'error-sentence';
+
+    // Display sentence with underlined error words
+    let displaySentence = item.sentence;
+    item.errors.forEach(err => {
+      const re = new RegExp('\\b' + escapeRE(err.word) + '\\b');
+      displaySentence = displaySentence.replace(re,
+        `<span class="err-word" title="這裡有錯誤！">${err.word}</span>`);
+    });
+
+    div.innerHTML = `
+      <div class="es-top">句子 ${idx + 1}（共 ${item.errors.length} 個錯誤）</div>
+      <div class="es-sentence">${displaySentence}</div>
+      <div class="err-inputs">
+        ${item.errors.map((err, ei) => `
+          <div class="err-field">
+            <label>❌ "${err.word}" →</label>
+            <input class="err-input" id="ei-${idx}-${ei}"
+              type="text" placeholder="正確答案" autocomplete="off"
+              spellcheck="false">
+          </div>
+        `).join('')}
+      </div>
+      <div class="err-answer-reveal" id="ear-${idx}"></div>
+    `;
+    area.appendChild(div);
+  });
+}
+
+function escapeRE(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function checkErrors() {
+  const data  = ERROR_DATA[currentUnit] || [];
+  let correct = 0, total = 0;
+
+  data.forEach((item, idx) => {
+    item.errors.forEach((err, ei) => {
+      total++;
+      const input = document.getElementById('ei-' + idx + '-' + ei);
+      const val   = input.value.trim();
+      input.classList.remove('correct', 'wrong');
+      if (val === err.correct) {
+        input.classList.add('correct');
+        correct++;
+      } else {
+        input.classList.add('wrong');
+      }
+      // Show answer if wrong
+      const reveal = document.getElementById('ear-' + idx);
+      if (reveal) {
+        reveal.style.display = 'block';
+        reveal.innerHTML = item.errors.map(e =>
+          `<span style="margin-right:10px">✅ "${e.word}" → <b>${e.correct}</b> <span style="color:var(--gray);font-size:.82em">(${e.reason})</span></span>`
+        ).join('');
+      }
+    });
+  });
+
+  const pct = correct / total;
+  document.getElementById('error-score').style.display = 'block';
+  document.getElementById('error-stars').textContent = pct >= 1 ? '⭐⭐⭐' : pct >= .6 ? '⭐⭐' : '⭐';
+  document.getElementById('error-snum').textContent  = correct + ' / ' + total + ' 答對';
+  const msgs = ['再仔細看看！📖','不錯喔，繼續加油！💪','答得很好！🎯','全對！太厲害了！🏆'];
+  document.getElementById('error-msg').textContent   = msgs[pct >= 1 ? 3 : pct >= .75 ? 2 : pct >= .5 ? 1 : 0];
+  if (pct >= .8) spop('🏆', correct + '/' + total + ' 正確！', pct === 1 ? '改錯全對！真的太厲害了！' : '答得很好！繼續加油！');
+}
+
+function resetErrors() { initError(); }
+
+// ══════════════════════════════════
+// GAME 3: QUIZ
+// ══════════════════════════════════
+function initQuiz() {
+  quizSel = {};
+  document.getElementById('quiz-score').style.display = 'none';
+  const data = QUIZ_DATA[currentUnit] || [];
+  document.getElementById('quiz-area').innerHTML = data.map((q, qi) => `
+    <div class="quiz-item">
+      <div class="qi-q">Q${qi + 1}: ${q.q}</div>
+      <div class="qi-opts">
+        ${q.opts.map((opt, oi) =>
+          `<button class="qi-opt" id="qo-${qi}-${oi}" onclick="selQ(${qi},${oi})">${opt}</button>`
+        ).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function selQ(qi, oi) {
+  const data = QUIZ_DATA[currentUnit];
+  data[qi].opts.forEach((_, i) => {
+    const el = document.getElementById('qo-' + qi + '-' + i);
+    el.classList.remove('cor', 'wrg');
+    el.style.background = '';
+    el.style.borderColor = '#e2e8f0';
+  });
+  quizSel[qi] = oi;
+  const el = document.getElementById('qo-' + qi + '-' + oi);
+  el.style.background = '#f0fdf4';
+  el.style.borderColor = 'var(--green)';
+}
+
+function checkQuiz() {
+  const data  = QUIZ_DATA[currentUnit] || [];
+  let correct = 0;
+  data.forEach((q, qi) => {
+    const sel = quizSel[qi];
+    q.opts.forEach((_, oi) => {
+      const el = document.getElementById('qo-' + qi + '-' + oi);
+      el.style.background = '';
+      el.style.borderColor = '#e2e8f0';
+      el.classList.remove('cor', 'wrg');
+    });
+    if (sel !== undefined) {
+      if (sel === q.c) { document.getElementById('qo-' + qi + '-' + sel).classList.add('cor'); correct++; }
+      else { document.getElementById('qo-' + qi + '-' + sel).classList.add('wrg'); document.getElementById('qo-' + qi + '-' + q.c).classList.add('cor'); }
+    } else {
+      document.getElementById('qo-' + qi + '-' + q.c).classList.add('cor');
+    }
+  });
+  const tot = data.length, pct = correct / tot;
+  document.getElementById('quiz-score').style.display = 'block';
+  document.getElementById('quiz-stars').textContent = pct >= 1 ? '⭐⭐⭐' : pct >= .6 ? '⭐⭐' : '⭐';
+  document.getElementById('quiz-snum').textContent  = correct + ' / ' + tot;
+  const msgs = ['再多練習幾次！📖','不錯！繼續加油！💪','答得很好！🎯','全對！太厲害了！🏆'];
+  document.getElementById('quiz-msg').textContent   = msgs[pct >= 1 ? 3 : pct >= .75 ? 2 : pct >= .5 ? 1 : 0];
+  if (pct >= .75) spop('⭐', correct + '/' + tot + ' 分！', pct === 1 ? '全部答對！超厲害！' : '答得很好！繼續加油！');
+}
+
+function resetQuiz() { initQuiz(); }
+</script>
+</body>
+</html>
