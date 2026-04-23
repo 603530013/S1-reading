@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>期中總複習 Midterm Review</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Baloo+2:wght@700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient(180deg,#fff7ed,#fed7aa);padding:24px}
+.wrap{max-width:920px;margin:0 auto}
+.hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.hd h1{font-family:'Baloo 2',cursive;font-size:1.9em;color:#c2410c}
+.hd .back{background:#fff;border:2px solid #fed7aa;border-radius:14px;padding:8px 14px;
+  color:#9a3412;font-weight:700;text-decoration:none;font-size:.9em}
+.hd .back:hover{background:#ffedd5}
+.subtle{color:#9a3412;font-size:.95em;margin-bottom:24px}
+.landing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:24px}
+.s-btn{background:white;border-radius:20px;padding:18px;box-shadow:0 4px 14px rgba(0,0,0,.08);
+  cursor:pointer;border:none;font-family:inherit;text-align:left;transition:transform .2s}
+.s-btn:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.s-btn .sicon{font-size:2.2em;margin-bottom:6px}
+.s-btn .stit{font-weight:800;color:#1e293b;font-size:1.1em}
+.s-btn .scn{color:#64748b;font-size:.85em;margin-top:2px}
+.card{background:white;border-radius:24px;padding:24px;margin-bottom:20px;box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.card h2{font-family:'Baloo 2',cursive;font-size:1.35em;color:#c2410c;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.tp{background:#fff7ed;border-left:4px solid #fb923c;padding:12px 16px;border-radius:10px;margin-bottom:8px;font-size:.95em;line-height:1.7;color:#334155}
+.fill-group{background:#fef3c7;border-radius:14px;padding:14px;margin-bottom:12px}
+.fill-group h3{color:#92400e;font-weight:800;margin-bottom:8px;font-size:1em}
+.fill-sentence{font-size:1.02em;margin-bottom:8px;line-height:1.9;color:#1f2937}
+.hint-tag{display:inline-block;background:#fff;border-radius:8px;padding:2px 8px;margin-right:8px;font-size:.85em;color:#92400e;border:1px dashed #fbbf24}
+.blank{display:inline-block;min-width:90px;border-bottom:2px solid #d97706;padding:2px 6px;margin:0 4px;background:#fffbeb;border-radius:6px;cursor:pointer;font-weight:700;color:#b45309}
+.blank.active{background:#fef3c7;border-bottom-color:#b45309}
+.blank.correct{background:#dcfce7;border-bottom-color:#16a34a;color:#15803d}
+.blank.wrong{background:#fee2e2;border-bottom-color:#dc2626;color:#b91c1c}
+.word-bank{margin-top:10px;padding-top:10px;border-top:1px dashed #fbbf24}
+.wb-label{font-weight:700;color:#92400e;margin-right:8px}
+.wb-chip{display:inline-block;background:#fff;border:2px solid #fbbf24;border-radius:14px;padding:6px 14px;margin:4px 4px;cursor:pointer;font-weight:700;color:#92400e;font-family:inherit;font-size:.9em}
+.wb-chip:hover{background:#fef3c7}
+.err-item{background:#e0f2fe;border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.err-sentence{font-size:1.05em;line-height:1.9;color:#075985}
+.err-word{display:inline-block;padding:1px 6px;margin:0 2px;border-radius:6px;background:#fff;border:2px solid #7dd3fc;cursor:pointer;font-weight:700;color:#0c4a6e}
+.err-word.picked{background:#fef3c7;border-color:#f59e0b}
+.err-word.correct-ok{background:#dcfce7;border-color:#16a34a;color:#15803d}
+.err-word.wrong-pick{background:#fee2e2;border-color:#dc2626;color:#b91c1c}
+.err-correction{display:none;margin-top:6px;padding:6px 10px;background:#fff;border-radius:8px;font-size:.9em;color:#0c4a6e}
+.err-correction.show{display:block}
+.q-item{background:#fce7f3;border-radius:12px;padding:14px;margin-bottom:12px}
+.q-item .qq{font-weight:800;color:#831843;margin-bottom:8px;font-size:1em}
+.q-opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.q-opt{background:#fff;border:2px solid #fbcfe8;border-radius:12px;padding:8px 12px;cursor:pointer;font-family:inherit;font-weight:700;color:#831843;text-align:left;font-size:.9em}
+.q-opt:hover{background:#fdf2f8}
+.q-opt.cor{background:#dcfce7;border-color:#16a34a;color:#15803d}
+.q-opt.wrg{background:#fee2e2;border-color:#dc2626;color:#b91c1c}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.btn{padding:10px 20px;border-radius:14px;font-family:'Baloo 2',cursive;font-weight:700;border:none;cursor:pointer;font-size:.95em}
+.bt{background:#fb923c;color:white}
+.bt:hover{background:#ea580c}
+.bg{background:#facc15;color:#713f12}
+.bg:hover{background:#eab308}
+.br{background:#64748b;color:white}
+.br:hover{background:#475569}
+.score{text-align:center;margin-top:12px;font-family:'Baloo 2',cursive;color:#c2410c;display:none}
+.score .stars{font-size:2em}
+.score .snum{font-size:1.4em;font-weight:800}
+.hidden{display:none!important}
+.pop{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;z-index:999}
+.pop.show{display:flex}
+.pop-inner{background:white;border-radius:24px;padding:36px 28px;text-align:center;max-width:340px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:pop .4s ease-out}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+.pop-inner .emo{font-size:4em;margin-bottom:8px}
+.pop-inner h3{font-family:'Baloo 2',cursive;font-size:1.4em;color:#c2410c;margin-bottom:6px}
+.pop-inner p{color:#64748b;margin-bottom:16px}
+.pop-inner .ok{background:#fb923c;color:white;border:none;padding:10px 26px;border-radius:20px;font-family:'Baloo 2',cursive;font-weight:700;cursor:pointer}
+.story-box{background:#fff7ed;border:2px solid #fed7aa;border-radius:14px;padding:16px;line-height:2;font-size:1em;color:#1e293b;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hd">
+  <h1>📝 S1A 期中總複習</h1>
+  <a class="back" href="index.html">← 回首頁</a>
+</div>
+<p class="subtle">April 2026 Midterm Test Review · 選擇項目開始複習</p>
+
+<div id="landing">
+  <div class="landing-grid">
+    <button class="s-btn" style="border-left:6px solid #f59e0b" onclick="enterSection('phonics')">
+      <div class="sicon">🔤</div>
+      <div class="stit" style="color:#f59e0b">Phonics</div>
+      <div class="scn">發音規則</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #10b981" onclick="enterSection('vocabulary')">
+      <div class="sicon">📘</div>
+      <div class="stit" style="color:#10b981">Vocabulary</div>
+      <div class="scn">單字</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #3b82f6" onclick="enterSection('sentences')">
+      <div class="sicon">💬</div>
+      <div class="stit" style="color:#3b82f6">Sentence Patterns</div>
+      <div class="scn">句型</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #8b5cf6" onclick="enterSection('proofreading')">
+      <div class="sicon">✏️</div>
+      <div class="stit" style="color:#8b5cf6">Proofreading</div>
+      <div class="scn">改錯</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #ec4899" onclick="enterSection('grammar')">
+      <div class="sicon">🧠</div>
+      <div class="stit" style="color:#ec4899">Grammar</div>
+      <div class="scn">文法</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #06b6d4" onclick="enterSection('reading')">
+      <div class="sicon">📖</div>
+      <div class="stit" style="color:#06b6d4">Reading Vocab</div>
+      <div class="scn">閱讀單字</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #f97316" onclick="enterSection('story')">
+      <div class="sicon">🧤</div>
+      <div class="stit" style="color:#f97316">The Lost Mitten</div>
+      <div class="scn">課文閱讀</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #ef4444" onclick="enterSection('subject')">
+      <div class="sicon">🎨</div>
+      <div class="stit" style="color:#ef4444">Subject Learning</div>
+      <div class="scn">學科單字</div>
+    </button>
+  </div>
+</div>
+
+<div id="rv-phonics" class="card hidden" style="border-top:6px solid #f59e0b">
+  <h2>🔤 Phonics <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(發音規則)</span></h2>
+  <div class="tp">🎵 <b>長母音拼字規則</b></div>
+  <div class="tp"><b>a</b>：a_e (cake)、ai (rain)、ay (play)</div>
+  <div class="tp"><b>e</b>：ee (bee)、ea (meat)、e (he)</div>
+  <div class="tp"><b>i</b>：i_e (bike)、ie (pie)、i (hi)、igh (night)、y (fly)</div>
+  <div class="tp"><b>o</b>：o_e (home)、o (go)、oe (toe)、ow (snow)、oa (boat)</div>
+  <div class="tp"><b>u</b>：u_e (cube)、ui (fruit)、ue (blue)</div>
+  <div class="tp"><br></div>
+  <div class="tp">🔡 <b>Blends 字首組合</b></div>
+  <div class="tp">ch (chair)、sh (ship)、th (thank)</div>
+  <div class="tp">gr (green)、br (bread)、fr (fries)、dr (drink)、tr (truck)、cr (crab)</div>
+  <div class="tp">fl (flower)、pl (plant)、bl (blue)、cl (clock)、gl (glass)、sl (sleep)</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-phonics"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('phonics')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('phonics')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-phonics"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('phonics')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('phonics')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-phonics">
+    <div class="stars" id="quiz-stars-phonics"></div>
+    <div class="snum" id="quiz-snum-phonics"></div>
+    <div id="quiz-msg-phonics"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-vocabulary" class="card hidden" style="border-top:6px solid #10b981">
+  <h2>📘 Vocabulary <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單字)</span></h2>
+  <div class="tp">📚 <b>Family and Friends 單字</b></div>
+  <div class="tp">🏫 Classroom：table, computer, coat hook, pencil case, whiteboard, poster, picture, drawers, cabinet</div>
+  <div class="tp">😊 Adjectives：hot, cold, hungry, thirsty, happy, sad, tired, angry, scared, brave, nervous</div>
+  <div class="tp">⚽ Verbs：ride a bike, ride a horse, skate, skateboard, play tennis, play soccer</div>
+  <div class="tp">🍕 Food：salad, fries, pizza, milkshake, cheese, sandwich, chicken</div>
+  <div class="tp">🔢 Numbers：ten, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred</div>
+  <div class="tp">📐 School Subjects：art, math, English, Chinese, science, P.E., music</div>
+  <div class="tp">🏃 School Rooms：school yard, field, art room, computer room, gym</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-vocabulary"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('vocabulary')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('vocabulary')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-vocabulary"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('vocabulary')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('vocabulary')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-vocabulary">
+    <div class="stars" id="quiz-stars-vocabulary"></div>
+    <div class="snum" id="quiz-snum-vocabulary"></div>
+    <div id="quiz-msg-vocabulary"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-sentences" class="card hidden" style="border-top:6px solid #3b82f6">
+  <h2>💬 Sentence Patterns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(句型)</span></h2>
+  <div class="tp">💬 <b>句型複習</b></div>
+  <div class="tp"><b>This / That</b> is + 單數名詞 → This is a table. / That is a chair.</div>
+  <div class="tp"><b>These / Those</b> are + 複數名詞 → These are pencils. / Those are rulers.</div>
+  <div class="tp">Yes/No 問答：<b>Are they happy?</b> → Yes, they are. / No, they aren't.</div>
+  <div class="tp"><b>Can</b> he skateboard? → Yes, he can. / No, he can't.</div>
+  <div class="tp"><b>Does</b> he have milkshake? → Yes, he does. / No, he doesn't.</div>
+  <div class="tp"><b>Is</b> this your book? → Yes, it is. / No, it isn't.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-sentences"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('sentences')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('sentences')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-sentences"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('sentences')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('sentences')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-sentences"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('sentences')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('sentences')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-sentences">
+    <div class="stars" id="quiz-stars-sentences"></div>
+    <div class="snum" id="quiz-snum-sentences"></div>
+    <div id="quiz-msg-sentences"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-proofreading" class="card hidden" style="border-top:6px solid #8b5cf6">
+  <h2>✏️ Proofreading <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(改錯)</span></h2>
+  <div class="tp">✏️ <b>改錯 4 大規則</b></div>
+  <div class="tp">1. 句首大寫：<i>this is my book.</i> → <b>T</b>his is my book<b>.</b></div>
+  <div class="tp">2. 人名大寫：<i>she is miss yvonne.</i> → She is <b>M</b>iss <b>Y</b>vonne.</div>
+  <div class="tp">3. 星期大寫：<i>We have art on tuesdays.</i> → ...on <b>T</b>uesdays.</div>
+  <div class="tp">4. 問句加問號：<i>Is this a pen</i> → Is this a pen<b>?</b></div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-proofreading"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('proofreading')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('proofreading')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-proofreading"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('proofreading')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('proofreading')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-proofreading">
+    <div class="stars" id="quiz-stars-proofreading"></div>
+    <div class="snum" id="quiz-snum-proofreading"></div>
+    <div id="quiz-msg-proofreading"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-grammar" class="card hidden" style="border-top:6px solid #ec4899">
+  <h2>🧠 Grammar <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(文法)</span></h2>
+  <div class="tp">🧠 <b>Grammar 11 單元重點</b></div>
+  <div class="tp">單元 1-2：代名詞 I/you/he/she/we/they</div>
+  <div class="tp">單元 3-4：反身代名詞 myself~themselves</div>
+  <div class="tp">單元 5-6：this/that/these/those</div>
+  <div class="tp">單元 7-10：名詞（a/an、單複數、不可數、永遠複數）</div>
+  <div class="tp">單元 11：形容詞 adjectives</div>
+  <div class="tp"><br><a href="grammar-review.html" style="color:#db2777;font-weight:700">👉 前往 Grammar 完整複習</a></div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-grammar"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('grammar')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('grammar')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-grammar">
+    <div class="stars" id="quiz-stars-grammar"></div>
+    <div class="snum" id="quiz-snum-grammar"></div>
+    <div id="quiz-msg-grammar"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-reading" class="card hidden" style="border-top:6px solid #06b6d4">
+  <h2>📖 Reading Vocab <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(閱讀單字)</span></h2>
+  <div class="tp">📖 <b>Reading 課本單字 U1-U6</b></div>
+  <div class="tp"><b>U1</b>：lay (eggs) 下蛋、warm 溫暖的、beak 鳥喙、feather 羽毛、safe 安全的</div>
+  <div class="tp"><b>U2</b>：wake up 起床、take a bath 洗澡、take a nap 午睡、hurry 趕快、early 早、late 遲</div>
+  <div class="tp"><b>U3</b>：plant 植物/種植、watering can 灑水器、grow 生長、vine 藤、vegetables 蔬菜、give 給、seeds 種子、flower 花、pick 摘、taste 嚐、dig 挖</div>
+  <div class="tp"><b>U4</b>：rabbit 兔子、hedgehog 刺蝟、cricket 蟋蟀、bear 熊、mitten 連指手套、lose 遺失、crowded 擁擠、sleep 睡、inside 裡面、friend 朋友</div>
+  <div class="tp"><b>U5</b>：different 不同、same 相同、bigger 較大、cook 煮、stove 爐子、buy 買、sink 水槽、now 現在、in the past 以前、fire 火、store 商店、wash the dishes 洗碗</div>
+  <div class="tp"><b>U6</b>：wheat 小麥、machine 機器、crush 壓碎、flour 麵粉、spread 塗抹、delicious 美味、breakfast 早餐、bread 麵包、jam 果醬、grapes 葡萄、orange 柳橙、drink 喝、juice 果汁、truck 卡車、deliver 遞送</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-reading"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('reading')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('reading')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-reading"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('reading')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('reading')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-reading">
+    <div class="stars" id="quiz-stars-reading"></div>
+    <div class="snum" id="quiz-snum-reading"></div>
+    <div id="quiz-msg-reading"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-story" class="card hidden" style="border-top:6px solid #f97316">
+  <h2>🧤 The Lost Mitten <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(課文閱讀)</span></h2>
+  <div class="tp">🧤 <b>The Lost Mitten 課文</b></div>
+  <div class="tp">Lance gets new mittens. He goes out to find firewood.</div>
+  <div class="tp">But he loses a mitten! Mice find the mitten. They want to hide. They go inside.</div>
+  <div class="tp">Rabbit wants to sleep. He goes in with the mice.</div>
+  <div class="tp">Hedgehog is cold. He goes in with the mice and the rabbit.</div>
+  <div class="tp">Bear is tired. She goes in with the mice, the rabbit, and the hedgehog.</div>
+  <div class="tp">It's crowded in the mitten. Cricket sees his friends. He goes in, too.</div>
+  <div class="tp">Now it's too crowded! Rip! Snap! POP! Poor Lance! His mitten is gone!</div>
+  <div class="story-box">
+    <b>Read aloud:</b><br>
+    Lance gets new mittens. He goes out to find firewood. But he loses a mitten! Mice find the mitten. They want to hide. They go inside. Rabbit wants to sleep. He goes in with the mice. Hedgehog is cold. He goes in with the mice and the rabbit. Bear is tired. She goes in with the mice, the rabbit, and the hedgehog. It's crowded in the mitten. Cricket sees his friends. He goes in, too. Now it's too crowded! Rip! Snap! POP! Poor Lance! His mitten is gone!
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-story"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('story')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('story')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-story">
+    <div class="stars" id="quiz-stars-story"></div>
+    <div class="snum" id="quiz-snum-story"></div>
+    <div id="quiz-msg-story"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-subject" class="card hidden" style="border-top:6px solid #ef4444">
+  <h2>🎨 Subject Learning <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(學科單字)</span></h2>
+  <div class="tp">🎨 <b>Subject Learning</b></div>
+  <div class="tp">📐 <b>Math Vocab</b>：whole 整個、half 一半、third 三分之一、quarter 四分之一</div>
+  <div class="tp">🖼️ <b>Art Vocab</b>：artist 藝術家、mirror 鏡子、skin 皮膚、face 臉、background 背景</div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-subject"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('subject')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('subject')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-subject">
+    <div class="stars" id="quiz-stars-subject"></div>
+    <div class="snum" id="quiz-snum-subject"></div>
+    <div id="quiz-msg-subject"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+
+<div class="pop" id="pop">
+  <div class="pop-inner">
+    <div class="emo" id="pop-emo">🎉</div>
+    <h3 id="pop-title">Great!</h3>
+    <p id="pop-msg"></p>
+    <button class="ok" onclick="closePop()">好！</button>
+  </div>
+</div>
+
+</div>
+
+<script>
+var FILL_DATA = {"phonics": [{"title": "長母音 a (a_e / ai / ay)", "sentences": [{"hint": "🎂 長 a", "before": "c", "after": "ke", "ans": "a"}, {"hint": "🌧️ 長 a", "before": "r", "after": "n", "ans": "ai"}, {"hint": "🎮 長 a", "before": "pl", "after": "", "ans": "ay"}, {"hint": "📆 長 a", "before": "d", "after": "y", "ans": "a"}], "wordBank": ["a", "ai", "ay"]}, {"title": "長母音 e (ee / ea / e)", "sentences": [{"hint": "🐝 長 e", "before": "b", "after": "", "ans": "ee"}, {"hint": "🍖 長 e", "before": "m", "after": "t", "ans": "ea"}, {"hint": "👦 長 e", "before": "h", "after": "", "ans": "e"}, {"hint": "🌳 長 e", "before": "tr", "after": "", "ans": "ee"}], "wordBank": ["ee", "ea", "e"]}, {"title": "長母音 i (i_e / ie / i / igh / y)", "sentences": [{"hint": "🚲 長 i", "before": "b", "after": "ke", "ans": "i"}, {"hint": "🥧 長 i", "before": "p", "after": "", "ans": "ie"}, {"hint": "👋 長 i", "before": "h", "after": "", "ans": "i"}, {"hint": "🌙 長 i", "before": "n", "after": "t", "ans": "igh"}, {"hint": "🪁 長 i", "before": "fl", "after": "", "ans": "y"}], "wordBank": ["i", "ie", "igh", "y"]}, {"title": "長母音 o (o_e / o / oe / ow / oa)", "sentences": [{"hint": "🏠 長 o", "before": "h", "after": "me", "ans": "o"}, {"hint": "🦶 長 o", "before": "t", "after": "", "ans": "oe"}, {"hint": "❄️ 長 o", "before": "sn", "after": "", "ans": "ow"}, {"hint": "⛵ 長 o", "before": "b", "after": "t", "ans": "oa"}], "wordBank": ["o", "oe", "ow", "oa"]}, {"title": "長母音 u (u_e / ui / ue)", "sentences": [{"hint": "🧊 長 u", "before": "c", "after": "be", "ans": "u"}, {"hint": "🍊 長 u", "before": "fr", "after": "t", "ans": "ui"}, {"hint": "🟦 長 u", "before": "bl", "after": "", "ans": "ue"}], "wordBank": ["u", "ui", "ue"]}, {"title": "Blends 字首組合", "sentences": [{"hint": "🪑 椅子", "before": "", "after": "air", "ans": "ch"}, {"hint": "🚢 船", "before": "", "after": "ip", "ans": "sh"}, {"hint": "🙏 謝", "before": "", "after": "ank", "ans": "th"}, {"hint": "🍞 麵包", "before": "", "after": "ead", "ans": "br"}, {"hint": "🟢 綠色", "before": "", "after": "een", "ans": "gr"}, {"hint": "🥤 喝", "before": "", "after": "ink", "ans": "dr"}, {"hint": "🚚 卡車", "before": "", "after": "uck", "ans": "tr"}, {"hint": "🌸 花", "before": "", "after": "ower", "ans": "fl"}, {"hint": "🕘 鐘", "before": "", "after": "ock", "ans": "cl"}, {"hint": "🟦 藍色", "before": "", "after": "ue", "ans": "bl"}], "wordBank": ["ch", "sh", "th", "gr", "br", "dr", "tr", "fl", "cl", "bl"]}], "vocabulary": [{"title": "Classroom 教室", "sentences": [{"hint": "📋 白板", "before": "The ", "after": " is clean.", "ans": "whiteboard"}, {"hint": "🖥️ 電腦", "before": "I use my ", "after": " to do homework.", "ans": "computer"}, {"hint": "✏️ 鉛筆盒", "before": "Pens are in my ", "after": ".", "ans": "pencil case"}, {"hint": "🖼️ 海報", "before": "Look at the ", "after": " on the wall.", "ans": "poster"}], "wordBank": ["whiteboard", "computer", "pencil case", "poster"]}, {"title": "Adjectives 形容詞", "sentences": [{"hint": "🥵 熱", "before": "I am ", "after": ".", "ans": "hot"}, {"hint": "🥶 冷", "before": "They are ", "after": ".", "ans": "cold"}, {"hint": "🍔 餓", "before": "He is ", "after": ".", "ans": "hungry"}, {"hint": "💪 勇敢", "before": "She is ", "after": ".", "ans": "brave"}, {"hint": "😨 害怕", "before": "I am ", "after": ".", "ans": "scared"}, {"hint": "😰 緊張", "before": "He is ", "after": ".", "ans": "nervous"}], "wordBank": ["hot", "cold", "hungry", "brave", "scared", "nervous"]}, {"title": "Food 食物", "sentences": [{"hint": "🥗 沙拉", "before": "I eat a ", "after": ".", "ans": "salad"}, {"hint": "🍟 薯條", "before": "I have some ", "after": ".", "ans": "fries"}, {"hint": "🍕 披薩", "before": "She has ", "after": ".", "ans": "pizza"}, {"hint": "🥤 奶昔", "before": "He drinks a ", "after": ".", "ans": "milkshake"}, {"hint": "🧀 起司", "before": "I like ", "after": ".", "ans": "cheese"}, {"hint": "🥪 三明治", "before": "She has a ", "after": ".", "ans": "sandwich"}], "wordBank": ["salad", "fries", "pizza", "milkshake", "cheese", "sandwich"]}, {"title": "Numbers 數字 10-100", "sentences": [{"hint": "10", "before": "", "after": "", "ans": "ten"}, {"hint": "30", "before": "", "after": "", "ans": "thirty"}, {"hint": "50", "before": "", "after": "", "ans": "fifty"}, {"hint": "70", "before": "", "after": "", "ans": "seventy"}, {"hint": "90", "before": "", "after": "", "ans": "ninety"}, {"hint": "100", "before": "", "after": "", "ans": "one hundred"}], "wordBank": ["ten", "thirty", "fifty", "seventy", "ninety", "one hundred"]}, {"title": "School Subjects 科目", "sentences": [{"hint": "🎨 美術", "before": "We have ", "after": " on Monday.", "ans": "art"}, {"hint": "➕ 數學", "before": "They have ", "after": " on Tuesday.", "ans": "math"}, {"hint": "🔬 自然", "before": "We have ", "after": " on Friday.", "ans": "science"}, {"hint": "🏃 體育", "before": "I have ", "after": " on Wednesday.", "ans": "P.E."}, {"hint": "🎵 音樂", "before": "We have ", "after": " on Thursday.", "ans": "music"}], "wordBank": ["art", "math", "science", "P.E.", "music"]}, {"title": "School Rooms 教室空間", "sentences": [{"hint": "🏫 運動場", "before": "We play in the ", "after": ".", "ans": "school yard"}, {"hint": "🌳 球場", "before": "We run on the ", "after": ".", "ans": "field"}, {"hint": "🎨 美術教室", "before": "We paint in the ", "after": ".", "ans": "art room"}, {"hint": "💻 電腦教室", "before": "We type in the ", "after": ".", "ans": "computer room"}, {"hint": "🏋️ 體育館", "before": "We exercise in the ", "after": ".", "ans": "gym"}], "wordBank": ["school yard", "field", "art room", "computer room", "gym"]}], "sentences": [{"title": "This / That / These / Those", "sentences": [{"hint": "🪑 近單", "before": "", "after": " is a table.", "ans": "This"}, {"hint": "🪑 遠單", "before": "", "after": " is a chair.", "ans": "That"}, {"hint": "✏️ 近複", "before": "", "after": " are pencils.", "ans": "These"}, {"hint": "📏 遠複", "before": "", "after": " are rulers.", "ans": "Those"}], "wordBank": ["This", "That", "These", "Those"]}, {"title": "Are / Can / Does / Is 問句回答", "sentences": [{"hint": "Yes 回答 Are they happy?", "before": "Yes, they ", "after": ".", "ans": "are"}, {"hint": "No 回答 Are they happy?", "before": "No, they ", "after": ".", "ans": "aren't"}, {"hint": "Yes 回答 Can he skateboard?", "before": "Yes, he ", "after": ".", "ans": "can"}, {"hint": "No 回答 Can he skateboard?", "before": "No, he ", "after": ".", "ans": "can't"}, {"hint": "Yes 回答 Does he have milkshake?", "before": "Yes, he ", "after": ".", "ans": "does"}, {"hint": "No 回答 Does he have milkshake?", "before": "No, he ", "after": ".", "ans": "doesn't"}, {"hint": "Yes 回答 Is this your book?", "before": "Yes, it ", "after": ".", "ans": "is"}, {"hint": "No 回答 Is this your book?", "before": "No, it ", "after": ".", "ans": "isn't"}], "wordBank": ["are", "aren't", "can", "can't", "does", "doesn't", "is", "isn't"]}], "proofreading": [], "grammar": [], "reading": [{"title": "U1 單字", "sentences": [{"hint": "🥚 下蛋", "before": "Hens ", "after": " eggs.", "ans": "lay"}, {"hint": "🌡️ 溫暖", "before": "The nest is ", "after": ".", "ans": "warm"}, {"hint": "🐦 鳥喙", "before": "The bird's ", "after": " is yellow.", "ans": "beak"}, {"hint": "🪶 羽毛", "before": "A ", "after": " is soft.", "ans": "feather"}, {"hint": "🛡️ 安全", "before": "Baby birds are ", "after": ".", "ans": "safe"}], "wordBank": ["lay", "warm", "beak", "feather", "safe"]}, {"title": "U2 單字", "sentences": [{"hint": "⏰ 起床", "before": "I ", "after": " at 7.", "ans": "wake up"}, {"hint": "🛁 洗澡", "before": "I ", "after": " every day.", "ans": "take a bath"}, {"hint": "💤 午睡", "before": "I ", "after": " in the afternoon.", "ans": "take a nap"}, {"hint": "🏃 趕快", "before": "", "after": "! We are late.", "ans": "Hurry"}, {"hint": "🌅 早", "before": "I wake up ", "after": ".", "ans": "early"}], "wordBank": ["wake up", "take a bath", "take a nap", "Hurry", "early"]}, {"title": "U3 單字", "sentences": [{"hint": "🌱 種植", "before": "I ", "after": " seeds.", "ans": "plant"}, {"hint": "🌿 藤", "before": "The ", "after": " is long.", "ans": "vine"}, {"hint": "🥕 蔬菜", "before": "I eat ", "after": ".", "ans": "vegetables"}, {"hint": "🌸 花", "before": "A red ", "after": " is pretty.", "ans": "flower"}, {"hint": "✂️ 摘", "before": "I ", "after": " the flowers.", "ans": "pick"}], "wordBank": ["plant", "vine", "vegetables", "flower", "pick"]}, {"title": "U4 單字", "sentences": [{"hint": "🐰 兔子", "before": "A ", "after": " hops.", "ans": "rabbit"}, {"hint": "🦔 刺蝟", "before": "A ", "after": " has spikes.", "ans": "hedgehog"}, {"hint": "🧤 手套", "before": "I lost my ", "after": ".", "ans": "mitten"}, {"hint": "😟 擁擠", "before": "It is ", "after": " inside.", "ans": "crowded"}, {"hint": "🤝 朋友", "before": "My ", "after": " is kind.", "ans": "friend"}], "wordBank": ["rabbit", "hedgehog", "mitten", "crowded", "friend"]}, {"title": "U5 單字", "sentences": [{"hint": "❓ 不同", "before": "They are ", "after": ".", "ans": "different"}, {"hint": "🔥 火", "before": "A ", "after": " is hot.", "ans": "fire"}, {"hint": "🏬 商店", "before": "I go to the ", "after": ".", "ans": "store"}, {"hint": "⏱️ 現在", "before": "Things are different ", "after": ".", "ans": "now"}, {"hint": "🍳 煮", "before": "Mom ", "after": " on the stove.", "ans": "cooks"}], "wordBank": ["different", "fire", "store", "now", "cooks"]}, {"title": "U6 單字", "sentences": [{"hint": "🌾 小麥", "before": "Farmers grow ", "after": ".", "ans": "wheat"}, {"hint": "🥖 麵包", "before": "I eat ", "after": " for breakfast.", "ans": "bread"}, {"hint": "🍓 果醬", "before": "Spread ", "after": " on bread.", "ans": "jam"}, {"hint": "🍊 柳橙", "before": "I have an ", "after": ".", "ans": "orange"}, {"hint": "🧃 果汁", "before": "I drink ", "after": ".", "ans": "juice"}, {"hint": "🚚 卡車", "before": "A ", "after": " delivers bread.", "ans": "truck"}], "wordBank": ["wheat", "bread", "jam", "orange", "juice", "truck"]}], "story": [], "subject": []};
+var ERROR_DATA = {"phonics": [], "vocabulary": [], "sentences": [{"sentence": "This are a table.", "errors": [{"word": "are", "correct": "is", "reason": "This 後面用 is"}]}, {"sentence": "These is pencils.", "errors": [{"word": "is", "correct": "are", "reason": "These 後面用 are"}]}, {"sentence": "Those is rulers.", "errors": [{"word": "is", "correct": "are", "reason": "複數用 are"}]}, {"sentence": "Can he skateboards?", "errors": [{"word": "skateboards", "correct": "skateboard", "reason": "Can 後面用原形動詞"}]}, {"sentence": "Does he has milkshake?", "errors": [{"word": "has", "correct": "have", "reason": "Does 後面用原形 have"}]}, {"sentence": "Is this you book?", "errors": [{"word": "you", "correct": "your", "reason": "應用所有格 your"}]}], "proofreading": [{"sentence": "this is my book", "errors": [{"word": "this", "correct": "This", "reason": "句首大寫"}, {"word": "book", "correct": "book.", "reason": "句尾加句號"}]}, {"sentence": "she is miss yvonne.", "errors": [{"word": "she", "correct": "She", "reason": "句首大寫"}, {"word": "miss", "correct": "Miss", "reason": "名字大寫"}, {"word": "yvonne.", "correct": "Yvonne.", "reason": "名字大寫"}]}, {"sentence": "We have art on tuesdays.", "errors": [{"word": "tuesdays.", "correct": "Tuesdays.", "reason": "星期名大寫"}]}, {"sentence": "Is this a pen", "errors": [{"word": "pen", "correct": "pen?", "reason": "問句用問號"}]}, {"sentence": "i am hungry", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}, {"word": "hungry", "correct": "hungry.", "reason": "句尾加句號"}]}, {"sentence": "can he skate", "errors": [{"word": "can", "correct": "Can", "reason": "句首大寫"}, {"word": "skate", "correct": "skate?", "reason": "問句用問號"}]}, {"sentence": "my name is mary", "errors": [{"word": "my", "correct": "My", "reason": "句首大寫"}, {"word": "mary", "correct": "Mary", "reason": "名字大寫"}, {"word": "mary", "correct": "Mary.", "reason": "加句號"}]}], "grammar": [], "reading": [], "story": [], "subject": []};
+var QUIZ_DATA = {"phonics": [{"q": "cake 的長 a 是哪一種拼法？", "opts": ["a_e", "ai", "ay", "a"], "c": 0}, {"q": "play 的長 a 拼法是？", "opts": ["a_e", "ai", "ay", "a"], "c": 2}, {"q": "meat 的長 e 拼法是？", "opts": ["ee", "ea", "e", "y"], "c": 1}, {"q": "night 的長 i 拼法是？", "opts": ["i_e", "ie", "igh", "y"], "c": 2}, {"q": "snow 的長 o 拼法是？", "opts": ["o_e", "oe", "ow", "oa"], "c": 2}, {"q": "fruit 的長 u 拼法是？", "opts": ["u_e", "ui", "ue", "u"], "c": 1}, {"q": "chair 的 blend 是？", "opts": ["ch", "sh", "th", "gr"], "c": 0}, {"q": "truck 的 blend 是？", "opts": ["tr", "dr", "br", "fr"], "c": 0}, {"q": "flower 的 blend 是？", "opts": ["fl", "pl", "bl", "cl"], "c": 0}, {"q": "blue 的 blend 是？", "opts": ["bl", "pl", "cl", "gl"], "c": 0}], "vocabulary": [{"q": "🥗 沙拉 是？", "opts": ["pizza", "salad", "cheese", "fries"], "c": 1}, {"q": "🍟 薯條 是？", "opts": ["fries", "chicken", "milkshake", "cheese"], "c": 0}, {"q": "🥤 奶昔 是？", "opts": ["juice", "soda", "milkshake", "milk"], "c": 2}, {"q": "50 是？", "opts": ["fifteen", "fifty", "fivety", "five"], "c": 1}, {"q": "70 是？", "opts": ["seventeen", "sevty", "seventy", "seven"], "c": 2}, {"q": "😨 害怕 是？", "opts": ["scared", "angry", "tired", "brave"], "c": 0}, {"q": "💪 勇敢 是？", "opts": ["scared", "brave", "nervous", "sad"], "c": 1}, {"q": "📋 白板 是？", "opts": ["poster", "whiteboard", "drawer", "cabinet"], "c": 1}, {"q": "🎨 美術 是？", "opts": ["art", "music", "science", "P.E."], "c": 0}, {"q": "🏃 體育 是？", "opts": ["gym", "field", "P.E.", "yard"], "c": 2}, {"q": "🏋️ 體育館 是？", "opts": ["gym", "field", "school yard", "art room"], "c": 0}], "sentences": [{"q": "___ is a chair. (遠的一張)", "opts": ["This", "These", "That", "Those"], "c": 2}, {"q": "___ are pencils. (近的)", "opts": ["This", "These", "That", "Those"], "c": 1}, {"q": "Are they happy? → Yes, they ___.", "opts": ["is", "are", "am", "aren't"], "c": 1}, {"q": "Can he skateboard? → No, he ___.", "opts": ["can", "doesn't", "can't", "isn't"], "c": 2}, {"q": "Does he have milkshake? → Yes, he ___.", "opts": ["is", "can", "does", "has"], "c": 2}, {"q": "Is this your book? → No, it ___.", "opts": ["aren't", "can't", "isn't", "doesn't"], "c": 2}], "proofreading": [{"q": "哪個是「我」，一定要大寫？", "opts": ["me", "I", "my", "i"], "c": 1}, {"q": "星期一 Monday 要？", "opts": ["全大寫", "首字大寫", "全小寫", "不用大寫"], "c": 1}, {"q": "人名要？", "opts": ["小寫", "首字大寫", "全大寫", "都可以"], "c": 1}, {"q": "問句最後要？", "opts": ["句號 .", "問號 ?", "驚嘆號 !", "什麼都不用"], "c": 1}, {"q": "陳述句最後要？", "opts": ["句號 .", "問號 ?", "驚嘆號 !", "什麼都不用"], "c": 0}], "grammar": [{"q": "John can swim → ___ can swim.", "opts": ["She", "I", "He", "They"], "c": 2}, {"q": "She hurt ___ (她自己).", "opts": ["himself", "herself", "itself", "myself"], "c": 1}, {"q": "___ is a pencil (近).", "opts": ["That", "These", "This", "Those"], "c": 2}, {"q": "___ are trees (遠).", "opts": ["These", "Those", "This", "That"], "c": 1}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "box 的複數是？", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "「眼鏡」是？", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "a ___ cat (胖)", "opts": ["fats", "a fat", "fat", "fatty"], "c": 2}], "reading": [{"q": "🥚 下蛋 lay eggs 的 lay 是？", "opts": ["吃", "放/產", "跑", "睡"], "c": 1}, {"q": "🐦 鳥喙 是？", "opts": ["feather", "beak", "wing", "claw"], "c": 1}, {"q": "🛁 take a ___", "opts": ["nap", "bath", "walk", "sleep"], "c": 1}, {"q": "💤 take a ___ (午睡)", "opts": ["nap", "bath", "walk", "sleep"], "c": 0}, {"q": "🌱 植物是？", "opts": ["plant", "flour", "vine", "seed"], "c": 0}, {"q": "🦔 刺蝟 是？", "opts": ["rabbit", "hedgehog", "cricket", "bear"], "c": 1}, {"q": "🧤 連指手套 是？", "opts": ["glove", "mitten", "sock", "scarf"], "c": 1}, {"q": "擁擠 是？", "opts": ["crowded", "empty", "cold", "warm"], "c": 0}, {"q": "🌾 小麥 是？", "opts": ["rice", "wheat", "flour", "bread"], "c": 1}, {"q": "🚚 卡車 是？", "opts": ["car", "truck", "bus", "train"], "c": 1}, {"q": "遞送 是？", "opts": ["deliver", "deliver", "taste", "pick"], "c": 0}, {"q": "在過去 in the ___", "opts": ["now", "past", "future", "ago"], "c": 1}], "story": [{"q": "Who gets new mittens?", "opts": ["Mice", "Lance", "Rabbit", "Bear"], "c": 1}, {"q": "What does Lance go out to find?", "opts": ["food", "friends", "firewood", "flowers"], "c": 2}, {"q": "Who finds the mitten first?", "opts": ["Rabbit", "Bear", "Mice", "Cricket"], "c": 2}, {"q": "Why does Rabbit go in?", "opts": ["cold", "hungry", "sleepy", "afraid"], "c": 2}, {"q": "Why does Hedgehog go in?", "opts": ["cold", "hungry", "sleepy", "afraid"], "c": 0}, {"q": "Why does Bear go in?", "opts": ["cold", "hungry", "tired", "angry"], "c": 2}, {"q": "Who is the last to go in?", "opts": ["Bear", "Cricket", "Hedgehog", "Rabbit"], "c": 1}, {"q": "What happens at the end?", "opts": ["They share food", "The mitten breaks", "They sleep", "Lance finds it"], "c": 1}, {"q": "What does 'crowded' mean?", "opts": ["空的", "擁擠", "冷的", "安靜"], "c": 1}, {"q": "What sound does the mitten make?", "opts": ["Rip! Snap! POP!", "Bang!", "Crash!", "Boom!"], "c": 0}], "subject": [{"q": "1/2 是？", "opts": ["whole", "half", "third", "quarter"], "c": 1}, {"q": "1/4 是？", "opts": ["whole", "half", "third", "quarter"], "c": 3}, {"q": "1/3 是？", "opts": ["whole", "half", "third", "quarter"], "c": 2}, {"q": "整個 是?", "opts": ["whole", "half", "third", "quarter"], "c": 0}, {"q": "畫家 是？", "opts": ["artist", "mirror", "face", "background"], "c": 0}, {"q": "鏡子 是？", "opts": ["artist", "mirror", "skin", "face"], "c": 1}, {"q": "皮膚 是？", "opts": ["skin", "face", "background", "mirror"], "c": 0}, {"q": "背景 是？", "opts": ["skin", "face", "mirror", "background"], "c": 3}, {"q": "臉 是？", "opts": ["skin", "face", "background", "mirror"], "c": 1}]};
+
+var currentSection = null;
+var fillState = {};
+var fillActive = null;
+var errSel = {};
+var quizSel = {};
+
+function shuffle(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function enterSection(uid){
+  currentSection = uid;
+  document.getElementById('landing').classList.add('hidden');
+  document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
+  document.getElementById('rv-'+uid).classList.remove('hidden');
+  if (FILL_DATA[uid] && FILL_DATA[uid].length) initFill(uid);
+  if (ERROR_DATA[uid] && ERROR_DATA[uid].length) initError(uid);
+  if (QUIZ_DATA[uid] && QUIZ_DATA[uid].length) initQuiz(uid);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function backToLanding(){
+  currentSection = null;
+  document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
+  document.getElementById('landing').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function initFill(uid){
+  fillActive=null; fillState['u'+uid]={};
+  var area=document.getElementById('fill-'+uid); if(!area)return; area.innerHTML='';
+  var groups=FILL_DATA[uid]||[];
+  groups.forEach(function(group,gi){
+    var grpDiv=document.createElement('div'); grpDiv.className='fill-group';
+    var titleEl=document.createElement('h3'); titleEl.textContent=group.title; grpDiv.appendChild(titleEl);
+    group.sentences.forEach(function(s,si){
+      var key=gi+'-'+si;
+      var div=document.createElement('div'); div.className='fill-sentence';
+      var hintHTML=s.hint?'<span class="hint-tag">'+s.hint+'</span>':'';
+      div.innerHTML=hintHTML+s.before+'<span class="blank" id="bk-'+uid+'-'+key+'" onclick="activateBlank(\''+uid+'\',\''+key+'\','+gi+','+si+')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+s.after;
+      grpDiv.appendChild(div);
+    });
+    var bankDiv=document.createElement('div'); bankDiv.className='word-bank';
+    bankDiv.innerHTML='<span class="wb-label">單字庫：</span>';
+    var seen={};
+    shuffle(group.wordBank).forEach(function(w){
+      if(seen[w])return; seen[w]=true;
+      var btn=document.createElement('button'); btn.className='wb-chip';
+      btn.id='wc-'+uid+'-'+gi+'-'+encodeURIComponent(w);
+      btn.textContent=w;
+      btn.onclick=(function(ww){return function(){pickWord(uid,gi,ww);};})(w);
+      bankDiv.appendChild(btn);
+    });
+    grpDiv.appendChild(bankDiv); area.appendChild(grpDiv);
+  });
+}
+
+function activateBlank(uid,key,gi,si){
+  document.querySelectorAll('#rv-'+uid+' .blank').forEach(function(b){b.classList.remove('active');});
+  fillActive={uid:uid,key:key,gi:gi,si:si};
+  var bk=document.getElementById('bk-'+uid+'-'+key); if(bk)bk.classList.add('active');
+}
+
+function pickWord(uid,gi,word){
+  if(!fillActive||fillActive.uid!==uid||fillActive.gi!==gi){
+    var groups=FILL_DATA[uid]; var group=groups[gi];
+    for(var si=0;si<group.sentences.length;si++){
+      var k=gi+'-'+si;
+      if(!(fillState['u'+uid]||{})[k]){ fillActive={uid:uid,key:k,gi:gi,si:si}; break; }
+    }
+    if(!fillActive||fillActive.gi!==gi)return;
+  }
+  var key=fillActive.key;
+  fillState['u'+uid]=fillState['u'+uid]||{};
+  fillState['u'+uid][key]=word;
+  var bk=document.getElementById('bk-'+uid+'-'+key);
+  if(bk){bk.textContent=word; bk.classList.remove('active','correct','wrong');}
+  fillActive=null;
+}
+
+function checkFill(uid){
+  var groups=FILL_DATA[uid]||[]; var total=0,correct=0;
+  groups.forEach(function(group,gi){
+    group.sentences.forEach(function(s,si){
+      total++;
+      var key=gi+'-'+si;
+      var ans=(fillState['u'+uid]||{})[key];
+      var bk=document.getElementById('bk-'+uid+'-'+key); if(!bk)return;
+      bk.classList.remove('correct','wrong');
+      if(ans&&ans.toLowerCase()===s.ans.toLowerCase()){bk.classList.add('correct'); correct++;}
+      else{bk.classList.add('wrong'); if(ans)bk.textContent=ans+' ❌ (答: '+s.ans+')'; else bk.textContent='(答: '+s.ans+')';}
+    });
+  });
+  if(correct===total)spop('🎉','太棒了！','全部答對！'+correct+'/'+total);
+  else spop('💪','繼續加油','答對 '+correct+'/'+total);
+}
+
+function initError(uid){
+  errSel['u'+uid]={};
+  var area=document.getElementById('err-'+uid); if(!area)return; area.innerHTML='';
+  var data=ERROR_DATA[uid]||[];
+  data.forEach(function(item,idx){
+    var wrap=document.createElement('div'); wrap.className='err-item';
+    var s=document.createElement('div'); s.className='err-sentence';
+    var words=item.sentence.split(' ');
+    words.forEach(function(w,wi){
+      var span=document.createElement('span'); span.className='err-word'; span.textContent=w;
+      span.id='ew-'+uid+'-'+idx+'-'+wi;
+      span.onclick=(function(i,j){return function(){toggleErrWord(uid,i,j);};})(idx,wi);
+      s.appendChild(span); s.appendChild(document.createTextNode(' '));
+    });
+    wrap.appendChild(s);
+    var corr=document.createElement('div'); corr.className='err-correction'; corr.id='ec-'+uid+'-'+idx;
+    wrap.appendChild(corr); area.appendChild(wrap);
+  });
+}
+
+function toggleErrWord(uid,idx,wi){
+  errSel['u'+uid]=errSel['u'+uid]||{};
+  errSel['u'+uid][idx]=errSel['u'+uid][idx]||{};
+  var el=document.getElementById('ew-'+uid+'-'+idx+'-'+wi);
+  if(errSel['u'+uid][idx][wi]){delete errSel['u'+uid][idx][wi]; el.classList.remove('picked');}
+  else{errSel['u'+uid][idx][wi]=true; el.classList.add('picked');}
+}
+
+function checkErrors(uid){
+  var data=ERROR_DATA[uid]||[]; var total=0,correct=0;
+  data.forEach(function(item,idx){
+    var words=item.sentence.split(' ');
+    var errorWords={};
+    item.errors.forEach(function(e){
+      for(var i=0;i<words.length;i++){
+        if(words[i]===e.word&&!errorWords[i]){errorWords[i]=e; break;}
+      }
+    });
+    var picked=errSel['u'+uid]?(errSel['u'+uid][idx]||{}):{};
+    words.forEach(function(w,wi){
+      var el=document.getElementById('ew-'+uid+'-'+idx+'-'+wi);
+      el.classList.remove('picked','correct-ok','wrong-pick');
+      var isError=!!errorWords[wi]; var isPicked=!!picked[wi];
+      if(isError&&isPicked){el.classList.add('correct-ok'); total++; correct++;}
+      else if(isError&&!isPicked){el.classList.add('wrong-pick'); total++;}
+      else if(!isError&&isPicked){el.classList.add('wrong-pick');}
+    });
+    var ec=document.getElementById('ec-'+uid+'-'+idx);
+    var parts=item.errors.map(function(e){
+      var show=e.correct===''?'（刪除）':e.correct;
+      return '「'+e.word+'」→「'+show+'」'+(e.reason?'（'+e.reason+'）':'');
+    });
+    var fixed=words.slice();
+    item.errors.forEach(function(e){
+      for(var i=0;i<fixed.length;i++){if(fixed[i]===e.word){fixed[i]=e.correct; break;}}
+    });
+    fixed=fixed.filter(function(x){return x!=='';});
+    ec.innerHTML='<b>正確：</b>'+fixed.join(' ')+'<br>'+parts.join('；');
+    ec.classList.add('show');
+  });
+  if(total>0&&correct===total)spop('🎉','答對了！','找出所有錯誤！');
+  else spop('💪','再試試','有些還沒找到喔');
+}
+
+function initQuiz(uid){
+  quizSel['u'+uid]={};
+  var area=document.getElementById('quiz-'+uid); if(!area)return; area.innerHTML='';
+  var sd=document.getElementById('quiz-score-'+uid); if(sd)sd.style.display='none';
+  var data=QUIZ_DATA[uid]||[];
+  data.forEach(function(q,qi){
+    var wrap=document.createElement('div'); wrap.className='q-item';
+    var qd=document.createElement('div'); qd.className='qq';
+    qd.textContent=(qi+1)+'. '+q.q; wrap.appendChild(qd);
+    var opts=document.createElement('div'); opts.className='q-opts';
+    q.opts.forEach(function(o,oi){
+      var btn=document.createElement('button'); btn.className='q-opt';
+      btn.id='qo-'+uid+'-'+qi+'-'+oi;
+      btn.textContent=String.fromCharCode(65+oi)+'. '+o;
+      btn.onclick=(function(i,j){return function(){selQ(uid,i,j);};})(qi,oi);
+      opts.appendChild(btn);
+    });
+    wrap.appendChild(opts); area.appendChild(wrap);
+  });
+}
+
+function selQ(uid,qi,oi){
+  var data=QUIZ_DATA[uid];
+  data[qi].opts.forEach(function(_,i){
+    var el=document.getElementById('qo-'+uid+'-'+qi+'-'+i);
+    el.classList.remove('cor','wrg'); el.style.background='';
+  });
+  quizSel['u'+uid]=quizSel['u'+uid]||{}; quizSel['u'+uid][qi]=oi;
+  document.getElementById('qo-'+uid+'-'+qi+'-'+oi).style.background='#f0fdf4';
+}
+
+function checkQuiz(uid){
+  var data=QUIZ_DATA[uid]||[]; var correct=0;
+  data.forEach(function(q,qi){
+    var sel=(quizSel['u'+uid]||{})[qi];
+    q.opts.forEach(function(_,oi){
+      var el=document.getElementById('qo-'+uid+'-'+qi+'-'+oi);
+      el.style.background=''; el.classList.remove('cor','wrg');
+    });
+    if(sel!==undefined){
+      if(sel===q.c){document.getElementById('qo-'+uid+'-'+qi+'-'+sel).classList.add('cor'); correct++;}
+      else{document.getElementById('qo-'+uid+'-'+qi+'-'+sel).classList.add('wrg');
+           document.getElementById('qo-'+uid+'-'+qi+'-'+q.c).classList.add('cor');}
+    } else {
+      document.getElementById('qo-'+uid+'-'+qi+'-'+q.c).classList.add('cor');
+    }
+  });
+  var tot=data.length; var pct=tot?correct/tot:0;
+  var sd=document.getElementById('quiz-score-'+uid); if(sd)sd.style.display='block';
+  var st=document.getElementById('quiz-stars-'+uid); if(st)st.textContent=pct>=1?'⭐⭐⭐':pct>=.6?'⭐⭐':'⭐';
+  var sn=document.getElementById('quiz-snum-'+uid); if(sn)sn.textContent=correct+' / '+tot;
+  var msgs=['再多練習幾次！📖','不錯！繼續加油！💪','答得很好！🎯','全對！太厲害了！🏆'];
+  var sm=document.getElementById('quiz-msg-'+uid); if(sm)sm.textContent=msgs[pct>=1?3:pct>=.75?2:pct>=.5?1:0];
+  if(pct>=.75)spop('⭐',correct+'/'+tot+' 分！',pct===1?'全部答對！超厲害！':'答得很好！繼續加油！');
+}
+
+function spop(emo,title,msg){
+  document.getElementById('pop-emo').textContent=emo;
+  document.getElementById('pop-title').textContent=title;
+  document.getElementById('pop-msg').textContent=msg;
+  document.getElementById('pop').classList.add('show');
+}
+function closePop(){document.getElementById('pop').classList.remove('show');}
+</script>
+</body>
+</html>

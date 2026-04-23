@@ -14,18 +14,50 @@
     <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 
     <style>
-        body { font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; background-color: #f3f4f6; }
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Baloo+2:wght@700;800&display=swap');
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: 'Nunito', 'Microsoft JhengHei', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #fdf4ff, #f5d0fe);
+            color: #1f2937;
+        }
+        .page-hd {
+            max-width: 880px; margin: 0 auto; padding: 20px 16px 8px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .page-hd h1 {
+            font-family: 'Baloo 2', 'Microsoft JhengHei', cursive;
+            font-size: 1.8em; color: #a21caf; margin: 0;
+        }
+        .page-hd .back {
+            background: #fff; border: 2px solid #e9d5ff; border-radius: 14px;
+            padding: 8px 14px; color: #7e22ce; font-weight: 700;
+            text-decoration: none; font-size: 0.9em;
+        }
+        .page-hd .back:hover { background: #f3e8ff; }
+        .page-sub {
+            max-width: 880px; margin: 0 auto 12px; padding: 0 16px;
+            color: #7e22ce; font-size: 0.95em; opacity: 0.85;
+        }
+        #root {
+            max-width: 880px; margin: 0 auto 24px; padding: 20px;
+            background: white; border-radius: 24px;
+            box-shadow: 0 6px 24px rgba(162, 28, 175, 0.12);
+        }
         .interactive-line { stroke-width: 3; stroke-linecap: round; pointer-events: none; }
         .fade-in { animation: fadeIn 0.3s ease-in; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .custom-checkbox:checked + div { background-color: #ebf8ff; border-color: #3b82f6; color: #1d4ed8; }
-        
+        .custom-checkbox:checked + div { background-color: #faf5ff; border-color: #a855f7; color: #7e22ce; }
+
         /* 載入畫面樣式 */
         #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: white; z-index: 9999; display: flex; flex-direction: column;
+            background: linear-gradient(180deg, #fdf4ff, #f5d0fe);
+            z-index: 9999; display: flex; flex-direction: column;
             align-items: center; justify-content: center;
         }
+        #loader .text-2xl { font-family: 'Baloo 2', cursive; color: #a21caf !important; }
         /* 除錯區塊樣式 */
         #debug-console {
             position: fixed; bottom: 0; left: 0; width: 100%; max-height: 150px;
@@ -34,7 +66,7 @@
         }
         .log-error { color: #ff6b6b; border-bottom: 1px solid #555; padding: 2px 0; }
         .log-info { color: #69db7c; border-bottom: 1px solid #555; padding: 2px 0; }
-        
+
         /* Word Search Grid Styles */
         .ws-cell { user-select: none; touch-action: none; }
     </style>
@@ -47,6 +79,13 @@
         <div class="text-gray-500">正在下載資源，請稍候 (Loading Resources...)</div>
         <div id="loading-status" class="mt-4 text-sm text-gray-400">Step 1: HTML Loaded</div>
     </div>
+
+    <!-- 頁首 -->
+    <header class="page-hd">
+        <h1>🔤 Phonics / Vocabulary</h1>
+        <a class="back" href="index.html">← 返回首頁</a>
+    </header>
+    <p class="page-sub">發音、單字學習・聽寫・連連看・Word Search・Hangman</p>
 
     <!-- React 掛載點 -->
     <div id="root" style="display: none;"></div>

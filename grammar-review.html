@@ -7,25 +7,831 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Baloo+2:wght@700;800&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient(180deg,#fdf4ff,#f5d0fe);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
-.box{background:white;border-radius:24px;padding:36px 28px;max-width:400px;width:100%;
-  text-align:center;box-shadow:0 8px 28px rgba(0,0,0,.1)}
-.emoji{font-size:4em;margin-bottom:12px}
-h1{font-family:'Baloo 2',cursive;font-size:1.6em;color:#c026d3;margin-bottom:8px}
-p{color:#64748b;font-size:.95em;line-height:1.6;margin-bottom:20px}
-a{display:inline-block;padding:10px 22px;background:#c026d3;color:white;
-  border-radius:20px;font-family:'Baloo 2',cursive;font-weight:700;text-decoration:none;
-  font-size:.95em;transition:transform .2s}
-a:hover{transform:translateY(-2px)}
+body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient(180deg,#fdf4ff,#f5d0fe);padding:24px}
+.wrap{max-width:880px;margin:0 auto}
+.hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.hd h1{font-family:'Baloo 2',cursive;font-size:1.8em;color:#a21caf}
+.hd .back{background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:8px 14px;
+  color:#7e22ce;font-weight:700;text-decoration:none;font-size:.9em}
+.hd .back:hover{background:#f3e8ff}
+.landing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:24px}
+.u-btn{background:white;border-radius:20px;padding:18px;box-shadow:0 4px 14px rgba(0,0,0,.08);
+  cursor:pointer;border:none;font-family:inherit;text-align:left;transition:transform .2s}
+.u-btn:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.u-btn .unum{font-family:'Baloo 2',cursive;font-size:1.1em;margin-bottom:4px}
+.u-btn .utit{font-weight:800;color:#1e293b;font-size:1.05em;margin-bottom:2px}
+.u-btn .ucn{color:#64748b;font-size:.85em}
+.u-btn .uicon{font-size:2em;margin-bottom:6px}
+.u-all{background:linear-gradient(135deg,#fbcfe8,#f9a8d4);grid-column:1/-1;text-align:center}
+.u-all .uicon{font-size:2.4em}
+.u-all .utit{font-size:1.2em;color:#831843}
+.u-all .unum{color:#db2777}
+.card{background:white;border-radius:24px;padding:24px;margin-bottom:20px;box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.card h2{font-family:'Baloo 2',cursive;font-size:1.3em;color:#7e22ce;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.tp{background:#faf5ff;border-left:4px solid #a855f7;padding:12px 16px;border-radius:10px;margin-bottom:8px;font-size:.95em;line-height:1.7;color:#334155}
+.fill-group{background:#fef3c7;border-radius:14px;padding:14px;margin-bottom:12px}
+.fill-group h3{color:#92400e;font-weight:800;margin-bottom:8px;font-size:1em}
+.fill-sentence{font-size:1.02em;margin-bottom:8px;line-height:1.9;color:#1f2937}
+.hint-tag{display:inline-block;background:#fff;border-radius:8px;padding:2px 8px;margin-right:8px;font-size:.85em;color:#92400e;border:1px dashed #fbbf24}
+.blank{display:inline-block;min-width:90px;border-bottom:2px solid #d97706;padding:2px 6px;margin:0 4px;background:#fffbeb;border-radius:6px;cursor:pointer;font-weight:700;color:#b45309}
+.blank.active{background:#fef3c7;border-bottom-color:#b45309}
+.blank.correct{background:#dcfce7;border-bottom-color:#16a34a;color:#15803d}
+.blank.wrong{background:#fee2e2;border-bottom-color:#dc2626;color:#b91c1c}
+.word-bank{margin-top:10px;padding-top:10px;border-top:1px dashed #fbbf24}
+.wb-label{font-weight:700;color:#92400e;margin-right:8px}
+.wb-chip{display:inline-block;background:#fff;border:2px solid #fbbf24;border-radius:14px;padding:6px 14px;margin:4px 4px;cursor:pointer;font-weight:700;color:#92400e;font-family:inherit;font-size:.9em}
+.wb-chip:hover{background:#fef3c7}
+.wb-chip.used{opacity:.35}
+.err-item{background:#e0f2fe;border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.err-sentence{font-size:1.05em;line-height:1.9;color:#075985}
+.err-word{display:inline-block;padding:1px 6px;margin:0 2px;border-radius:6px;background:#fff;border:2px solid #7dd3fc;cursor:pointer;font-weight:700;color:#0c4a6e}
+.err-word.picked{background:#fef3c7;border-color:#f59e0b}
+.err-word.correct-ok{background:#dcfce7;border-color:#16a34a;color:#15803d}
+.err-word.wrong-pick{background:#fee2e2;border-color:#dc2626;color:#b91c1c}
+.err-correction{display:none;margin-top:6px;padding:6px 10px;background:#fff;border-radius:8px;font-size:.9em;color:#0c4a6e}
+.err-correction.show{display:block}
+.q-item{background:#fce7f3;border-radius:12px;padding:14px;margin-bottom:12px}
+.q-item .qq{font-weight:800;color:#831843;margin-bottom:8px;font-size:1em}
+.q-opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.q-opt{background:#fff;border:2px solid #fbcfe8;border-radius:12px;padding:8px 12px;cursor:pointer;font-family:inherit;font-weight:700;color:#831843;text-align:left;font-size:.9em}
+.q-opt:hover{background:#fdf2f8}
+.q-opt.cor{background:#dcfce7;border-color:#16a34a;color:#15803d}
+.q-opt.wrg{background:#fee2e2;border-color:#dc2626;color:#b91c1c}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.btn{padding:10px 20px;border-radius:14px;font-family:'Baloo 2',cursive;font-weight:700;border:none;cursor:pointer;font-size:.95em}
+.bt{background:#a855f7;color:white}
+.bt:hover{background:#9333ea}
+.bg{background:#facc15;color:#713f12}
+.bg:hover{background:#eab308}
+.br{background:#64748b;color:white}
+.br:hover{background:#475569}
+.score{text-align:center;margin-top:12px;font-family:'Baloo 2',cursive;color:#7e22ce;display:none}
+.score .stars{font-size:2em}
+.score .snum{font-size:1.4em;font-weight:800}
+.hidden{display:none!important}
+.pop{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;z-index:999}
+.pop.show{display:flex}
+.pop-inner{background:white;border-radius:24px;padding:36px 28px;text-align:center;max-width:340px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:pop .4s ease-out}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+.pop-inner .emo{font-size:4em;margin-bottom:8px}
+.pop-inner h3{font-family:'Baloo 2',cursive;font-size:1.4em;color:#a21caf;margin-bottom:6px}
+.pop-inner p{color:#64748b;margin-bottom:16px}
+.pop-inner .ok{background:#a855f7;color:white;border:none;padding:10px 26px;border-radius:20px;font-family:'Baloo 2',cursive;font-weight:700;cursor:pointer}
 </style>
 </head>
 <body>
-<div class="box">
-  <div class="emoji">✏️</div>
-  <h1>Grammar 複習</h1>
-  <p>Grammar 的複習內容正在準備中！<br>請上傳課本頁面，讓我幫你建立複習頁面。</p>
-  <a href="index.html">← 回首頁</a>
+<div class="wrap">
+<div class="hd">
+  <h1>✏️ Grammar 複習</h1>
+  <a class="back" href="index.html">← 回首頁</a>
 </div>
+
+<div id="landing">
+  <div class="landing-grid">
+    <button class="u-btn" style="border-left:6px solid #a855f7" onclick="enterUnit(1)">
+      <div class="uicon">👤</div>
+      <div class="unum" style="color:#a855f7">Unit 1</div>
+      <div class="utit">Singular Pronouns</div>
+      <div class="ucn">單數代名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #8b5cf6" onclick="enterUnit(2)">
+      <div class="uicon">👥</div>
+      <div class="unum" style="color:#8b5cf6">Unit 2</div>
+      <div class="utit">Plural Pronouns</div>
+      <div class="ucn">複數代名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #6366f1" onclick="enterUnit(3)">
+      <div class="uicon">🪞</div>
+      <div class="unum" style="color:#6366f1">Unit 3</div>
+      <div class="utit">Singular Reflexive Pronouns</div>
+      <div class="ucn">單數反身代名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #3b82f6" onclick="enterUnit(4)">
+      <div class="uicon">👥🪞</div>
+      <div class="unum" style="color:#3b82f6">Unit 4</div>
+      <div class="utit">Plural Reflexive Pronouns</div>
+      <div class="ucn">複數反身代名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #06b6d4" onclick="enterUnit(5)">
+      <div class="uicon">👉</div>
+      <div class="unum" style="color:#06b6d4">Unit 5</div>
+      <div class="utit">Singular Demonstrative</div>
+      <div class="ucn">單數指示代名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #14b8a6" onclick="enterUnit(6)">
+      <div class="uicon">👉👉</div>
+      <div class="unum" style="color:#14b8a6">Unit 6</div>
+      <div class="utit">Plural Demonstrative</div>
+      <div class="ucn">複數指示代名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #10b981" onclick="enterUnit(7)">
+      <div class="uicon">👓</div>
+      <div class="unum" style="color:#10b981">Unit 7</div>
+      <div class="utit">Nouns (No Singular Form)</div>
+      <div class="ucn">沒有單數的名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #84cc16" onclick="enterUnit(8)">
+      <div class="uicon">1️⃣</div>
+      <div class="unum" style="color:#84cc16">Unit 8</div>
+      <div class="utit">Singular Countable (A/An)</div>
+      <div class="ucn">單數可數名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #eab308" onclick="enterUnit(9)">
+      <div class="uicon">🔢</div>
+      <div class="unum" style="color:#eab308">Unit 9</div>
+      <div class="utit">Plural Countable Nouns</div>
+      <div class="ucn">複數可數名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #f97316" onclick="enterUnit(10)">
+      <div class="uicon">🥛</div>
+      <div class="unum" style="color:#f97316">Unit 10</div>
+      <div class="utit">Uncountable Nouns</div>
+      <div class="ucn">不可數名詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #ef4444" onclick="enterUnit(11)">
+      <div class="uicon">🎨</div>
+      <div class="unum" style="color:#ef4444">Unit 11</div>
+      <div class="utit">Adjectives</div>
+      <div class="ucn">形容詞</div>
+    </button>
+    <button class="u-btn u-all" onclick="enterUnit('all')">
+      <div class="uicon">🌟</div>
+      <div class="unum">Unit 1-11</div>
+      <div class="utit">全部一起複習</div>
+      <div class="ucn">11 單元綜合練習</div>
+    </button>
+  </div>
+</div>
+
+<div id="rv-1" class="card hidden" style="border-top:6px solid #a855f7">
+  <h2>👤 Unit 1 · Singular Pronouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數代名詞)</span></h2>
+  <div class="tp">單數代名詞：<b>I, you, he, she</b>（一個人或一個東西）</div>
+  <div class="tp">代名詞 (pronoun) 取代「名詞」</div>
+  <div class="tp">例：John can swim → <b>He</b> can swim.</div>
+  <div class="tp">例：My mother is tired. <b>She</b> needs a rest.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-1"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('1')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('1')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-1"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('1')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('1')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-1"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('1')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('1')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-1">
+    <div class="stars" id="quiz-stars-1"></div>
+    <div class="snum" id="quiz-snum-1"></div>
+    <div id="quiz-msg-1"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-2" class="card hidden" style="border-top:6px solid #8b5cf6">
+  <h2>👥 Unit 2 · Plural Pronouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(複數代名詞)</span></h2>
+  <div class="tp">複數代名詞：<b>we, you, they</b>（兩個或以上）</div>
+  <div class="tp">例：The lions → <b>They</b> are sleeping.</div>
+  <div class="tp">例：Peter and I → <b>We</b> are boys.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-2"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('2')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('2')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-2"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('2')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('2')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-2"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('2')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('2')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-2">
+    <div class="stars" id="quiz-stars-2"></div>
+    <div class="snum" id="quiz-snum-2"></div>
+    <div id="quiz-msg-2"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-3" class="card hidden" style="border-top:6px solid #6366f1">
+  <h2>🪞 Unit 3 · Singular Reflexive Pronouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數反身代名詞)</span></h2>
+  <div class="tp">單數反身代名詞：<b>myself, yourself, himself, herself, itself</b></div>
+  <div class="tp">指回「動作的人自己」</div>
+  <div class="tp">例：I am drying <b>myself</b>.</div>
+  <div class="tp">例：She hurt <b>herself</b>.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-3"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('3')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('3')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-3"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('3')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('3')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-3"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('3')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('3')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-3">
+    <div class="stars" id="quiz-stars-3"></div>
+    <div class="snum" id="quiz-snum-3"></div>
+    <div id="quiz-msg-3"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-4" class="card hidden" style="border-top:6px solid #3b82f6">
+  <h2>👥🪞 Unit 4 · Plural Reflexive Pronouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(複數反身代名詞)</span></h2>
+  <div class="tp">複數反身代名詞：<b>ourselves, yourselves, themselves</b></div>
+  <div class="tp">例：We cooled <b>ourselves</b>.</div>
+  <div class="tp">例：They were ashamed of <b>themselves</b>.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-4"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('4')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('4')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-4"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('4')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('4')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-4"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('4')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('4')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-4">
+    <div class="stars" id="quiz-stars-4"></div>
+    <div class="snum" id="quiz-snum-4"></div>
+    <div id="quiz-msg-4"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-5" class="card hidden" style="border-top:6px solid #06b6d4">
+  <h2>👉 Unit 5 · Singular Demonstrative <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數指示代名詞)</span></h2>
+  <div class="tp"><b>this</b>👉 附近的單數；<b>that</b>👉 較遠的單數</div>
+  <div class="tp">例：<b>This</b> is a pencil. / <b>That</b> is a table.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-5"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('5')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('5')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-5"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('5')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('5')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-5"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('5')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('5')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-5">
+    <div class="stars" id="quiz-stars-5"></div>
+    <div class="snum" id="quiz-snum-5"></div>
+    <div id="quiz-msg-5"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-6" class="card hidden" style="border-top:6px solid #14b8a6">
+  <h2>👉👉 Unit 6 · Plural Demonstrative <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(複數指示代名詞)</span></h2>
+  <div class="tp"><b>these</b>👉👉 附近的複數；<b>those</b>👉👉 較遠的複數</div>
+  <div class="tp">例：<b>These</b> are flowers. / <b>Those</b> are trees.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-6"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('6')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('6')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-6"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('6')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('6')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-6"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('6')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('6')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-6">
+    <div class="stars" id="quiz-stars-6"></div>
+    <div class="snum" id="quiz-snum-6"></div>
+    <div id="quiz-msg-6"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-7" class="card hidden" style="border-top:6px solid #10b981">
+  <h2>👓 Unit 7 · Nouns (No Singular Form) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(沒有單數的名詞)</span></h2>
+  <div class="tp">大多數複數名詞字尾加 <b>-s</b> 或 <b>-es</b></div>
+  <div class="tp">有些永遠複數：spectacles 眼鏡、trousers 褲子、pyjamas 睡衣</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-7"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('7')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('7')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-7"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('7')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('7')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-7"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('7')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('7')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-7">
+    <div class="stars" id="quiz-stars-7"></div>
+    <div class="snum" id="quiz-snum-7"></div>
+    <div id="quiz-msg-7"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-8" class="card hidden" style="border-top:6px solid #84cc16">
+  <h2>1️⃣ Unit 8 · Singular Countable (A/An) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數可數名詞)</span></h2>
+  <div class="tp">單數可數用 <b>a / an</b></div>
+  <div class="tp"><b>a</b> + 子音開頭：a cat, a book</div>
+  <div class="tp"><b>an</b> + 母音開頭 (a/e/i/o/u)：an apple, an elephant</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-8"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('8')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('8')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-8"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('8')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('8')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-8"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('8')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('8')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-8">
+    <div class="stars" id="quiz-stars-8"></div>
+    <div class="snum" id="quiz-snum-8"></div>
+    <div id="quiz-msg-8"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-9" class="card hidden" style="border-top:6px solid #eab308">
+  <h2>🔢 Unit 9 · Plural Countable Nouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(複數可數名詞)</span></h2>
+  <div class="tp">複數可數名詞</div>
+  <div class="tp">加 -s → chairs、加 -es (s/x/ch/sh) → boxes、matches</div>
+  <div class="tp">子音+y → ies → housefly → houseflies</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-9"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('9')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('9')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-9"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('9')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('9')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-9"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('9')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('9')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-9">
+    <div class="stars" id="quiz-stars-9"></div>
+    <div class="snum" id="quiz-snum-9"></div>
+    <div id="quiz-msg-9"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-10" class="card hidden" style="border-top:6px solid #f97316">
+  <h2>🥛 Unit 10 · Uncountable Nouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(不可數名詞)</span></h2>
+  <div class="tp">不可數名詞：water, milk, rice, sugar, butter, sand, bread</div>
+  <div class="tp">不能用 two waters；要用量詞 a glass of water</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-10"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('10')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('10')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-10"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('10')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('10')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-10"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('10')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('10')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-10">
+    <div class="stars" id="quiz-stars-10"></div>
+    <div class="snum" id="quiz-snum-10"></div>
+    <div id="quiz-msg-10"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-11" class="card hidden" style="border-top:6px solid #ef4444">
+  <h2>🎨 Unit 11 · Adjectives <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(形容詞)</span></h2>
+  <div class="tp">形容詞 adjectives 形容名詞</div>
+  <div class="tp">位置 1：名詞前 → a fat cat</div>
+  <div class="tp">位置 2：be 動詞後 → The house is big.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-11"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('11')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('11')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-11"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('11')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('11')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-11"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('11')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('11')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-11">
+    <div class="stars" id="quiz-stars-11"></div>
+    <div class="snum" id="quiz-snum-11"></div>
+    <div id="quiz-msg-11"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-all" class="card hidden" style="border-top:6px solid #db2777">
+  <h2>🌟 Unit 1-11 全部複習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(綜合練習)</span></h2>
+  <div class="tp">🎯 Unit 1-11 綜合複習</div>
+  <div class="tp">代名詞：單數 (I, you, he, she)、複數 (we, you, they)</div>
+  <div class="tp">反身代名詞：myself/yourself/himself/herself/itself/ourselves/yourselves/themselves</div>
+  <div class="tp">指示代名詞：this/that/these/those（近↔遠、單↔複）</div>
+  <div class="tp">名詞：a/an、單數/複數規則、不可數、永遠複數 (spectacles, trousers, pyjamas)</div>
+  <div class="tp">形容詞：放名詞前 (a fat cat) 或 be 動詞後 (It is big.)</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-all"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('all')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('all')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-all"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('all')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('all')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-all"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('all')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('all')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-all">
+    <div class="stars" id="quiz-stars-all"></div>
+    <div class="snum" id="quiz-snum-all"></div>
+    <div id="quiz-msg-all"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+
+<div class="pop" id="pop">
+  <div class="pop-inner">
+    <div class="emo" id="pop-emo">🎉</div>
+    <h3 id="pop-title">Great!</h3>
+    <p id="pop-msg"></p>
+    <button class="ok" onclick="closePop()">好！</button>
+  </div>
+</div>
+
+</div>
+
+<script>
+var FILL_DATA = {"1": [{"title": "I / You / He / She", "sentences": [{"hint": "👦 我", "before": "", "after": " am Simon.", "ans": "I"}, {"hint": "👧 你", "before": "", "after": " are Mary.", "ans": "You"}, {"hint": "👩 她", "before": "", "after": " is Miss Lee.", "ans": "She"}, {"hint": "👨 他", "before": "", "after": " is Mr Tan.", "ans": "He"}, {"hint": "👨 他 (John)", "before": "", "after": " can swim very fast.", "ans": "He"}, {"hint": "👩 她 (mother)", "before": "", "after": " needs a rest.", "ans": "She"}], "wordBank": ["I", "You", "He", "She"]}], "2": [{"title": "We / You / They", "sentences": [{"hint": "👨‍👩‍👦 我們", "before": "", "after": " are boys.", "ans": "We"}, {"hint": "👧👧 你們", "before": "", "after": " are girls.", "ans": "You"}, {"hint": "👨‍🏫 他們", "before": "", "after": " are teachers.", "ans": "They"}, {"hint": "🦁 他們(lions)", "before": "The lions are in the cage. ", "after": " are sleeping.", "ans": "They"}, {"hint": "我+他=我們", "before": "Peter and I are tall. ", "after": " are brothers.", "ans": "We"}], "wordBank": ["We", "You", "They"]}], "3": [{"title": "Reflexive (單數)", "sentences": [{"hint": "🧴 我自己", "before": "I am drying ", "after": " with a towel.", "ans": "myself"}, {"hint": "⌚ 你自己", "before": "You have bought ", "after": " a new watch.", "ans": "yourself"}, {"hint": "✂️ 他自己", "before": "He cut ", "after": " accidentally.", "ans": "himself"}, {"hint": "🤕 她自己", "before": "She fell and hurt ", "after": ".", "ans": "herself"}, {"hint": "🐱 它自己", "before": "The cat hid ", "after": " under the table.", "ans": "itself"}], "wordBank": ["myself", "yourself", "himself", "herself", "itself"]}], "4": [{"title": "Reflexive (複數)", "sentences": [{"hint": "🧼 你們自己", "before": "You can wash ", "after": " with soap.", "ans": "yourselves"}, {"hint": "😳 他們自己", "before": "They were ashamed of ", "after": ".", "ans": "themselves"}, {"hint": "🌬️ 我們自己", "before": "We cooled ", "after": " under the fan.", "ans": "ourselves"}, {"hint": "🏃 我們自己", "before": "We saved ", "after": " by running away.", "ans": "ourselves"}, {"hint": "🏊 他們自己", "before": "They taught ", "after": " to swim.", "ans": "themselves"}], "wordBank": ["ourselves", "yourselves", "themselves"]}], "5": [{"title": "this / that", "sentences": [{"hint": "✏️ 近的 (this)", "before": "", "after": " is a pencil.", "ans": "This"}, {"hint": "🪑 遠的 (that)", "before": "", "after": " is a table.", "ans": "That"}, {"hint": "📦 近的疑問", "before": "What is ", "after": " in the box?", "ans": "this"}, {"hint": "🗿 遠的疑問", "before": "What is ", "after": " behind the rock?", "ans": "that"}], "wordBank": ["This", "That", "this", "that"]}], "6": [{"title": "these / those", "sentences": [{"hint": "🌸🌸 近的", "before": "", "after": " are flowers.", "ans": "These"}, {"hint": "🌳🌳 遠的", "before": "", "after": " are trees.", "ans": "Those"}, {"hint": "📦 近的疑問", "before": "What are ", "after": " in the box?", "ans": "these"}, {"hint": "🗿 遠的疑問", "before": "What are ", "after": " behind the rock?", "ans": "those"}], "wordBank": ["These", "Those", "these", "those"]}], "7": [{"title": "沒有單數形的名詞", "sentences": [{"hint": "👓 眼鏡", "before": "My dad wears ", "after": ".", "ans": "spectacles"}, {"hint": "👖 長褲", "before": "I wear ", "after": ".", "ans": "trousers"}, {"hint": "🛏️ 睡衣", "before": "I sleep in my ", "after": ".", "ans": "pyjamas"}, {"hint": "🍎🍎 apple→?", "before": "I see three ", "after": ".", "ans": "apples"}, {"hint": "🥛🥛 glass→?", "before": "There are two ", "after": ".", "ans": "glasses"}], "wordBank": ["spectacles", "trousers", "pyjamas", "apples", "glasses"]}], "8": [{"title": "a / an", "sentences": [{"hint": "🍎 母音開頭", "before": "I have ", "after": " apple.", "ans": "an"}, {"hint": "🐱 子音開頭", "before": "I have ", "after": " cat.", "ans": "a"}, {"hint": "👩‍🏫 子音開頭", "before": "She is ", "after": " teacher.", "ans": "a"}, {"hint": "🐘 母音開頭", "before": "It is ", "after": " elephant.", "ans": "an"}, {"hint": "📙 子音開頭", "before": "This is ", "after": " book.", "ans": "a"}, {"hint": "🕗 母音開頭", "before": "It was ", "after": " hour ago.", "ans": "an"}], "wordBank": ["a", "an"]}], "9": [{"title": "複數可數名詞", "sentences": [{"hint": "🪑🪑 chair→?", "before": "Two ", "after": " in the room.", "ans": "chairs"}, {"hint": "🐯🐯 tiger→?", "before": "Three ", "after": " in the zoo.", "ans": "tigers"}, {"hint": "📦📦 box→?", "before": "Four ", "after": " on the table.", "ans": "boxes"}, {"hint": "🔥🔥 match→?", "before": "Five ", "after": " in the packet.", "ans": "matches"}, {"hint": "🐎🐎 horse→?", "before": "Six ", "after": " are running.", "ans": "horses"}, {"hint": "🪥🪥 brush→?", "before": "Two ", "after": " in the cup.", "ans": "brushes"}], "wordBank": ["chairs", "tigers", "boxes", "matches", "horses", "brushes"]}], "10": [{"title": "不可數名詞", "sentences": [{"hint": "💧 水", "before": "I drink ", "after": " every day.", "ans": "water"}, {"hint": "🥛 牛奶", "before": "She has ", "after": " for breakfast.", "ans": "milk"}, {"hint": "🍚 米飯", "before": "We eat ", "after": " for lunch.", "ans": "rice"}, {"hint": "🍯 糖", "before": "Please pass me the ", "after": ".", "ans": "sugar"}, {"hint": "🍞 麵包", "before": "I have ", "after": " with butter.", "ans": "bread"}], "wordBank": ["water", "milk", "rice", "sugar", "bread"]}], "11": [{"title": "形容詞", "sentences": [{"hint": "🐱 胖", "before": "a ", "after": " cat", "ans": "fat"}, {"hint": "🌙 冷", "before": "a ", "after": " night", "ans": "cold"}, {"hint": "📙 厚", "before": "a ", "after": " book", "ans": "thick"}, {"hint": "🏠 大", "before": "The house is ", "after": ".", "ans": "big"}, {"hint": "🪨 重", "before": "The stone is ", "after": ".", "ans": "heavy"}, {"hint": "😊 開心", "before": "They are ", "after": ".", "ans": "happy"}], "wordBank": ["fat", "cold", "thick", "big", "heavy", "happy"]}], "all": [{"title": "代名詞 (1-2)", "sentences": [{"hint": "👧 Mary", "before": "", "after": " am Mary.", "ans": "I"}, {"hint": "👨 Mr Tan", "before": "", "after": " is Mr Tan.", "ans": "He"}, {"hint": "👨‍👩‍👦 我們", "before": "", "after": " are boys.", "ans": "We"}, {"hint": "🦁 lions", "before": "The lions are sleeping. ", "after": " are in the cage.", "ans": "They"}], "wordBank": ["I", "He", "We", "They"]}, {"title": "反身代名詞 (3-4)", "sentences": [{"hint": "🧴 我自己", "before": "I am drying ", "after": ".", "ans": "myself"}, {"hint": "🤕 她自己", "before": "She hurt ", "after": ".", "ans": "herself"}, {"hint": "🌬️ 我們", "before": "We cooled ", "after": ".", "ans": "ourselves"}, {"hint": "🏊 他們", "before": "They taught ", "after": " to swim.", "ans": "themselves"}], "wordBank": ["myself", "herself", "ourselves", "themselves"]}, {"title": "指示代名詞 (5-6)", "sentences": [{"hint": "✏️ 近的單", "before": "", "after": " is a pencil.", "ans": "This"}, {"hint": "🪑 遠的單", "before": "", "after": " is a table.", "ans": "That"}, {"hint": "🌸🌸 近的複", "before": "", "after": " are flowers.", "ans": "These"}, {"hint": "🌳🌳 遠的複", "before": "", "after": " are trees.", "ans": "Those"}], "wordBank": ["This", "That", "These", "Those"]}, {"title": "名詞 (7-10)", "sentences": [{"hint": "🍎 母音", "before": "I eat ", "after": " apple.", "ans": "an"}, {"hint": "🐱 子音", "before": "I have ", "after": " cat.", "ans": "a"}, {"hint": "📦 box 複", "before": "Four ", "after": " on the table.", "ans": "boxes"}, {"hint": "💧 不可數", "before": "I drink ", "after": " every day.", "ans": "water"}, {"hint": "👓 永遠複", "before": "My dad wears ", "after": ".", "ans": "spectacles"}], "wordBank": ["a", "an", "boxes", "water", "spectacles"]}, {"title": "形容詞 (11)", "sentences": [{"hint": "🐱 胖", "before": "a ", "after": " cat", "ans": "fat"}, {"hint": "🏠 大", "before": "The house is ", "after": ".", "ans": "big"}, {"hint": "😊 開心", "before": "They are ", "after": ".", "ans": "happy"}], "wordBank": ["fat", "big", "happy"]}]};
+var ERROR_DATA = {"1": [{"sentence": "i am six years old.", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}]}, {"sentence": "He are my neighbour.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}, {"sentence": "she am Miss Lee.", "errors": [{"word": "she", "correct": "She", "reason": "句首大寫"}, {"word": "am", "correct": "is", "reason": "She 用 is"}]}, {"sentence": "you is tall.", "errors": [{"word": "you", "correct": "You", "reason": "句首大寫"}, {"word": "is", "correct": "are", "reason": "You 用 are"}]}], "2": [{"sentence": "they is boys.", "errors": [{"word": "they", "correct": "They", "reason": "句首大寫"}, {"word": "is", "correct": "are", "reason": "They 用 are"}]}, {"sentence": "we am hungry.", "errors": [{"word": "we", "correct": "We", "reason": "句首大寫"}, {"word": "am", "correct": "are", "reason": "We 用 are"}]}, {"sentence": "The lions is sleeping.", "errors": [{"word": "is", "correct": "are", "reason": "複數 lions 用 are"}]}, {"sentence": "Peter and I is tall.", "errors": [{"word": "is", "correct": "are", "reason": "我們 (We) 用 are"}]}], "3": [{"sentence": "I am drying myselves.", "errors": [{"word": "myselves", "correct": "myself", "reason": "單數用 myself"}]}, {"sentence": "She hurt himself.", "errors": [{"word": "himself", "correct": "herself", "reason": "She 用 herself"}]}, {"sentence": "He cut herself.", "errors": [{"word": "herself", "correct": "himself", "reason": "He 用 himself"}]}, {"sentence": "The cat hid himself.", "errors": [{"word": "himself", "correct": "itself", "reason": "貓 (it) 用 itself"}]}], "4": [{"sentence": "We saved ourself.", "errors": [{"word": "ourself", "correct": "ourselves", "reason": "We 用 ourselves"}]}, {"sentence": "They taught himselves to swim.", "errors": [{"word": "himselves", "correct": "themselves", "reason": "They 用 themselves"}]}, {"sentence": "You can wash yourself, everyone.", "errors": [{"word": "yourself", "correct": "yourselves", "reason": "everyone 這裡表大家用 yourselves"}]}], "5": [{"sentence": "these is a pencil.", "errors": [{"word": "these", "correct": "This", "reason": "單數用 This"}]}, {"sentence": "That are a table.", "errors": [{"word": "are", "correct": "is", "reason": "單數用 is"}]}, {"sentence": "this is a pencil", "errors": [{"word": "this", "correct": "This", "reason": "句首大寫"}, {"word": "pencil", "correct": "pencil.", "reason": "句尾需要句號"}]}], "6": [{"sentence": "this are flowers.", "errors": [{"word": "this", "correct": "These", "reason": "複數用 These"}]}, {"sentence": "Those is trees.", "errors": [{"word": "is", "correct": "are", "reason": "複數用 are"}]}, {"sentence": "that are my books.", "errors": [{"word": "that", "correct": "Those", "reason": "複數用 Those"}]}], "7": [{"sentence": "I wear a trouser.", "errors": [{"word": "a", "correct": "", "reason": "trousers 永遠複數"}, {"word": "trouser", "correct": "trousers", "reason": "永遠複數"}]}, {"sentence": "Bring me the spectacle.", "errors": [{"word": "spectacle", "correct": "spectacles", "reason": "永遠複數"}]}, {"sentence": "I sleep in my pyjama.", "errors": [{"word": "pyjama", "correct": "pyjamas", "reason": "永遠複數"}]}], "8": [{"sentence": "I eat a apple.", "errors": [{"word": "a", "correct": "an", "reason": "apple 母音用 an"}]}, {"sentence": "She is an teacher.", "errors": [{"word": "an", "correct": "a", "reason": "teacher 子音用 a"}]}, {"sentence": "It is a elephant.", "errors": [{"word": "a", "correct": "an", "reason": "elephant 母音用 an"}]}, {"sentence": "This is an book.", "errors": [{"word": "an", "correct": "a", "reason": "book 子音用 a"}]}], "9": [{"sentence": "Two tiger in the zoo.", "errors": [{"word": "tiger", "correct": "tigers", "reason": "複數加 s"}]}, {"sentence": "Three box on the table.", "errors": [{"word": "box", "correct": "boxes", "reason": "字尾 x 加 es"}]}, {"sentence": "Four match in the packet.", "errors": [{"word": "match", "correct": "matches", "reason": "字尾 ch 加 es"}]}, {"sentence": "Five horse are running.", "errors": [{"word": "horse", "correct": "horses", "reason": "複數加 s"}]}], "10": [{"sentence": "I drink two waters.", "errors": [{"word": "two", "correct": "", "reason": "water 不可數"}, {"word": "waters", "correct": "water", "reason": "water 不可數"}]}, {"sentence": "Please pass me three sugars.", "errors": [{"word": "three", "correct": "", "reason": "sugar 不可數"}, {"word": "sugars", "correct": "sugar", "reason": "sugar 不可數"}]}, {"sentence": "I want a rice.", "errors": [{"word": "a", "correct": "", "reason": "rice 不可數不用 a"}]}], "11": [{"sentence": "The house big is.", "errors": [{"word": "big", "correct": "is", "reason": "順序錯"}, {"word": "is", "correct": "big.", "reason": "應是 is big"}]}, {"sentence": "They are happys.", "errors": [{"word": "happys", "correct": "happy", "reason": "形容詞不加 s"}]}, {"sentence": "The stone is heavys.", "errors": [{"word": "heavys", "correct": "heavy", "reason": "形容詞不加 s"}]}], "all": [{"sentence": "i am six years old.", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}]}, {"sentence": "He are my neighbour.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}, {"sentence": "We saved ourself.", "errors": [{"word": "ourself", "correct": "ourselves", "reason": "We 用 ourselves"}]}, {"sentence": "this are flowers.", "errors": [{"word": "this", "correct": "These", "reason": "複數用 These"}]}, {"sentence": "I eat a apple.", "errors": [{"word": "a", "correct": "an", "reason": "apple 母音用 an"}]}, {"sentence": "Two tiger in the zoo.", "errors": [{"word": "tiger", "correct": "tigers", "reason": "複數加 s"}]}, {"sentence": "I drink two waters.", "errors": [{"word": "two", "correct": "", "reason": "water 不可數"}, {"word": "waters", "correct": "water", "reason": "water 不可數"}]}, {"sentence": "They are happys.", "errors": [{"word": "happys", "correct": "happy", "reason": "形容詞不加 s"}]}]};
+var QUIZ_DATA = {"1": [{"q": "Mary 說：___ am Mary.", "opts": ["I", "You", "He", "She"], "c": 0}, {"q": "介紹 Miss Lee：___ is Miss Lee.", "opts": ["He", "She", "You", "I"], "c": 1}, {"q": "介紹 Mr Tan：___ is Mr Tan.", "opts": ["She", "I", "He", "You"], "c": 2}, {"q": "John 會游泳：___ can swim very fast.", "opts": ["She", "I", "You", "He"], "c": 3}, {"q": "媽媽累了：___ needs a rest.", "opts": ["He", "She", "It", "I"], "c": 1}], "2": [{"q": "Peter and I → ___ are brothers.", "opts": ["They", "You", "We", "She"], "c": 2}, {"q": "The lions → ___ are in the cage.", "opts": ["We", "They", "You", "He"], "c": 1}, {"q": "You and Mary → ___ are girls.", "opts": ["They", "We", "I", "You"], "c": 3}, {"q": "he / she / it 的複數是？", "opts": ["we", "you", "they", "I"], "c": 2}], "3": [{"q": "I am drying ___ with a towel.", "opts": ["yourself", "myself", "himself", "itself"], "c": 1}, {"q": "She fell and hurt ___.", "opts": ["herself", "himself", "itself", "myself"], "c": 0}, {"q": "He cut ___ accidentally.", "opts": ["herself", "itself", "himself", "yourself"], "c": 2}, {"q": "The cat hid ___.", "opts": ["himself", "itself", "herself", "yourself"], "c": 1}], "4": [{"q": "We saved ___.", "opts": ["themselves", "yourselves", "ourselves", "himself"], "c": 2}, {"q": "They taught ___ to swim.", "opts": ["ourselves", "themselves", "yourselves", "herself"], "c": 1}, {"q": "You (大家) can wash ___.", "opts": ["yourself", "yourselves", "themselves", "ourselves"], "c": 1}, {"q": "The students gave ___ a treat.", "opts": ["themselves", "ourselves", "yourselves", "itself"], "c": 0}], "5": [{"q": "近的東西用哪個？", "opts": ["that", "this", "these", "those"], "c": 1}, {"q": "遠的東西用哪個？", "opts": ["this", "these", "that", "those"], "c": 2}, {"q": "___ is a pencil. (我手上的)", "opts": ["That", "These", "This", "Those"], "c": 2}, {"q": "What is ___ behind the rock?", "opts": ["this", "that", "these", "those"], "c": 1}], "6": [{"q": "近的一群用哪個？", "opts": ["this", "that", "these", "those"], "c": 2}, {"q": "遠的一群用哪個？", "opts": ["this", "that", "these", "those"], "c": 3}, {"q": "___ are my books (在我旁邊)", "opts": ["That", "This", "Those", "These"], "c": 3}, {"q": "___ are trees (遠方)", "opts": ["These", "Those", "This", "That"], "c": 1}], "7": [{"q": "🥽 眼鏡的英文？", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "👖 長褲的英文？", "opts": ["trouser", "trousers", "pant", "pants"], "c": 1}, {"q": "🛏️ 睡衣的英文？", "opts": ["pyjama", "pyjamas", "sleep", "sleeps"], "c": 1}, {"q": "apple 的複數？", "opts": ["apple", "apples", "apple's", "applees"], "c": 1}], "8": [{"q": "___ apple", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "___ cat", "opts": ["a", "an", "the", "無"], "c": 0}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "___ teacher", "opts": ["a", "an", "the", "無"], "c": 0}, {"q": "___ hour", "opts": ["a", "an", "the", "無"], "c": 1}], "9": [{"q": "box 的複數？", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "match 的複數？", "opts": ["matchs", "matches", "matchies", "match"], "c": 1}, {"q": "chair 的複數？", "opts": ["chaires", "chairs", "chairies", "chair"], "c": 1}, {"q": "housefly 的複數？", "opts": ["houseflys", "houseflies", "housefly", "houseflyes"], "c": 1}], "10": [{"q": "Water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "Book 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 0}, {"q": "正確？", "opts": ["two waters", "a water", "some water", "three waters"], "c": 2}, {"q": "喝牛奶怎麼說？", "opts": ["a milk", "two milks", "a glass of milk", "three milks"], "c": 2}], "11": [{"q": "順序正確？", "opts": ["a cat fat", "a fat cat", "fat a cat", "cat a fat"], "c": 1}, {"q": "The house is ___.", "opts": ["bigs", "big", "bigly", "a big"], "c": 1}, {"q": "They are ___.", "opts": ["happy", "happys", "happying", "a happy"], "c": 0}, {"q": "a ___ book (厚)", "opts": ["thicks", "a thick", "thick", "thicker"], "c": 2}], "all": [{"q": "John can swim → ___ can swim.", "opts": ["She", "I", "He", "They"], "c": 2}, {"q": "複數 he/she/it →", "opts": ["we", "you", "they", "I"], "c": 2}, {"q": "She fell and hurt ___.", "opts": ["herself", "himself", "itself", "myself"], "c": 0}, {"q": "We taught ___ to swim.", "opts": ["themselves", "ourselves", "yourselves", "herself"], "c": 1}, {"q": "近的單數用：", "opts": ["that", "this", "these", "those"], "c": 1}, {"q": "遠的複數用：", "opts": ["this", "that", "these", "those"], "c": 3}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "box 的複數是：", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "Water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "眼鏡的英文：", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "The house is ___.", "opts": ["bigs", "big", "bigly", "a big"], "c": 1}, {"q": "a ___ book (厚)", "opts": ["thicks", "a thick", "thick", "thicker"], "c": 2}]};
+
+var currentUnit = null;
+var fillState = {};
+var fillActive = null;
+var errSel = {};
+var quizSel = {};
+
+function shuffle(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+function enterUnit(uid){
+  currentUnit = uid;
+  document.getElementById('landing').classList.add('hidden');
+  document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
+  document.getElementById('rv-'+uid).classList.remove('hidden');
+  initFill(uid); initError(uid); initQuiz(uid);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function backToLanding(){
+  currentUnit = null;
+  document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
+  document.getElementById('landing').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function initFill(uid){
+  fillActive=null; fillState['u'+uid]={};
+  var area=document.getElementById('fill-'+uid); area.innerHTML='';
+  var groups=FILL_DATA[uid]||[];
+  groups.forEach(function(group,gi){
+    var grpDiv=document.createElement('div'); grpDiv.className='fill-group';
+    var titleEl=document.createElement('h3'); titleEl.textContent=group.title; grpDiv.appendChild(titleEl);
+    group.sentences.forEach(function(s,si){
+      var key=gi+'-'+si;
+      var div=document.createElement('div'); div.className='fill-sentence';
+      var hintHTML=s.hint?'<span class="hint-tag">'+s.hint+'</span>':'';
+      div.innerHTML=hintHTML+s.before+'<span class="blank" id="bk-'+uid+'-'+key+'" onclick="activateBlank(\''+uid+'\',\''+key+'\','+gi+','+si+')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'+s.after;
+      grpDiv.appendChild(div);
+    });
+    var bankDiv=document.createElement('div'); bankDiv.className='word-bank';
+    bankDiv.innerHTML='<span class="wb-label">單字庫：</span>';
+    var seen={};
+    shuffle(group.wordBank).forEach(function(w){
+      if(seen[w])return; seen[w]=true;
+      var btn=document.createElement('button'); btn.className='wb-chip';
+      btn.id='wc-'+uid+'-'+gi+'-'+encodeURIComponent(w);
+      btn.textContent=w;
+      btn.onclick=(function(ww){return function(){pickWord(uid,gi,ww);};})(w);
+      bankDiv.appendChild(btn);
+    });
+    grpDiv.appendChild(bankDiv); area.appendChild(grpDiv);
+  });
+}
+
+function activateBlank(uid,key,gi,si){
+  document.querySelectorAll('#rv-'+uid+' .blank').forEach(function(b){b.classList.remove('active');});
+  fillActive={uid:uid,key:key,gi:gi,si:si};
+  var bk=document.getElementById('bk-'+uid+'-'+key); if(bk)bk.classList.add('active');
+}
+
+function pickWord(uid,gi,word){
+  if(!fillActive||fillActive.uid!==uid||fillActive.gi!==gi){
+    var groups=FILL_DATA[uid]; var group=groups[gi];
+    for(var si=0;si<group.sentences.length;si++){
+      var k=gi+'-'+si;
+      if(!(fillState['u'+uid]||{})[k]){ fillActive={uid:uid,key:k,gi:gi,si:si}; break; }
+    }
+    if(!fillActive||fillActive.gi!==gi)return;
+  }
+  var key=fillActive.key;
+  fillState['u'+uid]=fillState['u'+uid]||{};
+  fillState['u'+uid][key]=word;
+  var bk=document.getElementById('bk-'+uid+'-'+key);
+  if(bk){bk.textContent=word; bk.classList.remove('active','correct','wrong');}
+  fillActive=null;
+}
+
+function checkFill(uid){
+  var groups=FILL_DATA[uid]||[]; var total=0,correct=0;
+  groups.forEach(function(group,gi){
+    group.sentences.forEach(function(s,si){
+      total++;
+      var key=gi+'-'+si;
+      var ans=(fillState['u'+uid]||{})[key];
+      var bk=document.getElementById('bk-'+uid+'-'+key); if(!bk)return;
+      bk.classList.remove('correct','wrong');
+      if(ans&&ans.toLowerCase()===s.ans.toLowerCase()){bk.classList.add('correct'); correct++;}
+      else{bk.classList.add('wrong'); if(ans)bk.textContent=ans+' ❌ (答: '+s.ans+')'; else bk.textContent='(答: '+s.ans+')';}
+    });
+  });
+  if(correct===total)spop('🎉','太棒了！','全部答對！'+correct+'/'+total);
+  else spop('💪','繼續加油','答對 '+correct+'/'+total);
+}
+
+function initError(uid){
+  errSel['u'+uid]={};
+  var area=document.getElementById('err-'+uid); area.innerHTML='';
+  var data=ERROR_DATA[uid]||[];
+  data.forEach(function(item,idx){
+    var wrap=document.createElement('div'); wrap.className='err-item';
+    var s=document.createElement('div'); s.className='err-sentence';
+    var words=item.sentence.split(' ');
+    words.forEach(function(w,wi){
+      var span=document.createElement('span'); span.className='err-word'; span.textContent=w;
+      span.id='ew-'+uid+'-'+idx+'-'+wi;
+      span.onclick=(function(i,j){return function(){toggleErrWord(uid,i,j);};})(idx,wi);
+      s.appendChild(span); s.appendChild(document.createTextNode(' '));
+    });
+    wrap.appendChild(s);
+    var corr=document.createElement('div'); corr.className='err-correction'; corr.id='ec-'+uid+'-'+idx;
+    wrap.appendChild(corr); area.appendChild(wrap);
+  });
+}
+
+function toggleErrWord(uid,idx,wi){
+  errSel['u'+uid]=errSel['u'+uid]||{};
+  errSel['u'+uid][idx]=errSel['u'+uid][idx]||{};
+  var el=document.getElementById('ew-'+uid+'-'+idx+'-'+wi);
+  if(errSel['u'+uid][idx][wi]){delete errSel['u'+uid][idx][wi]; el.classList.remove('picked');}
+  else{errSel['u'+uid][idx][wi]=true; el.classList.add('picked');}
+}
+
+function checkErrors(uid){
+  var data=ERROR_DATA[uid]||[]; var total=0,correct=0;
+  data.forEach(function(item,idx){
+    var words=item.sentence.split(' ');
+    var errorWords={};
+    item.errors.forEach(function(e){
+      for(var i=0;i<words.length;i++){
+        if(words[i]===e.word&&!errorWords[i]){errorWords[i]=e; break;}
+      }
+    });
+    var picked=errSel['u'+uid]?(errSel['u'+uid][idx]||{}):{};
+    words.forEach(function(w,wi){
+      var el=document.getElementById('ew-'+uid+'-'+idx+'-'+wi);
+      el.classList.remove('picked','correct-ok','wrong-pick');
+      var isError=!!errorWords[wi]; var isPicked=!!picked[wi];
+      if(isError&&isPicked){el.classList.add('correct-ok'); total++; correct++;}
+      else if(isError&&!isPicked){el.classList.add('wrong-pick'); total++;}
+      else if(!isError&&isPicked){el.classList.add('wrong-pick');}
+    });
+    var ec=document.getElementById('ec-'+uid+'-'+idx);
+    var parts=item.errors.map(function(e){
+      var show=e.correct===''?'（刪除）':e.correct;
+      return '「'+e.word+'」→「'+show+'」'+(e.reason?'（'+e.reason+'）':'');
+    });
+    var fixed=words.slice();
+    item.errors.forEach(function(e){
+      for(var i=0;i<fixed.length;i++){if(fixed[i]===e.word){fixed[i]=e.correct; break;}}
+    });
+    fixed=fixed.filter(function(x){return x!=='';});
+    ec.innerHTML='<b>正確：</b>'+fixed.join(' ')+'<br>'+parts.join('；');
+    ec.classList.add('show');
+  });
+  if(total>0&&correct===total)spop('🎉','答對了！','找出所有錯誤！');
+  else spop('💪','再試試','有些還沒找到喔');
+}
+
+function initQuiz(uid){
+  quizSel['u'+uid]={};
+  var area=document.getElementById('quiz-'+uid); area.innerHTML='';
+  document.getElementById('quiz-score-'+uid).style.display='none';
+  var data=QUIZ_DATA[uid]||[];
+  data.forEach(function(q,qi){
+    var wrap=document.createElement('div'); wrap.className='q-item';
+    var qd=document.createElement('div'); qd.className='qq';
+    qd.textContent=(qi+1)+'. '+q.q; wrap.appendChild(qd);
+    var opts=document.createElement('div'); opts.className='q-opts';
+    q.opts.forEach(function(o,oi){
+      var btn=document.createElement('button'); btn.className='q-opt';
+      btn.id='qo-'+uid+'-'+qi+'-'+oi;
+      btn.textContent=String.fromCharCode(65+oi)+'. '+o;
+      btn.onclick=(function(i,j){return function(){selQ(uid,i,j);};})(qi,oi);
+      opts.appendChild(btn);
+    });
+    wrap.appendChild(opts); area.appendChild(wrap);
+  });
+}
+
+function selQ(uid,qi,oi){
+  var data=QUIZ_DATA[uid];
+  data[qi].opts.forEach(function(_,i){
+    var el=document.getElementById('qo-'+uid+'-'+qi+'-'+i);
+    el.classList.remove('cor','wrg'); el.style.background='';
+  });
+  quizSel['u'+uid]=quizSel['u'+uid]||{}; quizSel['u'+uid][qi]=oi;
+  document.getElementById('qo-'+uid+'-'+qi+'-'+oi).style.background='#f0fdf4';
+}
+
+function checkQuiz(uid){
+  var data=QUIZ_DATA[uid]||[]; var correct=0;
+  data.forEach(function(q,qi){
+    var sel=(quizSel['u'+uid]||{})[qi];
+    q.opts.forEach(function(_,oi){
+      var el=document.getElementById('qo-'+uid+'-'+qi+'-'+oi);
+      el.style.background=''; el.classList.remove('cor','wrg');
+    });
+    if(sel!==undefined){
+      if(sel===q.c){document.getElementById('qo-'+uid+'-'+qi+'-'+sel).classList.add('cor'); correct++;}
+      else{document.getElementById('qo-'+uid+'-'+qi+'-'+sel).classList.add('wrg');
+           document.getElementById('qo-'+uid+'-'+qi+'-'+q.c).classList.add('cor');}
+    } else {
+      document.getElementById('qo-'+uid+'-'+qi+'-'+q.c).classList.add('cor');
+    }
+  });
+  var tot=data.length; var pct=tot?correct/tot:0;
+  document.getElementById('quiz-score-'+uid).style.display='block';
+  document.getElementById('quiz-stars-'+uid).textContent=pct>=1?'⭐⭐⭐':pct>=.6?'⭐⭐':'⭐';
+  document.getElementById('quiz-snum-'+uid).textContent=correct+' / '+tot;
+  var msgs=['再多練習幾次！📖','不錯！繼續加油！💪','答得很好！🎯','全對！太厲害了！🏆'];
+  document.getElementById('quiz-msg-'+uid).textContent=msgs[pct>=1?3:pct>=.75?2:pct>=.5?1:0];
+  if(pct>=.75)spop('⭐',correct+'/'+tot+' 分！',pct===1?'全部答對！超厲害！':'答得很好！繼續加油！');
+}
+
+function spop(emo,title,msg){
+  document.getElementById('pop-emo').textContent=emo;
+  document.getElementById('pop-title').textContent=title;
+  document.getElementById('pop-msg').textContent=msg;
+  document.getElementById('pop').classList.add('show');
+}
+function closePop(){document.getElementById('pop').classList.remove('show');}
+</script>
 </body>
 </html>
