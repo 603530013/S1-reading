@@ -36,6 +36,12 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
 .ubtn .un{font-size:.68em;opacity:.85}
 .ubtn .uname{font-size:.88em;font-weight:800}
 .u-ff1{background:linear-gradient(135deg,#16a34a,#15803d)}
+.u-ff2{background:linear-gradient(135deg,#ec4899,#db2777)}
+.u-ff3{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
+.u-ff4{background:linear-gradient(135deg,#f97316,#ea580c)}
+.u-ff5{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+.u-ff6{background:linear-gradient(135deg,#14b8a6,#0f766e)}
+.u-ff7{background:linear-gradient(135deg,#f43f5e,#be123c)}
 .u-all{background:linear-gradient(135deg,#f59e0b,#16a34a)}
 .landing-note{color:rgba(255,255,255,.65);font-size:.78em;margin-top:18px;text-align:center;position:relative}
 
@@ -198,17 +204,40 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
   <div class="ltitle">📚 Family and Friends</div>
   <div class="lsub">選擇 Unit 開始複習！</div>
   <div class="ugrid">
-    <button class="ubtn u-ff1 ugrid-full" onclick="enter('ff1')">
+    <button class="ubtn u-ff1" onclick="enter('ff1')">
       <span class="icon">🏫</span>
       <div><div class="un">Unit 1</div><div class="uname">Our new things</div></div>
     </button>
-    <!-- 加入更多 unit 按鈕時在這裡新增 -->
+    <button class="ubtn u-ff2" onclick="enter('ff2')">
+      <span class="icon">😊</span>
+      <div><div class="un">Unit 2</div><div class="uname">They're happy now!</div></div>
+    </button>
+    <button class="ubtn u-ff3" onclick="enter('ff3')">
+      <span class="icon">🚴</span>
+      <div><div class="un">Unit 3</div><div class="uname">I can ride a bike!</div></div>
+    </button>
+    <button class="ubtn u-ff4" onclick="enter('ff4')">
+      <span class="icon">🍕</span>
+      <div><div class="un">Unit 4</div><div class="uname">Do you have a milkshake?</div></div>
+    </button>
+    <button class="ubtn u-ff5" onclick="enter('ff5')">
+      <span class="icon">📚</span>
+      <div><div class="un">Unit 5</div><div class="uname">We have English!</div></div>
+    </button>
+    <button class="ubtn u-ff6" onclick="enter('ff6')">
+      <span class="icon">🎒</span>
+      <div><div class="un">Unit 6</div><div class="uname">Let's play after school!</div></div>
+    </button>
+    <button class="ubtn u-ff7 ugrid-full" onclick="enter('ff7')">
+      <span class="icon">🎂</span>
+      <div><div class="un">Unit 7</div><div class="uname">Let's buy presents!</div></div>
+    </button>
     <button class="ubtn u-all ugrid-full" onclick="enterAll()">
       <span class="icon">⭐</span>
-      <div><div class="un">全部</div><div class="uname">一起複習！</div></div>
+      <div><div class="un">全部 Unit 1–7</div><div class="uname">一起複習！</div></div>
     </button>
   </div>
-  <p class="landing-note">更多 Unit 陸續加入中…</p>
+  <p class="landing-note">Family and Friends · Unit 1–7</p>
 </div>
 
 <!-- APP -->
@@ -347,7 +376,230 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
         </ul>
       </div>
     </div>
-    <!-- 新 Unit 的 review card 在這裡加入 -->
+
+    <!-- Unit 2 -->
+    <div id="rv-ff2" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：be 動詞 + 感覺</h2>
+        <div class="pill">We're / They're · Are...? · 回答</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定</th><th>否定</th></tr></thead>
+          <tbody>
+            <tr><td><b>We</b></td><td><span class="en">We're hot.</span><br><span class="zh">我們很熱。</span></td><td><span class="en">We aren't hot.</span><br><span class="zh">我們不熱。</span></td></tr>
+            <tr><td><b>They</b></td><td><span class="en">They're hungry.</span><br><span class="zh">他們很餓。</span></td><td><span class="en">They aren't hungry.</span><br><span class="zh">他們不餓。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❓ 疑問句</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">?</span><div><div class="en">Are they happy?</div><div class="zh">他們開心嗎？</div></div></li>
+          <li><span class="num">✓</span><div><div class="en">Yes, they are.</div><div class="zh">是的，他們開心。</div></div></li>
+          <li><span class="num">✗</span><div><div class="en">No, they aren't.</div><div class="zh">不，他們不開心。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Feelings 感覺</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🥵</span><div><div class="en">hot</div><div class="zh">熱的</div></div></li>
+          <li><span class="num">🥶</span><div><div class="en">cold</div><div class="zh">冷的</div></div></li>
+          <li><span class="num">🍽️</span><div><div class="en">hungry</div><div class="zh">餓的</div></div></li>
+          <li><span class="num">💧</span><div><div class="en">thirsty</div><div class="zh">渴的</div></div></li>
+          <li><span class="num">😀</span><div><div class="en">happy</div><div class="zh">開心的</div></div></li>
+          <li><span class="num">😢</span><div><div class="en">sad</div><div class="zh">難過的</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎭 故事對話：They're happy now!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Jack</div><div class="dtext">Brrr… <b>We're cold!</b> 🥶</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Kate</div><div class="dtext">Let's play! <b>Are you</b> hungry?</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Jack</div><div class="dtext">Yes, <b>I am</b>. 🍎</div></div></div>
+          <div class="dbubble right"><div class="davatar">👩</div><div><div class="dname">Mom</div><div class="dtext">Here you are. Now <b>are they happy?</b></div></div></div>
+          <div class="dbubble"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">Yes! <b>They're happy now!</b> 🎉</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit 3 -->
+    <div id="rv-ff3" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：can / can't</h2>
+        <div class="pill">能力 ability</div>
+        <table class="gtable">
+          <thead><tr><th></th><th>肯定 (✓ 會)</th><th>否定 (✗ 不會)</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / You / He / She</b></td><td><span class="en">I can skate.</span><br><span class="zh">我會溜冰。</span></td><td><span class="en">I can't skateboard.</span><br><span class="zh">我不會玩滑板。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❓ 疑問句</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">?</span><div><div class="en">Can you ride a bike?</div><div class="zh">你會騎腳踏車嗎？</div></div></li>
+          <li><span class="num">✓</span><div><div class="en">Yes, I can.</div><div class="zh">會！</div></div></li>
+          <li><span class="num">✗</span><div><div class="en">No, I can't.</div><div class="zh">不會。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Sports 運動</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🚴</span><div><div class="en">ride a bike</div><div class="zh">騎腳踏車</div></div></li>
+          <li><span class="num">🐴</span><div><div class="en">ride a horse</div><div class="zh">騎馬</div></div></li>
+          <li><span class="num">⛸️</span><div><div class="en">skate</div><div class="zh">溜冰</div></div></li>
+          <li><span class="num">🛹</span><div><div class="en">skateboard</div><div class="zh">玩滑板</div></div></li>
+          <li><span class="num">🎾</span><div><div class="en">play tennis</div><div class="zh">打網球</div></div></li>
+          <li><span class="num">⚽</span><div><div class="en">play soccer</div><div class="zh">踢足球</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>💬 Fluency Time：位置</h2>
+        <div class="pill pill-blue">介系詞 prepositions</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🔙</span><div><div class="en">behind</div><div class="zh">在…後面</div></div></li>
+          <li><span class="num">⏩</span><div><div class="en">in front of</div><div class="zh">在…前面</div></div></li>
+          <li><span class="num">↔️</span><div><div class="en">next to</div><div class="zh">在…旁邊</div></div></li>
+          <li><span class="num">⬌</span><div><div class="en">between</div><div class="zh">在…之間</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 4 -->
+    <div id="rv-ff4" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：Do / Does + have</h2>
+        <div class="pill">問 & 答</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>問句</th><th>回答</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / you</b></td><td><span class="en">Do you have a pizza?</span></td><td><span class="en">Yes, I do. / No, I don't.</span></td></tr>
+            <tr><td><b>he / she</b></td><td><span class="en">Does she have fries?</span></td><td><span class="en">Yes, she does. / No, she doesn't.</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 記住</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">I / You / We / They → <b>Do ... have</b></div><div class="zh">Do you have a salad?</div></div></li>
+          <li><span class="num">2</span><div><div class="en">He / She / It → <b>Does ... have</b></div><div class="zh">Does he have chicken?</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Food 食物</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🥗</span><div><div class="en">salad</div><div class="zh">沙拉</div></div></li>
+          <li><span class="num">🍟</span><div><div class="en">fries</div><div class="zh">薯條</div></div></li>
+          <li><span class="num">🍕</span><div><div class="en">pizza</div><div class="zh">披薩</div></div></li>
+          <li><span class="num">🥤</span><div><div class="en">milkshake</div><div class="zh">奶昔</div></div></li>
+          <li><span class="num">🥪</span><div><div class="en">cheese sandwich</div><div class="zh">起司三明治</div></div></li>
+          <li><span class="num">🍗</span><div><div class="en">chicken</div><div class="zh">雞肉</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎭 故事對話</h2>
+        <div class="dialogue">
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Rosy</div><div class="dtext"><b>Do you have</b> a milkshake?</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Billy</div><div class="dtext">Yes, <b>I do</b>. 🥤</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Rosy</div><div class="dtext"><b>Does he have</b> fries?</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Billy</div><div class="dtext">No, he <b>doesn't</b>. 🍕</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit 5 -->
+    <div id="rv-ff5" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：What do ... have on ...?</h2>
+        <div class="pill">問課程 · our / their</div>
+        <table class="gtable">
+          <thead><tr><th>問句</th><th>回答</th></tr></thead>
+          <tbody>
+            <tr><td><span class="en">What do we have on Monday?</span></td><td><span class="en">We have English.</span></td></tr>
+            <tr><td><span class="en">What do they have on Tuesday?</span></td><td><span class="en">They have math.</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 所有格</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en"><b>our</b> classroom</div><div class="zh">我們的教室</div></div></li>
+          <li><span class="num">2</span><div><div class="en"><b>their</b> books</div><div class="zh">他們的書</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：School Subjects 科目</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🎨</span><div><div class="en">art</div><div class="zh">美術</div></div></li>
+          <li><span class="num">➕</span><div><div class="en">math</div><div class="zh">數學</div></div></li>
+          <li><span class="num">🔤</span><div><div class="en">English</div><div class="zh">英文</div></div></li>
+          <li><span class="num">🔬</span><div><div class="en">science</div><div class="zh">自然</div></div></li>
+          <li><span class="num">🏃</span><div><div class="en">P.E.</div><div class="zh">體育</div></div></li>
+          <li><span class="num">🎵</span><div><div class="en">music</div><div class="zh">音樂</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 6 -->
+    <div id="rv-ff6" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：after-school activities</h2>
+        <div class="pill">I do / I don't</div>
+        <table class="gtable">
+          <thead><tr><th>肯定</th><th>否定</th></tr></thead>
+          <tbody>
+            <tr><td><span class="en">I visit my grandma on Tuesday.</span><br><span class="zh">我星期二探望奶奶。</span></td><td><span class="en">I don't go swimming on Monday.</span><br><span class="zh">我星期一不去游泳。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">📅 Days of the week</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">Monday, Tuesday, Wednesday, Thursday</div><div class="zh">一、二、三、四</div></div></li>
+          <li><span class="num">2</span><div><div class="en">Friday, Saturday, Sunday</div><div class="zh">五、六、日</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：After-school 活動</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🧹</span><div><div class="en">help my mom</div><div class="zh">幫媽媽</div></div></li>
+          <li><span class="num">📝</span><div><div class="en">do my homework</div><div class="zh">做功課</div></div></li>
+          <li><span class="num">👵</span><div><div class="en">visit my grandma</div><div class="zh">探望奶奶</div></div></li>
+          <li><span class="num">🏊</span><div><div class="en">go swimming</div><div class="zh">去游泳</div></div></li>
+          <li><span class="num">🎹</span><div><div class="en">have a music lesson</div><div class="zh">上音樂課</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 7 -->
+    <div id="rv-ff7" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：What do/does ... like?</h2>
+        <div class="pill">like / likes / doesn't like</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>問句</th><th>回答</th></tr></thead>
+          <tbody>
+            <tr><td><b>you</b></td><td><span class="en">What do you like?</span></td><td><span class="en">I like balloons.</span></td></tr>
+            <tr><td><b>he / she</b></td><td><span class="en">What does she like?</span></td><td><span class="en">She likes candy.</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 記住</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">I / You → <b>like</b></div><div class="zh">I like cake.</div></div></li>
+          <li><span class="num">2</span><div><div class="en">He / She → <b>likes</b>（要加 s）</div><div class="zh">She likes cake.</div></div></li>
+          <li><span class="num">3</span><div><div class="en">He / She → <b>doesn't like</b>（否定）</div><div class="zh">He doesn't like balloons.</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Presents 禮物</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🎈</span><div><div class="en">balloon</div><div class="zh">氣球</div></div></li>
+          <li><span class="num">🎂</span><div><div class="en">cake</div><div class="zh">蛋糕</div></div></li>
+          <li><span class="num">🍬</span><div><div class="en">candy</div><div class="zh">糖果</div></div></li>
+          <li><span class="num">🍫</span><div><div class="en">chocolate</div><div class="zh">巧克力</div></div></li>
+          <li><span class="num">🎁</span><div><div class="en">present</div><div class="zh">禮物</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎭 故事對話：Billy's birthday</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Billy</div><div class="dtext">It's my birthday tomorrow. Let's buy presents! 🎂</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Andy</div><div class="dtext"><b>What does he like?</b></div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tim</div><div class="dtext">He <b>likes</b> candy. He <b>doesn't like</b> balloons.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Andy</div><div class="dtext">OK! Let's buy candy. 🍬</div></div></div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -433,11 +685,9 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
 
 <script>
 // ══════════════════════════════════
-// DATA — Unit ff1
+// DATA
 // ══════════════════════════════════
 
-// Fill-in-the-blank data
-// Each group has a title + sentences with blanks
 const FILL_DATA = {
   ff1: [
     {
@@ -458,83 +708,250 @@ const FILL_DATA = {
         { hint: '🔍 動詞（找）',     before: "I can't ",      after: ' my pencil case.',                ans: 'find'  },
         { hint: '📍 介系詞（在…下面）', before: 'Look ',         after: ' your pillow.',                   ans: 'under' },
         { hint: '❌ 否定（不是）',    before: 'It ',           after: ' there.',                          ans: "isn't" },
-        { hint: '👉 代名詞',         before: 'Here ',         after: ' is. It\'s under your bed.',      ans: 'it' },
+        { hint: '👉 代名詞',         before: 'Here ',         after: " is. It's under your bed.",      ans: 'it' },
       ],
-      wordBank: ['find','under','isn\'t','it']
+      wordBank: ['find','under',"isn't",'it']
+    }
+  ],
+  ff2: [
+    {
+      title: "Feelings · We're / They're",
+      sentences: [
+        { hint: '🥶 感覺（冷）',     before: "We're ",        after: '.',                               ans: 'cold'    },
+        { hint: '🍽️ 感覺（餓）',    before: "They're ",      after: '.',                               ans: 'hungry'  },
+        { hint: '😀 感覺（開心）',   before: "They're ",      after: ' now!',                            ans: 'happy'   },
+        { hint: '💧 感覺（渴）',     before: "We're ",        after: '.',                               ans: 'thirsty' },
+        { hint: '🥵 感覺（熱）',     before: "They're ",      after: '.',                               ans: 'hot'     },
+        { hint: '😢 感覺（難過）',   before: "We're ",        after: '.',                               ans: 'sad'     },
+      ],
+      wordBank: ['cold','hungry','happy','thirsty','hot','sad']
+    },
+    {
+      title: 'Questions & answers',
+      sentences: [
+        { hint: '❓ 疑問 be',         before: '',             after: ' they happy? — Yes, they are.',    ans: 'Are'     },
+        { hint: '✓ 肯定回答',         before: 'Are you hot? — Yes, we ', after: '.',                    ans: 'are'     },
+        { hint: '✗ 否定回答',         before: "Are they cold? — No, they ", after: '.',                 ans: "aren't"  },
+      ],
+      wordBank: ['Are','are',"aren't"]
+    }
+  ],
+  ff3: [
+    {
+      title: "can / can't + 運動",
+      sentences: [
+        { hint: '✓ 會',              before: 'I ',            after: ' ride a bike.',                    ans: 'can'    },
+        { hint: '✗ 不會',             before: "I ",            after: ' skateboard.',                     ans: "can't"  },
+        { hint: '🐴 動詞（騎）',       before: 'I can ',        after: ' a horse.',                        ans: 'ride'   },
+        { hint: '⛸️ 動詞（溜冰）',     before: 'She can ',      after: '.',                               ans: 'skate'  },
+        { hint: '🎾 動詞（打/玩）',    before: 'We can ',       after: ' tennis.',                        ans: 'play'   },
+      ],
+      wordBank: ['can',"can't",'ride','skate','play']
+    },
+    {
+      title: '位置 · Prepositions',
+      sentences: [
+        { hint: '🔙 介系詞（後面）',  before: 'The cat is ',   after: ' the chair.',                     ans: 'behind'  },
+        { hint: '↔️ 介系詞（旁邊）',  before: 'The bag is ',   after: ' to the bed.',                    ans: 'next'    },
+        { hint: '⬌ 介系詞（之間）',  before: 'The ball is ',  after: ' the boxes.',                     ans: 'between' },
+      ],
+      wordBank: ['behind','next','between']
+    }
+  ],
+  ff4: [
+    {
+      title: 'Do / Does + have',
+      sentences: [
+        { hint: '❓ you/we/they',    before: '',              after: ' you have a pizza?',                ans: 'Do'      },
+        { hint: '❓ he/she',         before: '',              after: ' she have fries?',                  ans: 'Does'    },
+        { hint: '✓ 回答 I',          before: 'Do you have a salad? — Yes, I ', after: '.',               ans: 'do'      },
+        { hint: '✗ 回答 he',         before: "Does he have chicken? — No, he ", after: '.',              ans: "doesn't" },
+        { hint: '🍔 動詞（擁有）',    before: 'I ',            after: ' a milkshake.',                     ans: 'have'    },
+      ],
+      wordBank: ['Do','Does','do',"doesn't",'have']
+    },
+    {
+      title: 'Food 食物',
+      sentences: [
+        { hint: '🥗 沙拉',            before: 'I have a ',     after: '.',                                ans: 'salad'    },
+        { hint: '🍟 薯條',            before: 'Do you have ',  after: '?',                                ans: 'fries'    },
+        { hint: '🥤 奶昔',            before: 'She has a ',    after: '.',                                ans: 'milkshake'},
+      ],
+      wordBank: ['salad','fries','milkshake']
+    }
+  ],
+  ff5: [
+    {
+      title: 'School subjects',
+      sentences: [
+        { hint: '🎨 美術',            before: 'We have ',      after: ' on Monday.',                      ans: 'art'     },
+        { hint: '➕ 數學',            before: 'They have ',    after: ' on Tuesday.',                     ans: 'math'    },
+        { hint: '🔬 自然',            before: 'We have ',      after: ' on Friday.',                      ans: 'science' },
+        { hint: '🏃 體育',            before: 'I have ',       after: ' on Wednesday.',                   ans: 'P.E.'    },
+        { hint: '🎵 音樂',            before: 'We have ',      after: ' on Thursday.',                    ans: 'music'   },
+      ],
+      wordBank: ['art','math','science','P.E.','music']
+    },
+    {
+      title: 'our / their · have',
+      sentences: [
+        { hint: '👥 我們的',          before: "This is ",      after: ' classroom.',                      ans: 'our'     },
+        { hint: '👫 他們的',          before: "Those are ",    after: ' books.',                           ans: 'their'   },
+        { hint: '📚 動詞（有）',      before: 'What do we ',   after: ' on Monday?',                      ans: 'have'    },
+      ],
+      wordBank: ['our','their','have']
+    }
+  ],
+  ff6: [
+    {
+      title: 'After-school activities',
+      sentences: [
+        { hint: '🧹 動詞 help',       before: 'I ',            after: ' my mom on Sunday.',               ans: 'help'   },
+        { hint: '📝 動詞 do',         before: "I ",            after: ' my homework after school.',       ans: 'do'     },
+        { hint: '👵 動詞 visit',      before: 'I ',            after: ' my grandma on Tuesday.',          ans: 'visit'  },
+        { hint: '🏊 動詞 go',         before: 'I ',            after: ' swimming on Wednesday.',          ans: 'go'     },
+        { hint: '🎹 動詞 have',       before: 'I ',            after: ' a music lesson on Friday.',       ans: 'have'   },
+      ],
+      wordBank: ['help','do','visit','go','have']
+    },
+    {
+      title: 'Days of the week',
+      sentences: [
+        { hint: '📅 星期一',          before: 'I help my mom on ', after: '.',                            ans: 'Monday'  },
+        { hint: '📅 星期三',          before: 'We go swimming on ', after: '.',                           ans: 'Wednesday'},
+        { hint: '📅 星期日',          before: 'I visit my grandma on ', after: '.',                       ans: 'Sunday'  },
+      ],
+      wordBank: ['Monday','Wednesday','Sunday']
+    }
+  ],
+  ff7: [
+    {
+      title: "like / likes / doesn't like",
+      sentences: [
+        { hint: '✓ I / you',          before: 'I ',            after: ' balloons.',                        ans: 'like'     },
+        { hint: '✓ he / she',         before: 'She ',          after: ' candy.',                           ans: 'likes'    },
+        { hint: '✗ 否定 he',          before: "He ",           after: ' like cake.',                       ans: "doesn't"  },
+        { hint: '❓ 問 you',           before: 'What ',         after: ' you like?',                        ans: 'do'       },
+        { hint: '❓ 問 he',            before: 'What ',         after: ' he like?',                         ans: 'does'     },
+      ],
+      wordBank: ['like','likes',"doesn't",'do','does']
+    },
+    {
+      title: 'Presents 禮物',
+      sentences: [
+        { hint: '🎈 氣球',            before: 'I like ',       after: '.',                                 ans: 'balloons'  },
+        { hint: '🎂 蛋糕',            before: 'She likes ',    after: '.',                                 ans: 'cake'      },
+        { hint: '🍫 巧克力',          before: 'He likes ',     after: '.',                                 ans: 'chocolate' },
+        { hint: '🎁 禮物',            before: "Let's buy ",    after: '!',                                 ans: 'presents'  },
+      ],
+      wordBank: ['balloons','cake','chocolate','presents']
     }
   ]
 };
 
-// Error correction data
-// errors: array of {word, correct, reason}
 const ERROR_DATA = {
   ff1: [
-    {
-      sentence: 'this is my new pencil case.',
-      errors: [
-        { word: 'this', correct: 'This', reason: '句首大寫' }
-      ]
-    },
-    {
-      sentence: 'Those is your new coat hooks.',
-      errors: [
-        { word: 'is', correct: 'are', reason: 'Those 後面用 are（複數）' }
-      ]
-    },
-    {
-      sentence: 'these are new Table.',
-      errors: [
-        { word: 'these', correct: 'These', reason: '句首大寫' },
-        { word: 'Table', correct: 'tables', reason: '普通名詞不大寫；複數加 s' }
-      ]
-    },
-    {
-      sentence: 'That are our new board.',
-      errors: [
-        { word: 'are', correct: 'is', reason: 'That 後面用 is（單數）' }
-      ]
-    },
-    {
-      sentence: 'I cant find my pencil case',
-      errors: [
-        { word: 'cant', correct: "can't", reason: '縮寫需要有省略符號' },
-        { word: 'case', correct: 'case.', reason: '句尾需要句號' }
-      ]
-    },
-    {
-      sentence: 'look under you pillow.',
-      errors: [
-        { word: 'look', correct: 'Look', reason: '句首大寫' },
-        { word: 'you', correct: 'your', reason: '應該用 your（你的）' }
-      ]
-    }
+    { sentence: 'this is my new pencil case.', errors: [{ word: 'this', correct: 'This', reason: '句首大寫' }] },
+    { sentence: 'Those is your new coat hooks.', errors: [{ word: 'is', correct: 'are', reason: 'Those 後面用 are（複數）' }] },
+    { sentence: 'these are new Table.', errors: [{ word: 'these', correct: 'These', reason: '句首大寫' },{ word: 'Table', correct: 'tables', reason: '普通名詞不大寫；複數加 s' }] },
+    { sentence: 'That are our new board.', errors: [{ word: 'are', correct: 'is', reason: 'That 後面用 is（單數）' }] },
+    { sentence: 'I cant find my pencil case', errors: [{ word: 'cant', correct: "can't", reason: '縮寫需要有省略符號' },{ word: 'case', correct: 'case.', reason: '句尾需要句號' }] },
+    { sentence: 'look under you pillow.', errors: [{ word: 'look', correct: 'Look', reason: '句首大寫' },{ word: 'you', correct: 'your', reason: '應該用 your（你的）' }] }
+  ],
+  ff2: [
+    { sentence: 'they happy now', errors: [{ word: 'they', correct: "They're", reason: '句首大寫 + 缺 be 動詞' },{ word: 'now', correct: 'now.', reason: '句尾需要句號' }] },
+    { sentence: 'we is hot.', errors: [{ word: 'we', correct: 'We', reason: '句首大寫' },{ word: 'is', correct: 'are', reason: 'We 後面用 are' }] },
+    { sentence: 'Are they is hungry?', errors: [{ word: 'is', correct: '', reason: 'Are they 後面直接接形容詞（不用 is）' }] },
+    { sentence: 'No, they arent.', errors: [{ word: 'arent', correct: "aren't", reason: '縮寫需要省略符號' }] }
+  ],
+  ff3: [
+    { sentence: 'i cant ride a bike.', errors: [{ word: 'i', correct: 'I', reason: 'I 永遠大寫' },{ word: 'cant', correct: "can't", reason: '縮寫需要省略符號' }] },
+    { sentence: 'She can skates.', errors: [{ word: 'skates', correct: 'skate', reason: 'can 後面接原形動詞' }] },
+    { sentence: 'Do you can play tennis?', errors: [{ word: 'Do', correct: 'Can', reason: 'can 的疑問句用 Can 開頭' },{ word: 'can', correct: '', reason: '已有句首 Can，這裡不再需要 can' }] },
+    { sentence: 'The cat is behinds the chair.', errors: [{ word: 'behinds', correct: 'behind', reason: '介系詞不加 s' }] }
+  ],
+  ff4: [
+    { sentence: 'Do she have fries?', errors: [{ word: 'Do', correct: 'Does', reason: 'she 用 Does' }] },
+    { sentence: 'Does you have a pizza?', errors: [{ word: 'Does', correct: 'Do', reason: 'you 用 Do' }] },
+    { sentence: 'Does he has chicken?', errors: [{ word: 'has', correct: 'have', reason: 'Does 後面用原形 have' }] },
+    { sentence: 'Yes, she do.', errors: [{ word: 'do', correct: 'does', reason: 'she 的回答用 does' }] }
+  ],
+  ff5: [
+    { sentence: 'What we have on monday?', errors: [{ word: 'What', correct: 'What do', reason: '疑問句需要助動詞 do' },{ word: 'monday', correct: 'Monday', reason: '星期名稱字首大寫' }] },
+    { sentence: 'We has English on Tuesday.', errors: [{ word: 'has', correct: 'have', reason: 'We 用 have' }] },
+    { sentence: 'Those are they books.', errors: [{ word: 'they', correct: 'their', reason: '所有格用 their' }] }
+  ],
+  ff6: [
+    { sentence: 'I visits my grandma on Tuesday.', errors: [{ word: 'visits', correct: 'visit', reason: 'I 用原形 visit' }] },
+    { sentence: 'I dont go swimming.', errors: [{ word: 'dont', correct: "don't", reason: '縮寫需要省略符號' }] },
+    { sentence: 'I help my mom on wednesday.', errors: [{ word: 'wednesday', correct: 'Wednesday', reason: '星期名稱字首大寫' }] }
+  ],
+  ff7: [
+    { sentence: 'She like candy.', errors: [{ word: 'like', correct: 'likes', reason: 'She 用 likes（加 s）' }] },
+    { sentence: "He don't like balloons.", errors: [{ word: "don't", correct: "doesn't", reason: "He 用 doesn't" }] },
+    { sentence: 'What do she like?', errors: [{ word: 'do', correct: 'does', reason: 'she 用 does' }] },
+    { sentence: 'I likes cake.', errors: [{ word: 'likes', correct: 'like', reason: 'I 用 like（不加 s）' }] }
   ]
 };
 
-// Quiz data
 const QUIZ_DATA = {
   ff1: [
-    { q: '__ is my new pencil case. (near, 1 thing)',
-      opts: ['This','That','These','Those'], c: 0 },
-    { q: '__ are your new tables. (near, many things)',
-      opts: ['This','That','These','Those'], c: 2 },
-    { q: '__ is our new board. (far, 1 thing)',
-      opts: ['This','That','These','Those'], c: 1 },
-    { q: '__ are your new coat hooks. (far, many things)',
-      opts: ['This','That','These','Those'], c: 3 },
-    { q: 'Do you like our new things? — __, we do.',
-      opts: ['No','Yes','Not','That'], c: 1 },
-    { q: "I can't __ my pencil case.",
-      opts: ['look','find','see','take'], c: 1 },
-    { q: "It isn't there. = It is __ there.",
-      opts: ['not','no','isn','don\'t'], c: 0 },
-    { q: 'Which sentence is correct?',
-      opts: [
-        'Those is my bags.',
-        'This are new tables.',
-        'These are new chairs.',
-        'That are a computer.'
-      ], c: 2 }
+    { q: '__ is my new pencil case. (near, 1 thing)', opts: ['This','That','These','Those'], c: 0 },
+    { q: '__ are your new tables. (near, many things)', opts: ['This','That','These','Those'], c: 2 },
+    { q: '__ is our new board. (far, 1 thing)', opts: ['This','That','These','Those'], c: 1 },
+    { q: '__ are your new coat hooks. (far, many things)', opts: ['This','That','These','Those'], c: 3 },
+    { q: 'Do you like our new things? — __, we do.', opts: ['No','Yes','Not','That'], c: 1 },
+    { q: "I can't __ my pencil case.", opts: ['look','find','see','take'], c: 1 },
+    { q: "It isn't there. = It is __ there.", opts: ['not','no','isn',"don't"], c: 0 },
+    { q: 'Which sentence is correct?', opts: ['Those is my bags.','This are new tables.','These are new chairs.','That are a computer.'], c: 2 }
+  ],
+  ff2: [
+    { q: "We're very ___. Let's drink water! 💧", opts: ['hot','thirsty','cold','sad'], c: 1 },
+    { q: "It's snowing! We're ___. 🥶", opts: ['hot','hungry','cold','happy'], c: 2 },
+    { q: "Are they hungry? — Yes, they ___.", opts: ['is','am','are',"aren't"], c: 2 },
+    { q: "Are you sad? — No, we ___. We're happy!", opts: ['are',"aren't",'am','is'], c: 1 },
+    { q: "___ hungry. Let's eat! 🍎", opts: ["They's","They are","They is","They"], c: 1 },
+    { q: "Which is correct?", opts: ['We is hot.','They are happy.','They is sad.','We am cold.'], c: 1 }
+  ],
+  ff3: [
+    { q: "I ___ ride a bike. 🚴", opts: ['can','cans','am','do'], c: 0 },
+    { q: "She can't ___. She needs help.", opts: ['skates','skate','skating','to skate'], c: 1 },
+    { q: "___ you play tennis? — Yes, I can.", opts: ['Do','Are','Can','Is'], c: 2 },
+    { q: "I can ride a ___. 🐴", opts: ['bike','horse','car','ball'], c: 1 },
+    { q: "The cat is ___ the boxes. (between two boxes)", opts: ['behind','next','between','in'], c: 2 },
+    { q: "Which is correct?", opts: ['He can skateboards.',"I can't to skate.",'She can ride a bike.','Can you plays tennis?'], c: 2 }
+  ],
+  ff4: [
+    { q: "___ you have a milkshake? — Yes, I do.", opts: ['Do','Does','Are','Is'], c: 0 },
+    { q: "___ she have fries?", opts: ['Do','Does','Are','Have'], c: 1 },
+    { q: "Does he have chicken? — No, he ___.", opts: ["don't","doesn't","isn't",'not'], c: 1 },
+    { q: "I have a ___. 🍕", opts: ['salad','pizza','milkshake','fries'], c: 1 },
+    { q: "Does he ___ a cheese sandwich?", opts: ['has','have','had','having'], c: 1 },
+    { q: "Which is correct?", opts: ['Do she have fries?','Does he has pizza?','Do you have a salad?','Does you have chicken?'], c: 2 }
+  ],
+  ff5: [
+    { q: "What ___ we have on Monday?", opts: ['do','does','are','is'], c: 0 },
+    { q: "We have ___ on Friday. 🎨", opts: ['math','art','P.E.','science'], c: 1 },
+    { q: "This is ___ classroom. (我們的)", opts: ['our','their','your','my'], c: 0 },
+    { q: "Those are ___ books. (他們的)", opts: ['our','their','your','his'], c: 1 },
+    { q: "We ___ English on Monday.", opts: ['has','have','having','is'], c: 1 },
+    { q: "🔬 science 是什麼科目？", opts: ['美術','數學','自然','音樂'], c: 2 }
+  ],
+  ff6: [
+    { q: "I ___ my grandma on Tuesday. 👵", opts: ['help','visit','go','do'], c: 1 },
+    { q: "I ___ swimming on Wednesday. 🏊", opts: ['do','have','go','help'], c: 2 },
+    { q: "I ___ my homework after school.", opts: ['do','go','have','visit'], c: 0 },
+    { q: "I don't ___ my mom on Monday.", opts: ['help','helps','helping','to help'], c: 0 },
+    { q: "📅 Wednesday 是星期幾？", opts: ['星期二','星期三','星期四','星期日'], c: 1 },
+    { q: "Which is correct?", opts: ['I visits my grandma.','I dont go swimming.','I have a music lesson.','I helps my mom.'], c: 2 }
+  ],
+  ff7: [
+    { q: "What ___ you like? — I like balloons. 🎈", opts: ['do','does','are','is'], c: 0 },
+    { q: "What ___ she like? — She likes candy.", opts: ['do','does','are','is'], c: 1 },
+    { q: "I ___ chocolate. 🍫", opts: ['like','likes','liking','do like'], c: 0 },
+    { q: "He ___ cake. 🎂", opts: ['like','likes','do','to like'], c: 1 },
+    { q: "She ___ like balloons. (不喜歡)", opts: ["don't","doesn't",'not',"isn't"], c: 1 },
+    { q: "Which is correct?", opts: ['He like candy.',"She doesn't likes cake.","He doesn't like balloons.",'I likes chocolate.'], c: 2 }
   ]
 };
 
@@ -542,27 +959,58 @@ const QUIZ_DATA = {
 // STATE
 // ══════════════════════════════════
 let currentUnit = 'ff1';
-let fillActive  = null;  // {groupIdx, sentIdx}
-let fillAnswers = {};    // key: 'g-s', value: word chosen
+let fillActive  = null;
+let fillAnswers = {};
 let quizSel     = {};
 
 // ══════════════════════════════════
 // NAVIGATION
 // ══════════════════════════════════
+const UNIT_TITLES = {
+  ff1: 'Unit 1 · Our new things',
+  ff2: "Unit 2 · They're happy now!",
+  ff3: 'Unit 3 · I can ride a bike!',
+  ff4: 'Unit 4 · Do you have a milkshake?',
+  ff5: 'Unit 5 · We have English!',
+  ff6: "Unit 6 · Let's play after school!",
+  ff7: "Unit 7 · Let's buy presents!",
+  all: '全部 · Units 1–7'
+};
+const UNIT_BADGES = {
+  ff1:'📚 Unit 1', ff2:'📚 Unit 2', ff3:'📚 Unit 3',
+  ff4:'📚 Unit 4', ff5:'📚 Unit 5', ff6:'📚 Unit 6',
+  ff7:'📚 Unit 7', all:'⭐ Unit 1–7'
+};
+const ALL_UNITS = ['ff1','ff2','ff3','ff4','ff5','ff6','ff7'];
+
 function enter(key) {
   currentUnit = key;
   document.getElementById('landing').style.display = 'none';
   document.getElementById('app').style.display = 'block';
-  const titles = { ff1: 'Unit 1 · Our new things' };
-  document.getElementById('atitle').textContent = titles[key] || key;
-  document.getElementById('abadge').textContent = '📚 ' + (key === 'ff1' ? 'Unit 1' : key.toUpperCase());
+  document.getElementById('atitle').textContent = UNIT_TITLES[key] || key;
+  document.getElementById('abadge').textContent = UNIT_BADGES[key] || key.toUpperCase();
   document.querySelectorAll('[id^="rv-"]').forEach(el => el.style.display = 'none');
-  const rv = document.getElementById('rv-' + key);
-  if (rv) rv.style.display = 'block';
+  if (key === 'all') {
+    ALL_UNITS.forEach(u => {
+      const el = document.getElementById('rv-' + u);
+      if (el) el.style.display = 'block';
+    });
+  } else {
+    const rv = document.getElementById('rv-' + key);
+    if (rv) rv.style.display = 'block';
+  }
   stab('review', document.querySelectorAll('.tab')[0]);
 }
 function enterAll() {
-  enter('ff1'); // currently only ff1 — extend when more units added
+  FILL_DATA.all = [];
+  ERROR_DATA.all = [];
+  QUIZ_DATA.all = [];
+  ALL_UNITS.forEach(u => {
+    (FILL_DATA[u]  || []).forEach(g => FILL_DATA.all.push(g));
+    (ERROR_DATA[u] || []).forEach(e => ERROR_DATA.all.push(e));
+    (QUIZ_DATA[u]  || []).forEach(q => QUIZ_DATA.all.push(q));
+  });
+  enter('all');
 }
 function goBack() {
   document.getElementById('app').style.display = 'none';
@@ -606,13 +1054,11 @@ function initFill() {
     const grpDiv = document.createElement('div');
     grpDiv.className = 'sentence-group';
 
-    // Title + word bank
     const titleEl = document.createElement('div');
     titleEl.className = 'sg-title';
     titleEl.textContent = group.title;
     grpDiv.appendChild(titleEl);
 
-    // Sentences
     group.sentences.forEach((s, si) => {
       const key = gi + '-' + si;
       const div = document.createElement('div');
@@ -626,12 +1072,16 @@ function initFill() {
       grpDiv.appendChild(div);
     });
 
-    // Word bank
     const bankDiv = document.createElement('div');
     bankDiv.className = 'word-bank';
     bankDiv.innerHTML = '<span class="wb-label">單字庫：</span>';
     const usedWords = new Set();
-    group.wordBank.forEach(w => {
+    const shuffledBank = group.wordBank.slice();
+    for (let i = shuffledBank.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledBank[i], shuffledBank[j]] = [shuffledBank[j], shuffledBank[i]];
+    }
+    shuffledBank.forEach(w => {
       if (!usedWords.has(w)) {
         usedWords.add(w);
         const btn = document.createElement('button');
@@ -648,7 +1098,6 @@ function initFill() {
 }
 
 function activateBlank(key, gi, si) {
-  // Clear all active
   document.querySelectorAll('.blank').forEach(b => {
     b.classList.remove('active');
   });
@@ -659,7 +1108,6 @@ function activateBlank(key, gi, si) {
 
 function pickWord(gi, word) {
   if (!fillActive || fillActive.gi !== gi) {
-    // Auto-select first empty blank in this group
     const groups = FILL_DATA[currentUnit];
     const group  = groups[gi];
     for (let si = 0; si < group.sentences.length; si++) {
@@ -677,7 +1125,6 @@ function pickWord(gi, word) {
   const sentence = groups[g].sentences[s];
   const bk       = document.getElementById('bk-' + key);
 
-  // Words can be reused across blanks (e.g. "This" used in 2 sentences)
   fillAnswers[key] = word;
 
   bk.textContent = word;
@@ -689,7 +1136,6 @@ function pickWord(gi, word) {
   }
   fillActive = null;
 
-  // Check all done
   const total   = FILL_DATA[currentUnit].reduce((n, g) => n + g.sentences.length, 0);
   let allCorrect = true;
   let filled = 0;
@@ -721,7 +1167,6 @@ function initError() {
     const div = document.createElement('div');
     div.className = 'error-sentence';
 
-    // Display sentence with underlined error words
     let displaySentence = item.sentence;
     item.errors.forEach(err => {
       const re = new RegExp('\\b' + escapeRE(err.word) + '\\b');
@@ -768,7 +1213,6 @@ function checkErrors() {
       } else {
         input.classList.add('wrong');
       }
-      // Show answer if wrong
       const reveal = document.getElementById('ear-' + idx);
       if (reveal) {
         reveal.style.display = 'block';
@@ -851,6 +1295,7 @@ function checkQuiz() {
 }
 
 function resetQuiz() { initQuiz(); }
+
 </script>
 </body>
 </html>
