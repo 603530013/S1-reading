@@ -1468,5 +1468,230 @@
         "def": "說話 (ㄕㄨㄛ ㄏㄨㄚˋ)"
       }
     ]
+  },
+  {
+    "id": 3120,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "cream",
+    "answers": [
+      {
+        "word": "cream",
+        "def": "鮮奶油 (ㄒㄧㄢ ㄋㄞˇ ㄧㄡˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3121,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "clean",
+    "answers": [
+      {
+        "word": "clean",
+        "def": "乾淨 (ㄍㄢ ㄐㄧㄥˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3122,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "cry",
+    "answers": [
+      {
+        "word": "cry",
+        "def": "哭 (ㄎㄨ)"
+      }
+    ]
+  },
+  {
+    "id": 3123,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "crown",
+    "answers": [
+      {
+        "word": "crown",
+        "def": "皇冠 (ㄏㄨㄤˊ ㄍㄨㄢ)"
+      }
+    ]
+  },
+  {
+    "id": 3124,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "clown",
+    "answers": [
+      {
+        "word": "clown",
+        "def": "小丑 (ㄒㄧㄠˇ ㄔㄡˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3125,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "crust",
+    "answers": [
+      {
+        "word": "crust",
+        "def": "麵包皮 (ㄇㄧㄢˋ ㄅㄠ ㄆㄧˊ) / 外殼 (ㄨㄞˋ ㄎㄜˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3126,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "clothes",
+    "answers": [
+      {
+        "word": "clothes",
+        "def": "衣服 (ㄧ ㄈㄨˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3127,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "fruit",
+    "answers": [
+      {
+        "word": "fruit",
+        "def": "水果 (ㄕㄨㄟˇ ㄍㄨㄛˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3128,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "flashlight",
+    "answers": [
+      {
+        "word": "flashlight",
+        "def": "手電筒 (ㄕㄡˇ ㄉㄧㄢˋ ㄊㄨㄥˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3129,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "flower",
+    "answers": [
+      {
+        "word": "flower",
+        "def": "花 (ㄏㄨㄚ)（同音字 flour）"
+      }
+    ]
+  },
+  {
+    "id": 3130,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "flour",
+    "answers": [
+      {
+        "word": "flour",
+        "def": "麵粉 (ㄇㄧㄢˋ ㄈㄣˇ)（同音字 flower）"
+      }
+    ]
+  },
+  {
+    "id": 3131,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "frown",
+    "answers": [
+      {
+        "word": "frown",
+        "def": "皺眉 (ㄓㄡˋ ㄇㄟˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3132,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "friend",
+    "answers": [
+      {
+        "word": "friend",
+        "def": "朋友 (ㄆㄥˊ ㄧㄡˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3133,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "french fries",
+    "answers": [
+      {
+        "word": "french fries",
+        "def": "薯條 (ㄕㄨˇ ㄊㄧㄠˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3134,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W14"
+    ],
+    "audioText": "flag",
+    "answers": [
+      {
+        "word": "flag",
+        "def": "旗子 (ㄑㄧˊ ㄗ˙) / 旗幟 (ㄑㄧˊ ㄓˋ)"
+      }
+    ]
   }
 ]
