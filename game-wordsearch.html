@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Search 找字 · 單字複習</title>
+<link rel="stylesheet" href="games-common.css">
+<style>
+.ws-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.ws-grid{
+  display:grid;gap:3px;padding:10px;background:#ede9fe;border-radius:14px;
+  user-select:none;touch-action:none;
+}
+.ws-cell{
+  width:32px;height:32px;background:white;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Baloo 2',cursive;font-size:1em;color:#1f2937;
+  cursor:pointer;transition:background .1s;
+}
+@media(max-width:600px){
+  .ws-cell{width:26px;height:26px;font-size:.9em}
+}
+.ws-cell.start{background:#fde68a;color:#78350f}
+.ws-cell.end-preview{background:#fbbf24;color:#78350f}
+.ws-cell.found{background:#86efac;color:#14532d}
+.ws-cell.hint{box-shadow:inset 0 0 0 2px #a855f7}
+.ws-words{
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  background:#faf5ff;border-radius:14px;padding:12px;
+}
+.ws-word{
+  background:white;border:2px solid #e9d5ff;border-radius:10px;
+  padding:4px 12px;font-weight:700;color:#6b7280;font-size:.95em;
+}
+.ws-word.found{background:#dcfce7;border-color:#16a34a;color:#15803d;text-decoration:line-through}
+.ws-meta{display:flex;justify-content:space-between;gap:10px;font-size:.9em;color:#7e22ce}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-hd">
+    <h1>🔍 Word Search 找字</h1>
+    <a class="back" href="words.html">← 返回</a>
+  </header>
+  <p class="page-sub">在字母格子中找出單字：點擊首字母 → 再點擊尾字母</p>
+
+  <div id="setup" class="card">
+    <h2>📚 選擇範圍</h2>
+    <p class="small mb-12">Word Search 包含 Phonics 與 Vocabulary，會挑選較短且合適的單字置入格子。</p>
+    <h3>週次範圍</h3>
+    <div id="week-selector"></div>
+    <div class="btn-row">
+      <button class="btn-outline" id="btn-all">全選所有週</button>
+      <button class="btn btn-lg" id="btn-start">開始遊戲 🎮</button>
+    </div>
+  </div>
+
+  <div id="play" class="card hidden">
+    <div class="flex-between mb-12">
+      <button class="btn-ghost" id="btn-exit">← 離開</button>
+      <span id="ws-progress" class="small"></span>
+    </div>
+    <div class="ws-wrap">
+      <div class="ws-grid" id="grid"></div>
+      <div class="ws-meta">
+        <span id="ws-hint-msg" class="small"></span>
+      </div>
+      <div class="ws-words" id="word-list"></div>
+      <div class="btn-row">
+        <button class="btn-outline" id="btn-hint">顯示提示 💡</button>
+        <button class="btn-outline" id="btn-reshuffle">重新洗牌 🔀</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="result" class="card hidden">
+    <h2>🎉 全部找到了！</h2>
+    <div class="stat-row">
+      <div class="stat-box"><div class="n" id="r-words">0</div><div class="l">找到單字</div></div>
+      <div class="stat-box"><div class="n" id="r-time">0s</div><div class="l">花費時間</div></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="btn-again">再玩一次 🔁</button>
+      <a class="btn-outline" href="words.html" style="text-decoration:none">選其他遊戲</a>
+    </div>
+  </div>
+</div>
+
+<script src="data/phonics-114-1.js"></script>
+<script src="data/vocabulary-114-1.js"></script>
+<script src="data/phonics-114-2.js"></script>
+<script src="data/vocabulary-114-2.js"></script>
+<script src="games-common.js"></script>
+<script>
+(function(){
+  var GRID = 10;
+  var MAX_WORDS = 8;
+
+  var $setup = document.getElementById('setup');
+  var $play = document.getElementById('play');
+  var $result = document.getElementById('result');
+  var $weekSel = document.getElementById('week-selector');
+  var $grid = document.getElementById('grid');
+  var $wordList = document.getElementById('word-list');
+  var $btnAll = document.getElementById('btn-all');
+  var $btnStart = document.getElementById('btn-start');
+  var $btnExit = document.getElementById('btn-exit');
+  var $btnAgain = document.getElementById('btn-again');
+  var $btnHint = document.getElementById('btn-hint');
+  var $btnReshuffle = document.getElementById('btn-reshuffle');
+  var $progress = document.getElementById('ws-progress');
+  var $hintMsg = document.getElementById('ws-hint-msg');
+
+  var selector = buildWeekSelector($weekSel, 'all');
+  $btnAll.addEventListener('click', function(){ selector.selectAll(); });
+
+  var gridData = []; // 2D array of letters
+  var placements = []; // {word, cells:[[r,c],...]}
+  var foundWords = new Set();
+  var startCell = null;
+  var startTime = 0;
+
+  $btnStart.addEventListener('click', function(){
+    startGame();
+  });
+  $btnReshuffle.addEventListener('click', function(){
+    startGame();
+  });
+
+  function pickWords(){
+    var sel = selector.getSelection();
+    var items = filterItems({type:'all', weeks: sel.weeks});
+    if(items.length===0) return null;
+    // 抽取單純字母單字（不含空格、連字號），長度 3-8
+    var seen = {};
+    var candidates = [];
+    items.forEach(function(it){
+      var w = (it.answers[0].word||'').toUpperCase();
+      if(/^[A-Z]+$/.test(w) && w.length>=3 && w.length<=8 && !seen[w]){
+        seen[w] = true;
+        candidates.push(w);
+      }
+    });
+    if(candidates.length<3) return null;
+    candidates = shuffle(candidates);
+    return candidates.slice(0, Math.min(MAX_WORDS, candidates.length));
+  }
+
+  function placeWord(word){
+    var dirs = [[0,1],[1,0],[1,1],[-1,1]]; // 4 directions (可加入反向)
+    for(var tries=0; tries<80; tries++){
+      var d = dirs[Math.floor(Math.random()*dirs.length)];
+      var dr = d[0], dc = d[1];
+      var maxR = GRID - (dr>=0 ? word.length : 1) - (dr<0 ? word.length-1 : 0);
+      var maxC = GRID - (dc>=0 ? word.length : 1);
+      var minR = dr<0 ? word.length-1 : 0;
+      var r = minR + Math.floor(Math.random()*(GRID - word.length*(dr!==0?1:0) - (dr<0?-(word.length-1):0) ));
+      var c = Math.floor(Math.random()*(GRID - word.length*(dc!==0?1:0)));
+      // 簡單邊界檢查
+      var endR = r + dr*(word.length-1);
+      var endC = c + dc*(word.length-1);
+      if(endR<0 || endR>=GRID || endC<0 || endC>=GRID) continue;
+      var ok = true;
+      for(var i=0;i<word.length;i++){
+        var rr = r + dr*i, cc = c + dc*i;
+        var cur = gridData[rr][cc];
+        if(cur && cur !== word[i]){ ok=false; break; }
+      }
+      if(!ok) continue;
+      var cells = [];
+      for(var i=0;i<word.length;i++){
+        var rr = r + dr*i, cc = c + dc*i;
+        gridData[rr][cc] = word[i];
+        cells.push([rr,cc]);
+      }
+      return {word:word, cells:cells};
+    }
+    return null;
+  }
+
+  function fillRandom(){
+    var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    for(var r=0;r<GRID;r++){
+      for(var c=0;c<GRID;c++){
+        if(!gridData[r][c]) gridData[r][c] = letters[Math.floor(Math.random()*26)];
+      }
+    }
+  }
+
+  function startGame(){
+    var words = pickWords();
+    if(!words){ alert('請選擇至少一個週次，且該範圍需有足夠 3-8 字母的單字'); return; }
+    gridData = [];
+    for(var r=0;r<GRID;r++){
+      var row = [];
+      for(var c=0;c<GRID;c++) row.push('');
+      gridData.push(row);
+    }
+    placements = [];
+    words.forEach(function(w){
+      var p = placeWord(w);
+      if(p) placements.push(p);
+    });
+    fillRandom();
+    foundWords = new Set();
+    startCell = null;
+    startTime = Date.now();
+
+    $setup.classList.add('hidden');
+    $result.classList.add('hidden');
+    $play.classList.remove('hidden');
+    renderGrid();
+    renderWords();
+    updateProgress();
+  }
+
+  function renderGrid(){
+    $grid.style.gridTemplateColumns = 'repeat('+GRID+',1fr)';
+    $grid.innerHTML = '';
+    for(var r=0;r<GRID;r++){
+      for(var c=0;c<GRID;c++){
+        (function(r,c){
+          var cell = el('div',{cls:'ws-cell', text: gridData[r][c]});
+          cell.dataset.r = r; cell.dataset.c = c;
+          cell.addEventListener('click', function(){ clickCell(r,c,cell); });
+          $grid.appendChild(cell);
+        })(r,c);
+      }
+    }
+    markFoundCells();
+  }
+  function renderWords(){
+    $wordList.innerHTML = '';
+    placements.forEach(function(p){
+      var e = el('span',{cls:'ws-word' + (foundWords.has(p.word)?' found':''), text: p.word});
+      e.dataset.word = p.word;
+      $wordList.appendChild(e);
+    });
+  }
+  function markFoundCells(){
+    placements.forEach(function(p){
+      if(foundWords.has(p.word)){
+        p.cells.forEach(function(rc){
+          var cell = $grid.querySelector('.ws-cell[data-r="'+rc[0]+'"][data-c="'+rc[1]+'"]');
+          if(cell) cell.classList.add('found');
+        });
+      }
+    });
+  }
+  function updateProgress(){
+    $progress.textContent = '已找到 ' + foundWords.size + ' / ' + placements.length;
+  }
+
+  function clickCell(r,c,cell){
+    if(cell.classList.contains('found')) return;
+    if(!startCell){
+      startCell = {r:r,c:c,elem:cell};
+      cell.classList.add('start');
+      $hintMsg.textContent = '起點已選 → 點擊尾字母選取整個單字';
+      return;
+    }
+    // 第二次點：計算方向是否合法
+    var dr = Math.sign(r - startCell.r);
+    var dc = Math.sign(c - startCell.c);
+    var len = Math.max(Math.abs(r - startCell.r), Math.abs(c - startCell.c)) + 1;
+    var valid = true;
+    if(dr!==0 && dc!==0 && Math.abs(r-startCell.r) !== Math.abs(c-startCell.c)) valid = false;
+    var collected = [];
+    if(valid){
+      for(var i=0;i<len;i++){
+        var rr = startCell.r + dr*i;
+        var cc = startCell.c + dc*i;
+        if(rr<0||rr>=GRID||cc<0||cc>=GRID){ valid=false; break; }
+        collected.push(gridData[rr][cc]);
+      }
+    }
+    var picked = collected.join('');
+    var match = null;
+    if(valid){
+      match = placements.find(function(p){
+        if(foundWords.has(p.word)) return false;
+        if(p.word !== picked) return false;
+        if(p.cells.length !== len) return false;
+        // 驗證完全一致的路徑
+        for(var i=0;i<len;i++){
+          var rr = startCell.r + dr*i;
+          var cc = startCell.c + dc*i;
+          if(p.cells[i][0]!==rr || p.cells[i][1]!==cc) return false;
+        }
+        return true;
+      });
+    }
+    if(match){
+      foundWords.add(match.word);
+      startCell.elem.classList.remove('start');
+      match.cells.forEach(function(rc){
+        var cc = $grid.querySelector('.ws-cell[data-r="'+rc[0]+'"][data-c="'+rc[1]+'"]');
+        if(cc) cc.classList.add('found');
+      });
+      renderWords();
+      updateProgress();
+      speak(match.word);
+      $hintMsg.textContent = '✅ 找到：' + match.word;
+      if(foundWords.size >= placements.length){
+        setTimeout(showResult, 600);
+      }
+    } else {
+      startCell.elem.classList.remove('start');
+      $hintMsg.textContent = '❌ 這不是一個列表中的單字';
+    }
+    startCell = null;
+  }
+
+  $btnHint.addEventListener('click', function(){
+    var remain = placements.filter(function(p){ return !foundWords.has(p.word); });
+    if(remain.length===0) return;
+    var p = remain[Math.floor(Math.random()*remain.length)];
+    var first = p.cells[0];
+    var cell = $grid.querySelector('.ws-cell[data-r="'+first[0]+'"][data-c="'+first[1]+'"]');
+    if(cell){
+      cell.classList.add('hint');
+      setTimeout(function(){ cell.classList.remove('hint'); }, 1500);
+      $hintMsg.textContent = '💡 提示：' + p.word + ' 起點已標示';
+    }
+  });
+
+  function showResult(){
+    $play.classList.add('hidden');
+    $result.classList.remove('hidden');
+    document.getElementById('r-words').textContent = foundWords.size;
+    var secs = Math.round((Date.now()-startTime)/1000);
+    document.getElementById('r-time').textContent = secs + 's';
+  }
+
+  $btnExit.addEventListener('click', function(){
+    if(confirm('確定要離開目前遊戲？')){
+      $play.classList.add('hidden');
+      $setup.classList.remove('hidden');
+    }
+  });
+  $btnAgain.addEventListener('click', function(){
+    $result.classList.add('hidden');
+    $setup.classList.remove('hidden');
+  });
+})();
+</script>
+</body>
+</html>

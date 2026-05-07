@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hangman 劊子手 · 單字複習</title>
+<link rel="stylesheet" href="games-common.css">
+<style>
+.hm-wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.hm-stage{
+  background:#faf5ff;border:2px dashed #d8b4fe;border-radius:18px;
+  padding:14px;width:200px;
+}
+.hm-svg{display:block;margin:0 auto}
+.hm-line{stroke:#7e22ce;stroke-width:4;stroke-linecap:round;fill:none}
+.hm-body{stroke:#dc2626;stroke-width:4;stroke-linecap:round;fill:none}
+.hm-clue{
+  background:#fef3c7;border:2px solid #fbbf24;border-radius:14px;
+  padding:14px 18px;text-align:center;width:100%;max-width:480px;
+}
+.hm-clue .lab{font-size:.85em;color:#92400e;font-weight:800;margin-bottom:4px}
+.hm-clue .def{font-family:'Baloo 2',cursive;font-size:1.2em;color:#78350f}
+.hm-letters{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:6px;
+  font-family:'Baloo 2',cursive;font-size:1.6em;color:#1f2937;
+  letter-spacing:2px;margin:6px 0;
+}
+.hm-letter{
+  display:inline-block;min-width:32px;text-align:center;
+  border-bottom:3px solid #a855f7;padding-bottom:2px;
+}
+.hm-letter.gap{border:none;width:14px}
+.hm-keys{
+  display:grid;grid-template-columns:repeat(7,1fr);gap:6px;
+  width:100%;max-width:420px;
+}
+@media(max-width:480px){.hm-keys{grid-template-columns:repeat(7,1fr);gap:4px}}
+.hm-key{
+  background:#ede9fe;color:#6d28d9;border:none;border-radius:8px;
+  padding:8px 0;font-family:'Baloo 2',cursive;font-size:1em;font-weight:800;
+  cursor:pointer;transition:all .12s;
+}
+.hm-key:hover:not(:disabled){background:#ddd6fe;transform:translateY(-1px)}
+.hm-key:disabled{opacity:.35;cursor:not-allowed}
+.hm-key.right{background:#dcfce7;color:#15803d}
+.hm-key.wrong{background:#fee2e2;color:#b91c1c}
+.hm-status{
+  font-family:'Baloo 2',cursive;font-size:1.2em;
+  padding:8px 16px;border-radius:14px;text-align:center;
+}
+.hm-status.win{background:#dcfce7;color:#15803d}
+.hm-status.lose{background:#fee2e2;color:#b91c1c}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-hd">
+    <h1>😵 Hangman 劊子手</h1>
+    <a class="back" href="words.html">← 返回</a>
+  </header>
+  <p class="page-sub">看中文意思，猜出英文單字的字母（有 6 次錯誤機會）</p>
+
+  <div id="setup" class="card">
+    <h2>📚 選擇範圍</h2>
+    <p class="small mb-12">Hangman 包含 Phonics 與 Vocabulary。</p>
+    <h3>週次範圍</h3>
+    <div id="week-selector"></div>
+    <div class="btn-row">
+      <button class="btn-outline" id="btn-all">全選所有週</button>
+      <button class="btn btn-lg" id="btn-start">開始遊戲 🎮</button>
+    </div>
+  </div>
+
+  <div id="play" class="card hidden">
+    <div class="flex-between mb-12">
+      <button class="btn-ghost" id="btn-exit">← 離開</button>
+      <span id="hm-progress" class="small"></span>
+    </div>
+    <div class="hm-wrap">
+      <div class="hm-stage">
+        <svg class="hm-svg" width="170" height="200" viewBox="0 0 170 200">
+          <!-- 木架 -->
+          <line class="hm-line" x1="10" y1="190" x2="160" y2="190"/>
+          <line class="hm-line" x1="40" y1="190" x2="40" y2="10"/>
+          <line class="hm-line" x1="40" y1="10" x2="120" y2="10"/>
+          <line class="hm-line" x1="120" y1="10" x2="120" y2="40"/>
+          <!-- 身體部位（依錯誤次數顯示） -->
+          <circle id="hm-head" class="hm-body hidden" cx="120" cy="55" r="15"/>
+          <line id="hm-torso" class="hm-body hidden" x1="120" y1="70" x2="120" y2="125"/>
+          <line id="hm-larm" class="hm-body hidden" x1="120" y1="85" x2="100" y2="105"/>
+          <line id="hm-rarm" class="hm-body hidden" x1="120" y1="85" x2="140" y2="105"/>
+          <line id="hm-lleg" class="hm-body hidden" x1="120" y1="125" x2="105" y2="155"/>
+          <line id="hm-rleg" class="hm-body hidden" x1="120" y1="125" x2="135" y2="155"/>
+        </svg>
+      </div>
+      <div class="hm-clue">
+        <div class="lab">中文意思</div>
+        <div class="def" id="hm-def">—</div>
+      </div>
+      <div class="hm-letters" id="hm-letters"></div>
+      <div class="hm-status hidden" id="hm-status"></div>
+      <div class="hm-keys" id="hm-keys"></div>
+      <div class="btn-row" style="justify-content:center">
+        <button class="btn" id="btn-next">下一題 →</button>
+      </div>
+      <p class="small">錯誤次數：<b id="hm-errors">0</b> / 6</p>
+    </div>
+  </div>
+
+  <div id="result" class="card hidden">
+    <h2>🎉 結果</h2>
+    <div class="stat-row">
+      <div class="stat-box"><div class="n" id="r-win">0</div><div class="l">猜對</div></div>
+      <div class="stat-box"><div class="n" id="r-lose">0</div><div class="l">猜錯</div></div>
+      <div class="stat-box"><div class="n" id="r-rate">0%</div><div class="l">勝率</div></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="btn-again">再玩一次 🔁</button>
+      <a class="btn-outline" href="words.html" style="text-decoration:none">選其他遊戲</a>
+    </div>
+  </div>
+</div>
+
+<script src="data/phonics-114-1.js"></script>
+<script src="data/vocabulary-114-1.js"></script>
+<script src="data/phonics-114-2.js"></script>
+<script src="data/vocabulary-114-2.js"></script>
+<script src="games-common.js"></script>
+<script>
+(function(){
+  var MAX_WRONG = 6;
+  var BODY_PARTS = ['hm-head','hm-torso','hm-larm','hm-rarm','hm-lleg','hm-rleg'];
+  var TOTAL_QS = 8;
+
+  var $setup = document.getElementById('setup');
+  var $play = document.getElementById('play');
+  var $result = document.getElementById('result');
+  var $weekSel = document.getElementById('week-selector');
+  var $btnAll = document.getElementById('btn-all');
+  var $btnStart = document.getElementById('btn-start');
+  var $btnExit = document.getElementById('btn-exit');
+  var $btnAgain = document.getElementById('btn-again');
+  var $btnNext = document.getElementById('btn-next');
+  var $def = document.getElementById('hm-def');
+  var $letters = document.getElementById('hm-letters');
+  var $keys = document.getElementById('hm-keys');
+  var $status = document.getElementById('hm-status');
+  var $errors = document.getElementById('hm-errors');
+  var $progress = document.getElementById('hm-progress');
+
+  var selector = buildWeekSelector($weekSel, 'all');
+  $btnAll.addEventListener('click', function(){ selector.selectAll(); });
+
+  var pool = [];
+  var idx = 0;
+  var wins = 0, losses = 0;
+  var current = null; // {word, def}
+  var guessed = new Set();
+  var wrongCount = 0;
+  var ended = false;
+
+  $btnStart.addEventListener('click', function(){
+    var sel = selector.getSelection();
+    var items = filterItems({type:'all', weeks: sel.weeks});
+    var seen = {};
+    pool = [];
+    items.forEach(function(it){
+      var w = (it.answers[0].word||'').toUpperCase();
+      if(/^[A-Z]+$|^[A-Z]+( [A-Z]+)+$/.test(w) && w.length>=3 && w.length<=12 && !seen[w]){
+        seen[w] = true;
+        pool.push({word:w, def: it.answers[0].def});
+      }
+    });
+    if(pool.length===0){ alert('請選擇至少一個週次！'); return; }
+    pool = shuffle(pool).slice(0, Math.min(TOTAL_QS, pool.length));
+    idx = 0; wins = 0; losses = 0;
+    $setup.classList.add('hidden');
+    $result.classList.add('hidden');
+    $play.classList.remove('hidden');
+    nextQuestion();
+  });
+
+  function nextQuestion(){
+    if(idx >= pool.length){ showResult(); return; }
+    current = pool[idx];
+    guessed = new Set();
+    wrongCount = 0;
+    ended = false;
+    $status.classList.add('hidden');
+    $btnNext.disabled = true;
+    $errors.textContent = '0';
+    BODY_PARTS.forEach(function(id){
+      var p = document.getElementById(id);
+      if(p) p.classList.add('hidden');
+    });
+    $def.textContent = current.def;
+    $progress.textContent = '第 ' + (idx+1) + ' / ' + pool.length + ' 題';
+    renderLetters();
+    renderKeys();
+  }
+
+  function renderLetters(){
+    $letters.innerHTML = '';
+    var word = current.word;
+    for(var i=0;i<word.length;i++){
+      var ch = word[i];
+      if(ch===' '){
+        $letters.appendChild(el('span',{cls:'hm-letter gap'}));
+      } else {
+        var shown = (guessed.has(ch) || ended) ? ch : '';
+        $letters.appendChild(el('span',{cls:'hm-letter',text:shown}));
+      }
+    }
+  }
+
+  function renderKeys(){
+    $keys.innerHTML = '';
+    var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    for(var i=0;i<letters.length;i++){
+      (function(L){
+        var btn = el('button',{cls:'hm-key',text:L,on:{click:function(){ guess(L); }}});
+        btn.dataset.letter = L;
+        if(guessed.has(L)){
+          btn.disabled = true;
+          if(current.word.indexOf(L)>=0) btn.classList.add('right');
+          else btn.classList.add('wrong');
+        }
+        $keys.appendChild(btn);
+      })(letters[i]);
+    }
+  }
+
+  function guess(L){
+    if(ended || guessed.has(L)) return;
+    guessed.add(L);
+    var hit = current.word.indexOf(L) >= 0;
+    if(!hit){
+      wrongCount++;
+      $errors.textContent = wrongCount;
+      var partId = BODY_PARTS[wrongCount-1];
+      if(partId){
+        var p = document.getElementById(partId);
+        if(p) p.classList.remove('hidden');
+      }
+      if(wrongCount >= MAX_WRONG){
+        ended = true;
+        losses++;
+        $status.className = 'hm-status lose';
+        $status.textContent = '😢 失敗！答案是：' + current.word;
+        $status.classList.remove('hidden');
+        $btnNext.disabled = false;
+      }
+    } else {
+      // 檢查是否全部猜出
+      var allHit = true;
+      for(var i=0;i<current.word.length;i++){
+        var ch = current.word[i];
+        if(ch===' ') continue;
+        if(!guessed.has(ch)){ allHit = false; break; }
+      }
+      if(allHit){
+        ended = true;
+        wins++;
+        $status.className = 'hm-status win';
+        $status.textContent = '🎉 答對了！';
+        $status.classList.remove('hidden');
+        $btnNext.disabled = false;
+        speak(current.word);
+      }
+    }
+    renderLetters();
+    renderKeys();
+  }
+
+  $btnNext.addEventListener('click', function(){
+    idx++;
+    nextQuestion();
+  });
+
+  function showResult(){
+    $play.classList.add('hidden');
+    $result.classList.remove('hidden');
+    document.getElementById('r-win').textContent = wins;
+    document.getElementById('r-lose').textContent = losses;
+    var total = wins + losses;
+    document.getElementById('r-rate').textContent = total>0 ? Math.round(wins/total*100)+'%' : '0%';
+  }
+
+  $btnExit.addEventListener('click', function(){
+    if(confirm('確定要離開目前遊戲？')){
+      $play.classList.add('hidden');
+      $setup.classList.remove('hidden');
+    }
+  });
+  $btnAgain.addEventListener('click', function(){
+    $result.classList.add('hidden');
+    $setup.classList.remove('hidden');
+  });
+})();
+</script>
+</body>
+</html>
