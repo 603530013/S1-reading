@@ -1693,5 +1693,117 @@ window.PHONICS_114_2 = [
         "def": "旗子 (ㄑㄧˊ ㄗ˙) / 旗幟 (ㄑㄧˊ ㄓˋ)"
       }
     ]
+  },
+  {
+    "id": 3135,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "bracelet",
+    "answers": [{"word": "bracelet", "def": "手鐲 (ㄕㄡˇ ㄓㄨㄛˊ) / 手鏈 (ㄕㄡˇ ㄌㄧㄢˋ)"}]
+  },
+  {
+    "id": 3136,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "break",
+    "answers": [{"word": "break", "def": "打破 (ㄉㄚˇ ㄆㄛˋ) / 休息 (ㄒㄧㄡ ㄒㄧˊ)"}]
+  },
+  {
+    "id": 3137,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "broken",
+    "answers": [{"word": "broken", "def": "壞掉的 (ㄏㄨㄞˋ ㄉㄧㄠˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 3138,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "brush",
+    "answers": [{"word": "brush", "def": "刷子 (ㄕㄨㄚ ㄗ˙) / 刷 (ㄕㄨㄚ)"}]
+  },
+  {
+    "id": 3139,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "braid",
+    "answers": [{"word": "braid", "def": "辮子 (ㄅㄧㄢˋ ㄗ˙)"}]
+  },
+  {
+    "id": 3140,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "blender",
+    "answers": [{"word": "blender", "def": "攪拌機 (ㄐㄧㄠˇ ㄅㄢˋ ㄐㄧ) / 果汁機 (ㄍㄨㄛˇ ㄓ ㄐㄧ)"}]
+  },
+  {
+    "id": 3141,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "blocks",
+    "answers": [{"word": "blocks", "def": "積木 (ㄐㄧ ㄇㄨˋ)（複數）"}]
+  },
+  {
+    "id": 3142,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "blanket",
+    "answers": [{"word": "blanket", "def": "毯子 (ㄊㄢˇ ㄗ˙) / 毛毯 (ㄇㄠˊ ㄊㄢˇ)"}]
+  },
+  {
+    "id": 3143,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "grip",
+    "answers": [{"word": "grip", "def": "緊握 (ㄐㄧㄣˇ ㄨㄛˋ) / 握把 (ㄨㄛˋ ㄅㄚˇ)"}]
+  },
+  {
+    "id": 3144,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "grab",
+    "answers": [{"word": "grab", "def": "抓取 (ㄓㄨㄚ ㄑㄩˇ) / 一把抓住 (ㄧˋ ㄅㄚˇ ㄓㄨㄚ ㄓㄨˋ)"}]
+  },
+  {
+    "id": 3145,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "grade",
+    "answers": [{"word": "grade", "def": "年級 (ㄋㄧㄢˊ ㄐㄧˊ) / 分數 (ㄈㄣ ㄕㄨˋ)"}]
+  },
+  {
+    "id": 3146,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "grow",
+    "answers": [{"word": "grow", "def": "成長 (ㄔㄥˊ ㄓㄤˇ) / 種植 (ㄓㄨㄥˋ ㄓˊ)"}]
+  },
+  {
+    "id": 3147,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "globe",
+    "answers": [{"word": "globe", "def": "地球儀 (ㄉㄧˋ ㄑㄧㄡˊ ㄧˊ) / 地球 (ㄉㄧˋ ㄑㄧㄡˊ)"}]
+  },
+  {
+    "id": 3148,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "glasses",
+    "answers": [{"word": "glasses", "def": "眼鏡 (ㄧㄢˇ ㄐㄧㄥˋ)（複數）"}]
   }
 ];
