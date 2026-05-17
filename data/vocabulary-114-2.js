@@ -1858,5 +1858,125 @@ window.VOCAB_114_2 = [
         "def": "遞送 (ㄉㄧˋ ㄙㄨㄥˋ)"
       }
     ]
+  },
+  {
+    "id": 4143,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "slither",
+    "answers": [{"word": "slither", "def": "滑行 (ㄏㄨㄚˊ ㄒㄧㄥˊ)（蛇等爬行動物）"}]
+  },
+  {
+    "id": 4144,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "crawl",
+    "answers": [{"word": "crawl", "def": "爬行 (ㄆㄚˊ ㄒㄧㄥˊ)"}]
+  },
+  {
+    "id": 4145,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "stomp",
+    "answers": [{"word": "stomp", "def": "跺腳 (ㄉㄨㄛˋ ㄐㄧㄠˇ)"}]
+  },
+  {
+    "id": 4146,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "wave",
+    "answers": [{"word": "wave", "def": "揮手 (ㄏㄨㄟ ㄕㄡˇ) / 波浪 (ㄅㄛ ㄌㄤˋ)"}]
+  },
+  {
+    "id": 4147,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "move",
+    "answers": [{"word": "move", "def": "移動 (ㄧˊ ㄉㄨㄥˋ)"}]
+  },
+  {
+    "id": 4148,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "hide",
+    "answers": [{"word": "hide", "def": "躲藏 (ㄉㄨㄛˇ ㄘㄤˊ) / 隱藏 (ㄧㄣˇ ㄘㄤˊ)"}]
+  },
+  {
+    "id": 4149,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "buzz",
+    "answers": [{"word": "buzz", "def": "嗡嗡叫 (ㄨㄥ ㄨㄥ ㄐㄧㄠˋ)（蜜蜂等的聲音）"}]
+  },
+  {
+    "id": 4150,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "ground",
+    "answers": [{"word": "ground", "def": "地面 (ㄉㄧˋ ㄇㄧㄢˋ)"}]
+  },
+  {
+    "id": 4151,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "land",
+    "answers": [{"word": "land", "def": "陸地 (ㄌㄨˋ ㄉㄧˋ)"}]
+  },
+  {
+    "id": 4152,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "crab",
+    "answers": [{"word": "crab", "def": "螃蟹 (ㄆㄤˊ ㄒㄧㄝˋ)"}]
+  },
+  {
+    "id": 4153,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "insect",
+    "answers": [{"word": "insect", "def": "昆蟲 (ㄎㄨㄣ ㄔㄨㄥˊ)"}]
+  },
+  {
+    "id": 4154,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "elephant",
+    "answers": [{"word": "elephant", "def": "大象 (ㄉㄚˋ ㄒㄧㄤˋ)"}]
+  },
+  {
+    "id": 4155,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "snake",
+    "answers": [{"word": "snake", "def": "蛇 (ㄕㄜˊ)"}]
+  },
+  {
+    "id": 4156,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "turtle",
+    "answers": [{"word": "turtle", "def": "烏龜 (ㄨ ㄍㄨㄟ) / 海龜 (ㄏㄞˇ ㄍㄨㄟ)"}]
+  },
+  {
+    "id": 4157,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W15"],
+    "audioText": "noisy",
+    "answers": [{"word": "noisy", "def": "吵鬧的 (ㄔㄠˇ ㄋㄠˋ ㄉㄜ˙)"}]
   }
 ];
