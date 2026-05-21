@@ -1978,5 +1978,85 @@
     "weeks": ["W15"],
     "audioText": "noisy",
     "answers": [{"word": "noisy", "def": "吵鬧的 (ㄔㄠˇ ㄋㄠˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 4158,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "fluffy",
+    "answers": [{"word": "fluffy", "def": "毛茸茸的 (ㄇㄠˊ ㄖㄨㄥˊ ㄖㄨㄥˊ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 4159,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "tail",
+    "answers": [{"word": "tail", "def": "尾巴 (ㄨㄟˇ ㄅㄚ)"}]
+  },
+  {
+    "id": 4160,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "tale",
+    "answers": [{"word": "tale", "def": "故事 (ㄍㄨˋ ㄕˋ)（同音字 tail）"}]
+  },
+  {
+    "id": 4161,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "chop",
+    "answers": [{"word": "chop", "def": "切 (ㄑㄧㄝ) / 砍 (ㄎㄢˇ)"}]
+  },
+  {
+    "id": 4162,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "flat",
+    "answers": [{"word": "flat", "def": "平的 (ㄆㄧㄥˊ ㄉㄜ˙) / 扁的 (ㄅㄧㄢˇ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 4163,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "ride",
+    "answers": [{"word": "ride", "def": "騎 (ㄑㄧˊ) / 乘坐 (ㄔㄥˊ ㄗㄨㄛˋ)"}]
+  },
+  {
+    "id": 4164,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "carry",
+    "answers": [{"word": "carry", "def": "攜帶 (ㄒㄧ ㄉㄞˋ) / 搬運 (ㄅㄢ ㄩㄣˋ)"}]
+  },
+  {
+    "id": 4165,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "idea",
+    "answers": [{"word": "idea", "def": "想法 (ㄒㄧㄤˇ ㄈㄚˇ) / 主意 (ㄓㄨˇ ㄧˋ)"}]
+  },
+  {
+    "id": 4166,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "everyone",
+    "answers": [{"word": "everyone", "def": "每個人 (ㄇㄟˇ ㄍㄜ˙ ㄖㄣˊ) / 大家 (ㄉㄚˋ ㄐㄧㄚ)"}]
+  },
+  {
+    "id": 4167,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "beautiful",
+    "answers": [{"word": "beautiful", "def": "美麗的 (ㄇㄟˇ ㄌㄧˋ ㄉㄜ˙) / 漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"}]
   }
 ]

@@ -1805,5 +1805,125 @@
     "weeks": ["W15"],
     "audioText": "glasses",
     "answers": [{"word": "glasses", "def": "眼鏡 (ㄧㄢˇ ㄐㄧㄥˋ)（複數）"}]
+  },
+  {
+    "id": 3149,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "drip",
+    "answers": [{"word": "drip", "def": "滴下 (ㄉㄧ ㄒㄧㄚˋ) / 滴水 (ㄉㄧ ㄕㄨㄟˇ)"}]
+  },
+  {
+    "id": 3150,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "dress",
+    "answers": [{"word": "dress", "def": "洋裝 (ㄧㄤˊ ㄓㄨㄤ) / 穿衣服 (ㄔㄨㄢ ㄧ ㄈㄨˊ)"}]
+  },
+  {
+    "id": 3151,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "drill",
+    "answers": [{"word": "drill", "def": "鑽孔 (ㄗㄨㄢˋ ㄎㄨㄥˇ) / 訓練 (ㄒㄩㄣˋ ㄌㄧㄢˋ)"}]
+  },
+  {
+    "id": 3152,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "drive",
+    "answers": [{"word": "drive", "def": "開車 (ㄎㄞ ㄔㄜ)"}]
+  },
+  {
+    "id": 3153,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "drum",
+    "answers": [{"word": "drum", "def": "鼓 (ㄍㄨˇ)"}]
+  },
+  {
+    "id": 3154,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "trick",
+    "answers": [{"word": "trick", "def": "把戲 (ㄅㄚˇ ㄒㄧˋ) / 技巧 (ㄐㄧˋ ㄑㄧㄠˇ)"}]
+  },
+  {
+    "id": 3155,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "try",
+    "answers": [{"word": "try", "def": "嘗試 (ㄔㄤˊ ㄕˋ)"}]
+  },
+  {
+    "id": 3156,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "treat",
+    "answers": [{"word": "treat", "def": "款待 (ㄎㄨㄢˇ ㄉㄞˋ) / 治療 (ㄓˋ ㄌㄧㄠˊ)"}]
+  },
+  {
+    "id": 3157,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "train",
+    "answers": [{"word": "train", "def": "火車 (ㄏㄨㄛˇ ㄔㄜ) / 訓練 (ㄒㄩㄣˋ ㄌㄧㄢˋ)"}]
+  },
+  {
+    "id": 3158,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "trip",
+    "answers": [{"word": "trip", "def": "旅行 (ㄌㄩˇ ㄒㄧㄥˊ)"}]
+  },
+  {
+    "id": 3159,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "press",
+    "answers": [{"word": "press", "def": "按 (ㄢˋ) / 壓 (ㄧㄚ)"}]
+  },
+  {
+    "id": 3160,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "prize",
+    "answers": [{"word": "prize", "def": "獎品 (ㄐㄧㄤˇ ㄆㄧㄣˇ)"}]
+  },
+  {
+    "id": 3161,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "pretty",
+    "answers": [{"word": "pretty", "def": "漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 3162,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "princess",
+    "answers": [{"word": "princess", "def": "公主 (ㄍㄨㄥ ㄓㄨˇ)"}]
+  },
+  {
+    "id": 3163,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W16"],
+    "audioText": "pride",
+    "answers": [{"word": "pride", "def": "驕傲 (ㄐㄧㄠ ㄠˋ) / 自豪 (ㄗˋ ㄏㄠˊ)"}]
   }
 ]
