@@ -1925,5 +1925,125 @@ window.PHONICS_114_2 = [
     "weeks": ["W16"],
     "audioText": "pride",
     "answers": [{"word": "pride", "def": "驕傲 (ㄐㄧㄠ ㄠˋ) / 自豪 (ㄗˋ ㄏㄠˊ)"}]
+  },
+  {
+    "id": 3164,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "please",
+    "answers": [{"word": "please", "def": "請 (ㄑㄧㄥˇ)"}]
+  },
+  {
+    "id": 3165,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "plane",
+    "answers": [{"word": "plane", "def": "飛機 (ㄈㄟ ㄐㄧ)"}]
+  },
+  {
+    "id": 3166,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "play",
+    "answers": [{"word": "play", "def": "玩耍 (ㄨㄢˊ ㄕㄨㄚˇ)"}]
+  },
+  {
+    "id": 3167,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "plop",
+    "answers": [{"word": "plop", "def": "撲通聲 (ㄆㄨ ㄊㄨㄥ ㄕㄥ) / 重重落下 (ㄓㄨㄥˋ ㄓㄨㄥˋ ㄌㄨㄛˋ ㄒㄧㄚˋ)"}]
+  },
+  {
+    "id": 3168,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "pluck",
+    "answers": [{"word": "pluck", "def": "拔 (ㄅㄚˊ) / 摘 (ㄓㄞ)"}]
+  },
+  {
+    "id": 3169,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "slide",
+    "answers": [{"word": "slide", "def": "滑行 (ㄏㄨㄚˊ ㄒㄧㄥˊ) / 溜滑梯 (ㄌㄧㄡ ㄏㄨㄚˊ ㄊㄧ)"}]
+  },
+  {
+    "id": 3170,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "slick",
+    "answers": [{"word": "slick", "def": "光滑的 (ㄍㄨㄤ ㄏㄨㄚˊ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 3171,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "slim",
+    "answers": [{"word": "slim", "def": "苗條的 (ㄇㄧㄠˊ ㄊㄧㄠˊ ㄉㄜ˙) / 瘦的 (ㄕㄡˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 3172,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "slow",
+    "answers": [{"word": "slow", "def": "緩慢的 (ㄏㄨㄢˇ ㄇㄢˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 3173,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "slope",
+    "answers": [{"word": "slope", "def": "斜坡 (ㄒㄧㄝˊ ㄆㄛ)"}]
+  },
+  {
+    "id": 3174,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "sweet",
+    "answers": [{"word": "sweet", "def": "甜的 (ㄊㄧㄢˊ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 3175,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "swim",
+    "answers": [{"word": "swim", "def": "游泳 (ㄧㄡˊ ㄩㄥˇ)"}]
+  },
+  {
+    "id": 3176,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "swan",
+    "answers": [{"word": "swan", "def": "天鵝 (ㄊㄧㄢ ㄜˊ)"}]
+  },
+  {
+    "id": 3177,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "switch",
+    "answers": [{"word": "switch", "def": "開關 (ㄎㄞ ㄍㄨㄢ) / 切換 (ㄑㄧㄝ ㄏㄨㄢˋ)"}]
+  },
+  {
+    "id": 3178,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": ["W17"],
+    "audioText": "swing",
+    "answers": [{"word": "swing", "def": "搖擺 (ㄧㄠˊ ㄅㄞˇ) / 鞦韆 (ㄑㄧㄡ ㄑㄧㄢ)"}]
   }
 ];
