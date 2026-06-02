@@ -2045,5 +2045,19 @@ window.PHONICS_114_2 = [
     "weeks": ["W17"],
     "audioText": "swing",
     "answers": [{"word": "swing", "def": "搖擺 (ㄧㄠˊ ㄅㄞˇ) / 鞦韆 (ㄑㄧㄡ ㄑㄧㄢ)"}]
-  }
+  },
+  {"id": 3179, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scary", "answers": [{"word": "scary", "def": "可怕的 (ㄎㄜˇ ㄆㄚˋ ㄉㄜ˙)"}]},
+  {"id": 3180, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "score", "answers": [{"word": "score", "def": "分數 (ㄈㄣ ㄕㄨˋ)"}]},
+  {"id": 3181, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scar", "answers": [{"word": "scar", "def": "傷疤 (ㄕㄤ ㄅㄚ)"}]},
+  {"id": 3182, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scrub", "answers": [{"word": "scrub", "def": "用力擦洗 (ㄩㄥˋ ㄌㄧˋ ㄘㄚ ㄒㄧˇ)"}]},
+  {"id": 3183, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scream", "answers": [{"word": "scream", "def": "尖叫 (ㄐㄧㄢ ㄐㄧㄠˋ)"}]},
+  {"id": 3184, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skunk", "answers": [{"word": "skunk", "def": "臭鼬 (ㄔㄡˋ ㄧㄡˋ)"}]},
+  {"id": 3185, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skirt", "answers": [{"word": "skirt", "def": "裙子 (ㄑㄩㄣˊ ˙ㄗ)"}]},
+  {"id": 3186, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "ski", "answers": [{"word": "ski", "def": "滑雪 (ㄏㄨㄚˊ ㄒㄩㄝˇ)"}]},
+  {"id": 3187, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skill", "answers": [{"word": "skill", "def": "技能 (ㄐㄧˋ ㄋㄥˊ)"}]},
+  {"id": 3188, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skate", "answers": [{"word": "skate", "def": "溜冰；滑板 (ㄌㄧㄡˊ ㄅㄧㄥ；ㄏㄨㄚˊ ㄅㄢˇ)"}]},
+  {"id": 3189, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "square", "answers": [{"word": "square", "def": "正方形 (ㄓㄥˋ ㄈㄤ ㄒㄧㄥˊ)"}]},
+  {"id": 3190, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "squash", "answers": [{"word": "squash", "def": "南瓜；擠壓 (ㄋㄢˊ ㄍㄨㄚ；ㄐㄧˇ ㄧㄚ)"}]},
+  {"id": 3191, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "squid", "answers": [{"word": "squid", "def": "烏賊、魷魚 (ㄨ ㄗㄟˊ、ㄧㄡˊ ㄩˊ)"}]},
+  {"id": 3192, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "squeak", "answers": [{"word": "squeak", "def": "吱吱叫 (ㄓ ㄓ ㄐㄧㄠˋ)"}]}
 ];

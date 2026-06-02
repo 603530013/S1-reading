@@ -2058,5 +2058,15 @@
     "weeks": ["W16"],
     "audioText": "beautiful",
     "answers": [{"word": "beautiful", "def": "美麗的 (ㄇㄟˇ ㄌㄧˋ ㄉㄜ˙) / 漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"}]
-  }
+  },
+  {"id": 4168, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "ocean", "answers": [{"word": "ocean", "def": "海洋 (ㄏㄞˇ ㄧㄤˊ)"}]},
+  {"id": 4169, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "alone", "answers": [{"word": "alone", "def": "單獨的、孤單的 (ㄉㄢ ㄉㄨˊ ㄉㄜ˙、ㄍㄨ ㄉㄢ ㄉㄜ˙)"}]},
+  {"id": 4170, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "close", "answers": [{"word": "close", "def": "靠近的；關閉 (ㄎㄠˋ ㄐㄧㄣˋ ㄉㄜ˙；ㄍㄨㄢ ㄅㄧˋ)"}]},
+  {"id": 4171, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "team", "answers": [{"word": "team", "def": "團隊 (ㄊㄨㄢˊ ㄉㄨㄟˋ)"}]},
+  {"id": 4172, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "search", "answers": [{"word": "search", "def": "搜尋 (ㄙㄡ ㄒㄩㄣˊ)"}]},
+  {"id": 4173, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "dangerous", "answers": [{"word": "dangerous", "def": "危險的 (ㄨㄟˊ ㄒㄧㄢˇ ㄉㄜ˙)"}]},
+  {"id": 4174, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "partner", "answers": [{"word": "partner", "def": "夥伴 (ㄏㄨㄛˇ ㄅㄢˋ)"}]},
+  {"id": 4175, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "group", "answers": [{"word": "group", "def": "群組、團體 (ㄑㄩㄣˊ ㄗㄨˇ、ㄊㄨㄢˊ ㄊㄧˇ)"}]},
+  {"id": 4176, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "together", "answers": [{"word": "together", "def": "一起 (ㄧ ㄑㄧˇ)"}]},
+  {"id": 4177, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "river", "answers": [{"word": "river", "def": "河流 (ㄏㄜˊ ㄌㄧㄡˊ)"}]}
 ]
