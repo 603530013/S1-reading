@@ -2068,5 +2068,15 @@ window.VOCAB_114_2 = [
   {"id": 4174, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "partner", "answers": [{"word": "partner", "def": "夥伴 (ㄏㄨㄛˇ ㄅㄢˋ)"}]},
   {"id": 4175, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "group", "answers": [{"word": "group", "def": "群組、團體 (ㄑㄩㄣˊ ㄗㄨˇ、ㄊㄨㄢˊ ㄊㄧˇ)"}]},
   {"id": 4176, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "together", "answers": [{"word": "together", "def": "一起 (ㄧ ㄑㄧˇ)"}]},
-  {"id": 4177, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "river", "answers": [{"word": "river", "def": "河流 (ㄏㄜˊ ㄌㄧㄡˊ)"}]}
+  {"id": 4177, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "river", "answers": [{"word": "river", "def": "河流 (ㄏㄜˊ ㄌㄧㄡˊ)"}]},
+  {"id": 4178, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "heart", "answers": [{"word": "heart", "def": "心臟 (ㄒㄧㄣ ㄓㄤˋ)"}]},
+  {"id": 4179, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "oxygen", "answers": [{"word": "oxygen", "def": "氧氣 (ㄧㄤˇ ㄑㄧˋ)"}]},
+  {"id": 4180, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "muscles", "answers": [{"word": "muscles", "def": "肌肉 (ㄐㄧ ㄖㄡˋ)"}]},
+  {"id": 4181, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "breathe", "answers": [{"word": "breathe", "def": "呼吸 (ㄏㄨ ㄒㄧ)"}]},
+  {"id": 4182, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "bend", "answers": [{"word": "bend", "def": "彎曲 (ㄨㄢ ㄑㄩ)"}]},
+  {"id": 4183, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "exercise", "answers": [{"word": "exercise", "def": "運動；鍛鍊 (ㄩㄣˋ ㄉㄨㄥˋ；ㄉㄨㄢˋ ㄌㄧㄢˋ)"}]},
+  {"id": 4184, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "body", "answers": [{"word": "body", "def": "身體 (ㄕㄣ ㄊㄧˇ)"}]},
+  {"id": 4185, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "flexible", "answers": [{"word": "flexible", "def": "柔軟的；有彈性的 (ㄖㄡˊ ㄖㄨㄢˇ ㄉㄜ˙；ㄧㄡˇ ㄊㄢˊ ㄒㄧㄥˋ ㄉㄜ˙)"}]},
+  {"id": 4186, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "stretch", "answers": [{"word": "stretch", "def": "伸展 (ㄕㄣ ㄓㄢˇ)"}]},
+  {"id": 4187, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "dance", "answers": [{"word": "dance", "def": "跳舞 (ㄊㄧㄠˋ ㄨˇ)"}]}
 ];
