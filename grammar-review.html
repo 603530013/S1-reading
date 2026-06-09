@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -154,11 +154,77 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
       <div class="utit">Adjectives</div>
       <div class="ucn">形容詞</div>
     </button>
+    <button class="u-btn" style="border-left:6px solid #f43f5e" onclick="enterUnit(12)">
+      <div class="uicon">🏷️</div>
+      <div class="unum" style="color:#f43f5e">Unit 12</div>
+      <div class="utit">Possessive Adj. (Singular)</div>
+      <div class="ucn">單數所有格形容詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #ec4899" onclick="enterUnit(13)">
+      <div class="uicon">👨‍👩‍👦‍👦</div>
+      <div class="unum" style="color:#ec4899">Unit 13</div>
+      <div class="utit">Possessive Adj. (Plural)</div>
+      <div class="ucn">複數所有格形容詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #d946ef" onclick="enterUnit(14)">
+      <div class="uicon">🔤</div>
+      <div class="unum" style="color:#d946ef">Unit 14</div>
+      <div class="utit">Am, Is and Are</div>
+      <div class="ucn">be動詞 (am/is/are)</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #8b5cf6" onclick="enterUnit(15)">
+      <div class="uicon">✋</div>
+      <div class="unum" style="color:#8b5cf6">Unit 15</div>
+      <div class="utit">Has and Have</div>
+      <div class="ucn">has / have</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #4f46e5" onclick="enterUnit(16)">
+      <div class="uicon">✅</div>
+      <div class="unum" style="color:#4f46e5">Unit 16</div>
+      <div class="utit">Do and Does</div>
+      <div class="ucn">do / does</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #0284c7" onclick="enterUnit(17)">
+      <div class="uicon">🕐</div>
+      <div class="unum" style="color:#0284c7">Unit 17</div>
+      <div class="utit">Simple Present Tense</div>
+      <div class="ucn">簡單現在式</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #0891b2" onclick="enterUnit(18)">
+      <div class="uicon">▶️</div>
+      <div class="unum" style="color:#0891b2">Unit 18</div>
+      <div class="utit">Present Continuous Tense</div>
+      <div class="ucn">現在進行式</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #059669" onclick="enterUnit(19)">
+      <div class="uicon">📍</div>
+      <div class="unum" style="color:#059669">Unit 19</div>
+      <div class="utit">Prepositions</div>
+      <div class="ucn">介系詞</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #65a30d" onclick="enterUnit(20)">
+      <div class="uicon">🔗</div>
+      <div class="unum" style="color:#65a30d">Unit 20</div>
+      <div class="utit">Conjunctions</div>
+      <div class="ucn">連接詞 (and/or)</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #ca8a04" onclick="enterUnit(21)">
+      <div class="uicon">❓</div>
+      <div class="unum" style="color:#ca8a04">Unit 21</div>
+      <div class="utit">Question Words</div>
+      <div class="ucn">疑問詞 (Who/What)</div>
+    </button>
+    <button class="u-btn" style="border-left:6px solid #ea580c" onclick="enterUnit(22)">
+      <div class="uicon">🚫</div>
+      <div class="unum" style="color:#ea580c">Unit 22</div>
+      <div class="utit">Negative Statements</div>
+      <div class="ucn">否定句</div>
+    </button>
     <button class="u-btn u-all" onclick="enterUnit('all')">
       <div class="uicon">🌟</div>
-      <div class="unum">Unit 1-11</div>
+      <div class="unum">Unit 1-22</div>
       <div class="utit">全部一起複習</div>
-      <div class="ucn">11 單元綜合練習</div>
+      <div class="ucn">22 單元綜合練習</div>
     </button>
   </div>
 </div>
@@ -557,14 +623,419 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
     <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
   </div>
 </div>
-<div id="rv-all" class="card hidden" style="border-top:6px solid #db2777">
-  <h2>🌟 Unit 1-11 全部複習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(綜合練習)</span></h2>
-  <div class="tp">🎯 Unit 1-11 綜合複習</div>
-  <div class="tp">代名詞：單數 (I, you, he, she)、複數 (we, you, they)</div>
-  <div class="tp">反身代名詞：myself/yourself/himself/herself/itself/ourselves/yourselves/themselves</div>
-  <div class="tp">指示代名詞：this/that/these/those（近↔遠、單↔複）</div>
-  <div class="tp">名詞：a/an、單數/複數規則、不可數、永遠複數 (spectacles, trousers, pyjamas)</div>
-  <div class="tp">形容詞：放名詞前 (a fat cat) 或 be 動詞後 (It is big.)</div>
+
+<div id="rv-12" class="card hidden" style="border-top:6px solid #f43f5e">
+  <h2>🏷️ Unit 12 · Possessive Adjectives (Singular) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數所有格形容詞)</span></h2>
+  <div class="tp">單數所有格形容詞：<b>my, your, his, her, its</b></div>
+  <div class="tp">用來說明東西屬於誰 (to whom or to what something belongs)</div>
+  <div class="tp">例：I have a book. → <b>My</b> book is new.</div>
+  <div class="tp">例：Mary has a doll. → <b>Her</b> doll is pretty.</div>
+  <div class="tp">例：The dog has a tail. → <b>Its</b> tail is short.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-12"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('12')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('12')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-12"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('12')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('12')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-12"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('12')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('12')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-12">
+    <div class="stars" id="quiz-stars-12"></div>
+    <div class="snum" id="quiz-snum-12"></div>
+    <div id="quiz-msg-12"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-13" class="card hidden" style="border-top:6px solid #ec4899">
+  <h2>👨‍👩‍👦‍👦 Unit 13 · Possessive Adjectives (Plural) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(複數所有格形容詞)</span></h2>
+  <div class="tp">複數所有格形容詞：<b>our, their, your</b></div>
+  <div class="tp">例：Miss Lee is <b>our</b> teacher. (我們的老師)</div>
+  <div class="tp">例：That is <b>their</b> house. (他們的房子)</div>
+  <div class="tp">例：These are <b>your</b> books. (你們的書)</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-13"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('13')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('13')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-13"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('13')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('13')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-13"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('13')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('13')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-13">
+    <div class="stars" id="quiz-stars-13"></div>
+    <div class="snum" id="quiz-snum-13"></div>
+    <div id="quiz-msg-13"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-14" class="card hidden" style="border-top:6px solid #d946ef">
+  <h2>🔤 Unit 14 · "Am", "Is" and "Are" <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(be動詞)</span></h2>
+  <div class="tp">這三個是 "to be" 動詞的形式</div>
+  <div class="tp"><b>Am</b> 用於 I</div>
+  <div class="tp"><b>Is</b> 用於 she, he 和單數名詞</div>
+  <div class="tp"><b>Are</b> 用於 you, they, we 和複數名詞</div>
+  <div class="tp">例：I <b>am</b> a pupil. / She <b>is</b> a doctor. / They <b>are</b> teachers.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-14"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('14')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('14')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-14"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('14')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('14')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-14"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('14')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('14')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-14">
+    <div class="stars" id="quiz-stars-14"></div>
+    <div class="snum" id="quiz-snum-14"></div>
+    <div id="quiz-msg-14"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-15" class="card hidden" style="border-top:6px solid #8b5cf6">
+  <h2>✋ Unit 15 · "Has" and "Have" <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(has/have)</span></h2>
+  <div class="tp">這兩個是 "to have" 動詞的形式</div>
+  <div class="tp"><b>Has</b> 用於 she, he 和單數名詞</div>
+  <div class="tp"><b>Have</b> 用於 I, you, they, we 和複數名詞</div>
+  <div class="tp">例：She <b>has</b> a fever. / I <b>have</b> a brother. / They <b>have</b> two dogs.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-15"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('15')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('15')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-15"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('15')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('15')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-15"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('15')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('15')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-15">
+    <div class="stars" id="quiz-stars-15"></div>
+    <div class="snum" id="quiz-snum-15"></div>
+    <div id="quiz-msg-15"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-16" class="card hidden" style="border-top:6px solid #4f46e5">
+  <h2>✅ Unit 16 · "Do" and "Does" <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(do/does)</span></h2>
+  <div class="tp">這兩個是 "to do" 動詞的形式</div>
+  <div class="tp"><b>Do</b> 用於 I, you, they, we 和複數名詞</div>
+  <div class="tp"><b>Does</b> 用於 he, she 和單數名詞</div>
+  <div class="tp">例：I <b>do</b> my work quickly. / She <b>does</b> her work slowly.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-16"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('16')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('16')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-16"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('16')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('16')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-16"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('16')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('16')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-16">
+    <div class="stars" id="quiz-stars-16"></div>
+    <div class="snum" id="quiz-snum-16"></div>
+    <div id="quiz-msg-16"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-17" class="card hidden" style="border-top:6px solid #0284c7">
+  <h2>🕐 Unit 17 · Simple Present Tense <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(簡單現在式)</span></h2>
+  <div class="tp">簡單現在式用於描述<b>習慣性動作</b>或<b>一般事實</b></div>
+  <div class="tp">動詞有兩種形式：<b>base form</b> 和 <b>base + s</b></div>
+  <div class="tp">I / You / We / They / 複數名詞 → 用 <b>base form</b>（原形）</div>
+  <div class="tp">She / He / It / 單數名詞 → 用 <b>base + s</b>（加 s）</div>
+  <div class="tp">例：speak → speaks, run → runs, like → likes, go → goes</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-17"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('17')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('17')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-17"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('17')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('17')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-17"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('17')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('17')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-17">
+    <div class="stars" id="quiz-stars-17"></div>
+    <div class="snum" id="quiz-snum-17"></div>
+    <div id="quiz-msg-17"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-18" class="card hidden" style="border-top:6px solid #0891b2">
+  <h2>▶️ Unit 18 · Present Continuous Tense <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(現在進行式)</span></h2>
+  <div class="tp">現在進行式用於描述<b>正在發生的動作</b></div>
+  <div class="tp">結構：<b>am / is / are + 動詞 -ing</b>（現在分詞）</div>
+  <div class="tp">I → am + -ing / She, He, It → is + -ing / You, We, They → are + -ing</div>
+  <div class="tp">例：I <b>am writing</b> the answer. / The baby <b>is sleeping</b> soundly.</div>
+  <div class="tp">例：The boys <b>are waiting</b> for their parents.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-18"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('18')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('18')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-18"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('18')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('18')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-18"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('18')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('18')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-18">
+    <div class="stars" id="quiz-stars-18"></div>
+    <div class="snum" id="quiz-snum-18"></div>
+    <div id="quiz-msg-18"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-19" class="card hidden" style="border-top:6px solid #059669">
+  <h2>📍 Unit 19 · Prepositions <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(介系詞)</span></h2>
+  <div class="tp">介系詞用於表示<b>位置、地點或移動方向</b></div>
+  <div class="tp">位置介系詞：<b>on</b> (在上面), <b>in</b> (在裡面), <b>above</b> (在上方), <b>under</b> (在下面), <b>in front of</b> (在前面), <b>behind</b> (在後面)</div>
+  <div class="tp">移動介系詞：<b>to</b> (到), <b>from</b> (從)</div>
+  <div class="tp">例：The book is <b>on</b> the chair. / The stick is <b>in</b> the box.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-19"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('19')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('19')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-19"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('19')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('19')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-19"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('19')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('19')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-19">
+    <div class="stars" id="quiz-stars-19"></div>
+    <div class="snum" id="quiz-snum-19"></div>
+    <div id="quiz-msg-19"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-20" class="card hidden" style="border-top:6px solid #65a30d">
+  <h2>🔗 Unit 20 · Conjunctions <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(連接詞)</span></h2>
+  <div class="tp">連接詞是用來<b>連接單字或句子</b>的詞</div>
+  <div class="tp"><b>and</b>：連接相似或附加的內容（兩者都有）</div>
+  <div class="tp"><b>or</b>：連接選項（二選一）</div>
+  <div class="tp">例：Mrs Lee has a daughter <b>and</b> a son. (兩個都有)</div>
+  <div class="tp">例：Is this a pen <b>or</b> a pencil? (選一個)</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-20"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('20')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('20')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-20"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('20')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('20')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-20"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('20')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('20')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-20">
+    <div class="stars" id="quiz-stars-20"></div>
+    <div class="snum" id="quiz-snum-20"></div>
+    <div id="quiz-msg-20"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-21" class="card hidden" style="border-top:6px solid #ca8a04">
+  <h2>❓ Unit 21 · Question Words <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(疑問詞)</span></h2>
+  <div class="tp">疑問詞用來詢問資訊</div>
+  <div class="tp"><b>Who</b>：詢問<b>人名</b>（Who is this? This is Alan.）</div>
+  <div class="tp"><b>What</b>：詢問<b>事物、活動或職業</b>（What is this? It is a rabbit.）</div>
+  <div class="tp">例：<b>What</b> is his job? He is a postman.</div>
+  <div class="tp">例：<b>Who</b> are they? They are Alan and Mary.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-21"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('21')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('21')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-21"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('21')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('21')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-21"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('21')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('21')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-21">
+    <div class="stars" id="quiz-stars-21"></div>
+    <div class="snum" id="quiz-snum-21"></div>
+    <div id="quiz-msg-21"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div>
+<div id="rv-22" class="card hidden" style="border-top:6px solid #ea580c">
+  <h2>🚫 Unit 22 · Negative and Affirmative Statements <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(否定句與肯定句)</span></h2>
+  <div class="tp">肯定句 (Affirmative) 是正面的句子</div>
+  <div class="tp">否定句 (Negative) 含有 <b>not</b></div>
+  <div class="tp">例：This is an umbrella. → This is <b>not</b> a stick.</div>
+  <div class="tp">例：They like balloons. → They do <b>not</b> like balloons.</div>
+  <div class="tp">例：I have a pen. → I do <b>not</b> have a pen.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-22"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('22')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('22')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-22"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('22')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('22')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-22"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('22')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('22')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-22">
+    <div class="stars" id="quiz-stars-22"></div>
+    <div class="snum" id="quiz-snum-22"></div>
+    <div id="quiz-msg-22"></div>
+  </div>
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
+  </div>
+</div><div id="rv-all" class="card hidden" style="border-top:6px solid #db2777">
+  <h2>🌟 Unit 1-22 全部複習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(綜合練習)</span></h2>
+  <div class="tp">🎯 Unit 1-22 綜合複習</div>
+  <div class="tp">代名詞：單數 (I,you,he,she)、複數 (we,you,they) | 反身代名詞：myself/herself/ourselves...</div>
+  <div class="tp">名詞：a/an、單複數規則、不可數、永遠複數 | 形容詞：a fat cat / It is big.</div>
+  <div class="tp">所有格形容詞：my/your/his/her/its (單數) | our/their/your (複數)</div>
+  <div class="tp">be動詞：am(I) / is(she,he) / are(you,they,we) | has(she,he) / have(I,you,they,we)</div>
+  <div class="tp">do(I,you,they,we) / does(he,she) | 簡單現在式：base/base+s | 進行式：am/is/are+-ing</div>
+  <div class="tp">介系詞：on/in/above/under/in front of/behind/to/from | 連接詞：and(兩者)/or(選一)</div>
+  <div class="tp">疑問詞：Who(問人) / What(問事物/職業) | 否定句：含有 not</div>
 
   <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
   <div id="fill-all"></div>
@@ -609,9 +1080,9 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
 </div>
 
 <script>
-var FILL_DATA = {"1": [{"title": "I / You / He / She", "sentences": [{"hint": "👦 我", "before": "", "after": " am Simon.", "ans": "I"}, {"hint": "👧 你", "before": "", "after": " are Mary.", "ans": "You"}, {"hint": "👩 她", "before": "", "after": " is Miss Lee.", "ans": "She"}, {"hint": "👨 他", "before": "", "after": " is Mr Tan.", "ans": "He"}, {"hint": "👨 他 (John)", "before": "", "after": " can swim very fast.", "ans": "He"}, {"hint": "👩 她 (mother)", "before": "", "after": " needs a rest.", "ans": "She"}], "wordBank": ["I", "You", "He", "She"]}], "2": [{"title": "We / You / They", "sentences": [{"hint": "👨‍👩‍👦 我們", "before": "", "after": " are boys.", "ans": "We"}, {"hint": "👧👧 你們", "before": "", "after": " are girls.", "ans": "You"}, {"hint": "👨‍🏫 他們", "before": "", "after": " are teachers.", "ans": "They"}, {"hint": "🦁 他們(lions)", "before": "The lions are in the cage. ", "after": " are sleeping.", "ans": "They"}, {"hint": "我+他=我們", "before": "Peter and I are tall. ", "after": " are brothers.", "ans": "We"}], "wordBank": ["We", "You", "They"]}], "3": [{"title": "Reflexive (單數)", "sentences": [{"hint": "🧴 我自己", "before": "I am drying ", "after": " with a towel.", "ans": "myself"}, {"hint": "⌚ 你自己", "before": "You have bought ", "after": " a new watch.", "ans": "yourself"}, {"hint": "✂️ 他自己", "before": "He cut ", "after": " accidentally.", "ans": "himself"}, {"hint": "🤕 她自己", "before": "She fell and hurt ", "after": ".", "ans": "herself"}, {"hint": "🐱 它自己", "before": "The cat hid ", "after": " under the table.", "ans": "itself"}], "wordBank": ["myself", "yourself", "himself", "herself", "itself"]}], "4": [{"title": "Reflexive (複數)", "sentences": [{"hint": "🧼 你們自己", "before": "You can wash ", "after": " with soap.", "ans": "yourselves"}, {"hint": "😳 他們自己", "before": "They were ashamed of ", "after": ".", "ans": "themselves"}, {"hint": "🌬️ 我們自己", "before": "We cooled ", "after": " under the fan.", "ans": "ourselves"}, {"hint": "🏃 我們自己", "before": "We saved ", "after": " by running away.", "ans": "ourselves"}, {"hint": "🏊 他們自己", "before": "They taught ", "after": " to swim.", "ans": "themselves"}], "wordBank": ["ourselves", "yourselves", "themselves"]}], "5": [{"title": "this / that", "sentences": [{"hint": "✏️ 近的 (this)", "before": "", "after": " is a pencil.", "ans": "This"}, {"hint": "🪑 遠的 (that)", "before": "", "after": " is a table.", "ans": "That"}, {"hint": "📦 近的疑問", "before": "What is ", "after": " in the box?", "ans": "this"}, {"hint": "🗿 遠的疑問", "before": "What is ", "after": " behind the rock?", "ans": "that"}], "wordBank": ["This", "That", "this", "that"]}], "6": [{"title": "these / those", "sentences": [{"hint": "🌸🌸 近的", "before": "", "after": " are flowers.", "ans": "These"}, {"hint": "🌳🌳 遠的", "before": "", "after": " are trees.", "ans": "Those"}, {"hint": "📦 近的疑問", "before": "What are ", "after": " in the box?", "ans": "these"}, {"hint": "🗿 遠的疑問", "before": "What are ", "after": " behind the rock?", "ans": "those"}], "wordBank": ["These", "Those", "these", "those"]}], "7": [{"title": "沒有單數形的名詞", "sentences": [{"hint": "👓 眼鏡", "before": "My dad wears ", "after": ".", "ans": "spectacles"}, {"hint": "👖 長褲", "before": "I wear ", "after": ".", "ans": "trousers"}, {"hint": "🛏️ 睡衣", "before": "I sleep in my ", "after": ".", "ans": "pyjamas"}, {"hint": "🍎🍎 apple→?", "before": "I see three ", "after": ".", "ans": "apples"}, {"hint": "🥛🥛 glass→?", "before": "There are two ", "after": ".", "ans": "glasses"}], "wordBank": ["spectacles", "trousers", "pyjamas", "apples", "glasses"]}], "8": [{"title": "a / an", "sentences": [{"hint": "🍎 母音開頭", "before": "I have ", "after": " apple.", "ans": "an"}, {"hint": "🐱 子音開頭", "before": "I have ", "after": " cat.", "ans": "a"}, {"hint": "👩‍🏫 子音開頭", "before": "She is ", "after": " teacher.", "ans": "a"}, {"hint": "🐘 母音開頭", "before": "It is ", "after": " elephant.", "ans": "an"}, {"hint": "📙 子音開頭", "before": "This is ", "after": " book.", "ans": "a"}, {"hint": "🕗 母音開頭", "before": "It was ", "after": " hour ago.", "ans": "an"}], "wordBank": ["a", "an"]}], "9": [{"title": "複數可數名詞", "sentences": [{"hint": "🪑🪑 chair→?", "before": "Two ", "after": " in the room.", "ans": "chairs"}, {"hint": "🐯🐯 tiger→?", "before": "Three ", "after": " in the zoo.", "ans": "tigers"}, {"hint": "📦📦 box→?", "before": "Four ", "after": " on the table.", "ans": "boxes"}, {"hint": "🔥🔥 match→?", "before": "Five ", "after": " in the packet.", "ans": "matches"}, {"hint": "🐎🐎 horse→?", "before": "Six ", "after": " are running.", "ans": "horses"}, {"hint": "🪥🪥 brush→?", "before": "Two ", "after": " in the cup.", "ans": "brushes"}], "wordBank": ["chairs", "tigers", "boxes", "matches", "horses", "brushes"]}], "10": [{"title": "不可數名詞", "sentences": [{"hint": "💧 水", "before": "I drink ", "after": " every day.", "ans": "water"}, {"hint": "🥛 牛奶", "before": "She has ", "after": " for breakfast.", "ans": "milk"}, {"hint": "🍚 米飯", "before": "We eat ", "after": " for lunch.", "ans": "rice"}, {"hint": "🍯 糖", "before": "Please pass me the ", "after": ".", "ans": "sugar"}, {"hint": "🍞 麵包", "before": "I have ", "after": " with butter.", "ans": "bread"}], "wordBank": ["water", "milk", "rice", "sugar", "bread"]}], "11": [{"title": "形容詞", "sentences": [{"hint": "🐱 胖", "before": "a ", "after": " cat", "ans": "fat"}, {"hint": "🌙 冷", "before": "a ", "after": " night", "ans": "cold"}, {"hint": "📙 厚", "before": "a ", "after": " book", "ans": "thick"}, {"hint": "🏠 大", "before": "The house is ", "after": ".", "ans": "big"}, {"hint": "🪨 重", "before": "The stone is ", "after": ".", "ans": "heavy"}, {"hint": "😊 開心", "before": "They are ", "after": ".", "ans": "happy"}], "wordBank": ["fat", "cold", "thick", "big", "heavy", "happy"]}], "all": [{"title": "代名詞 (1-2)", "sentences": [{"hint": "👧 Mary", "before": "", "after": " am Mary.", "ans": "I"}, {"hint": "👨 Mr Tan", "before": "", "after": " is Mr Tan.", "ans": "He"}, {"hint": "👨‍👩‍👦 我們", "before": "", "after": " are boys.", "ans": "We"}, {"hint": "🦁 lions", "before": "The lions are sleeping. ", "after": " are in the cage.", "ans": "They"}], "wordBank": ["I", "He", "We", "They"]}, {"title": "反身代名詞 (3-4)", "sentences": [{"hint": "🧴 我自己", "before": "I am drying ", "after": ".", "ans": "myself"}, {"hint": "🤕 她自己", "before": "She hurt ", "after": ".", "ans": "herself"}, {"hint": "🌬️ 我們", "before": "We cooled ", "after": ".", "ans": "ourselves"}, {"hint": "🏊 他們", "before": "They taught ", "after": " to swim.", "ans": "themselves"}], "wordBank": ["myself", "herself", "ourselves", "themselves"]}, {"title": "指示代名詞 (5-6)", "sentences": [{"hint": "✏️ 近的單", "before": "", "after": " is a pencil.", "ans": "This"}, {"hint": "🪑 遠的單", "before": "", "after": " is a table.", "ans": "That"}, {"hint": "🌸🌸 近的複", "before": "", "after": " are flowers.", "ans": "These"}, {"hint": "🌳🌳 遠的複", "before": "", "after": " are trees.", "ans": "Those"}], "wordBank": ["This", "That", "These", "Those"]}, {"title": "名詞 (7-10)", "sentences": [{"hint": "🍎 母音", "before": "I eat ", "after": " apple.", "ans": "an"}, {"hint": "🐱 子音", "before": "I have ", "after": " cat.", "ans": "a"}, {"hint": "📦 box 複", "before": "Four ", "after": " on the table.", "ans": "boxes"}, {"hint": "💧 不可數", "before": "I drink ", "after": " every day.", "ans": "water"}, {"hint": "👓 永遠複", "before": "My dad wears ", "after": ".", "ans": "spectacles"}], "wordBank": ["a", "an", "boxes", "water", "spectacles"]}, {"title": "形容詞 (11)", "sentences": [{"hint": "🐱 胖", "before": "a ", "after": " cat", "ans": "fat"}, {"hint": "🏠 大", "before": "The house is ", "after": ".", "ans": "big"}, {"hint": "😊 開心", "before": "They are ", "after": ".", "ans": "happy"}], "wordBank": ["fat", "big", "happy"]}]};
-var ERROR_DATA = {"1": [{"sentence": "i am six years old.", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}]}, {"sentence": "He are my neighbour.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}, {"sentence": "she am Miss Lee.", "errors": [{"word": "she", "correct": "She", "reason": "句首大寫"}, {"word": "am", "correct": "is", "reason": "She 用 is"}]}, {"sentence": "you is tall.", "errors": [{"word": "you", "correct": "You", "reason": "句首大寫"}, {"word": "is", "correct": "are", "reason": "You 用 are"}]}], "2": [{"sentence": "they is boys.", "errors": [{"word": "they", "correct": "They", "reason": "句首大寫"}, {"word": "is", "correct": "are", "reason": "They 用 are"}]}, {"sentence": "we am hungry.", "errors": [{"word": "we", "correct": "We", "reason": "句首大寫"}, {"word": "am", "correct": "are", "reason": "We 用 are"}]}, {"sentence": "The lions is sleeping.", "errors": [{"word": "is", "correct": "are", "reason": "複數 lions 用 are"}]}, {"sentence": "Peter and I is tall.", "errors": [{"word": "is", "correct": "are", "reason": "我們 (We) 用 are"}]}], "3": [{"sentence": "I am drying myselves.", "errors": [{"word": "myselves", "correct": "myself", "reason": "單數用 myself"}]}, {"sentence": "She hurt himself.", "errors": [{"word": "himself", "correct": "herself", "reason": "She 用 herself"}]}, {"sentence": "He cut herself.", "errors": [{"word": "herself", "correct": "himself", "reason": "He 用 himself"}]}, {"sentence": "The cat hid himself.", "errors": [{"word": "himself", "correct": "itself", "reason": "貓 (it) 用 itself"}]}], "4": [{"sentence": "We saved ourself.", "errors": [{"word": "ourself", "correct": "ourselves", "reason": "We 用 ourselves"}]}, {"sentence": "They taught himselves to swim.", "errors": [{"word": "himselves", "correct": "themselves", "reason": "They 用 themselves"}]}, {"sentence": "You can wash yourself, everyone.", "errors": [{"word": "yourself", "correct": "yourselves", "reason": "everyone 這裡表大家用 yourselves"}]}], "5": [{"sentence": "these is a pencil.", "errors": [{"word": "these", "correct": "This", "reason": "單數用 This"}]}, {"sentence": "That are a table.", "errors": [{"word": "are", "correct": "is", "reason": "單數用 is"}]}, {"sentence": "this is a pencil", "errors": [{"word": "this", "correct": "This", "reason": "句首大寫"}, {"word": "pencil", "correct": "pencil.", "reason": "句尾需要句號"}]}], "6": [{"sentence": "this are flowers.", "errors": [{"word": "this", "correct": "These", "reason": "複數用 These"}]}, {"sentence": "Those is trees.", "errors": [{"word": "is", "correct": "are", "reason": "複數用 are"}]}, {"sentence": "that are my books.", "errors": [{"word": "that", "correct": "Those", "reason": "複數用 Those"}]}], "7": [{"sentence": "I wear a trouser.", "errors": [{"word": "a", "correct": "", "reason": "trousers 永遠複數"}, {"word": "trouser", "correct": "trousers", "reason": "永遠複數"}]}, {"sentence": "Bring me the spectacle.", "errors": [{"word": "spectacle", "correct": "spectacles", "reason": "永遠複數"}]}, {"sentence": "I sleep in my pyjama.", "errors": [{"word": "pyjama", "correct": "pyjamas", "reason": "永遠複數"}]}], "8": [{"sentence": "I eat a apple.", "errors": [{"word": "a", "correct": "an", "reason": "apple 母音用 an"}]}, {"sentence": "She is an teacher.", "errors": [{"word": "an", "correct": "a", "reason": "teacher 子音用 a"}]}, {"sentence": "It is a elephant.", "errors": [{"word": "a", "correct": "an", "reason": "elephant 母音用 an"}]}, {"sentence": "This is an book.", "errors": [{"word": "an", "correct": "a", "reason": "book 子音用 a"}]}], "9": [{"sentence": "Two tiger in the zoo.", "errors": [{"word": "tiger", "correct": "tigers", "reason": "複數加 s"}]}, {"sentence": "Three box on the table.", "errors": [{"word": "box", "correct": "boxes", "reason": "字尾 x 加 es"}]}, {"sentence": "Four match in the packet.", "errors": [{"word": "match", "correct": "matches", "reason": "字尾 ch 加 es"}]}, {"sentence": "Five horse are running.", "errors": [{"word": "horse", "correct": "horses", "reason": "複數加 s"}]}], "10": [{"sentence": "I drink two waters.", "errors": [{"word": "two", "correct": "", "reason": "water 不可數"}, {"word": "waters", "correct": "water", "reason": "water 不可數"}]}, {"sentence": "Please pass me three sugars.", "errors": [{"word": "three", "correct": "", "reason": "sugar 不可數"}, {"word": "sugars", "correct": "sugar", "reason": "sugar 不可數"}]}, {"sentence": "I want a rice.", "errors": [{"word": "a", "correct": "", "reason": "rice 不可數不用 a"}]}], "11": [{"sentence": "The house big is.", "errors": [{"word": "big", "correct": "is", "reason": "順序錯"}, {"word": "is", "correct": "big.", "reason": "應是 is big"}]}, {"sentence": "They are happys.", "errors": [{"word": "happys", "correct": "happy", "reason": "形容詞不加 s"}]}, {"sentence": "The stone is heavys.", "errors": [{"word": "heavys", "correct": "heavy", "reason": "形容詞不加 s"}]}], "all": [{"sentence": "i am six years old.", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}]}, {"sentence": "He are my neighbour.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}, {"sentence": "We saved ourself.", "errors": [{"word": "ourself", "correct": "ourselves", "reason": "We 用 ourselves"}]}, {"sentence": "this are flowers.", "errors": [{"word": "this", "correct": "These", "reason": "複數用 These"}]}, {"sentence": "I eat a apple.", "errors": [{"word": "a", "correct": "an", "reason": "apple 母音用 an"}]}, {"sentence": "Two tiger in the zoo.", "errors": [{"word": "tiger", "correct": "tigers", "reason": "複數加 s"}]}, {"sentence": "I drink two waters.", "errors": [{"word": "two", "correct": "", "reason": "water 不可數"}, {"word": "waters", "correct": "water", "reason": "water 不可數"}]}, {"sentence": "They are happys.", "errors": [{"word": "happys", "correct": "happy", "reason": "形容詞不加 s"}]}]};
-var QUIZ_DATA = {"1": [{"q": "Mary 說：___ am Mary.", "opts": ["I", "You", "He", "She"], "c": 0}, {"q": "介紹 Miss Lee：___ is Miss Lee.", "opts": ["He", "She", "You", "I"], "c": 1}, {"q": "介紹 Mr Tan：___ is Mr Tan.", "opts": ["She", "I", "He", "You"], "c": 2}, {"q": "John 會游泳：___ can swim very fast.", "opts": ["She", "I", "You", "He"], "c": 3}, {"q": "媽媽累了：___ needs a rest.", "opts": ["He", "She", "It", "I"], "c": 1}], "2": [{"q": "Peter and I → ___ are brothers.", "opts": ["They", "You", "We", "She"], "c": 2}, {"q": "The lions → ___ are in the cage.", "opts": ["We", "They", "You", "He"], "c": 1}, {"q": "You and Mary → ___ are girls.", "opts": ["They", "We", "I", "You"], "c": 3}, {"q": "he / she / it 的複數是？", "opts": ["we", "you", "they", "I"], "c": 2}], "3": [{"q": "I am drying ___ with a towel.", "opts": ["yourself", "myself", "himself", "itself"], "c": 1}, {"q": "She fell and hurt ___.", "opts": ["herself", "himself", "itself", "myself"], "c": 0}, {"q": "He cut ___ accidentally.", "opts": ["herself", "itself", "himself", "yourself"], "c": 2}, {"q": "The cat hid ___.", "opts": ["himself", "itself", "herself", "yourself"], "c": 1}], "4": [{"q": "We saved ___.", "opts": ["themselves", "yourselves", "ourselves", "himself"], "c": 2}, {"q": "They taught ___ to swim.", "opts": ["ourselves", "themselves", "yourselves", "herself"], "c": 1}, {"q": "You (大家) can wash ___.", "opts": ["yourself", "yourselves", "themselves", "ourselves"], "c": 1}, {"q": "The students gave ___ a treat.", "opts": ["themselves", "ourselves", "yourselves", "itself"], "c": 0}], "5": [{"q": "近的東西用哪個？", "opts": ["that", "this", "these", "those"], "c": 1}, {"q": "遠的東西用哪個？", "opts": ["this", "these", "that", "those"], "c": 2}, {"q": "___ is a pencil. (我手上的)", "opts": ["That", "These", "This", "Those"], "c": 2}, {"q": "What is ___ behind the rock?", "opts": ["this", "that", "these", "those"], "c": 1}], "6": [{"q": "近的一群用哪個？", "opts": ["this", "that", "these", "those"], "c": 2}, {"q": "遠的一群用哪個？", "opts": ["this", "that", "these", "those"], "c": 3}, {"q": "___ are my books (在我旁邊)", "opts": ["That", "This", "Those", "These"], "c": 3}, {"q": "___ are trees (遠方)", "opts": ["These", "Those", "This", "That"], "c": 1}], "7": [{"q": "🥽 眼鏡的英文？", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "👖 長褲的英文？", "opts": ["trouser", "trousers", "pant", "pants"], "c": 1}, {"q": "🛏️ 睡衣的英文？", "opts": ["pyjama", "pyjamas", "sleep", "sleeps"], "c": 1}, {"q": "apple 的複數？", "opts": ["apple", "apples", "apple's", "applees"], "c": 1}], "8": [{"q": "___ apple", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "___ cat", "opts": ["a", "an", "the", "無"], "c": 0}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "___ teacher", "opts": ["a", "an", "the", "無"], "c": 0}, {"q": "___ hour", "opts": ["a", "an", "the", "無"], "c": 1}], "9": [{"q": "box 的複數？", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "match 的複數？", "opts": ["matchs", "matches", "matchies", "match"], "c": 1}, {"q": "chair 的複數？", "opts": ["chaires", "chairs", "chairies", "chair"], "c": 1}, {"q": "housefly 的複數？", "opts": ["houseflys", "houseflies", "housefly", "houseflyes"], "c": 1}], "10": [{"q": "Water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "Book 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 0}, {"q": "正確？", "opts": ["two waters", "a water", "some water", "three waters"], "c": 2}, {"q": "喝牛奶怎麼說？", "opts": ["a milk", "two milks", "a glass of milk", "three milks"], "c": 2}], "11": [{"q": "順序正確？", "opts": ["a cat fat", "a fat cat", "fat a cat", "cat a fat"], "c": 1}, {"q": "The house is ___.", "opts": ["bigs", "big", "bigly", "a big"], "c": 1}, {"q": "They are ___.", "opts": ["happy", "happys", "happying", "a happy"], "c": 0}, {"q": "a ___ book (厚)", "opts": ["thicks", "a thick", "thick", "thicker"], "c": 2}], "all": [{"q": "John can swim → ___ can swim.", "opts": ["She", "I", "He", "They"], "c": 2}, {"q": "複數 he/she/it →", "opts": ["we", "you", "they", "I"], "c": 2}, {"q": "She fell and hurt ___.", "opts": ["herself", "himself", "itself", "myself"], "c": 0}, {"q": "We taught ___ to swim.", "opts": ["themselves", "ourselves", "yourselves", "herself"], "c": 1}, {"q": "近的單數用：", "opts": ["that", "this", "these", "those"], "c": 1}, {"q": "遠的複數用：", "opts": ["this", "that", "these", "those"], "c": 3}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "box 的複數是：", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "Water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "眼鏡的英文：", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "The house is ___.", "opts": ["bigs", "big", "bigly", "a big"], "c": 1}, {"q": "a ___ book (厚)", "opts": ["thicks", "a thick", "thick", "thicker"], "c": 2}]};
+var FILL_DATA = {"1": [{"title": "I / You / He / She", "sentences": [{"hint": "👦 我", "before": "", "after": " am Simon.", "ans": "I"}, {"hint": "👧 你", "before": "", "after": " are Mary.", "ans": "You"}, {"hint": "👩 她", "before": "", "after": " is Miss Lee.", "ans": "She"}, {"hint": "👨 他", "before": "", "after": " is Mr Tan.", "ans": "He"}, {"hint": "👨 他 (John)", "before": "", "after": " can swim very fast.", "ans": "He"}, {"hint": "👩 她 (mother)", "before": "", "after": " needs a rest.", "ans": "She"}], "wordBank": ["I", "You", "He", "She"]}], "2": [{"title": "We / You / They", "sentences": [{"hint": "👨‍👩‍👦 我們", "before": "", "after": " are boys.", "ans": "We"}, {"hint": "👧👧 你們", "before": "", "after": " are girls.", "ans": "You"}, {"hint": "👨‍🏫 他們", "before": "", "after": " are teachers.", "ans": "They"}, {"hint": "🦁 他們(lions)", "before": "The lions are in the cage. ", "after": " are sleeping.", "ans": "They"}, {"hint": "我+他=我們", "before": "Peter and I are tall. ", "after": " are brothers.", "ans": "We"}], "wordBank": ["We", "You", "They"]}], "3": [{"title": "Reflexive (單數)", "sentences": [{"hint": "🧴 我自己", "before": "I am drying ", "after": " with a towel.", "ans": "myself"}, {"hint": "⌚ 你自己", "before": "You have bought ", "after": " a new watch.", "ans": "yourself"}, {"hint": "✂️ 他自己", "before": "He cut ", "after": " accidentally.", "ans": "himself"}, {"hint": "🤕 她自己", "before": "She fell and hurt ", "after": ".", "ans": "herself"}, {"hint": "🐱 它自己", "before": "The cat hid ", "after": " under the table.", "ans": "itself"}], "wordBank": ["myself", "yourself", "himself", "herself", "itself"]}], "4": [{"title": "Reflexive (複數)", "sentences": [{"hint": "🧼 你們自己", "before": "You can wash ", "after": " with soap.", "ans": "yourselves"}, {"hint": "😳 他們自己", "before": "They were ashamed of ", "after": ".", "ans": "themselves"}, {"hint": "🌬️ 我們自己", "before": "We cooled ", "after": " under the fan.", "ans": "ourselves"}, {"hint": "🏃 我們自己", "before": "We saved ", "after": " by running away.", "ans": "ourselves"}, {"hint": "🏊 他們自己", "before": "They taught ", "after": " to swim.", "ans": "themselves"}], "wordBank": ["ourselves", "yourselves", "themselves"]}], "5": [{"title": "this / that", "sentences": [{"hint": "✏️ 近的 (this)", "before": "", "after": " is a pencil.", "ans": "This"}, {"hint": "🪑 遠的 (that)", "before": "", "after": " is a table.", "ans": "That"}, {"hint": "📦 近的疑問", "before": "What is ", "after": " in the box?", "ans": "this"}, {"hint": "🗿 遠的疑問", "before": "What is ", "after": " behind the rock?", "ans": "that"}], "wordBank": ["This", "That", "this", "that"]}], "6": [{"title": "these / those", "sentences": [{"hint": "🌸🌸 近的", "before": "", "after": " are flowers.", "ans": "These"}, {"hint": "🌳🌳 遠的", "before": "", "after": " are trees.", "ans": "Those"}, {"hint": "📦 近的疑問", "before": "What are ", "after": " in the box?", "ans": "these"}, {"hint": "🗿 遠的疑問", "before": "What are ", "after": " behind the rock?", "ans": "those"}], "wordBank": ["These", "Those", "these", "those"]}], "7": [{"title": "沒有單數形的名詞", "sentences": [{"hint": "👓 眼鏡", "before": "My dad wears ", "after": ".", "ans": "spectacles"}, {"hint": "👖 長褲", "before": "I wear ", "after": ".", "ans": "trousers"}, {"hint": "🛏️ 睡衣", "before": "I sleep in my ", "after": ".", "ans": "pyjamas"}, {"hint": "🍎🍎 apple→?", "before": "I see three ", "after": ".", "ans": "apples"}, {"hint": "🥛🥛 glass→?", "before": "There are two ", "after": ".", "ans": "glasses"}], "wordBank": ["spectacles", "trousers", "pyjamas", "apples", "glasses"]}], "8": [{"title": "a / an", "sentences": [{"hint": "🍎 母音開頭", "before": "I have ", "after": " apple.", "ans": "an"}, {"hint": "🐱 子音開頭", "before": "I have ", "after": " cat.", "ans": "a"}, {"hint": "👩‍🏫 子音開頭", "before": "She is ", "after": " teacher.", "ans": "a"}, {"hint": "🐘 母音開頭", "before": "It is ", "after": " elephant.", "ans": "an"}, {"hint": "📙 子音開頭", "before": "This is ", "after": " book.", "ans": "a"}, {"hint": "🕗 母音開頭", "before": "It was ", "after": " hour ago.", "ans": "an"}], "wordBank": ["a", "an"]}], "9": [{"title": "複數可數名詞", "sentences": [{"hint": "🪑🪑 chair→?", "before": "Two ", "after": " in the room.", "ans": "chairs"}, {"hint": "🐯🐯 tiger→?", "before": "Three ", "after": " in the zoo.", "ans": "tigers"}, {"hint": "📦📦 box→?", "before": "Four ", "after": " on the table.", "ans": "boxes"}, {"hint": "🔥🔥 match→?", "before": "Five ", "after": " in the packet.", "ans": "matches"}, {"hint": "🐎🐎 horse→?", "before": "Six ", "after": " are running.", "ans": "horses"}, {"hint": "🪥🪥 brush→?", "before": "Two ", "after": " in the cup.", "ans": "brushes"}], "wordBank": ["chairs", "tigers", "boxes", "matches", "horses", "brushes"]}], "10": [{"title": "不可數名詞", "sentences": [{"hint": "💧 水", "before": "I drink ", "after": " every day.", "ans": "water"}, {"hint": "🥛 牛奶", "before": "She has ", "after": " for breakfast.", "ans": "milk"}, {"hint": "🍚 米飯", "before": "We eat ", "after": " for lunch.", "ans": "rice"}, {"hint": "🍯 糖", "before": "Please pass me the ", "after": ".", "ans": "sugar"}, {"hint": "🍞 麵包", "before": "I have ", "after": " with butter.", "ans": "bread"}], "wordBank": ["water", "milk", "rice", "sugar", "bread"]}], "11": [{"title": "形容詞", "sentences": [{"hint": "🐱 胖", "before": "a ", "after": " cat", "ans": "fat"}, {"hint": "🌙 冷", "before": "a ", "after": " night", "ans": "cold"}, {"hint": "📙 厚", "before": "a ", "after": " book", "ans": "thick"}, {"hint": "🏠 大", "before": "The house is ", "after": ".", "ans": "big"}, {"hint": "🪨 重", "before": "The stone is ", "after": ".", "ans": "heavy"}, {"hint": "😊 開心", "before": "They are ", "after": ".", "ans": "happy"}], "wordBank": ["fat", "cold", "thick", "big", "heavy", "happy"]}], "12": [{"title": "my / your / his / her / its", "sentences": [{"hint": "📕 我的 (I)", "before": "I have a book. ", "after": " book is new.", "ans": "My"}, {"hint": "✏️ 你的 (You)", "before": "You have a pencil. ", "after": " pencil is long.", "ans": "Your"}, {"hint": "🎒 他的 (David)", "before": "David has a bag. ", "after": " bag is red.", "ans": "His"}, {"hint": "🪆 她的 (Mary)", "before": "Mary has a doll. ", "after": " doll is pretty.", "ans": "Her"}, {"hint": "🐕 它的 (dog)", "before": "The dog has a tail. ", "after": " tail is short.", "ans": "Its"}], "wordBank": ["My", "Your", "His", "Her", "Its"]}], "13": [{"title": "our / their / your", "sentences": [{"hint": "👩‍🏫 我們的 (our)", "before": "Miss Lee is a teacher. She is ", "after": " teacher.", "ans": "our"}, {"hint": "🏠 他們的 (their)", "before": "My friends live in that house. That is ", "after": " house.", "ans": "their"}, {"hint": "📚 你們的 (your)", "before": "These are ", "after": " books.", "ans": "your"}, {"hint": "🏫 我們的 (our)", "before": "This is ", "after": " classroom.", "ans": "our"}, {"hint": "⛵ 他們的 (their)", "before": "That is ", "after": " boat.", "ans": "their"}], "wordBank": ["our", "their", "your"]}], "14": [{"title": "am / is / are", "sentences": [{"hint": "🧒 I", "before": "I ", "after": " a pupil.", "ans": "am"}, {"hint": "👩 She", "before": "She ", "after": " a doctor.", "ans": "is"}, {"hint": "👨 He", "before": "He ", "after": " a singer.", "ans": "is"}, {"hint": "👨‍👩‍👦 They", "before": "They ", "after": " teachers.", "ans": "are"}, {"hint": "👫 We", "before": "We ", "after": " happy.", "ans": "are"}, {"hint": "🐁 It", "before": "It ", "after": " a small animal.", "ans": "is"}], "wordBank": ["am", "is", "are"]}], "15": [{"title": "has / have", "sentences": [{"hint": "👧 She", "before": "She ", "after": " a new bag.", "ans": "has"}, {"hint": "👨 He", "before": "He ", "after": " a fever.", "ans": "has"}, {"hint": "🧒 I", "before": "I ", "after": " a brother.", "ans": "have"}, {"hint": "👨‍👩‍👦 They", "before": "They ", "after": " two dogs.", "ans": "have"}, {"hint": "👫 We", "before": "We ", "after": " many books.", "ans": "have"}], "wordBank": ["has", "have"]}], "16": [{"title": "do / does", "sentences": [{"hint": "🧒 I", "before": "I ", "after": " my work quickly.", "ans": "do"}, {"hint": "👩 She", "before": "She ", "after": " her work slowly.", "ans": "does"}, {"hint": "👨 He", "before": "He ", "after": " not like cats.", "ans": "does"}, {"hint": "👨‍👩‍👦 They", "before": "They ", "after": " not speak Mandarin.", "ans": "do"}, {"hint": "👫 We", "before": "We ", "after": " our work together.", "ans": "do"}], "wordBank": ["do", "does"]}], "17": [{"title": "簡單現在式 (base/base+s)", "sentences": [{"hint": "👩 She (go)", "before": "She ", "after": " to school by bus.", "ans": "goes"}, {"hint": "🧒 I (jog)", "before": "I ", "after": " in the park every evening.", "ans": "jog"}, {"hint": "👨 He (speak)", "before": "He ", "after": " English well.", "ans": "speaks"}, {"hint": "👧👧 They (like)", "before": "They ", "after": " apples.", "ans": "like"}, {"hint": "🐈 cat (meow)", "before": "A cat ", "after": " and a dog barks.", "ans": "meows"}, {"hint": "👩 Miss Sun (drive)", "before": "Miss Sun ", "after": " to work.", "ans": "drives"}], "wordBank": ["goes", "jog", "speaks", "like", "meows", "drives"]}], "18": [{"title": "現在進行式 (am/is/are+-ing)", "sentences": [{"hint": "🧒 I (write)", "before": "I ", "after": " the answer.", "ans": "am writing"}, {"hint": "👶 baby (sleep)", "before": "The baby ", "after": " soundly.", "ans": "is sleeping"}, {"hint": "👦👦 boys (wait)", "before": "The boys ", "after": " for their parents.", "ans": "are waiting"}, {"hint": "👧 She (sweep)", "before": "She ", "after": " the floor.", "ans": "is sweeping"}, {"hint": "🐦 birds (sing)", "before": "The birds ", "after": ".", "ans": "are singing"}], "wordBank": ["am writing", "is sleeping", "are waiting", "is sweeping", "are singing"]}], "19": [{"title": "介系詞 (on/in/above/under/in front of/behind)", "sentences": [{"hint": "📗 on (在上面)", "before": "The book is ", "after": " the chair.", "ans": "on"}, {"hint": "📦 in (在裡面)", "before": "The stick is ", "after": " the box.", "ans": "in"}, {"hint": "🌸 above (在上方)", "before": "The bee is ", "after": " the flower.", "ans": "above"}, {"hint": "🛋 under (在下面)", "before": "The basket is ", "after": " the table.", "ans": "under"}, {"hint": "📺 in front of (在前面)", "before": "The girl is ", "after": " the television set.", "ans": "in front of"}, {"hint": "🚪 behind (在後面)", "before": "The boy is ", "after": " the door.", "ans": "behind"}], "wordBank": ["on", "in", "above", "under", "in front of", "behind"]}], "20": [{"title": "and / or", "sentences": [{"hint": "➕ and (兩者都有)", "before": "Mrs Lee has a daughter ", "after": " a son.", "ans": "and"}, {"hint": "❓ or (選一個)", "before": "Is this a pen ", "after": " a pencil?", "ans": "or"}, {"hint": "➕ and (兩種顏色)", "before": "The dress is black ", "after": " white.", "ans": "and"}, {"hint": "❓ or (選一個)", "before": "He must come with his mother ", "after": " his father.", "ans": "or"}, {"hint": "➕ and (加上)", "before": "This flag has a crescent ", "after": " five stars.", "ans": "and"}], "wordBank": ["and", "or"]}], "21": [{"title": "Who / What", "sentences": [{"hint": "人名用 Who", "before": "", "after": " is this? This is Alan.", "ans": "Who"}, {"hint": "東西用 What", "before": "", "after": " is this? It is a rabbit.", "ans": "What"}, {"hint": "職業用 What", "before": "", "after": " is his job? He is a postman.", "ans": "What"}, {"hint": "一群人用 Who", "before": "", "after": " are they? They are Alan and Mary.", "ans": "Who"}, {"hint": "東西用 What", "before": "", "after": " are those? Those are birds.", "ans": "What"}], "wordBank": ["Who", "What"]}], "22": [{"title": "否定句 (not)", "sentences": [{"hint": "🚫 is not", "before": "This is ", "after": " a stick. It is an umbrella.", "ans": "not"}, {"hint": "🚫 do not", "before": "They do ", "after": " like balloons.", "ans": "not"}, {"hint": "🚫 do not", "before": "I do ", "after": " have a pen.", "ans": "not"}, {"hint": "🚫 is not", "before": "She is ", "after": " hungry. She is thirsty.", "ans": "not"}, {"hint": "🚫 do not", "before": "We do ", "after": " like sour oranges.", "ans": "not"}], "wordBank": ["not"]}], "all": [{"title": "代名詞 (1-2)", "sentences": [{"hint": "👧 Mary", "before": "", "after": " am Mary.", "ans": "I"}, {"hint": "👨 Mr Tan", "before": "", "after": " is Mr Tan.", "ans": "He"}, {"hint": "👨‍👩‍👦 我們", "before": "", "after": " are boys.", "ans": "We"}, {"hint": "🦁 lions", "before": "The lions are sleeping. ", "after": " are in the cage.", "ans": "They"}], "wordBank": ["I", "He", "We", "They"]}, {"title": "反身代名詞 (3-4)", "sentences": [{"hint": "🧴 我自己", "before": "I am drying ", "after": ".", "ans": "myself"}, {"hint": "🤕 她自己", "before": "She hurt ", "after": ".", "ans": "herself"}, {"hint": "🌬️ 我們", "before": "We cooled ", "after": ".", "ans": "ourselves"}, {"hint": "🏊 他們", "before": "They taught ", "after": " to swim.", "ans": "themselves"}], "wordBank": ["myself", "herself", "ourselves", "themselves"]}, {"title": "指示代名詞 (5-6)", "sentences": [{"hint": "✏️ 近的單", "before": "", "after": " is a pencil.", "ans": "This"}, {"hint": "🪑 遠的單", "before": "", "after": " is a table.", "ans": "That"}, {"hint": "🌸🌸 近的複", "before": "", "after": " are flowers.", "ans": "These"}, {"hint": "🌳🌳 遠的複", "before": "", "after": " are trees.", "ans": "Those"}], "wordBank": ["This", "That", "These", "Those"]}, {"title": "名詞 (7-10)", "sentences": [{"hint": "🍎 母音", "before": "I eat ", "after": " apple.", "ans": "an"}, {"hint": "🐱 子音", "before": "I have ", "after": " cat.", "ans": "a"}, {"hint": "📦 box 複", "before": "Four ", "after": " on the table.", "ans": "boxes"}, {"hint": "💧 不可數", "before": "I drink ", "after": " every day.", "ans": "water"}, {"hint": "👓 永遠複", "before": "My dad wears ", "after": ".", "ans": "spectacles"}], "wordBank": ["a", "an", "boxes", "water", "spectacles"]}, {"title": "形容詞 (11)", "sentences": [{"hint": "🐱 胖", "before": "a ", "after": " cat", "ans": "fat"}, {"hint": "🏠 大", "before": "The house is ", "after": ".", "ans": "big"}, {"hint": "😊 開心", "before": "They are ", "after": ".", "ans": "happy"}], "wordBank": ["fat", "big", "happy"]}]};
+var ERROR_DATA = {"1": [{"sentence": "i am six years old.", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}]}, {"sentence": "He are my neighbour.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}, {"sentence": "she am Miss Lee.", "errors": [{"word": "she", "correct": "She", "reason": "句首大寫"}, {"word": "am", "correct": "is", "reason": "She 用 is"}]}, {"sentence": "you is tall.", "errors": [{"word": "you", "correct": "You", "reason": "句首大寫"}, {"word": "is", "correct": "are", "reason": "You 用 are"}]}], "2": [{"sentence": "they is boys.", "errors": [{"word": "they", "correct": "They", "reason": "句首大寫"}, {"word": "is", "correct": "are", "reason": "They 用 are"}]}, {"sentence": "we am hungry.", "errors": [{"word": "we", "correct": "We", "reason": "句首大寫"}, {"word": "am", "correct": "are", "reason": "We 用 are"}]}, {"sentence": "The lions is sleeping.", "errors": [{"word": "is", "correct": "are", "reason": "複數 lions 用 are"}]}, {"sentence": "Peter and I is tall.", "errors": [{"word": "is", "correct": "are", "reason": "我們 (We) 用 are"}]}], "3": [{"sentence": "I am drying myselves.", "errors": [{"word": "myselves", "correct": "myself", "reason": "單數用 myself"}]}, {"sentence": "She hurt himself.", "errors": [{"word": "himself", "correct": "herself", "reason": "She 用 herself"}]}, {"sentence": "He cut herself.", "errors": [{"word": "herself", "correct": "himself", "reason": "He 用 himself"}]}, {"sentence": "The cat hid himself.", "errors": [{"word": "himself", "correct": "itself", "reason": "貓 (it) 用 itself"}]}], "4": [{"sentence": "We saved ourself.", "errors": [{"word": "ourself", "correct": "ourselves", "reason": "We 用 ourselves"}]}, {"sentence": "They taught himselves to swim.", "errors": [{"word": "himselves", "correct": "themselves", "reason": "They 用 themselves"}]}, {"sentence": "You can wash yourself, everyone.", "errors": [{"word": "yourself", "correct": "yourselves", "reason": "everyone 這裡表大家用 yourselves"}]}], "5": [{"sentence": "these is a pencil.", "errors": [{"word": "these", "correct": "This", "reason": "單數用 This"}]}, {"sentence": "That are a table.", "errors": [{"word": "are", "correct": "is", "reason": "單數用 is"}]}, {"sentence": "this is a pencil", "errors": [{"word": "this", "correct": "This", "reason": "句首大寫"}, {"word": "pencil", "correct": "pencil.", "reason": "句尾需要句號"}]}], "6": [{"sentence": "this are flowers.", "errors": [{"word": "this", "correct": "These", "reason": "複數用 These"}]}, {"sentence": "Those is trees.", "errors": [{"word": "is", "correct": "are", "reason": "複數用 are"}]}, {"sentence": "that are my books.", "errors": [{"word": "that", "correct": "Those", "reason": "複數用 Those"}]}], "7": [{"sentence": "I wear a trouser.", "errors": [{"word": "a", "correct": "", "reason": "trousers 永遠複數"}, {"word": "trouser", "correct": "trousers", "reason": "永遠複數"}]}, {"sentence": "Bring me the spectacle.", "errors": [{"word": "spectacle", "correct": "spectacles", "reason": "永遠複數"}]}, {"sentence": "I sleep in my pyjama.", "errors": [{"word": "pyjama", "correct": "pyjamas", "reason": "永遠複數"}]}], "8": [{"sentence": "I eat a apple.", "errors": [{"word": "a", "correct": "an", "reason": "apple 母音用 an"}]}, {"sentence": "She is an teacher.", "errors": [{"word": "an", "correct": "a", "reason": "teacher 子音用 a"}]}, {"sentence": "It is a elephant.", "errors": [{"word": "a", "correct": "an", "reason": "elephant 母音用 an"}]}, {"sentence": "This is an book.", "errors": [{"word": "an", "correct": "a", "reason": "book 子音用 a"}]}], "9": [{"sentence": "Two tiger in the zoo.", "errors": [{"word": "tiger", "correct": "tigers", "reason": "複數加 s"}]}, {"sentence": "Three box on the table.", "errors": [{"word": "box", "correct": "boxes", "reason": "字尾 x 加 es"}]}, {"sentence": "Four match in the packet.", "errors": [{"word": "match", "correct": "matches", "reason": "字尾 ch 加 es"}]}, {"sentence": "Five horse are running.", "errors": [{"word": "horse", "correct": "horses", "reason": "複數加 s"}]}], "10": [{"sentence": "I drink two waters.", "errors": [{"word": "two", "correct": "", "reason": "water 不可數"}, {"word": "waters", "correct": "water", "reason": "water 不可數"}]}, {"sentence": "Please pass me three sugars.", "errors": [{"word": "three", "correct": "", "reason": "sugar 不可數"}, {"word": "sugars", "correct": "sugar", "reason": "sugar 不可數"}]}, {"sentence": "I want a rice.", "errors": [{"word": "a", "correct": "", "reason": "rice 不可數不用 a"}]}], "11": [{"sentence": "The house big is.", "errors": [{"word": "big", "correct": "is", "reason": "順序錯"}, {"word": "is", "correct": "big.", "reason": "應是 is big"}]}, {"sentence": "They are happys.", "errors": [{"word": "happys", "correct": "happy", "reason": "形容詞不加 s"}]}, {"sentence": "The stone is heavys.", "errors": [{"word": "heavys", "correct": "heavy", "reason": "形容詞不加 s"}]}], "12": [{"sentence": "Mary has a doll. His doll is pretty.", "errors": [{"word": "His", "correct": "Her", "reason": "Mary 是她 用 Her"}]}, {"sentence": "The dog has a tail. Their tail is short.", "errors": [{"word": "Their", "correct": "Its", "reason": "單一動物用 Its"}]}, {"sentence": "I have a book. Your book is new.", "errors": [{"word": "Your", "correct": "My", "reason": "我的用 My"}]}, {"sentence": "David has a bag. Her bag is on the chair.", "errors": [{"word": "Her", "correct": "His", "reason": "David 是他 用 His"}]}], "13": [{"sentence": "Miss Lee is a teacher. She is their teacher.", "errors": [{"word": "their", "correct": "our", "reason": "我們的老師用 our"}]}, {"sentence": "My friends live in that house. That is our house.", "errors": [{"word": "our", "correct": "their", "reason": "他們的房子用 their"}]}, {"sentence": "These are his books. Put them away.", "errors": [{"word": "his", "correct": "your", "reason": "你們的書用 your"}]}], "14": [{"sentence": "I is a pupil.", "errors": [{"word": "is", "correct": "am", "reason": "I 用 am"}]}, {"sentence": "She are a doctor.", "errors": [{"word": "are", "correct": "is", "reason": "She 用 is"}]}, {"sentence": "We is happy.", "errors": [{"word": "is", "correct": "are", "reason": "We 用 are"}]}, {"sentence": "He are a singer.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}], "15": [{"sentence": "She have a new bag.", "errors": [{"word": "have", "correct": "has", "reason": "She 用 has"}]}, {"sentence": "He have a fever.", "errors": [{"word": "have", "correct": "has", "reason": "He 用 has"}]}, {"sentence": "I has a brother.", "errors": [{"word": "has", "correct": "have", "reason": "I 用 have"}]}, {"sentence": "They has two dogs.", "errors": [{"word": "has", "correct": "have", "reason": "They 用 have"}]}], "16": [{"sentence": "She do her work slowly.", "errors": [{"word": "do", "correct": "does", "reason": "She 用 does"}]}, {"sentence": "He do not like cats.", "errors": [{"word": "do", "correct": "does", "reason": "He 用 does"}]}, {"sentence": "I does my work quickly.", "errors": [{"word": "does", "correct": "do", "reason": "I 用 do"}]}, {"sentence": "They does not speak English.", "errors": [{"word": "does", "correct": "do", "reason": "They 用 do"}]}], "17": [{"sentence": "She go to school by bus.", "errors": [{"word": "go", "correct": "goes", "reason": "She 用 goes"}]}, {"sentence": "He speak English well.", "errors": [{"word": "speak", "correct": "speaks", "reason": "He 用 speaks"}]}, {"sentence": "They likes apples.", "errors": [{"word": "likes", "correct": "like", "reason": "They 用 like (原形)"}]}, {"sentence": "The baby sleep in the afternoon.", "errors": [{"word": "sleep", "correct": "sleeps", "reason": "The baby 用 sleeps"}]}], "18": [{"sentence": "The cat is sleep on the chair.", "errors": [{"word": "sleep", "correct": "sleeping", "reason": "進行式加 -ing"}]}, {"sentence": "They is playing football.", "errors": [{"word": "is", "correct": "are", "reason": "They 用 are"}]}, {"sentence": "I are writing the answer.", "errors": [{"word": "are", "correct": "am", "reason": "I 用 am"}]}, {"sentence": "He am singing a song.", "errors": [{"word": "am", "correct": "is", "reason": "He 用 is"}]}], "19": [{"sentence": "The book is in the chair.", "errors": [{"word": "in", "correct": "on", "reason": "on 在上面"}]}, {"sentence": "The stick is on the box.", "errors": [{"word": "on", "correct": "in", "reason": "in 在裡面"}]}, {"sentence": "The bee is under the flower.", "errors": [{"word": "under", "correct": "above", "reason": "above 在上方"}]}, {"sentence": "The basket is above the table.", "errors": [{"word": "above", "correct": "under", "reason": "under 在下面"}]}], "20": [{"sentence": "Is this a pen and a pencil?", "errors": [{"word": "and", "correct": "or", "reason": "選一個用 or"}]}, {"sentence": "The dress is black or white.", "errors": [{"word": "or", "correct": "and", "reason": "兩者都有用 and"}]}, {"sentence": "Mrs Lee has a daughter or a son.", "errors": [{"word": "or", "correct": "and", "reason": "兩者都有用 and"}]}], "21": [{"sentence": "What is this? This is Alan.", "errors": [{"word": "What", "correct": "Who", "reason": "問人名用 Who"}]}, {"sentence": "Who is this? It is a rabbit.", "errors": [{"word": "Who", "correct": "What", "reason": "問東西用 What"}]}, {"sentence": "Who is his job? He is a postman.", "errors": [{"word": "Who", "correct": "What", "reason": "問職業用 What"}]}], "22": [{"sentence": "This is not a umbrella.", "errors": [{"word": "a", "correct": "an", "reason": "umbrella 母音用 an"}]}, {"sentence": "They do not likes balloons.", "errors": [{"word": "likes", "correct": "like", "reason": "do not 後用原形動詞"}]}, {"sentence": "I does not have a pen.", "errors": [{"word": "does", "correct": "do", "reason": "I 用 do not"}]}, {"sentence": "She are not hungry.", "errors": [{"word": "are", "correct": "is", "reason": "She 用 is not"}]}], "all": [{"sentence": "i am six years old.", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}]}, {"sentence": "He are my neighbour.", "errors": [{"word": "are", "correct": "is", "reason": "He 用 is"}]}, {"sentence": "We saved ourself.", "errors": [{"word": "ourself", "correct": "ourselves", "reason": "We 用 ourselves"}]}, {"sentence": "this are flowers.", "errors": [{"word": "this", "correct": "These", "reason": "複數用 These"}]}, {"sentence": "I eat a apple.", "errors": [{"word": "a", "correct": "an", "reason": "apple 母音用 an"}]}, {"sentence": "Two tiger in the zoo.", "errors": [{"word": "tiger", "correct": "tigers", "reason": "複數加 s"}]}, {"sentence": "I drink two waters.", "errors": [{"word": "two", "correct": "", "reason": "water 不可數"}, {"word": "waters", "correct": "water", "reason": "water 不可數"}]}, {"sentence": "They are happys.", "errors": [{"word": "happys", "correct": "happy", "reason": "形容詞不加 s"}]}]};
+var QUIZ_DATA = {"1": [{"q": "Mary 說：___ am Mary.", "opts": ["I", "You", "He", "She"], "c": 0}, {"q": "介紹 Miss Lee：___ is Miss Lee.", "opts": ["He", "She", "You", "I"], "c": 1}, {"q": "介紹 Mr Tan：___ is Mr Tan.", "opts": ["She", "I", "He", "You"], "c": 2}, {"q": "John 會游泳：___ can swim very fast.", "opts": ["She", "I", "You", "He"], "c": 3}, {"q": "媽媽累了：___ needs a rest.", "opts": ["He", "She", "It", "I"], "c": 1}], "2": [{"q": "Peter and I → ___ are brothers.", "opts": ["They", "You", "We", "She"], "c": 2}, {"q": "The lions → ___ are in the cage.", "opts": ["We", "They", "You", "He"], "c": 1}, {"q": "You and Mary → ___ are girls.", "opts": ["They", "We", "I", "You"], "c": 3}, {"q": "he / she / it 的複數是？", "opts": ["we", "you", "they", "I"], "c": 2}], "3": [{"q": "I am drying ___ with a towel.", "opts": ["yourself", "myself", "himself", "itself"], "c": 1}, {"q": "She fell and hurt ___.", "opts": ["herself", "himself", "itself", "myself"], "c": 0}, {"q": "He cut ___ accidentally.", "opts": ["herself", "itself", "himself", "yourself"], "c": 2}, {"q": "The cat hid ___.", "opts": ["himself", "itself", "herself", "yourself"], "c": 1}], "4": [{"q": "We saved ___.", "opts": ["themselves", "yourselves", "ourselves", "himself"], "c": 2}, {"q": "They taught ___ to swim.", "opts": ["ourselves", "themselves", "yourselves", "herself"], "c": 1}, {"q": "You (大家) can wash ___.", "opts": ["yourself", "yourselves", "themselves", "ourselves"], "c": 1}, {"q": "The students gave ___ a treat.", "opts": ["themselves", "ourselves", "yourselves", "itself"], "c": 0}], "5": [{"q": "近的東西用哪個？", "opts": ["that", "this", "these", "those"], "c": 1}, {"q": "遠的東西用哪個？", "opts": ["this", "these", "that", "those"], "c": 2}, {"q": "___ is a pencil. (我手上的)", "opts": ["That", "These", "This", "Those"], "c": 2}, {"q": "What is ___ behind the rock?", "opts": ["this", "that", "these", "those"], "c": 1}], "6": [{"q": "近的一群用哪個？", "opts": ["this", "that", "these", "those"], "c": 2}, {"q": "遠的一群用哪個？", "opts": ["this", "that", "these", "those"], "c": 3}, {"q": "___ are my books (在我旁邊)", "opts": ["That", "This", "Those", "These"], "c": 3}, {"q": "___ are trees (遠方)", "opts": ["These", "Those", "This", "That"], "c": 1}], "7": [{"q": "🥽 眼鏡的英文？", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "👖 長褲的英文？", "opts": ["trouser", "trousers", "pant", "pants"], "c": 1}, {"q": "🛏️ 睡衣的英文？", "opts": ["pyjama", "pyjamas", "sleep", "sleeps"], "c": 1}, {"q": "apple 的複數？", "opts": ["apple", "apples", "apple's", "applees"], "c": 1}], "8": [{"q": "___ apple", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "___ cat", "opts": ["a", "an", "the", "無"], "c": 0}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "___ teacher", "opts": ["a", "an", "the", "無"], "c": 0}, {"q": "___ hour", "opts": ["a", "an", "the", "無"], "c": 1}], "9": [{"q": "box 的複數？", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "match 的複數？", "opts": ["matchs", "matches", "matchies", "match"], "c": 1}, {"q": "chair 的複數？", "opts": ["chaires", "chairs", "chairies", "chair"], "c": 1}, {"q": "housefly 的複數？", "opts": ["houseflys", "houseflies", "housefly", "houseflyes"], "c": 1}], "10": [{"q": "Water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "Book 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 0}, {"q": "正確？", "opts": ["two waters", "a water", "some water", "three waters"], "c": 2}, {"q": "喝牛奶怎麼說？", "opts": ["a milk", "two milks", "a glass of milk", "three milks"], "c": 2}], "11": [{"q": "順序正確？", "opts": ["a cat fat", "a fat cat", "fat a cat", "cat a fat"], "c": 1}, {"q": "The house is ___.", "opts": ["bigs", "big", "bigly", "a big"], "c": 1}, {"q": "They are ___.", "opts": ["happy", "happys", "happying", "a happy"], "c": 0}, {"q": "a ___ book (厚)", "opts": ["thicks", "a thick", "thick", "thicker"], "c": 2}], "12": [{"q": "I have a book. ___ book is new.", "opts": ["My", "Your", "His", "Her"], "c": 0}, {"q": "Mary has a doll. ___ doll is pretty.", "opts": ["His", "Her", "Its", "My"], "c": 1}, {"q": "The dog has a tail. ___ tail is short.", "opts": ["His", "Her", "Their", "Its"], "c": 3}, {"q": "David has a bag. ___ bag is red.", "opts": ["Her", "My", "His", "Your"], "c": 2}, {"q": "You have a pencil. ___ pencil is long.", "opts": ["My", "Your", "His", "Her"], "c": 1}], "13": [{"q": "Miss Lee is a teacher. She is ___ teacher.", "opts": ["their", "your", "our", "its"], "c": 2}, {"q": "My friends live in that house. That is ___ house.", "opts": ["our", "your", "its", "their"], "c": 3}, {"q": "These books belong to you. These are ___ books.", "opts": ["our", "your", "their", "its"], "c": 1}, {"q": "我們的 (我和同學) 教室 → ___ classroom", "opts": ["their", "your", "our", "its"], "c": 2}], "14": [{"q": "I ___ a pupil.", "opts": ["is", "are", "am", "be"], "c": 2}, {"q": "She ___ a doctor.", "opts": ["am", "are", "be", "is"], "c": 3}, {"q": "They ___ teachers.", "opts": ["am", "is", "are", "be"], "c": 2}, {"q": "He ___ a singer.", "opts": ["am", "are", "is", "be"], "c": 2}, {"q": "We ___ happy.", "opts": ["is", "am", "be", "are"], "c": 3}], "15": [{"q": "She ___ a new bag.", "opts": ["have", "has", "had", "is"], "c": 1}, {"q": "I ___ a brother.", "opts": ["has", "have", "is", "are"], "c": 1}, {"q": "They ___ two dogs.", "opts": ["has", "is", "have", "are"], "c": 2}, {"q": "He ___ a fever.", "opts": ["have", "are", "has", "is"], "c": 2}, {"q": "We ___ many books.", "opts": ["has", "have", "is", "are"], "c": 1}], "16": [{"q": "I ___ my work quickly.", "opts": ["does", "do", "is", "am"], "c": 1}, {"q": "She ___ her work slowly.", "opts": ["do", "are", "does", "is"], "c": 2}, {"q": "He ___ not like cats.", "opts": ["do", "does", "is", "am"], "c": 1}, {"q": "They ___ not speak Mandarin.", "opts": ["does", "is", "do", "am"], "c": 2}], "17": [{"q": "She ___ to school by bus.", "opts": ["go", "goes", "going", "gone"], "c": 1}, {"q": "They ___ apples.", "opts": ["likes", "liking", "like", "liked"], "c": 2}, {"q": "He ___ English well.", "opts": ["speak", "speaking", "spoken", "speaks"], "c": 3}, {"q": "The baby ___ in the afternoon.", "opts": ["sleep", "sleeping", "sleeps", "slept"], "c": 2}, {"q": "I ___ in the park every evening.", "opts": ["jogs", "jogging", "jog", "jogged"], "c": 2}], "18": [{"q": "I ___ the answer.", "opts": ["is writing", "are writing", "am writing", "writing"], "c": 2}, {"q": "The baby ___ soundly.", "opts": ["am sleeping", "are sleeping", "is sleeping", "sleeping"], "c": 2}, {"q": "The boys ___ for their parents.", "opts": ["is waiting", "am waiting", "are waiting", "waiting"], "c": 2}, {"q": "She ___ the floor.", "opts": ["are sweeping", "am sweeping", "sweeping", "is sweeping"], "c": 3}, {"q": "現在進行式的結構是？", "opts": ["do/does + V", "am/is/are + V-ing", "V + s/es", "have/has + V"], "c": 1}], "19": [{"q": "The book is ___ the chair. (在上面)", "opts": ["in", "above", "on", "under"], "c": 2}, {"q": "The stick is ___ the box. (在裡面)", "opts": ["on", "in", "above", "behind"], "c": 1}, {"q": "The bee is ___ the flower. (在上方)", "opts": ["under", "in", "behind", "above"], "c": 3}, {"q": "The basket is ___ the table. (在下面)", "opts": ["on", "above", "under", "in front of"], "c": 2}, {"q": "The girl is ___ the TV set. (在前面)", "opts": ["behind", "above", "under", "in front of"], "c": 3}], "20": [{"q": "Mrs Lee has a daughter ___ a son. (兩個都有)", "opts": ["or", "but", "and", "so"], "c": 2}, {"q": "Is this a pen ___ a pencil? (二選一)", "opts": ["and", "but", "so", "or"], "c": 3}, {"q": "The dress is black ___ white. (兩色都有)", "opts": ["or", "and", "but", "so"], "c": 1}, {"q": "and 和 or 叫做什麼？", "opts": ["代名詞", "形容詞", "連接詞", "介系詞"], "c": 2}], "21": [{"q": "This is Alan. → ___ is this?", "opts": ["What", "Who", "Where", "When"], "c": 1}, {"q": "It is a rabbit. → ___ is this?", "opts": ["Who", "Where", "What", "When"], "c": 2}, {"q": "He is a postman. → ___ is his job?", "opts": ["Who", "Where", "When", "What"], "c": 3}, {"q": "They are Alan and Mary. → ___ are they?", "opts": ["What", "Where", "Who", "When"], "c": 2}, {"q": "問人名用什麼疑問詞？", "opts": ["What", "Where", "When", "Who"], "c": 3}], "22": [{"q": "This is ___ a stick. (不是棍子)", "opts": ["no", "not", "dont", "never"], "c": 1}, {"q": "They ___ not like balloons.", "opts": ["does", "is", "do", "am"], "c": 2}, {"q": "I ___ not have a pen.", "opts": ["does", "is", "am", "do"], "c": 3}, {"q": "She ___ not hungry.", "opts": ["do", "does", "am", "is"], "c": 3}, {"q": "否定句的特色是什麼？", "opts": ["句子很長", "有 not", "有問號", "有驚嘆號"], "c": 1}], "all": [{"q": "John can swim → ___ can swim.", "opts": ["She", "I", "He", "They"], "c": 2}, {"q": "複數 he/she/it →", "opts": ["we", "you", "they", "I"], "c": 2}, {"q": "She fell and hurt ___.", "opts": ["herself", "himself", "itself", "myself"], "c": 0}, {"q": "We taught ___ to swim.", "opts": ["themselves", "ourselves", "yourselves", "herself"], "c": 1}, {"q": "近的單數用：", "opts": ["that", "this", "these", "those"], "c": 1}, {"q": "遠的複數用：", "opts": ["this", "that", "these", "those"], "c": 3}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "box 的複數是：", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "Water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "眼鏡的英文：", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "The house is ___.", "opts": ["bigs", "big", "bigly", "a big"], "c": 1}, {"q": "a ___ book (厚)", "opts": ["thicks", "a thick", "thick", "thicker"], "c": 2}]};
 
 var currentUnit = null;
 var fillState = {};
