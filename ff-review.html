@@ -43,6 +43,14 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
 .u-ff6{background:linear-gradient(135deg,#14b8a6,#0f766e)}
 .u-ff7{background:linear-gradient(135deg,#f43f5e,#be123c)}
 .u-all{background:linear-gradient(135deg,#f59e0b,#16a34a)}
+.u-ff8{background:linear-gradient(135deg,#0ea5e9,#0284c7)}
+.u-ff9{background:linear-gradient(135deg,#10b981,#059669)}
+.u-ff10{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.u-ff11{background:linear-gradient(135deg,#ec4899,#be185d)}
+.u-ff12{background:linear-gradient(135deg,#8b5cf6,#7c3aed)}
+.u-ff13{background:linear-gradient(135deg,#ef4444,#dc2626)}
+.u-ff14{background:linear-gradient(135deg,#6366f1,#4f46e5)}
+.u-ff15{background:linear-gradient(135deg,#f97316,#c2410c)}
 .landing-note{color:rgba(255,255,255,.65);font-size:.78em;margin-top:18px;text-align:center;position:relative}
 
 /* ── APP ── */
@@ -228,16 +236,48 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
       <span class="icon">🎒</span>
       <div><div class="un">Unit 6</div><div class="uname">Let's play after school!</div></div>
     </button>
-    <button class="ubtn u-ff7 ugrid-full" onclick="enter('ff7')">
+    <button class="ubtn u-ff7" onclick="enter('ff7')">
       <span class="icon">🎂</span>
       <div><div class="un">Unit 7</div><div class="uname">Let's buy presents!</div></div>
     </button>
+    <button class="ubtn u-ff8" onclick="enter('ff8')">
+      <span class="icon">⏰</span>
+      <div><div class="un">Unit 8</div><div class="uname">What time is it?</div></div>
+    </button>
+    <button class="ubtn u-ff9" onclick="enter('ff9')">
+      <span class="icon">🏥</span>
+      <div><div class="un">Unit 9</div><div class="uname">Where does she work?</div></div>
+    </button>
+    <button class="ubtn u-ff10" onclick="enter('ff10')">
+      <span class="icon">🌤️</span>
+      <div><div class="un">Unit 10</div><div class="uname">What's the weather?</div></div>
+    </button>
+    <button class="ubtn u-ff11" onclick="enter('ff11')">
+      <span class="icon">👗</span>
+      <div><div class="un">Unit 11</div><div class="uname">What are you wearing?</div></div>
+    </button>
+    <button class="ubtn u-ff12" onclick="enter('ff12')">
+      <span class="icon">💃</span>
+      <div><div class="un">Unit 12</div><div class="uname">You're sleeping!</div></div>
+    </button>
+    <button class="ubtn u-ff13" onclick="enter('ff13')">
+      <span class="icon">🐄</span>
+      <div><div class="un">Unit 13</div><div class="uname">Look at all the animals!</div></div>
+    </button>
+    <button class="ubtn u-ff14" onclick="enter('ff14')">
+      <span class="icon">📷</span>
+      <div><div class="un">Unit 14</div><div class="uname">Look at the photos!</div></div>
+    </button>
+    <button class="ubtn u-ff15 ugrid-full" onclick="enter('ff15')">
+      <span class="icon">🏆</span>
+      <div><div class="un">Unit 15</div><div class="uname">Good job!</div></div>
+    </button>
     <button class="ubtn u-all ugrid-full" onclick="enterAll()">
       <span class="icon">⭐</span>
-      <div><div class="un">全部 Unit 1–7</div><div class="uname">一起複習！</div></div>
+      <div><div class="un">全部 Unit 1–15</div><div class="uname">一起複習！</div></div>
     </button>
   </div>
-  <p class="landing-note">Family and Friends · Unit 1–7</p>
+  <p class="landing-note">Family and Friends · Unit 1–15</p>
 </div>
 
 <!-- APP -->
@@ -601,6 +641,312 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
       </div>
     </div>
 
+    <!-- Unit 8 -->
+    <div id="rv-ff8" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：He/She + 日常動詞 + at + 時間</h2>
+        <div class="pill">每日作息</div>
+        <table class="gtable">
+          <thead><tr><th>句型</th><th>例句</th><th>中文</th></tr></thead>
+          <tbody>
+            <tr><td>肯定</td><td><span class="en">He gets up at six o'clock.</span></td><td><span class="zh">他六點起床。</span></td></tr>
+            <tr><td>肯定</td><td><span class="en">She has breakfast at seven o'clock.</span></td><td><span class="zh">她七點吃早餐。</span></td></tr>
+            <tr><td>否定</td><td><span class="en">He doesn't go to bed at nine.</span></td><td><span class="zh">他不是九點睡覺。</span></td></tr>
+            <tr><td>問句</td><td><span class="en">Does he get up at six o'clock?</span></td><td><span class="zh">他六點起床嗎？</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 記住</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">He / She → <b>gets up / goes / has</b>（要加 s）</div><div class="zh">He gets up. / She has breakfast. / He goes to school.</div></div></li>
+          <li><span class="num">2</span><div><div class="en">It's + 數字 + <b>o'clock</b></div><div class="zh">It's seven o'clock. 現在七點整。</div></div></li>
+          <li><span class="num">3</span><div><div class="en">What's the time? = What time is it?</div><div class="zh">幾點了？</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Everyday activities 日常活動</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">☀️</span><div><div class="en">get up</div><div class="zh">起床</div></div></li>
+          <li><span class="num">🍳</span><div><div class="en">have breakfast</div><div class="zh">吃早餐</div></div></li>
+          <li><span class="num">🏫</span><div><div class="en">go to school</div><div class="zh">上學</div></div></li>
+          <li><span class="num">🏠</span><div><div class="en">go home</div><div class="zh">回家</div></div></li>
+          <li><span class="num">🌙</span><div><div class="en">go to bed</div><div class="zh">睡覺</div></div></li>
+          <li><span class="num">🍽️</span><div><div class="en">have dinner</div><div class="zh">吃晚餐</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎭 故事對話：What time is it?</h2>
+        <div class="dialogue">
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Rosy</div><div class="dtext">What's the time, Dad?</div></div></div>
+          <div class="dbubble"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">It's <b>six o'clock</b>. Time to <b>get up</b>! ☀️</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Rosy</div><div class="dtext">When does Harry <b>have breakfast</b>?</div></div></div>
+          <div class="dbubble"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">He <b>has breakfast</b> at <b>seven o'clock</b>. 🍳</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Rosy</div><div class="dtext">And he <b>goes to school</b> at eight o'clock!</div></div></div>
+          <div class="dbubble"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">That's right! He <b>goes to bed</b> at nine o'clock. 🌙</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit 9 -->
+    <div id="rv-ff9" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：Does he/she work in a ___?</h2>
+        <div class="pill">問工作地點</div>
+        <table class="gtable">
+          <thead><tr><th>問句</th><th>回答</th></tr></thead>
+          <tbody>
+            <tr><td><span class="en">Does he work in a hospital?</span></td><td><span class="en">Yes, he does. / No, he doesn't.</span></td></tr>
+            <tr><td><span class="en">Does she work in a school?</span></td><td><span class="en">Yes, she does. / No, she doesn't.</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 記住</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">He/She → <b>Does</b>（疑問句開頭）</div><div class="zh">Does she work in a zoo?</div></div></li>
+          <li><span class="num">2</span><div><div class="en">肯定回答：Yes, he/she <b>does.</b></div></div></li>
+          <li><span class="num">3</span><div><div class="en">否定回答：No, he/she <b>doesn't.</b></div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Places 地點</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🏥</span><div><div class="en">hospital</div><div class="zh">醫院</div></div></li>
+          <li><span class="num">✈️</span><div><div class="en">airport</div><div class="zh">機場</div></div></li>
+          <li><span class="num">🚒</span><div><div class="en">fire station</div><div class="zh">消防局</div></div></li>
+          <li><span class="num">🚔</span><div><div class="en">police station</div><div class="zh">警察局</div></div></li>
+          <li><span class="num">🏪</span><div><div class="en">store</div><div class="zh">商店</div></div></li>
+          <li><span class="num">🏫</span><div><div class="en">school</div><div class="zh">學校</div></div></li>
+          <li><span class="num">🛒</span><div><div class="en">supermarket</div><div class="zh">超市</div></div></li>
+          <li><span class="num">🏦</span><div><div class="en">bank</div><div class="zh">銀行</div></div></li>
+          <li><span class="num">🦁</span><div><div class="en">zoo</div><div class="zh">動物園</div></div></li>
+          <li><span class="num">🚉</span><div><div class="en">station</div><div class="zh">車站</div></div></li>
+          <li><span class="num">🔧</span><div><div class="en">garage</div><div class="zh">車庫；修車廠</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 10 -->
+    <div id="rv-ff10" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：When it's ___, we ___.</h2>
+        <div class="pill">天氣 + 活動</div>
+        <table class="gtable">
+          <thead><tr><th>天氣</th><th>活動句型</th></tr></thead>
+          <tbody>
+            <tr><td><span class="en">windy</span></td><td><span class="en">When it's windy, we fly a kite.</span><br><span class="zh">當颳風時，我們放風箏。</span></td></tr>
+            <tr><td><span class="en">snowing</span></td><td><span class="en">When it's snowing, we make a snowman.</span><br><span class="zh">下雪時，我們堆雪人。</span></td></tr>
+            <tr><td><span class="en">sunny</span></td><td><span class="en">When it's sunny, we play outside.</span><br><span class="zh">晴天時，我們在外面玩。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ Don't + 原形動詞（否定命令句）</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">⛔</span><div><div class="en">Don't wear your hat.</div><div class="zh">不要戴帽子。</div></div></li>
+          <li><span class="num">⛔</span><div><div class="en">Don't put on your coat.</div><div class="zh">不要穿外套。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Weather & Activities</h2>
+        <h3>天氣</h3>
+        <ul class="kp-list">
+          <li><span class="num">💨</span><div><div class="en">windy</div><div class="zh">颳風的</div></div></li>
+          <li><span class="num">🌧️</span><div><div class="en">raining</div><div class="zh">下雨的</div></div></li>
+          <li><span class="num">❄️</span><div><div class="en">snowing</div><div class="zh">下雪的</div></div></li>
+          <li><span class="num">🔥</span><div><div class="en">hot</div><div class="zh">熱的</div></div></li>
+          <li><span class="num">🥶</span><div><div class="en">cold</div><div class="zh">冷的</div></div></li>
+          <li><span class="num">☀️</span><div><div class="en">sunny</div><div class="zh">晴天的</div></div></li>
+        </ul>
+        <h3>活動</h3>
+        <ul class="kp-list">
+          <li><span class="num">🪁</span><div><div class="en">fly a kite</div><div class="zh">放風箏</div></div></li>
+          <li><span class="num">☃️</span><div><div class="en">make a snowman</div><div class="zh">堆雪人</div></div></li>
+          <li><span class="num">⛸️</span><div><div class="en">go ice skating</div><div class="zh">去溜冰</div></div></li>
+          <li><span class="num">🏃</span><div><div class="en">play outside</div><div class="zh">在外面玩</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 11 -->
+    <div id="rv-ff11" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：I'm / He's / She's wearing ___</h2>
+        <div class="pill">現在進行式 · 穿著</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>句型</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>I</b></td><td>I'm wearing</td><td><span class="en">I'm wearing a dress.</span><br><span class="zh">我穿著一件洋裝。</span></td></tr>
+            <tr><td><b>He</b></td><td>He's wearing</td><td><span class="en">He's wearing jeans.</span><br><span class="zh">他穿著牛仔褲。</span></td></tr>
+            <tr><td><b>She</b></td><td>She's wearing</td><td><span class="en">She's wearing boots.</span><br><span class="zh">她穿著靴子。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❓ 問句</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">?</span><div><div class="en">What are you wearing?</div><div class="zh">你穿著什麼？</div></div></li>
+          <li><span class="num">?</span><div><div class="en">What is he wearing?</div><div class="zh">他穿著什麼？</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Clothes 衣物</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">👗</span><div><div class="en">skirt</div><div class="zh">裙子</div></div></li>
+          <li><span class="num">🧣</span><div><div class="en">scarf</div><div class="zh">圍巾</div></div></li>
+          <li><span class="num">🧤</span><div><div class="en">gloves</div><div class="zh">手套（複數）</div></div></li>
+          <li><span class="num">👖</span><div><div class="en">jeans</div><div class="zh">牛仔褲（複數）</div></div></li>
+          <li><span class="num">👢</span><div><div class="en">boots</div><div class="zh">靴子（複數）</div></div></li>
+          <li><span class="num">👔</span><div><div class="en">shirt</div><div class="zh">襯衫</div></div></li>
+          <li><span class="num">👗</span><div><div class="en">dress</div><div class="zh">洋裝</div></div></li>
+          <li><span class="num">👕</span><div><div class="en">T-shirt</div><div class="zh">T恤</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 12 -->
+    <div id="rv-ff12" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：現在進行式 疑問句</h2>
+        <div class="pill">Are they ___ing? / Is he/she ___ing?</div>
+        <table class="gtable">
+          <thead><tr><th>問句</th><th>肯定回答</th><th>否定回答</th></tr></thead>
+          <tbody>
+            <tr><td><span class="en">Are they dancing?</span></td><td><span class="en">Yes, they are.</span></td><td><span class="en">No, they aren't.</span></td></tr>
+            <tr><td><span class="en">Is she sleeping?</span></td><td><span class="en">Yes, she is.</span></td><td><span class="en">No, she isn't.</span></td></tr>
+            <tr><td><span class="en">Is he eating?</span></td><td><span class="en">Yes, he is.</span></td><td><span class="en">No, he isn't.</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ -ing 規則</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">一般：直接加 -ing</div><div class="zh">eat → eating, sing → singing, drink → drinking</div></div></li>
+          <li><span class="num">2</span><div><div class="en">字尾 e 去掉再加 -ing</div><div class="zh">dance → dancing, make → making, ride → riding</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Celebrations 慶典</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">💒</span><div><div class="en">wedding</div><div class="zh">婚禮</div></div></li>
+          <li><span class="num">🎂</span><div><div class="en">cake</div><div class="zh">蛋糕</div></div></li>
+          <li><span class="num">🎵</span><div><div class="en">sing</div><div class="zh">唱歌</div></div></li>
+          <li><span class="num">🎉</span><div><div class="en">guests</div><div class="zh">賓客</div></div></li>
+          <li><span class="num">✉️</span><div><div class="en">invitation</div><div class="zh">邀請函</div></div></li>
+          <li><span class="num">💃</span><div><div class="en">dance</div><div class="zh">跳舞</div></div></li>
+          <li><span class="num">👰</span><div><div class="en">bride</div><div class="zh">新娘</div></div></li>
+          <li><span class="num">🎸</span><div><div class="en">band</div><div class="zh">樂團</div></div></li>
+          <li><span class="num">👗</span><div><div class="en">dress</div><div class="zh">洋裝</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 13 -->
+    <div id="rv-ff13" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：比較級 Comparatives</h2>
+        <div class="pill">bigger / smaller / taller / shorter than</div>
+        <table class="gtable">
+          <thead><tr><th>原形</th><th>比較級</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td>big</td><td><b>bigger than</b></td><td><span class="en">A horse is bigger than a goose.</span></td></tr>
+            <tr><td>small</td><td><b>smaller than</b></td><td><span class="en">A goose is smaller than a horse.</span></td></tr>
+            <tr><td>tall</td><td><b>taller than</b></td><td><span class="en">Rosy is taller than Billy.</span></td></tr>
+            <tr><td>short</td><td><b>shorter than</b></td><td><span class="en">Billy is shorter than Rosy.</span></td></tr>
+            <tr><td>loud</td><td><b>louder than</b></td><td><span class="en">The goose is louder than the hen.</span></td></tr>
+            <tr><td>fast</td><td><b>faster than</b></td><td><span class="en">The dog is faster than the cat.</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ 規則</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">短形容詞 + <b>-er</b> + than</div><div class="zh">tall → taller, fast → faster, loud → louder</div></div></li>
+          <li><span class="num">2</span><div><div class="en">字尾重複子音：big → big<b>g</b>er</div><div class="zh">big → bigger, fat → fatter</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Farm animals & Adjectives</h2>
+        <h3>農場動物</h3>
+        <ul class="kp-list">
+          <li><span class="num">🐄</span><div><div class="en">cow</div><div class="zh">乳牛</div></div></li>
+          <li><span class="num">🐐</span><div><div class="en">goat</div><div class="zh">山羊</div></div></li>
+          <li><span class="num">🐴</span><div><div class="en">horse</div><div class="zh">馬</div></div></li>
+          <li><span class="num">🐑</span><div><div class="en">sheep</div><div class="zh">綿羊</div></div></li>
+          <li><span class="num">🫏</span><div><div class="en">donkey</div><div class="zh">驢子</div></div></li>
+          <li><span class="num">🪿</span><div><div class="en">goose</div><div class="zh">鵝</div></div></li>
+        </ul>
+        <h3>形容詞</h3>
+        <ul class="kp-list">
+          <li><span class="num">🐢</span><div><div class="en">slow</div><div class="zh">慢的</div></div></li>
+          <li><span class="num">🐇</span><div><div class="en">fast</div><div class="zh">快的</div></div></li>
+          <li><span class="num">🤫</span><div><div class="en">quiet</div><div class="zh">安靜的</div></div></li>
+          <li><span class="num">📢</span><div><div class="en">loud</div><div class="zh">吵鬧的</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 14 -->
+    <div id="rv-ff14" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：was / wasn't / were / weren't（過去式）</h2>
+        <div class="pill">be 動詞過去式</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定</th><th>否定</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / He / She / It</b></td><td><span class="en">He <b>was</b> kind.</span><br><span class="zh">他很友善。（過去）</span></td><td><span class="en">She <b>wasn't</b> wet.</span><br><span class="zh">她沒有濕。（過去）</span></td></tr>
+            <tr><td><b>We / You / They</b></td><td><span class="en">They <b>were</b> in the park.</span><br><span class="zh">他們在公園。（過去）</span></td><td><span class="en">We <b>weren't</b> sad.</span><br><span class="zh">我們不難過。（過去）</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❓ 疑問句</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">?</span><div><div class="en">Was she dry? — Yes, she was. / No, she wasn't.</div></div></li>
+          <li><span class="num">?</span><div><div class="en">Were they hungry? — Yes, they were. / No, they weren't.</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Adjectives 形容詞</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">📸</span><div><div class="en">photo</div><div class="zh">照片</div></div></li>
+          <li><span class="num">☀️</span><div><div class="en">dry</div><div class="zh">乾的</div></div></li>
+          <li><span class="num">😊</span><div><div class="en">kind</div><div class="zh">友善的</div></div></li>
+          <li><span class="num">💧</span><div><div class="en">wet</div><div class="zh">濕的</div></div></li>
+          <li><span class="num">🧊</span><div><div class="en">fridge</div><div class="zh">冰箱</div></div></li>
+          <li><span class="num">😈</span><div><div class="en">bad</div><div class="zh">壞的</div></div></li>
+          <li><span class="num">✨</span><div><div class="en">neat</div><div class="zh">整齊的</div></div></li>
+          <li><span class="num">🗑️</span><div><div class="en">trash</div><div class="zh">垃圾</div></div></li>
+          <li><span class="num">🪟</span><div><div class="en">floor</div><div class="zh">地板</div></div></li>
+          <li><span class="num">🌀</span><div><div class="en">messy</div><div class="zh">凌亂的</div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Unit 15 -->
+    <div id="rv-ff15" style="display:none">
+      <div class="card">
+        <h2>📐 文法重點：There were some / There weren't any</h2>
+        <div class="pill">過去式 · some / any</div>
+        <table class="gtable">
+          <thead><tr><th>句型</th><th>例句</th><th>中文</th></tr></thead>
+          <tbody>
+            <tr><td>肯定</td><td><span class="en">There were some chairs.</span></td><td><span class="zh">（過去）有一些椅子。</span></td></tr>
+            <tr><td>否定</td><td><span class="en">There weren't any tables.</span></td><td><span class="zh">（過去）沒有任何桌子。</span></td></tr>
+            <tr><td>問句</td><td><span class="en">Were there any children?</span></td><td><span class="zh">（過去）有孩子嗎？</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold" style="margin-top:6px">❗ some vs any</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">✓</span><div><div class="en"><b>some</b>：用在肯定句</div><div class="zh">There were some women.</div></div></li>
+          <li><span class="num">✗</span><div><div class="en"><b>any</b>：用在否定句 &amp; 問句</div><div class="zh">There weren't any men. / Were there any children?</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：People &amp; Ordinal Numbers</h2>
+        <h3>人（不規則複數）</h3>
+        <ul class="kp-list">
+          <li><span class="num">👨</span><div><div class="en">man → men</div><div class="zh">男人（複數）</div></div></li>
+          <li><span class="num">👩</span><div><div class="en">woman → women</div><div class="zh">女人（複數）</div></div></li>
+          <li><span class="num">🧒</span><div><div class="en">child → children</div><div class="zh">小孩（複數）</div></div></li>
+        </ul>
+        <h3>序數 Ordinal Numbers</h3>
+        <ul class="kp-list">
+          <li><span class="num">🥇</span><div><div class="en">first (1st)</div><div class="zh">第一</div></div></li>
+          <li><span class="num">🥈</span><div><div class="en">second (2nd)</div><div class="zh">第二</div></div></li>
+          <li><span class="num">🥉</span><div><div class="en">third (3rd)</div><div class="zh">第三</div></div></li>
+          <li><span class="num">4️⃣</span><div><div class="en">fourth (4th)</div><div class="zh">第四</div></div></li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
   <!-- GAMES TAB -->
@@ -846,6 +1192,187 @@ const FILL_DATA = {
       ],
       wordBank: ['balloons','cake','chocolate','presents']
     }
+  ],
+  ff8: [
+    {
+      title: 'Everyday activities · He/She',
+      sentences: [
+        { hint: '☀️ 起床', before: 'He gets ', after: " at six o'clock.", ans: 'up' },
+        { hint: '🍳 早餐', before: 'She has ', after: ' at seven.', ans: 'breakfast' },
+        { hint: '🏫 上學', before: 'He goes to ', after: ' at eight.', ans: 'school' },
+        { hint: '🏠 回家', before: 'She goes ', after: ' at four.', ans: 'home' },
+        { hint: '🌙 睡覺', before: 'He goes to ', after: " at nine o'clock.", ans: 'bed' },
+        { hint: '🍽️ 晚餐', before: 'She has ', after: ' at seven.', ans: 'dinner' },
+      ],
+      wordBank: ['up', 'breakfast', 'school', 'home', 'bed', 'dinner']
+    },
+    {
+      title: "What's the time?",
+      sentences: [
+        { hint: "⏰ 時刻用語", before: "It's seven ", after: '.', ans: "o'clock" },
+        { hint: '❓ 問時間', before: "What's ", after: ' time?', ans: 'the' },
+        { hint: '📅 時間介系詞', before: "He goes to school ", after: ' eight.', ans: 'at' },
+      ],
+      wordBank: ["o'clock", 'the', 'at']
+    }
+  ],
+  ff9: [
+    {
+      title: 'Does he/she work in a ___?',
+      sentences: [
+        { hint: '❓ he 的問句', before: '', after: ' he work in a hospital?', ans: 'Does' },
+        { hint: '✓ 肯定回答', before: 'Does she work in a school? — Yes, she ', after: '.', ans: 'does' },
+        { hint: '✗ 否定回答', before: "Does he work in a zoo? — No, he ", after: '.', ans: "doesn't" },
+        { hint: '🔨 動詞（工作）', before: 'Does she ', after: ' in a bank?', ans: 'work' },
+      ],
+      wordBank: ['Does', 'does', "doesn't", 'work']
+    },
+    {
+      title: 'Places 地點',
+      sentences: [
+        { hint: '🏥 醫院', before: 'She works in a ', after: '.', ans: 'hospital' },
+        { hint: '✈️ 機場', before: 'He works in an ', after: '.', ans: 'airport' },
+        { hint: '🛒 超市', before: 'He works in a ', after: '.', ans: 'supermarket' },
+        { hint: '🏦 銀行', before: 'She works in a ', after: '.', ans: 'bank' },
+      ],
+      wordBank: ['hospital', 'airport', 'supermarket', 'bank']
+    }
+  ],
+  ff10: [
+    {
+      title: "When it's ___, we ___.",
+      sentences: [
+        { hint: '💨 颳風', before: "When it's ", after: ', we fly a kite.', ans: 'windy' },
+        { hint: '❄️ 下雪', before: "When it's ", after: ', we make a snowman.', ans: 'snowing' },
+        { hint: '☀️ 晴天', before: "When it's ", after: ', we play outside.', ans: 'sunny' },
+        { hint: '🌧️ 下雨', before: "When it's ", after: ', we wear a coat.', ans: 'raining' },
+      ],
+      wordBank: ['windy', 'snowing', 'sunny', 'raining']
+    },
+    {
+      title: "Don't ___! 否定命令句",
+      sentences: [
+        { hint: '⛔ 不要戴', before: "Don't ", after: ' your hat.', ans: 'wear' },
+        { hint: '⛔ 不要穿', before: "Don't put ", after: ' your coat.', ans: 'on' },
+        { hint: '☔ 帶雨傘', before: 'Take your ', after: '.', ans: 'umbrella' },
+      ],
+      wordBank: ['wear', 'on', 'umbrella']
+    }
+  ],
+  ff11: [
+    {
+      title: "I'm / He's / She's wearing ___",
+      sentences: [
+        { hint: '👗 穿著（我）', before: "I'm ", after: ' a dress.', ans: 'wearing' },
+        { hint: '👖 牛仔褲（他）', before: "He's wearing ", after: '.', ans: 'jeans' },
+        { hint: '👢 靴子（她）', before: "She's wearing ", after: '.', ans: 'boots' },
+        { hint: '🧣 圍巾（他）', before: "He's wearing a ", after: '.', ans: 'scarf' },
+        { hint: '🧤 手套（她）', before: "She's wearing ", after: '.', ans: 'gloves' },
+        { hint: '👔 襯衫（他）', before: "He's wearing a ", after: '.', ans: 'shirt' },
+      ],
+      wordBank: ['wearing', 'jeans', 'boots', 'scarf', 'gloves', 'shirt']
+    },
+    {
+      title: 'What are you wearing? 疑問句',
+      sentences: [
+        { hint: '❓ 問句動詞', before: 'What ', after: ' you wearing?', ans: 'are' },
+        { hint: '👗 回答（我）', before: "I'm wearing a ", after: '.', ans: 'skirt' },
+        { hint: '👕 T恤', before: "He's wearing a ", after: '.', ans: 'T-shirt' },
+      ],
+      wordBank: ['are', 'skirt', 'T-shirt']
+    }
+  ],
+  ff12: [
+    {
+      title: 'Are they ___ing? / Is he/she ___ing?',
+      sentences: [
+        { hint: '❓ they 的問句', before: '', after: ' they dancing?', ans: 'Are' },
+        { hint: '❓ she 的問句', before: '', after: ' she sleeping?', ans: 'Is' },
+        { hint: '✓ they 肯定', before: 'Are they singing? — Yes, they ', after: '.', ans: 'are' },
+        { hint: "✗ she 否定", before: "Is she eating? — No, she ", after: '.', ans: "isn't" },
+        { hint: '✓ he 肯定', before: 'Is he dancing? — Yes, he ', after: '.', ans: 'is' },
+      ],
+      wordBank: ['Are', 'Is', 'are', "isn't", 'is']
+    },
+    {
+      title: 'Celebrations 慶典單字',
+      sentences: [
+        { hint: '💒 婚禮', before: "It's a ", after: '!', ans: 'wedding' },
+        { hint: '👰 新娘', before: 'Look at the ', after: '!', ans: 'bride' },
+        { hint: '✉️ 邀請函', before: 'We have an ', after: '.', ans: 'invitation' },
+        { hint: '🎉 賓客', before: 'There are many ', after: '.', ans: 'guests' },
+      ],
+      wordBank: ['wedding', 'bride', 'invitation', 'guests']
+    }
+  ],
+  ff13: [
+    {
+      title: 'Comparatives 比較級',
+      sentences: [
+        { hint: '🐴 比鵝大', before: 'A horse is ', after: ' than a goose.', ans: 'bigger' },
+        { hint: '🐑 比馬小', before: 'A sheep is ', after: ' than a horse.', ans: 'smaller' },
+        { hint: '🐄 比鵝高', before: 'A cow is ', after: ' than a goose.', ans: 'taller' },
+        { hint: '🪿 比雞吵', before: 'The goose is ', after: ' than the hen.', ans: 'louder' },
+        { hint: '🐇 比烏龜快', before: 'The rabbit is ', after: ' than the turtle.', ans: 'faster' },
+      ],
+      wordBank: ['bigger', 'smaller', 'taller', 'louder', 'faster']
+    },
+    {
+      title: 'Farm animals 農場動物',
+      sentences: [
+        { hint: '🐄 乳牛', before: 'There is a ', after: ' behind the gate.', ans: 'cow' },
+        { hint: '🐐 山羊', before: 'There is a ', after: ' next to the fence.', ans: 'goat' },
+        { hint: '🐑 綿羊', before: 'There is a ', after: ' on the grass.', ans: 'sheep' },
+        { hint: '🫏 驢子', before: 'There is a ', after: ' in front of the house.', ans: 'donkey' },
+      ],
+      wordBank: ['cow', 'goat', 'sheep', 'donkey']
+    }
+  ],
+  ff14: [
+    {
+      title: 'was / wasn\'t / were / weren\'t',
+      sentences: [
+        { hint: '✓ he 過去式', before: 'He ', after: ' kind yesterday.', ans: 'was' },
+        { hint: '✗ she 過去式否定', before: 'She ', after: ' wet.', ans: "wasn't" },
+        { hint: '✓ they 過去式', before: 'They ', after: ' in the park.', ans: 'were' },
+        { hint: '✗ we 過去式否定', before: 'We ', after: ' hungry.', ans: "weren't" },
+        { hint: '❓ 過去式問句', before: '', after: ' he bad? — Yes, he was.', ans: 'Was' },
+      ],
+      wordBank: ['was', "wasn't", 'were', "weren't", 'Was']
+    },
+    {
+      title: 'Adjectives 形容詞',
+      sentences: [
+        { hint: '😊 友善的', before: 'She was very ', after: '.', ans: 'kind' },
+        { hint: '💧 濕的', before: 'His coat was ', after: ' from the rain.', ans: 'wet' },
+        { hint: '✨ 整齊的', before: 'The room was very ', after: '.', ans: 'neat' },
+        { hint: '🌀 凌亂的', before: "His room was so ", after: '!', ans: 'messy' },
+      ],
+      wordBank: ['kind', 'wet', 'neat', 'messy']
+    }
+  ],
+  ff15: [
+    {
+      title: "There were some / There weren't any",
+      sentences: [
+        { hint: '✓ 有一些（過去）', before: 'There ', after: ' some chairs.', ans: 'were' },
+        { hint: "✗ 沒有（過去）", before: 'There ', after: " any tables.", ans: "weren't" },
+        { hint: '❓ 問句（過去）', before: 'Were there ', after: ' children?', ans: 'any' },
+        { hint: '✓ 用 some', before: 'There were ', after: ' women there.', ans: 'some' },
+      ],
+      wordBank: ['were', "weren't", 'any', 'some']
+    },
+    {
+      title: 'People & Ordinal Numbers',
+      sentences: [
+        { hint: '👨 男人複數', before: 'There are two ', after: '.', ans: 'men' },
+        { hint: '👩 女人複數', before: 'There are three ', after: '.', ans: 'women' },
+        { hint: '🧒 小孩複數', before: 'There are many ', after: '.', ans: 'children' },
+        { hint: '🥇 第一', before: 'She is the ', after: ' to finish.', ans: 'first' },
+        { hint: '🥈 第二', before: 'He came in ', after: ' place.', ans: 'second' },
+      ],
+      wordBank: ['men', 'women', 'children', 'first', 'second']
+    }
   ]
 };
 
@@ -891,6 +1418,55 @@ const ERROR_DATA = {
     { sentence: "He don't like balloons.", errors: [{ word: "don't", correct: "doesn't", reason: "He 用 doesn't" }] },
     { sentence: 'What do she like?', errors: [{ word: 'do', correct: 'does', reason: 'she 用 does' }] },
     { sentence: 'I likes cake.', errors: [{ word: 'likes', correct: 'like', reason: 'I 用 like（不加 s）' }] }
+  ],
+  ff8: [
+    { sentence: "He get up at six o'clock.", errors: [{ word: 'get', correct: 'gets', reason: 'He/She 後面動詞加 s → gets' }] },
+    { sentence: 'She have breakfast at seven.', errors: [{ word: 'have', correct: 'has', reason: 'She 後面用 has' }] },
+    { sentence: 'He go to school at eight.', errors: [{ word: 'go', correct: 'goes', reason: 'He 後面 go → goes' }] },
+    { sentence: "It's six a'clock.", errors: [{ word: "a'clock", correct: "o'clock", reason: "是 o'clock 不是 a'clock" }] },
+    { sentence: "She go to bed at nine.", errors: [{ word: 'go', correct: 'goes', reason: 'She 後面 go → goes' }] }
+  ],
+  ff9: [
+    { sentence: 'Do she work in a hospital?', errors: [{ word: 'Do', correct: 'Does', reason: 'she 用 Does' }] },
+    { sentence: 'Does he works in a school?', errors: [{ word: 'works', correct: 'work', reason: 'Does 後面用原形 work' }] },
+    { sentence: 'Yes, she do.', errors: [{ word: 'do', correct: 'does', reason: 'she 的回答用 does' }] },
+    { sentence: 'He work in a fire station.', errors: [{ word: 'work', correct: 'works', reason: 'He 動詞加 s → works' }] }
+  ],
+  ff10: [
+    { sentence: "When its windy, we fly a kite.", errors: [{ word: 'its', correct: "it's", reason: "it's = it is，需要省略符號" }] },
+    { sentence: "When it's snowing, we makes a snowman.", errors: [{ word: 'makes', correct: 'make', reason: 'we 後面用原形 make' }] },
+    { sentence: "Don't wears your hat.", errors: [{ word: 'wears', correct: 'wear', reason: "Don't 後面用原形動詞 wear" }] },
+    { sentence: "It's rain today.", errors: [{ word: 'rain', correct: 'raining', reason: "it's + 天氣用 -ing 形式：raining" }] }
+  ],
+  ff11: [
+    { sentence: "I wearing a dress.", errors: [{ word: 'wearing', correct: "I'm wearing", reason: "缺少 I'm（be 動詞）" }] },
+    { sentence: "He's wear jeans.", errors: [{ word: 'wear', correct: 'wearing', reason: "進行式用 V-ing：wearing" }] },
+    { sentence: "What are you wear?", errors: [{ word: 'wear', correct: 'wearing', reason: "進行式問句也要用 wearing" }] },
+    { sentence: "She's wearing a jean.", errors: [{ word: 'jean', correct: 'jeans', reason: 'jeans 永遠用複數' }] }
+  ],
+  ff12: [
+    { sentence: "Are they dance?", errors: [{ word: 'dance', correct: 'dancing', reason: '進行式用 V-ing：dancing' }] },
+    { sentence: "Is she sleeps?", errors: [{ word: 'sleeps', correct: 'sleeping', reason: '進行式用 V-ing：sleeping' }] },
+    { sentence: "Yes, they is dancing.", errors: [{ word: 'is', correct: 'are', reason: 'they 用 are' }] },
+    { sentence: "No, she aren't eating.", errors: [{ word: "aren't", correct: "isn't", reason: "she 用 isn't" }] }
+  ],
+  ff13: [
+    { sentence: "A horse is more big than a goose.", errors: [{ word: 'more big', correct: 'bigger', reason: '短形容詞直接加 -er：bigger' }] },
+    { sentence: "A goose is smaller then a cow.", errors: [{ word: 'then', correct: 'than', reason: '比較級用 than（不是 then）' }] },
+    { sentence: "The sheep is more quiet than the cow.", errors: [{ word: 'more quiet', correct: 'quieter', reason: '短形容詞直接加 -er：quieter' }] },
+    { sentence: "Cows is louder than hens.", errors: [{ word: 'is', correct: 'are', reason: 'Cows（複數）用 are' }] }
+  ],
+  ff14: [
+    { sentence: "He were kind yesterday.", errors: [{ word: 'were', correct: 'was', reason: 'He/She/It 用 was（單數）' }] },
+    { sentence: "They was in the park.", errors: [{ word: 'was', correct: 'were', reason: 'They 用 were（複數）' }] },
+    { sentence: "She wasnt wet.", errors: [{ word: 'wasnt', correct: "wasn't", reason: '縮寫需要省略符號' }] },
+    { sentence: "We werent hungry.", errors: [{ word: 'werent', correct: "weren't", reason: '縮寫需要省略符號' }] }
+  ],
+  ff15: [
+    { sentence: "There was some chairs.", errors: [{ word: 'was', correct: 'were', reason: 'chairs 是複數 → were' }] },
+    { sentence: "There weren't some children.", errors: [{ word: 'some', correct: 'any', reason: '否定句用 any' }] },
+    { sentence: "There are two mans.", errors: [{ word: 'mans', correct: 'men', reason: 'man 的複數不規則 → men' }] },
+    { sentence: "She is the 1st to finish.", errors: [{ word: '1st', correct: 'first', reason: '序數寫英文：first' }] }
   ]
 };
 
@@ -952,6 +1528,71 @@ const QUIZ_DATA = {
     { q: "He ___ cake. 🎂", opts: ['like','likes','do','to like'], c: 1 },
     { q: "She ___ like balloons. (不喜歡)", opts: ["don't","doesn't",'not',"isn't"], c: 1 },
     { q: "Which is correct?", opts: ['He like candy.',"She doesn't likes cake.","He doesn't like balloons.",'I likes chocolate.'], c: 2 }
+  ],
+  ff8: [
+    { q: "He ___ up at six o'clock. ☀️", opts: ['get', 'gets', 'go', 'goes'], c: 1 },
+    { q: "She ___ breakfast at seven.", opts: ['have', 'has', 'eat', 'eats'], c: 1 },
+    { q: "He ___ to school at eight.", opts: ['go', 'goes', 'get', 'gets'], c: 1 },
+    { q: "What's the time? It's ___ o'clock.", opts: ['six', 'sixth', "six's", 'a six'], c: 0 },
+    { q: "He ___ to bed at nine.", opts: ['go', 'goes', 'get', 'gets'], c: 1 },
+    { q: "She ___ dinner at seven.", opts: ['have', 'has', 'eat', 'eats'], c: 1 },
+    { q: "Which is correct?", opts: ['She get up at six.', 'He has breakfast at seven.', 'She have dinner.', 'He go home.'], c: 1 }
+  ],
+  ff9: [
+    { q: "___ she work in a hospital?", opts: ['Do', 'Does', 'Is', 'Are'], c: 1 },
+    { q: "Does he work in a school? — Yes, he ___.", opts: ['do', 'does', 'is', 'are'], c: 1 },
+    { q: "Does she work in a zoo? — No, she ___.", opts: ["don't", "doesn't", "isn't", 'no'], c: 1 },
+    { q: "He works in a ___ and fixes cars. 🔧", opts: ['airport', 'hospital', 'garage', 'bank'], c: 2 },
+    { q: "Does he ___ in a supermarket?", opts: ['works', 'work', 'working', 'worked'], c: 1 },
+    { q: "Which is correct?", opts: ['Do she work in a zoo?', 'Does he works in a school?', 'Does she work in a hospital?', 'Do he work?'], c: 2 }
+  ],
+  ff10: [
+    { q: "When it's ___, we fly a kite. 🪁", opts: ['raining', 'snowing', 'windy', 'sunny'], c: 2 },
+    { q: "When it's ___, we make a snowman. ☃️", opts: ['hot', 'cold', 'raining', 'snowing'], c: 3 },
+    { q: "Don't ___ your hat.", opts: ['wear', 'wears', 'wearing', 'wore'], c: 0 },
+    { q: "🌧️ raining 是什麼天氣？", opts: ['颳風', '下雨', '下雪', '晴天'], c: 1 },
+    { q: "When it's sunny, we ___ outside.", opts: ['plays', 'play', 'playing', 'played'], c: 1 },
+    { q: "Which is correct?", opts: ["When its windy, we fly a kite.", "When it's snowing, we makes a snowman.", "When it's sunny, we play outside.", "Don't wears your hat."], c: 2 }
+  ],
+  ff11: [
+    { q: "What ___ you wearing?", opts: ['is', 'are', 'am', 'be'], c: 1 },
+    { q: "He's ___ jeans. 👖", opts: ['wear', 'wears', 'wearing', 'wore'], c: 2 },
+    { q: "___ are boots. 👢（複數，遠的）", opts: ['This is', 'That is', 'These are', 'Those are'], c: 3 },
+    { q: "👗 dress 是什麼？", opts: ['裙子', '洋裝', '圍巾', '手套'], c: 1 },
+    { q: "She's wearing a ___. 🧣", opts: ['gloves', 'jeans', 'scarf', 'boots'], c: 2 },
+    { q: "Which is correct?", opts: ["I wearing a skirt.", "He's wear a shirt.", "She's wearing gloves.", "What are you wear?"], c: 2 }
+  ],
+  ff12: [
+    { q: "___ they dancing? — Yes, they are.", opts: ['Is', 'Are', 'Do', 'Does'], c: 1 },
+    { q: "___ she sleeping? — No, she isn't.", opts: ['Is', 'Are', 'Do', 'Does'], c: 0 },
+    { q: "Are they singing? — Yes, they ___.", opts: ['is', 'are', 'do', 'does'], c: 1 },
+    { q: "Is he eating? — No, he ___.", opts: ["aren't", "isn't", "doesn't", "don't"], c: 1 },
+    { q: "💒 wedding 是什麼？", opts: ['生日派對', '婚禮', '畢業典禮', '聖誕節'], c: 1 },
+    { q: "dance → ___ing", opts: ['danceing', 'dancing', 'danccing', 'dansing'], c: 1 }
+  ],
+  ff13: [
+    { q: "A horse is ___ a goose. 🐴>🪿", opts: ['bigger than', 'big than', 'more big than', 'bigger then'], c: 0 },
+    { q: "A goose is ___ a horse.", opts: ['smaller than', 'small than', 'more small', 'smallest'], c: 0 },
+    { q: "big → ___（比較級）", opts: ['biger', 'bigger', 'more big', 'bigest'], c: 1 },
+    { q: "🐄 cow 是什麼動物？", opts: ['山羊', '馬', '乳牛', '綿羊'], c: 2 },
+    { q: "The goose is ___ the hen. 📢", opts: ['louder than', 'loud than', 'more loud', 'loudest'], c: 0 },
+    { q: "Which is correct?", opts: ['A cow is more tall than a sheep.', 'The horse is bigger then the goat.', 'A sheep is smaller than a cow.', 'The goose more quiet than the hen.'], c: 2 }
+  ],
+  ff14: [
+    { q: "He ___ kind yesterday. 😊", opts: ['is', 'are', 'was', 'were'], c: 2 },
+    { q: "They ___ in the park.", opts: ['is', 'are', 'was', 'were'], c: 3 },
+    { q: "She ___ wet. (否定，過去)", opts: ["isn't", "wasn't", "weren't", "aren't"], c: 1 },
+    { q: "We ___ hungry. (否定，過去)", opts: ["don't", "didn't", "weren't", "wasn't"], c: 2 },
+    { q: "💧 wet 是什麼意思？", opts: ['乾的', '濕的', '整齊的', '凌亂的'], c: 1 },
+    { q: "Which is correct?", opts: ['He were kind.', 'They was in the park.', 'She was wet.', 'We was hungry.'], c: 2 }
+  ],
+  ff15: [
+    { q: "There ___ some chairs.", opts: ['is', 'are', 'was', 'were'], c: 3 },
+    { q: "There ___ any tables.", opts: ["weren't", "wasn't", "don't", "doesn't"], c: 0 },
+    { q: "man → ___（複數）", opts: ['mans', 'manes', 'men', 'menes'], c: 2 },
+    { q: "woman → ___（複數）", opts: ['womans', 'women', 'womens', 'wimen'], c: 1 },
+    { q: "🥇 first 是第幾？", opts: ['第一', '第二', '第三', '第四'], c: 0 },
+    { q: "There weren't ___ children.", opts: ['some', 'any', 'a', 'an'], c: 1 }
   ]
 };
 
@@ -974,14 +1615,25 @@ const UNIT_TITLES = {
   ff5: 'Unit 5 · We have English!',
   ff6: "Unit 6 · Let's play after school!",
   ff7: "Unit 7 · Let's buy presents!",
-  all: '全部 · Units 1–7'
+  ff8: "Unit 8 · What time is it?",
+  ff9: "Unit 9 · Where does she work?",
+  ff10: "Unit 10 · What's the weather?",
+  ff11: "Unit 11 · What are you wearing?",
+  ff12: "Unit 12 · You're sleeping!",
+  ff13: "Unit 13 · Look at all the animals!",
+  ff14: "Unit 14 · Look at the photos!",
+  ff15: "Unit 15 · Good job!",
+  all: '全部 · Units 1–15'
 };
 const UNIT_BADGES = {
-  ff1:'📚 Unit 1', ff2:'📚 Unit 2', ff3:'📚 Unit 3',
-  ff4:'📚 Unit 4', ff5:'📚 Unit 5', ff6:'📚 Unit 6',
-  ff7:'📚 Unit 7', all:'⭐ Unit 1–7'
+  ff1:'📚 Unit 1',  ff2:'📚 Unit 2',  ff3:'📚 Unit 3',
+  ff4:'📚 Unit 4',  ff5:'📚 Unit 5',  ff6:'📚 Unit 6',
+  ff7:'📚 Unit 7',  ff8:'📚 Unit 8',  ff9:'📚 Unit 9',
+  ff10:'📚 Unit 10', ff11:'📚 Unit 11', ff12:'📚 Unit 12',
+  ff13:'📚 Unit 13', ff14:'📚 Unit 14', ff15:'📚 Unit 15',
+  all:'⭐ Unit 1–15'
 };
-const ALL_UNITS = ['ff1','ff2','ff3','ff4','ff5','ff6','ff7'];
+const ALL_UNITS = ['ff1','ff2','ff3','ff4','ff5','ff6','ff7','ff8','ff9','ff10','ff11','ff12','ff13','ff14','ff15'];
 
 function enter(key) {
   currentUnit = key;
