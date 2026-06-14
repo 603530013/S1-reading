@@ -25,6 +25,11 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
 .u-all{background:linear-gradient(135deg,#fbcfe8,#f9a8d4);grid-column:1/-1;text-align:center}
 .u-all .uicon{font-size:2.4em}
 .u-all .utit{font-size:1.2em;color:#831843}
+.u-g1{background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:white}
+.u-g2{background:linear-gradient(135deg,#f59e0b,#ef4444);color:white}
+.u-g1 .unum,.u-g2 .unum{color:rgba(255,255,255,.9)}
+.u-g1 .utit,.u-g2 .utit{color:white}
+.u-g1 .ucn,.u-g2 .ucn{color:rgba(255,255,255,.8)}
 .u-all .unum{color:#db2777}
 .card{background:white;border-radius:24px;padding:24px;margin-bottom:20px;box-shadow:0 6px 20px rgba(0,0,0,.07)}
 .card h2{font-family:'Baloo 2',cursive;font-size:1.3em;color:#7e22ce;margin-bottom:14px;display:flex;align-items:center;gap:8px}
@@ -219,6 +224,18 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
       <div class="unum" style="color:#ea580c">Unit 22</div>
       <div class="utit">Negative Statements</div>
       <div class="ucn">否定句</div>
+    </button>
+    <button class="u-btn u-g1" onclick="enterGroup('g1to11',[1,2,3,4,5,6,7,8,9,10,11],'Unit 1–11 總複習')">
+      <div class="uicon">📘</div>
+      <div class="unum">Unit 1–11</div>
+      <div class="utit">上半段 總複習</div>
+      <div class="ucn">代名詞 → 名詞 → 形容詞 → 所有格</div>
+    </button>
+    <button class="u-btn u-g2" onclick="enterGroup('g12to22',[12,13,14,15,16,17,18,19,20,21,22],'Unit 12–22 總複習')">
+      <div class="uicon">📙</div>
+      <div class="unum">Unit 12–22</div>
+      <div class="utit">下半段 總複習</div>
+      <div class="ucn">be動詞 → 一般動詞 → 進行式 → 介系詞</div>
     </button>
     <button class="u-btn u-all" onclick="enterUnit('all')">
       <div class="uicon">🌟</div>
@@ -1026,7 +1043,45 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
   <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
     <button class="btn br" onclick="backToLanding()">← 回單元選擇</button>
   </div>
-</div><div id="rv-all" class="card hidden" style="border-top:6px solid #db2777">
+</div><div id="rv-g1to11" class="card hidden" style="border-top:6px solid #3b82f6">
+    <h2>📘 Unit 1–11 總複習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(綜合練習)</span></h2>
+    <div class="tp">代名詞：I / you / he / she / we / they | 反身代名詞：myself / yourself / herself...</div>
+    <div class="tp">名詞：a / an | 單複數規則 (-s/-es/-ies) | 不可數名詞 | 永遠複數名詞</div>
+    <div class="tp">形容詞：a fat cat (名詞前) / It is big. (be動詞後)</div>
+    <div class="tp">所有格形容詞：my / your / his / her / its (單數) | our / their / your (複數)</div>
+    <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+    <div id="fill-g1to11"></div>
+    <div class="actions"><button class="btn bt" onclick="checkFill('g1to11')">✅ 檢查填空</button><button class="btn bg" onclick="initFill('g1to11')">🔄 再玩</button></div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+    <div id="err-g1to11"></div>
+    <div class="actions"><button class="btn bt" onclick="checkErrors('g1to11')">✅ 檢查答案</button><button class="btn bg" onclick="initError('g1to11')">🔄 再玩</button></div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+    <div id="quiz-g1to11"></div>
+    <div class="actions"><button class="btn bt" onclick="checkQuiz('g1to11')">✅ 檢查答案</button><button class="btn bg" onclick="initQuiz('g1to11')">🔄 再玩</button></div>
+    <div class="score" id="quiz-score-g1to11"><div class="stars" id="quiz-stars-g1to11"></div><div class="snum" id="quiz-snum-g1to11"></div><div id="quiz-msg-g1to11"></div></div>
+    <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px"><button class="btn br" onclick="backToLanding()">← 回單元選擇</button></div>
+  </div>
+
+  <div id="rv-g12to22" class="card hidden" style="border-top:6px solid #f97316">
+    <h2>📙 Unit 12–22 總複習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(綜合練習)</span></h2>
+    <div class="tp">所有格形容詞：my/your/our/their | be動詞：am / is / are | has / have</div>
+    <div class="tp">一般動詞：do / does | 簡單現在式：base / base+s | 現在進行式：am/is/are + -ing</div>
+    <div class="tp">介系詞：on / in / above / under / in front of / behind / to / from</div>
+    <div class="tp">連接詞：and / or | 疑問詞：Who / What | 否定句：not</div>
+    <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+    <div id="fill-g12to22"></div>
+    <div class="actions"><button class="btn bt" onclick="checkFill('g12to22')">✅ 檢查填空</button><button class="btn bg" onclick="initFill('g12to22')">🔄 再玩</button></div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+    <div id="err-g12to22"></div>
+    <div class="actions"><button class="btn bt" onclick="checkErrors('g12to22')">✅ 檢查答案</button><button class="btn bg" onclick="initError('g12to22')">🔄 再玩</button></div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+    <div id="quiz-g12to22"></div>
+    <div class="actions"><button class="btn bt" onclick="checkQuiz('g12to22')">✅ 檢查答案</button><button class="btn bg" onclick="initQuiz('g12to22')">🔄 再玩</button></div>
+    <div class="score" id="quiz-score-g12to22"><div class="stars" id="quiz-stars-g12to22"></div><div class="snum" id="quiz-snum-g12to22"></div><div id="quiz-msg-g12to22"></div></div>
+    <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px"><button class="btn br" onclick="backToLanding()">← 回單元選擇</button></div>
+  </div>
+
+  <div id="rv-all" class="card hidden" style="border-top:6px solid #db2777">
   <h2>🌟 Unit 1-22 全部複習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(綜合練習)</span></h2>
   <div class="tp">🎯 Unit 1-22 綜合複習</div>
   <div class="tp">代名詞：單數 (I,you,he,she)、複數 (we,you,they) | 反身代名詞：myself/herself/ourselves...</div>
@@ -1098,6 +1153,22 @@ function enterUnit(uid){
   document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
   document.getElementById('rv-'+uid).classList.remove('hidden');
   initFill(uid); initError(uid); initQuiz(uid);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function enterGroup(groupKey, units, title) {
+  FILL_DATA[groupKey] = [];
+  ERROR_DATA[groupKey] = [];
+  QUIZ_DATA[groupKey] = [];
+  units.forEach(function(u) {
+    (FILL_DATA[u]  || []).forEach(function(g){ FILL_DATA[groupKey].push(g); });
+    (ERROR_DATA[u] || []).forEach(function(e){ ERROR_DATA[groupKey].push(e); });
+    (QUIZ_DATA[u]  || []).forEach(function(q){ QUIZ_DATA[groupKey].push(q); });
+  });
+  currentUnit = groupKey;
+  document.getElementById('landing').classList.add('hidden');
+  document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
+  document.getElementById('rv-'+groupKey).classList.remove('hidden');
+  initFill(groupKey); initError(groupKey); initQuiz(groupKey);
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function backToLanding(){
@@ -1306,3 +1377,6 @@ function closePop(){document.getElementById('pop').classList.remove('show');}
 </script>
 </body>
 </html>
+
+
+
