@@ -43,6 +43,10 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
 .u-ff6{background:linear-gradient(135deg,#14b8a6,#0f766e)}
 .u-ff7{background:linear-gradient(135deg,#f43f5e,#be123c)}
 .u-all{background:linear-gradient(135deg,#f59e0b,#16a34a)}
+.u-g1{background:linear-gradient(135deg,#3b82f6,#8b5cf6);grid-column:1/-1;text-align:center;color:white}
+.u-g2{background:linear-gradient(135deg,#f59e0b,#ef4444);grid-column:1/-1;text-align:center;color:white}
+.u-g1 .un,.u-g2 .un{opacity:.85;font-size:.72em}
+.u-g1 .uname,.u-g2 .uname{font-size:.9em;font-weight:800}
 .u-ff8{background:linear-gradient(135deg,#0ea5e9,#0284c7)}
 .u-ff9{background:linear-gradient(135deg,#10b981,#059669)}
 .u-ff10{background:linear-gradient(135deg,#f59e0b,#d97706)}
@@ -271,6 +275,14 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
     <button class="ubtn u-ff15 ugrid-full" onclick="enter('ff15')">
       <span class="icon">🏆</span>
       <div><div class="un">Unit 15</div><div class="uname">Good job!</div></div>
+    </button>
+    <button class="ubtn u-g1 ugrid-full" onclick="enterGroup('ff1to7',['ff1','ff2','ff3','ff4','ff5','ff6','ff7'],'📘 U1~7 總複習','U1~7')">
+      <span class="icon">📘</span>
+      <div><div class="un">Unit 1–7 總複習</div><div class="uname">上半段全部複習！</div></div>
+    </button>
+    <button class="ubtn u-g2 ugrid-full" onclick="enterGroup('ff8to15',['ff8','ff9','ff10','ff11','ff12','ff13','ff14','ff15'],'📙 U8~15 總複習','U8~15')">
+      <span class="icon">📙</span>
+      <div><div class="un">Unit 8–15 總複習</div><div class="uname">下半段全部複習！</div></div>
     </button>
     <button class="ubtn u-all ugrid-full" onclick="enterAll()">
       <span class="icon">⭐</span>
@@ -1690,6 +1702,26 @@ function enterAll() {
   });
   enter('all');
 }
+function enterGroup(groupKey, units, title, badge) {
+  FILL_DATA[groupKey] = [];
+  ERROR_DATA[groupKey] = [];
+  QUIZ_DATA[groupKey] = [];
+  units.forEach(u => {
+    (FILL_DATA[u]  || []).forEach(g => FILL_DATA[groupKey].push(g));
+    (ERROR_DATA[u] || []).forEach(e => ERROR_DATA[groupKey].push(e));
+    (QUIZ_DATA[u]  || []).forEach(q => QUIZ_DATA[groupKey].push(q));
+  });
+  UNIT_TITLES[groupKey] = title;
+  UNIT_BADGES[groupKey] = badge;
+  currentUnit = groupKey;
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.getElementById('atitle').textContent = title;
+  document.getElementById('abadge').textContent = badge;
+  document.querySelectorAll('[id^="rv-ff"]').forEach(el => el.style.display = 'none');
+  units.forEach(u => { const el = document.getElementById('rv-' + u); if (el) el.style.display = 'block'; });
+  stab('review', document.querySelectorAll('.tab')[0]);
+}
 function goBack() {
   document.getElementById('app').style.display = 'none';
   document.getElementById('landing').style.display = 'flex';
@@ -1977,6 +2009,8 @@ function resetQuiz() { initQuiz(); }
 </script>
 </body>
 </html>
+
+
 
 
 
