@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英文複習 Unit 7–12</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Baloo+2:wght@700;800&display=swap');
+:root{
+  --u7:#0ea5e9;--u7l:#f0f9ff;--u7d:#0369a1;
+  --u8:#16a34a;--u8l:#f0fdf4;--u8d:#14532d;
+  --u9:#8b5cf6;--u9l:#f5f3ff;--u9d:#6d28d9;
+  --u10:#f97316;--u10l:#fff7ed;--u10d:#c2410c;
+  --u11:#ec4899;--u11l:#fdf2f8;--u11d:#9d174d;
+  --u12:#14b8a6;--u12l:#f0fdfa;--u12d:#0f766e;
+  --grass:#22c55e;--red:#ef4444;--dark:#1e293b;
+  --teal:#14b8a6;--pink:#ec4899;--sun:#fbbf24;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;background:#f0f9ff}
+#landing{min-height:100vh;background:linear-gradient(160deg,#0ea5e9 0%,#8b5cf6 35%,#ec4899 65%,#14b8a6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px;position:relative;overflow:hidden}
+#landing::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+.home-link{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.2);color:white;border:none;border-radius:20px;padding:7px 14px;font-family:'Baloo 2',cursive;font-size:.85em;cursor:pointer;text-decoration:none;backdrop-filter:blur(4px)}
+.home-link:hover{background:rgba(255,255,255,.35)}
+.ltitle{font-family:'Baloo 2',cursive;font-size:2.3em;color:white;text-shadow:3px 3px 0 rgba(0,0,0,.25);text-align:center;margin-bottom:4px;position:relative}
+.lsub{color:rgba(255,255,255,.85);font-size:.93em;margin-bottom:22px;text-align:center;position:relative}
+.ugrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:100%;max-width:420px;position:relative}
+.ugrid-full{grid-column:1/-1}
+.ubtn{border:none;border-radius:16px;padding:13px 16px;cursor:pointer;font-family:'Baloo 2',cursive;font-size:.97em;display:flex;align-items:center;gap:11px;transition:transform .2s,box-shadow .2s;box-shadow:0 5px 16px rgba(0,0,0,.2);color:white}
+.ubtn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 9px 22px rgba(0,0,0,.28)}
+.ubtn .icon{font-size:1.6em}
+.ubtn .lbl .un{font-size:.68em;opacity:.85}
+.ubtn .lbl .uname{font-size:.93em}
+.bu7{background:linear-gradient(135deg,#0ea5e9,#0369a1)}
+.bu8{background:linear-gradient(135deg,#16a34a,#15803d)}
+.bu9{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+.bu10{background:linear-gradient(135deg,#f97316,#ea580c)}
+.bu11{background:linear-gradient(135deg,#ec4899,#be185d)}
+.bu12{background:linear-gradient(135deg,#14b8a6,#0f766e)}
+.ball{background:linear-gradient(135deg,#f59e0b,#22c55e)}
+#app{display:none;max-width:820px;margin:0 auto;padding:13px}
+body.mu7{background:linear-gradient(180deg,#f0f9ff,#bae6fd)}
+body.mu8{background:linear-gradient(180deg,#f0fdf4,#bbf7d0)}
+body.mu9{background:linear-gradient(180deg,#f5f3ff,#ddd6fe)}
+body.mu10{background:linear-gradient(180deg,#fff7ed,#fed7aa)}
+body.mu11{background:linear-gradient(180deg,#fdf2f8,#fbcfe8)}
+body.mu12{background:linear-gradient(180deg,#f0fdfa,#99f6e4)}
+body.mall{background:linear-gradient(180deg,#e0f2fe,#dcfce7)}
+.aheader{display:flex;align-items:center;gap:9px;margin-bottom:14px;flex-wrap:wrap}
+.backbtn{background:white;border:none;border-radius:50%;width:38px;height:38px;font-size:1.1em;cursor:pointer;box-shadow:0 3px 9px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.backbtn:hover{transform:scale(1.1)}
+.atitle{font-family:'Baloo 2',cursive;font-size:1.3em;color:var(--dark)}
+.badges{display:flex;gap:5px;flex-wrap:wrap}
+.bdg{padding:3px 9px;border-radius:11px;font-size:.74em;font-weight:700;font-family:'Baloo 2',cursive;color:white}
+.b7{background:var(--u7)}.b8{background:var(--u8)}.b9{background:var(--u9)}.b10{background:var(--u10)}.b11{background:var(--u11)}.b12{background:var(--u12)}
+.tabs{display:flex;gap:5px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.tab{background:rgba(255,255,255,.7);border:2.5px solid white;border-radius:18px;padding:7px 14px;font-family:'Baloo 2',cursive;font-size:.88em;font-weight:700;cursor:pointer;transition:all .22s;color:var(--dark)}
+.tab:hover{background:white;transform:translateY(-2px)}
+.tab.active{background:white;transform:translateY(-2px);box-shadow:0 4px 11px rgba(0,0,0,.11)}
+body.mu7 .tab.active{color:var(--u7);border-color:var(--u7)}
+body.mu8 .tab.active{color:var(--u8);border-color:var(--u8)}
+body.mu9 .tab.active{color:var(--u9);border-color:var(--u9)}
+body.mu10 .tab.active{color:var(--u10);border-color:var(--u10)}
+body.mu11 .tab.active{color:var(--u11);border-color:var(--u11)}
+body.mu12 .tab.active{color:var(--u12);border-color:var(--u12)}
+body.mall .tab.active{color:#0ea5e9;border-color:#0ea5e9}
+.card{background:rgba(255,255,255,.93);border-radius:19px;padding:18px;margin-bottom:14px;box-shadow:0 5px 18px rgba(0,0,0,.1);animation:sup .38s ease}
+@keyframes sup{from{transform:translateY(18px);opacity:0}to{transform:translateY(0);opacity:1}}
+.card h2{font-family:'Baloo 2',cursive;font-size:1.22em;color:var(--dark);margin-bottom:10px}
+.sstep{display:flex;align-items:flex-start;gap:9px;padding:9px 11px;border-radius:11px;margin-bottom:7px;background:#fafafa;transition:transform .2s}
+.sstep:hover{transform:translateX(4px)}
+.snum{color:white;font-family:'Baloo 2',cursive;font-weight:800;font-size:.95em;width:29px;height:29px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.su7 .snum{background:var(--u7)}.su8 .snum{background:var(--u8)}.su9 .snum{background:var(--u9)}.su10 .snum{background:var(--u10)}.su11 .snum{background:var(--u11)}.su12 .snum{background:var(--u12)}
+.sstep p{font-size:.92em;color:var(--dark);line-height:1.5}
+.sstep .zh{font-size:.8em;color:#888}
+.hl{font-weight:800}
+.h7{color:var(--u7)}.h8{color:var(--u8)}.h9{color:var(--u9)}.h10{color:var(--u10)}.h11{color:var(--u11)}.h12{color:var(--u12)}
+.slbl{font-family:'Baloo 2',cursive;font-size:.95em;padding:4px 12px;border-radius:11px;display:inline-block;margin-bottom:8px;font-weight:800}
+.sl7{background:var(--u7l);color:var(--u7d)}.sl8{background:var(--u8l);color:var(--u8d)}.sl9{background:var(--u9l);color:var(--u9d)}.sl10{background:var(--u10l);color:var(--u10d)}.sl11{background:var(--u11l);color:var(--u11d)}.sl12{background:var(--u12l);color:var(--u12d)}
+.si{border-radius:10px;padding:8px 12px;margin-bottom:7px;border-left:4px solid}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.vc{background:#f8faff;border-radius:12px;padding:10px 6px;text-align:center;border:2.5px solid #e8eef8;cursor:pointer;transition:all .22s;position:relative;overflow:hidden}
+.vc:hover{transform:scale(1.06)}
+.vc .em{font-size:1.75em;display:block;margin-bottom:3px}
+.vc .wd{font-family:'Baloo 2',cursive;font-size:.88em;font-weight:800;color:var(--dark)}
+.vc .mn{font-size:.72em;color:#999;margin-top:2px}
+.vc .fs{position:absolute;inset:0;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;transition:opacity .22s;color:white;font-weight:700;font-size:.95em}
+.vc:hover .fs{opacity:1}
+.vc7:hover{border-color:var(--u7)}.vc7 .fs{background:var(--u7)}
+.vc8:hover{border-color:var(--u8)}.vc8 .fs{background:var(--u8)}
+.vc9:hover{border-color:var(--u9)}.vc9 .fs{background:var(--u9)}
+.vc10:hover{border-color:var(--u10)}.vc10 .fs{background:var(--u10)}
+.vc11:hover{border-color:var(--u11)}.vc11 .fs{background:var(--u11)}
+.vc12:hover{border-color:var(--u12)}.vc12 .fs{background:var(--u12)}
+.gsgrid{display:flex;flex-direction:column;gap:8px}
+.gsbtn{border:none;border-radius:13px;padding:12px 14px;font-family:'Baloo 2',cursive;font-size:.93em;font-weight:700;cursor:pointer;text-align:left;color:white;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 10px rgba(0,0,0,.13)}
+.gsbtn:hover{transform:translateY(-2px);box-shadow:0 7px 14px rgba(0,0,0,.2)}
+.gsb1{background:linear-gradient(135deg,#f59e0b,#ef4444)}.gsb2{background:linear-gradient(135deg,#22c55e,#0ea5e9)}.gsb3{background:linear-gradient(135deg,#8b5cf6,#ec4899)}
+.sarea{display:flex;flex-direction:column;gap:9px}
+.sitem{background:#f8f9ff;border-radius:11px;padding:11px;border:2px solid #e0e8ff;font-size:.92em;line-height:2.1}
+.bk{display:inline-block;min-width:72px;text-align:center;border-bottom:3px solid var(--sun);padding:1px 6px;border-radius:5px;cursor:pointer;font-family:'Baloo 2',cursive;font-weight:700;transition:background .2s}
+.wcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.wchip{background:var(--sun);color:var(--dark);font-family:'Baloo 2',cursive;font-weight:700;padding:4px 11px;border-radius:14px;cursor:pointer;border:none;font-size:.85em;transition:all .16s}
+.wchip:hover{background:var(--u10);color:white;transform:scale(1.05)}.wchip.used{opacity:.35;pointer-events:none}
+.qq{background:#fafafa;border-radius:12px;padding:12px;margin-bottom:9px;border-left:5px solid}
+.qq .qtext{font-weight:700;font-size:.92em;color:var(--dark);margin-bottom:7px}
+.qopts{display:flex;flex-direction:column;gap:5px}
+.qopt{padding:7px 11px;border-radius:9px;border:2px solid #e2e8f0;background:white;cursor:pointer;font-weight:700;transition:all .16s;text-align:left;font-family:'Nunito',sans-serif;font-size:.87em}
+.qopt:hover{border-color:#a78bfa;background:#f5f3ff}
+.qopt.cor{background:#dcfce7;border-color:#22c55e}.qopt.wrg{background:#fee2e2;border-color:#ef4444}
+.btn{display:inline-block;padding:8px 16px;border-radius:17px;font-family:'Baloo 2',cursive;font-weight:700;font-size:.89em;cursor:pointer;border:none;transition:all .22s;margin:3px}
+.bprim{background:var(--u7);color:white}.bprim:hover{transform:translateY(-2px)}
+.bgr{background:#e2e8f0;color:var(--dark)}.bgr:hover{background:#cbd5e1}
+.bgrn{background:var(--grass);color:white}.bgrn:hover{transform:translateY(-2px)}
+.sboard{text-align:center;padding:11px;border-radius:12px;margin-top:10px;background:linear-gradient(135deg,#fff9c4,#fff0f8);font-family:'Baloo 2',cursive}
+.sboard .snum{font-size:1.7em;font-weight:800;color:var(--u10)}.stars{font-size:1.5em}
+.pov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.44);z-index:999;align-items:center;justify-content:center}
+.pov.show{display:flex}
+.pop{background:white;border-radius:20px;padding:25px;text-align:center;max-width:275px;width:90%;animation:pin .3s ease;box-shadow:0 12px 34px rgba(0,0,0,.2)}
+@keyframes pin{from{transform:scale(.5);opacity:0}70%{transform:scale(1.07)}to{transform:scale(1);opacity:1}}
+.pop .be{font-size:3.3em;margin-bottom:8px}
+.pop h3{font-family:'Baloo 2',cursive;font-size:1.38em;color:var(--dark)}
+.pop p{color:#888;margin-top:4px;font-size:.89em}
+.sec{display:none}.sec.active{display:block}
+.gamesec{display:none}.gamesec.active{display:block}
+table{width:100%;border-collapse:collapse;font-size:.82em}
+th{font-family:'Baloo 2',cursive;padding:6px 8px}
+td{padding:5px 8px}
+@media(max-width:500px){.vgrid{grid-template-columns:repeat(2,1fr)}.ltitle{font-size:1.82em}.ugrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div id="landing">
+  <a class="home-link" href="index.html">🏠 首頁</a>
+  <div class="ltitle">📖 英文閱讀複習</div>
+  <div class="lsub">Unit 7–12 選擇要複習的課文！</div>
+  <div class="ugrid">
+    <button class="ubtn bu7" onclick="enter('u7')"><span class="icon">🐘</span><div class="lbl"><div class="un">Unit 7</div><div class="uname">Animals on the Go</div></div></button>
+    <button class="ubtn bu8" onclick="enter('u8')"><span class="icon">🦫</span><div class="lbl"><div class="un">Unit 8</div><div class="uname">A Tale of a Tail</div></div></button>
+    <button class="ubtn bu9" onclick="enter('u9')"><span class="icon">🐟</span><div class="lbl"><div class="un">Unit 9</div><div class="uname">A Team of Fish</div></div></button>
+    <button class="ubtn bu10" onclick="enter('u10')"><span class="icon">🐆</span><div class="lbl"><div class="un">Unit 10</div><div class="uname">Hungry Animals</div></div></button>
+    <button class="ubtn bu11" onclick="enter('u11')"><span class="icon">🦋</span><div class="lbl"><div class="un">Unit 11</div><div class="uname">Bug Pals</div></div></button>
+    <button class="ubtn bu12" onclick="enter('u12')"><span class="icon">🐕</span><div class="lbl"><div class="un">Unit 12</div><div class="uname">Helper Dogs</div></div></button>
+    <button class="ubtn ball ugrid-full" onclick="enter('all')"><span class="icon">⭐</span><div class="lbl"><div class="un">Unit 7–12</div><div class="uname">全部一起複習！</div></div></button>
+  </div>
+</div>
+
+<div id="app">
+  <div class="aheader">
+    <button class="backbtn" onclick="goHome()">←</button>
+    <div class="atitle" id="atitle">複習</div>
+    <div class="badges" id="abadges"></div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="stab('review',this)">📖 複習重點</button>
+    <button class="tab" onclick="stab('vocab',this)">🔤 單字卡</button>
+    <button class="tab" onclick="stab('games',this)">🎮 遊戲</button>
+  </div>
+
+  <!-- REVIEW -->
+  <div id="sec-review" class="sec active">
+
+    <div id="rv7" class="card" style="display:none">
+      <h2>📚 Unit 7「Animals on the Go」</h2>
+      <div class="slbl sl7">🐘 故事大綱（Nonfiction）</div>
+      <div class="sstep su7"><div class="snum">1</div><div><p>🐍 Snakes <span class="hl h7">slither</span> on the ground. They can move fast.</p><p class="zh">蛇在地上爬行，移動很快。</p></div></div>
+      <div class="sstep su7"><div class="snum">2</div><div><p>🐢 Turtles are <span class="hl h7">slow</span> on land. In water they can <span class="hl h7">swim fast</span>.</p><p class="zh">烏龜在陸地慢，在水中游得快。</p></div></div>
+      <div class="sstep su7"><div class="snum">3</div><div><p>🦀 Crabs <span class="hl h7">crawl</span> across the sand. Then they dig a hole and hide.</p><p class="zh">螃蟹爬過沙地，再挖洞躲起來。</p></div></div>
+      <div class="sstep su7"><div class="snum">4</div><div><p>🐛 Insects <span class="hl h7">crawl</span> too. Some can fly. They <span class="hl h7">buzz</span> around. They can be <span class="hl h7">noisy</span>.</p><p class="zh">昆蟲也會爬，有些會飛，嗡嗡叫，很吵。</p></div></div>
+      <div class="sstep su7"><div class="snum">5</div><div><p>🐘 Elephants <span class="hl h7">stomp</span> on the ground. They are noisy, too. Look at them wave their <span class="hl h7">trunks</span>!</p><p class="zh">大象跺腳也很吵，還會揮舞象鼻！</p></div></div>
+      <div style="margin-top:12px">
+        <div class="slbl sl7">🗂️ Main Idea &amp; Key Details</div>
+        <div class="si" style="background:var(--u7l);border-color:var(--u7)"><b>Main Idea：<span class="h7">Animals move in many ways.</span></b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>Snakes → <span class="h7">slither</span> | Crabs → <span class="h7">crawl</span> | Insects → <span class="h7">buzz</span></b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>Turtles → <span class="h7">swim</span> | Elephants → <span class="h7">stomp</span></b></div>
+      </div>
+    </div>
+
+    <div id="rv8" class="card" style="display:none">
+      <h2>📚 Unit 8「A Tale of a Tail」</h2>
+      <div class="slbl sl8">🦫 故事大綱（Folktale）</div>
+      <div class="sstep su8"><div class="snum">1</div><div><p>🦫 Beaver has a beautiful, <span class="hl h8">fluffy</span> tail. "I have the best tail of all!" he says.</p><p class="zh">河狸有美麗蓬鬆的尾巴，覺得自己尾巴最棒！</p></div></div>
+      <div class="sstep su8"><div class="snum">2</div><div><p>🪵 Beaver <span class="hl h8">chops</span> down a tree, but it falls on his tail. "My tail is <span class="hl h8">flat</span>!"</p><p class="zh">砍樹時樹倒下壓扁了尾巴！「我的尾巴變扁了！」</p></div></div>
+      <div class="sstep su8"><div class="snum">3</div><div><p>☀️ The sun says: "Your <span class="hl h8">flat</span> tail can help you <span class="hl h8">swim fast</span>!"</p><p class="zh">太陽說：扁尾巴可以幫你游得快！</p></div></div>
+      <div class="sstep su8"><div class="snum">4</div><div><p>🎢 Beaver invites friends: "Climb on my tail for a <span class="hl h8">ride</span>!"</p><p class="zh">河狸邀請朋友：爬上我的尾巴坐船！</p></div></div>
+      <div class="sstep su8"><div class="snum">5</div><div><p>🏊 Beaver <span class="hl h8">carries</span> his friends across the lake. Everyone likes Beaver's new flat tail!</p><p class="zh">河狸載著朋友過湖，大家都喜歡他的新尾巴！</p></div></div>
+      <div style="margin-top:12px">
+        <div class="slbl sl8">🔗 Cause &amp; Effect</div>
+        <div class="si" style="background:var(--u8l);border-color:var(--u8)"><b>Cause：Beaver <span class="h8">chops</span> down a tree → Effect：tail is <span class="h8">flat</span></b></div>
+        <div class="si" style="background:var(--u8l);border-color:var(--u8)"><b>Cause：flat tail → Effect：Beaver can <span class="h8">swim fast</span> &amp; carry friends</b></div>
+      </div>
+    </div>
+
+    <div id="rv9" class="card" style="display:none">
+      <h2>📚 Unit 9「A Team of Fish」</h2>
+      <div class="slbl sl9">🐟 故事大綱（Nonfiction）</div>
+      <div class="sstep su9"><div class="snum">1</div><div><p>🌊 Fish swim in lakes, rivers, and the <span class="hl h9">ocean</span>. Fish can swim <span class="hl h9">alone</span> or with a partner.</p><p class="zh">魚住在湖、河和海洋，可以單獨游或結伴游。</p></div></div>
+      <div class="sstep su9"><div class="snum">2</div><div><p>🐠 Some fish swim <span class="hl h9">close</span> to each other in groups. They work in a <span class="hl h9">team</span>.</p><p class="zh">有些魚靠在一起成群，組成一個團隊。</p></div></div>
+      <div class="sstep su9"><div class="snum">3</div><div><p>🍽️ Fish in a team help each other. They <span class="hl h9">search</span> for food together.</p><p class="zh">團隊裡的魚互相幫助，一起搜尋食物。</p></div></div>
+      <div class="sstep su9"><div class="snum">4</div><div><p>⚠️ The sea can be <span class="hl h9">dangerous</span> for small fish. Big fish can eat them!</p><p class="zh">海洋對小魚很危險，大魚會吃牠們！</p></div></div>
+      <div class="sstep su9"><div class="snum">5</div><div><p>🐡 In a group, small fish can look like <span class="hl h9">one big fish</span>. Big fish leave them alone!</p><p class="zh">成群的小魚看起來像一條大魚，大魚就不敢靠近！</p></div></div>
+      <div style="margin-top:12px">
+        <div class="slbl sl9">🗂️ Main Idea &amp; Key Details</div>
+        <div class="si" style="background:var(--u9l);border-color:var(--u9)"><b>Main Idea：<span class="h9">Working in a team helps fish!</span></b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>They <span class="h9">search</span> for food together &amp; stay <span class="h9">safe</span> from big fish.</b></div>
+      </div>
+    </div>
+
+    <div id="rv10" class="card" style="display:none">
+      <h2>📚 Unit 10「Hungry Animals」</h2>
+      <div class="slbl sl10">🐆 故事大綱（Nonfiction）</div>
+      <div class="sstep su10"><div class="snum">1</div><div><p>🦛 All animals need food to live and grow. Hippos eat a lot of <span class="hl h10">grass</span>.</p><p class="zh">所有動物需要食物，河馬吃很多草。</p></div></div>
+      <div class="sstep su10"><div class="snum">2</div><div><p>🐿️ <span class="hl h10">Squirrels</span> eat seeds and nuts. They can smell nuts under the snow.</p><p class="zh">松鼠吃種子和堅果，能在雪地下找到堅果。</p></div></div>
+      <div class="sstep su10"><div class="snum">3</div><div><p>🐆 <span class="hl h10">Wild</span> animals like cheetahs <span class="hl h10">hunt</span> other animals. They can run very fast.</p><p class="zh">野生動物如獵豹獵食其他動物，跑得很快。</p></div></div>
+      <div class="sstep su10"><div class="snum">4</div><div><p>🐸 Frogs and <span class="hl h10">toads</span> <span class="hl h10">catch</span> bugs with their long <span class="hl h10">tongues</span>.</p><p class="zh">青蛙和蟾蜍用長舌頭捕捉蟲子。</p></div></div>
+      <div class="sstep su10"><div class="snum">5</div><div><p>🐻 Bears eat fish. They like plants, too. Some bears even eat people food!</p><p class="zh">熊吃魚也吃植物，有些熊甚至吃人的食物！</p></div></div>
+      <div style="margin-top:12px">
+        <div class="slbl sl10">🗂️ Main Idea &amp; Key Details</div>
+        <div class="si" style="background:var(--u10l);border-color:var(--u10)"><b>Main Idea：<span class="h10">Animals eat different kinds of food.</span></b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>Hippos → <span class="h10">grass</span> | Squirrels → <span class="h10">nuts</span> | Cheetahs → <span class="h10">hunt</span> animals</b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>Frogs → <span class="h10">catch</span> bugs with tongues | Bears → fish &amp; plants</b></div>
+      </div>
+    </div>
+
+    <div id="rv11" class="card" style="display:none">
+      <h2>📚 Unit 11「Bug Pals」</h2>
+      <div class="slbl sl11">🦋 故事大綱（Fantasy）</div>
+      <div class="sstep su11"><div class="snum">1</div><div><p>🐛 Five bugs are playing in a field. Bee and <span class="hl h11">Ladybug</span> can fly. <span class="hl h11">Grasshopper</span> can jump. Ant can run fast.</p><p class="zh">五隻蟲子一起玩。瓢蟲和蜜蜂會飛，蚱蜢會跳，螞蟻跑得快。</p></div></div>
+      <div class="sstep su11"><div class="snum">2</div><div><p>😢 Poor <span class="hl h11">Caterpillar</span> can't fly or jump. He can't run fast. Caterpillar is sad. He <span class="hl h11">creeps</span> away.</p><p class="zh">毛毛蟲不會飛也不會跳，跑不快，很難過，悄悄爬走了。</p></div></div>
+      <div class="sstep su11"><div class="snum">3</div><div><p>🍱 The bugs have lunch. But where is Caterpillar?</p><p class="zh">大家吃午餐，但毛毛蟲不見了！</p></div></div>
+      <div class="sstep su11"><div class="snum">4</div><div><p>✨ One day, they see a <span class="hl h11">beautiful</span> bug with gold wings. "It's me! Caterpillar!" says Butterfly.</p><p class="zh">有一天，出現一隻有金色翅膀的美麗蟲子，「是我！毛毛蟲！」蝴蝶說。</p></div></div>
+      <div class="sstep su11"><div class="snum">5</div><div><p>🦋 "You're not the <span class="hl h11">same</span>," says Ant. "Yes, I'm different now. But I'm still your friend!"</p><p class="zh">「你變了！」但蝴蝶說：「我變了，但我還是你的朋友！」</p></div></div>
+      <div style="margin-top:12px">
+        <div class="slbl sl11">👥 Characters &amp; Events</div>
+        <div class="si" style="background:var(--u11l);border-color:var(--u11)"><b>Characters：Bee, Ladybug, Grasshopper, Ant, <span class="h11">Caterpillar → Butterfly</span></b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>Caterpillar <span class="h11">creeps</span> away → becomes a <span class="h11">beautiful</span> butterfly</b></div>
+      </div>
+    </div>
+
+    <div id="rv12" class="card" style="display:none">
+      <h2>📚 Unit 12「Helper Dogs」</h2>
+      <div class="slbl sl12">🐕 故事大綱（Nonfiction）</div>
+      <div class="sstep su12"><div class="snum">1</div><div><p>👁️ Some people can't see. They get help from special dogs called <span class="hl h12">guide dogs</span>.</p><p class="zh">有些人看不見，牠們靠導盲犬幫助。</p></div></div>
+      <div class="sstep su12"><div class="snum">2</div><div><p>🐶 These dogs are <span class="hl h12">calm</span>, <span class="hl h12">smart</span>, and easy to <span class="hl h12">train</span>.</p><p class="zh">導盲犬個性冷靜、聰明、容易訓練。</p></div></div>
+      <div class="sstep su12"><div class="snum">3</div><div><p>📅 It takes <span class="hl h12">two years</span> to train a guide dog. First, the dog lives with a family for one year.</p><p class="zh">訓練導盲犬要兩年，第一年先住在一個家庭中。</p></div></div>
+      <div class="sstep su12"><div class="snum">4</div><div><p>🎓 Then a trainer teaches the dog many things: cross the street, stop at a red <span class="hl h12">signal</span>, <span class="hl h12">lead</span> a person through busy streets.</p><p class="zh">接著訓練師教牠穿越馬路、遇紅燈停下、引導人走過繁忙街道。</p></div></div>
+      <div class="sstep su12"><div class="snum">5</div><div><p>🌟 Guide dogs are great <span class="hl h12">helpers</span>!</p><p class="zh">導盲犬是很棒的幫手！</p></div></div>
+      <div style="margin-top:12px">
+        <div class="slbl sl12">🗂️ Main Idea &amp; Key Details</div>
+        <div class="si" style="background:var(--u12l);border-color:var(--u12)"><b>Main Idea：<span class="h12">Guide dogs are great helpers.</span></b></div>
+        <div class="si" style="background:#fafafa;border-color:#ccc"><b>They are <span class="h12">calm &amp; smart</span> → easy to <span class="h12">train</span> → learn to <span class="h12">lead</span> people</b></div>
+      </div>
+    </div>
+
+    <div id="rvall" style="display:none">
+      <div class="card">
+        <h2>⭐ Unit 7–12 全部重點快速回顧</h2>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="si" style="background:var(--u7l);border-color:var(--u7)"><b class="h7">U7 Animals on the Go</b>：Snakes slither · Crabs crawl · Insects buzz · Turtles swim · Elephants stomp</div>
+          <div class="si" style="background:var(--u8l);border-color:var(--u8)"><b class="h8">U8 A Tale of a Tail</b>：fluffy → flat → swim fast → carry friends（Cause &amp; Effect）</div>
+          <div class="si" style="background:var(--u9l);border-color:var(--u9)"><b class="h9">U9 A Team of Fish</b>：team · search · dangerous → small fish look like one big fish</div>
+          <div class="si" style="background:var(--u10l);border-color:var(--u10)"><b class="h10">U10 Hungry Animals</b>：grass · nuts · hunt · tongues · catch（different kinds of food）</div>
+          <div class="si" style="background:var(--u11l);border-color:var(--u11)"><b class="h11">U11 Bug Pals</b>：Caterpillar creeps away → becomes beautiful Butterfly（Fantasy）</div>
+          <div class="si" style="background:var(--u12l);border-color:var(--u12)"><b class="h12">U12 Helper Dogs</b>：guide dog · calm · smart · train · signal · lead（Nonfiction）</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sec-review -->
+
+  <!-- VOCAB -->
+  <div id="sec-vocab" class="sec">
+    <div class="card">
+      <h2>🔤 單字卡</h2>
+      <p style="font-size:.85em;color:#888;margin-bottom:12px">點擊卡片查看中文意思</p>
+      <div class="vgrid" id="vgrid"></div>
+    </div>
+  </div>
+
+  <!-- GAMES -->
+  <div id="sec-games" class="sec">
+    <div class="gsgrid" id="gamesel" style="margin-bottom:14px">
+      <button class="gsbtn gsb1" onclick="startGame('fill')">✏️ 填空練習 — 選出正確單字</button>
+      <button class="gsbtn gsb2" onclick="startGame('quiz')">🧠 理解測驗 — 選出正確答案</button>
+    </div>
+    <div class="gamesec" id="game-fill">
+      <div id="fill-wrap" class="sarea"></div>
+      <div style="text-align:center;margin-top:10px">
+        <button class="btn bgr" onclick="stopGame()">← 返回</button>
+      </div>
+    </div>
+    <div class="gamesec" id="game-quiz">
+      <div id="quiz-wrap"></div>
+      <div style="text-align:center;margin-top:10px">
+        <button class="btn bgr" onclick="stopGame()">← 返回</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<div class="pov" id="popWin">
+  <div class="pop">
+    <div class="be">🎉</div>
+    <h3>做得很好！</h3>
+    <p id="popScore"></p>
+    <button class="btn bgrn" style="margin-top:10px" onclick="document.getElementById('popWin').classList.remove('show')">繼續</button>
+  </div>
+</div>
+
+<script>
+const UNITS = {
+  u7:{label:'Unit 7',title:'Animals on the Go',icon:'🐘',col:'mu7',badge:'b7',rv:'rv7'},
+  u8:{label:'Unit 8',title:'A Tale of a Tail',icon:'🦫',col:'mu8',badge:'b8',rv:'rv8'},
+  u9:{label:'Unit 9',title:'A Team of Fish',icon:'🐟',col:'mu9',badge:'b9',rv:'rv9'},
+  u10:{label:'Unit 10',title:'Hungry Animals',icon:'🐆',col:'mu10',badge:'b10',rv:'rv10'},
+  u11:{label:'Unit 11',title:'Bug Pals',icon:'🦋',col:'mu11',badge:'b11',rv:'rv11'},
+  u12:{label:'Unit 12',title:'Helper Dogs',icon:'🐕',col:'mu12',badge:'b12',rv:'rv12'},
+  all:{label:'Unit 7–12',title:'全部複習',icon:'⭐',col:'mall',badge:'',rv:'rvall'}
+};
+
+const VOCAB = {
+  u7:[
+    {em:'🐍',w:'slither',zh:'（蛇）滑行爬動'},
+    {em:'🦀',w:'crawl',zh:'爬行'},
+    {em:'🐛',w:'insect',zh:'昆蟲'},
+    {em:'🔊',w:'noisy',zh:'吵鬧的'},
+    {em:'🐘',w:'stomp',zh:'重踩、跺腳'},
+    {em:'🐘',w:'trunk',zh:'（象）鼻子'},
+  ],
+  u8:[
+    {em:'🌸',w:'fluffy',zh:'蓬鬆的'},
+    {em:'🦫',w:'tail',zh:'尾巴'},
+    {em:'🪓',w:'chop',zh:'砍（樹）'},
+    {em:'📏',w:'flat',zh:'扁平的'},
+    {em:'🎢',w:'ride',zh:'乘坐；搭乘'},
+    {em:'📦',w:'carry',zh:'攜帶；背負'},
+  ],
+  u9:[
+    {em:'🌊',w:'ocean',zh:'海洋'},
+    {em:'🐠',w:'alone',zh:'單獨地'},
+    {em:'🤝',w:'close',zh:'靠近的'},
+    {em:'⚽',w:'team',zh:'團隊'},
+    {em:'🔍',w:'search',zh:'搜尋；尋找'},
+    {em:'⚠️',w:'dangerous',zh:'危險的'},
+  ],
+  u10:[
+    {em:'🐿️',w:'squirrel',zh:'松鼠'},
+    {em:'🌿',w:'wild',zh:'野生的'},
+    {em:'🐆',w:'cheetah',zh:'獵豹'},
+    {em:'🐸',w:'toad',zh:'蟾蜍'},
+    {em:'🎣',w:'catch',zh:'捕捉'},
+    {em:'👅',w:'tongue',zh:'舌頭'},
+  ],
+  u11:[
+    {em:'🐞',w:'ladybug',zh:'瓢蟲'},
+    {em:'🦗',w:'grasshopper',zh:'蚱蜢'},
+    {em:'🐛',w:'caterpillar',zh:'毛毛蟲'},
+    {em:'🐌',w:'creep',zh:'悄悄爬行'},
+    {em:'🌸',w:'beautiful',zh:'美麗的'},
+    {em:'👯',w:'same',zh:'相同的'},
+  ],
+  u12:[
+    {em:'🐕',w:'guide dog',zh:'導盲犬'},
+    {em:'😌',w:'calm',zh:'冷靜的'},
+    {em:'🧠',w:'smart',zh:'聰明的'},
+    {em:'🎓',w:'train',zh:'訓練'},
+    {em:'🚦',w:'signal',zh:'信號；紅綠燈'},
+    {em:'🗺️',w:'lead',zh:'引導；帶領'},
+  ]
+};
+
+const FILL = {
+  u7:[
+    {s:'Snakes ___ on the ground.',ans:'slither',opts:['slither','crawl','stomp','swim']},
+    {s:'Crabs ___ across the sand.',ans:'crawl',opts:['crawl','slither','buzz','stomp']},
+    {s:'Insects can ___ around and be noisy.',ans:'buzz',opts:['buzz','crawl','stomp','swim']},
+    {s:'Elephants ___ on the ground and wave their trunks.',ans:'stomp',opts:['stomp','slither','crawl','buzz']},
+    {s:'Turtles can ___ fast in water.',ans:'swim',opts:['swim','crawl','stomp','fly']},
+  ],
+  u8:[
+    {s:'Beaver has a beautiful, ___ tail.',ans:'fluffy',opts:['fluffy','flat','long','short']},
+    {s:'Beaver ___ down a tree, but it falls on his tail.',ans:'chops',opts:['chops','carries','rides','creeps']},
+    {s:'Now Beaver\'s tail is ___.',ans:'flat',opts:['flat','fluffy','big','noisy']},
+    {s:'Beaver ___ his friends across the lake.',ans:'carries',opts:['carries','chops','stomps','creeps']},
+    {s:'Everyone likes Beaver\'s new ___ tail!',ans:'flat',opts:['flat','fluffy','beautiful','noisy']},
+  ],
+  u9:[
+    {s:'Fish swim in the ___.',ans:'ocean',opts:['ocean','forest','desert','sky']},
+    {s:'Some fish swim ___ to each other in groups.',ans:'close',opts:['close','alone','fast','high']},
+    {s:'Fish in a team ___ for food together.',ans:'search',opts:['search','crawl','stomp','chop']},
+    {s:'The sea can be ___ for small fish.',ans:'dangerous',opts:['dangerous','noisy','flat','fluffy']},
+    {s:'In a group, small fish can look like one big ___.',ans:'fish',opts:['fish','insect','trunk','bird']},
+  ],
+  u10:[
+    {s:'___ eat seeds and nuts.',ans:'Squirrels',opts:['Squirrels','Cheetahs','Toads','Bears']},
+    {s:'Wild animals like cheetahs ___ other animals.',ans:'hunt',opts:['hunt','crawl','creep','stomp']},
+    {s:'Frogs and toads catch bugs with their long ___.',ans:'tongues',opts:['tongues','trunks','tails','noses']},
+    {s:'Bears eat fish. They like ___, too.',ans:'plants',opts:['plants','grass','insects','nuts']},
+    {s:'All animals need food to live and ___.',ans:'grow',opts:['grow','fly','swim','stomp']},
+  ],
+  u11:[
+    {s:'Bee and Ladybug can ___.',ans:'fly',opts:['fly','jump','crawl','swim']},
+    {s:'Caterpillar is sad. He ___ away.',ans:'creeps',opts:['creeps','stomps','flies','carries']},
+    {s:'One day, they see a ___ bug with gold wings.',ans:'beautiful',opts:['beautiful','same','flat','noisy']},
+    {s:'"You\'re not the ___," says Ant.',ans:'same',opts:['same','beautiful','fluffy','calm']},
+    {s:'"Yes, I\'m different now. But I\'m still your ___!"',ans:'friend',opts:['friend','team','trunk','signal']},
+  ],
+  u12:[
+    {s:'Some people can\'t see. They get help from ___ dogs.',ans:'guide',opts:['guide','wild','calm','noisy']},
+    {s:'These dogs are calm, smart, and easy to ___.',ans:'train',opts:['train','carry','chop','stomp']},
+    {s:'It takes two ___ to train a guide dog.',ans:'years',opts:['years','days','months','weeks']},
+    {s:'He learns to stop at a red ___.',ans:'signal',opts:['signal','trunk','ocean','tail']},
+    {s:'He learns how to ___ a person through busy streets.',ans:'lead',opts:['lead','carry','chop','crawl']},
+  ]
+};
+
+const QUIZ = {
+  u7:[
+    {q:'How do snakes move?',opts:['They slither.','They stomp.','They crawl.','They swim.'],ans:0},
+    {q:'What can turtles do fast in water?',opts:['stomp','fly','swim','buzz'],ans:2},
+    {q:'What do crabs do after they crawl?',opts:['They fly away.','They dig a hole and hide.','They swim fast.','They buzz around.'],ans:1},
+    {q:'Which word means the elephant\'s nose?',opts:['tail','trunk','tongue','toad'],ans:1},
+  ],
+  u8:[
+    {q:'What happens to Beaver\'s tail when the tree falls?',opts:['It gets fluffy.','It gets flat.','It gets long.','It falls off.'],ans:1},
+    {q:'What does the sun tell Beaver?',opts:['His flat tail can help him fly.','His flat tail can help him swim fast.','He needs a new tail.','He should chop more trees.'],ans:1},
+    {q:'What does Beaver do for his friends?',opts:['He feeds them.','He gives them a ride across the lake.','He chops trees for them.','He teaches them to swim.'],ans:1},
+    {q:'How does everyone feel about Beaver\'s flat tail?',opts:['They don\'t like it.','They are scared.','They like it.','They are sad.'],ans:2},
+  ],
+  u9:[
+    {q:'Why do some fish swim close together?',opts:['To sleep','To work in a team','To find the ocean','To buzz around'],ans:1},
+    {q:'What can small fish look like when in a big group?',opts:['A big whale','One big fish','A school bus','A wave'],ans:1},
+    {q:'What do fish in a team do together?',opts:['Search for food','Chop trees','Stomp the ground','Crawl in the sand'],ans:0},
+    {q:'What is the main idea of "A Team of Fish"?',opts:['Fish can swim alone.','Big fish eat small fish.','Working in a team helps fish.','Fish live in the ocean.'],ans:2},
+  ],
+  u10:[
+    {q:'How do frogs and toads catch bugs?',opts:['With their trunks','With their long tongues','With their tails','With their claws'],ans:1},
+    {q:'What do squirrels eat?',opts:['Fish and frogs','Seeds and nuts','Grass and bugs','People food'],ans:1},
+    {q:'What is true about cheetahs?',opts:['They eat grass.','They are slow.','They hunt other animals.','They live in the ocean.'],ans:2},
+    {q:'What is the main idea of "Hungry Animals"?',opts:['All animals eat grass.','Animals eat different kinds of food.','Bears only eat fish.','Toads are dangerous.'],ans:1},
+  ],
+  u11:[
+    {q:'What can Grasshopper do?',opts:['fly','jump','swim','creep'],ans:1},
+    {q:'Why is Caterpillar sad?',opts:['He has no friends.','He can\'t fly, jump, or run fast.','He is lost.','He is hungry.'],ans:1},
+    {q:'What does Caterpillar turn into?',opts:['A ladybug','A bee','A grasshopper','A butterfly'],ans:3},
+    {q:'What does Butterfly say to Ant?',opts:['"I am the same."','"I\'m different now, but I\'m still your friend!"','"I can fly now, goodbye!"','"Let\'s have lunch!"'],ans:1},
+  ],
+  u12:[
+    {q:'What are guide dogs used for?',opts:['To help people who can\'t see','To carry heavy bags','To hunt other animals','To swim in the ocean'],ans:0},
+    {q:'How long does it take to train a guide dog?',opts:['One year','Six months','Two years','Five years'],ans:2},
+    {q:'What does a guide dog learn to do at a red signal?',opts:['Run fast','Bark loudly','Stop','Turn around'],ans:2},
+    {q:'Which word describes a guide dog\'s personality?',opts:['noisy and wild','fluffy and flat','calm and smart','dangerous and loud'],ans:2},
+  ]
+};
+
+let cur='', curWords=[], fillState=[], quizState=[], quizScore=0;
+
+function enter(id){
+  cur=id;
+  const u=UNITS[id];
+  document.body.className=u.col;
+  document.getElementById('landing').style.display='none';
+  document.getElementById('app').style.display='block';
+  document.getElementById('atitle').textContent=u.icon+' '+u.title;
+  const bd=document.getElementById('abadges');
+  bd.innerHTML='';
+  const keys=id==='all'?['u7','u8','u9','u10','u11','u12']:[id];
+  keys.forEach(k=>{
+    const sp=document.createElement('span');
+    sp.className='bdg '+UNITS[k].badge;
+    sp.textContent=UNITS[k].label;
+    bd.appendChild(sp);
+  });
+  // Show review sections
+  ['rv7','rv8','rv9','rv10','rv11','rv12','rvall'].forEach(r=>document.getElementById(r).style.display='none');
+  if(id==='all'){
+    document.getElementById('rvall').style.display='block';
+  } else {
+    document.getElementById(u.rv).style.display='block';
+  }
+  // Build vocab
+  const allKeys=id==='all'?['u7','u8','u9','u10','u11','u12']:[id];
+  curWords=allKeys.flatMap(k=>VOCAB[k].map(v=>({...v,ukey:k})));
+  buildVocab();
+  stab('review',document.querySelector('.tab.active'));
+}
+
+function buildVocab(){
+  const g=document.getElementById('vgrid');
+  g.innerHTML='';
+  const cls={u7:'vc7',u8:'vc8',u9:'vc9',u10:'vc10',u11:'vc11',u12:'vc12'};
+  curWords.forEach(v=>{
+    const d=document.createElement('div');
+    d.className='vc '+(cls[v.ukey]||'');
+    d.innerHTML=`<span class="em">${v.em}</span><div class="wd">${v.w}</div><div class="mn">點擊看中文</div><div class="fs"><div>${v.zh}</div></div>`;
+    g.appendChild(d);
+  });
+}
+
+function goHome(){
+  document.body.className='';
+  document.getElementById('landing').style.display='flex';
+  document.getElementById('app').style.display='none';
+  stopGame();
+}
+
+function stab(name,el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  if(el) el.classList.add('active');
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-'+name).classList.add('active');
+  stopGame();
+}
+
+function startGame(type){
+  document.getElementById('gamesel').style.display='none';
+  document.querySelectorAll('.gamesec').forEach(g=>g.classList.remove('active'));
+  const allKeys=cur==='all'?['u7','u8','u9','u10','u11','u12']:[cur];
+  if(type==='fill'){
+    document.getElementById('game-fill').classList.add('active');
+    buildFill(allKeys);
+  } else {
+    document.getElementById('game-quiz').classList.add('active');
+    buildQuiz(allKeys);
+  }
+}
+
+function stopGame(){
+  document.getElementById('gamesel').style.display='flex';
+  document.querySelectorAll('.gamesec').forEach(g=>g.classList.remove('active'));
+}
+
+function buildFill(keys){
+  const items=keys.flatMap(k=>FILL[k]);
+  const wrap=document.getElementById('fill-wrap');
+  wrap.innerHTML='';
+  items.forEach((item,i)=>{
+    const div=document.createElement('div');
+    div.className='sitem';
+    div.id='fi'+i;
+    const parts=item.s.split('___');
+    const bankId='wb'+i;
+    div.innerHTML=`<div>${parts[0]}<span class="bk" id="bk${i}" onclick="pickFill(${i})">&nbsp;&nbsp;&nbsp;</span>${parts[1]||''}</div><div class="wcs" id="${bankId}"></div>`;
+    wrap.appendChild(div);
+    const wcs=document.getElementById(bankId);
+    const opts=[...item.opts].sort(()=>Math.random()-.5);
+    opts.forEach(o=>{
+      const btn=document.createElement('button');
+      btn.className='wchip';
+      btn.textContent=o;
+      btn.dataset.word=o;
+      btn.dataset.fi=i;
+      btn.onclick=()=>doFill(i,o,btn,item.ans);
+      wcs.appendChild(btn);
+    });
+  });
+}
+
+function doFill(i,word,btn,ans){
+  const bk=document.getElementById('bk'+i);
+  const fi=document.getElementById('fi'+i);
+  bk.textContent=word;
+  document.querySelectorAll(`[data-fi="${i}"]`).forEach(b=>b.classList.add('used'));
+  if(word===ans){
+    bk.style.color='#16a34a';bk.style.borderColor='#16a34a';
+    fi.style.background='#f0fdf4';
+  } else {
+    bk.style.color='#ef4444';bk.style.borderColor='#ef4444';
+    fi.style.background='#fff0f0';
+    setTimeout(()=>{
+      bk.textContent='   ';
+      bk.style.color='';bk.style.borderColor='';
+      fi.style.background='';
+      document.querySelectorAll(`[data-fi="${i}"]`).forEach(b=>b.classList.remove('used'));
+    },900);
+  }
+}
+
+function buildQuiz(keys){
+  const items=keys.flatMap(k=>QUIZ[k]).sort(()=>Math.random()-.5);
+  quizState=items;quizScore=0;
+  const wrap=document.getElementById('quiz-wrap');
+  wrap.innerHTML='';
+  items.forEach((item,i)=>{
+    const div=document.createElement('div');
+    div.className='qq';
+    div.style.borderColor='#a78bfa';
+    div.innerHTML=`<div class="qtext">Q${i+1}. ${item.q}</div><div class="qopts" id="qo${i}"></div>`;
+    wrap.appendChild(div);
+    const qo=div.querySelector('.qopts');
+    item.opts.forEach((o,j)=>{
+      const btn=document.createElement('button');
+      btn.className='qopt';
+      btn.textContent=o;
+      btn.onclick=()=>doQuiz(i,j,item.ans,div);
+      qo.appendChild(btn);
+    });
+  });
+}
+
+function doQuiz(qi,chosen,ans,div){
+  const opts=div.querySelectorAll('.qopt');
+  opts.forEach(b=>b.onclick=null);
+  opts[ans].classList.add('cor');
+  if(chosen!==ans){opts[chosen].classList.add('wrg');}
+  else {
+    quizScore++;
+    if(quizScore===quizState.length){
+      setTimeout(()=>{
+        document.getElementById('popScore').textContent=`答對 ${quizScore} / ${quizState.length} 題！`;
+        document.getElementById('popWin').classList.add('show');
+      },400);
+    }
+  }
+}
+</script>
+</body>
+</html>
