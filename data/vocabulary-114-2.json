@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": 4001,
     "type": "vocab",
@@ -2079,4 +2079,15 @@
   {"id": 4185, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "flexible", "answers": [{"word": "flexible", "def": "柔軟的；有彈性的 (ㄖㄡˊ ㄖㄨㄢˇ ㄉㄜ˙；ㄧㄡˇ ㄊㄢˊ ㄒㄧㄥˋ ㄉㄜ˙)"}]},
   {"id": 4186, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "stretch", "answers": [{"word": "stretch", "def": "伸展 (ㄕㄣ ㄓㄢˇ)"}]},
   {"id": 4187, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "dance", "answers": [{"word": "dance", "def": "跳舞 (ㄊㄧㄠˋ ㄨˇ)"}]}
+,
+  {"id": 4188, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "squirrel", "answers": [{"word": "squirrel", "def": "松鼠 (ㄙㄨㄥ ㄕㄨˇ)"}]},
+  {"id": 4189, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "wild", "answers": [{"word": "wild", "def": "野生的；狂野的 (ㄧㄝˇ ㄕㄥ ㄉㄜ˙；ㄎㄨㄤˊ ㄧㄝˇ ㄉㄜ˙)"}]},
+  {"id": 4190, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "cheetah", "answers": [{"word": "cheetah", "def": "獵豹 (ㄌㄧㄝˋ ㄅㄠˋ)"}]},
+  {"id": 4191, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "toad", "answers": [{"word": "toad", "def": "蟾蜍 (ㄔㄢˊ ㄔㄨˊ)"}]},
+  {"id": 4192, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "catch", "answers": [{"word": "catch", "def": "抓住；捕捉 (ㄓㄨㄚ ㄓㄨˋ；ㄅㄨˇ ㄓㄨㄛ)"}]},
+  {"id": 4193, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "tongue", "answers": [{"word": "tongue", "def": "舌頭 (ㄕㄜˊ ㄊㄡˊ)"}]},
+  {"id": 4194, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "smell", "answers": [{"word": "smell", "def": "聞；嗅 (ㄨㄣˊ；ㄒㄧㄡˋ)"}]},
+  {"id": 4195, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "hunt", "answers": [{"word": "hunt", "def": "狩獵；尋找 (ㄕㄡˋ ㄌㄧㄝˋ；ㄒㄩㄣˊ ㄓㄠˇ)"}]},
+  {"id": 4196, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "turtle", "answers": [{"word": "turtle", "def": "烏龜 (ㄨ ㄍㄨㄟ)"}]},
+  {"id": 4197, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "plant", "answers": [{"word": "plant", "def": "植物 (ㄓˊ ㄨˋ)"}]}
 ]

@@ -1,4 +1,4 @@
-window.PHONICS_114_2 = [
+﻿window.PHONICS_114_2 = [
   {
     "id": 3001,
     "type": "phonics",
@@ -2075,4 +2075,20 @@ window.PHONICS_114_2 = [
   {"id": 3205, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "snail", "answers": [{"word": "snail", "def": "蝸牛 (ㄨㄛ ㄋㄧㄡˊ)"}]},
   {"id": 3206, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "snow", "answers": [{"word": "snow", "def": "雪 (ㄒㄩㄝˇ)"}]},
   {"id": 3207, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "snap", "answers": [{"word": "snap", "def": "喀嚓聲；突然折斷 (ㄎㄚ ㄔㄚ ㄕㄥ；ㄊㄨˊ ㄖㄢˊ ㄓㄜˊ ㄉㄨㄢˋ)"}]}
+,
+  {"id": 3208, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "try", "answers": [{"word": "try", "def": "嘗試 (ㄔㄤˊ ㄕˋ)"}]},
+  {"id": 3209, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "cry", "answers": [{"word": "cry", "def": "哭 (ㄎㄨ)"}]},
+  {"id": 3210, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "shy", "answers": [{"word": "shy", "def": "害羞的 (ㄏㄞˋ ㄒㄧㄡ ㄉㄜ˙)"}]},
+  {"id": 3211, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "fly", "answers": [{"word": "fly", "def": "飛；蒼蠅 (ㄈㄟ；ㄘㄤ ㄧㄥˊ)"}]},
+  {"id": 3212, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "sky", "answers": [{"word": "sky", "def": "天空 (ㄊㄧㄢ ㄎㄨㄥ)"}]},
+  {"id": 3213, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yummy", "answers": [{"word": "yummy", "def": "美味的；好吃的 (ㄇㄟˇ ㄨㄟˋ ㄉㄜ˙；ㄏㄠˇ ㄔ ㄉㄜ˙)"}]},
+  {"id": 3214, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "baby", "answers": [{"word": "baby", "def": "嬰兒 (ㄧㄥ ㄦˊ)"}]},
+  {"id": 3215, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "family", "answers": [{"word": "family", "def": "家庭；家人 (ㄐㄧㄚ ㄊㄧㄥˊ；ㄐㄧㄚ ㄖㄣˊ)"}]},
+  {"id": 3216, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "funny", "answers": [{"word": "funny", "def": "有趣的；好笑的 (ㄧㄡˇ ㄑㄩˋ ㄉㄜ˙；ㄏㄠˇ ㄒㄧㄠˋ ㄉㄜ˙)"}]},
+  {"id": 3217, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "happy", "answers": [{"word": "happy", "def": "快樂的 (ㄎㄨㄞˋ ㄌㄜˋ ㄉㄜ˙)"}]},
+  {"id": 3218, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yam", "answers": [{"word": "yam", "def": "山藥；番薯 (ㄕㄢ ㄧㄠˋ；ㄈㄢ ㄕㄨˇ)"}]},
+  {"id": 3219, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "your", "answers": [{"word": "your", "def": "你的 (ㄋㄧˇ ㄉㄜ˙)"}]},
+  {"id": 3220, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yellow", "answers": [{"word": "yellow", "def": "黃色（的） (ㄏㄨㄤˊ ㄙㄜˋ)"}]},
+  {"id": 3221, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yes", "answers": [{"word": "yes", "def": "是；好的 (ㄕˋ；ㄏㄠˇ ㄉㄜ˙)"}]},
+  {"id": 3222, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yard", "answers": [{"word": "yard", "def": "院子；庭院 (ㄩㄢˋ ㄗ˙；ㄊㄧㄥˊ ㄩㄢˋ)"}]}
 ];
