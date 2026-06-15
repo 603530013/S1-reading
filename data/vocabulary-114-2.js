@@ -2091,3 +2091,4 @@
   {"id": 4196, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "turtle", "answers": [{"word": "turtle", "def": "烏龜 (ㄨ ㄍㄨㄟ)"}]},
   {"id": 4197, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "plant", "answers": [{"word": "plant", "def": "植物 (ㄓˊ ㄨˋ)"}]}
 ];
+
