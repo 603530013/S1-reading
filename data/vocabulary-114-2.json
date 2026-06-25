@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 4001,
     "type": "vocab",
@@ -1863,232 +1863,975 @@
     "id": 4143,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "slither",
-    "answers": [{"word": "slither", "def": "滑行 (ㄏㄨㄚˊ ㄒㄧㄥˊ)（蛇等爬行動物）"}]
+    "answers": [
+      {
+        "word": "slither",
+        "def": "滑行 (ㄏㄨㄚˊ ㄒㄧㄥˊ)（蛇等爬行動物）"
+      }
+    ]
   },
   {
     "id": 4144,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "crawl",
-    "answers": [{"word": "crawl", "def": "爬行 (ㄆㄚˊ ㄒㄧㄥˊ)"}]
+    "answers": [
+      {
+        "word": "crawl",
+        "def": "爬行 (ㄆㄚˊ ㄒㄧㄥˊ)"
+      }
+    ]
   },
   {
     "id": 4145,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "stomp",
-    "answers": [{"word": "stomp", "def": "跺腳 (ㄉㄨㄛˋ ㄐㄧㄠˇ)"}]
+    "answers": [
+      {
+        "word": "stomp",
+        "def": "跺腳 (ㄉㄨㄛˋ ㄐㄧㄠˇ)"
+      }
+    ]
   },
   {
     "id": 4146,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "wave",
-    "answers": [{"word": "wave", "def": "揮手 (ㄏㄨㄟ ㄕㄡˇ) / 波浪 (ㄅㄛ ㄌㄤˋ)"}]
+    "answers": [
+      {
+        "word": "wave",
+        "def": "揮手 (ㄏㄨㄟ ㄕㄡˇ) / 波浪 (ㄅㄛ ㄌㄤˋ)"
+      }
+    ]
   },
   {
     "id": 4147,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "move",
-    "answers": [{"word": "move", "def": "移動 (ㄧˊ ㄉㄨㄥˋ)"}]
+    "answers": [
+      {
+        "word": "move",
+        "def": "移動 (ㄧˊ ㄉㄨㄥˋ)"
+      }
+    ]
   },
   {
     "id": 4148,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "hide",
-    "answers": [{"word": "hide", "def": "躲藏 (ㄉㄨㄛˇ ㄘㄤˊ) / 隱藏 (ㄧㄣˇ ㄘㄤˊ)"}]
+    "answers": [
+      {
+        "word": "hide",
+        "def": "躲藏 (ㄉㄨㄛˇ ㄘㄤˊ) / 隱藏 (ㄧㄣˇ ㄘㄤˊ)"
+      }
+    ]
   },
   {
     "id": 4149,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "buzz",
-    "answers": [{"word": "buzz", "def": "嗡嗡叫 (ㄨㄥ ㄨㄥ ㄐㄧㄠˋ)（蜜蜂等的聲音）"}]
+    "answers": [
+      {
+        "word": "buzz",
+        "def": "嗡嗡叫 (ㄨㄥ ㄨㄥ ㄐㄧㄠˋ)（蜜蜂等的聲音）"
+      }
+    ]
   },
   {
     "id": 4150,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "ground",
-    "answers": [{"word": "ground", "def": "地面 (ㄉㄧˋ ㄇㄧㄢˋ)"}]
+    "answers": [
+      {
+        "word": "ground",
+        "def": "地面 (ㄉㄧˋ ㄇㄧㄢˋ)"
+      }
+    ]
   },
   {
     "id": 4151,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "land",
-    "answers": [{"word": "land", "def": "陸地 (ㄌㄨˋ ㄉㄧˋ)"}]
+    "answers": [
+      {
+        "word": "land",
+        "def": "陸地 (ㄌㄨˋ ㄉㄧˋ)"
+      }
+    ]
   },
   {
     "id": 4152,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "crab",
-    "answers": [{"word": "crab", "def": "螃蟹 (ㄆㄤˊ ㄒㄧㄝˋ)"}]
+    "answers": [
+      {
+        "word": "crab",
+        "def": "螃蟹 (ㄆㄤˊ ㄒㄧㄝˋ)"
+      }
+    ]
   },
   {
     "id": 4153,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "insect",
-    "answers": [{"word": "insect", "def": "昆蟲 (ㄎㄨㄣ ㄔㄨㄥˊ)"}]
+    "answers": [
+      {
+        "word": "insect",
+        "def": "昆蟲 (ㄎㄨㄣ ㄔㄨㄥˊ)"
+      }
+    ]
   },
   {
     "id": 4154,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "elephant",
-    "answers": [{"word": "elephant", "def": "大象 (ㄉㄚˋ ㄒㄧㄤˋ)"}]
+    "answers": [
+      {
+        "word": "elephant",
+        "def": "大象 (ㄉㄚˋ ㄒㄧㄤˋ)"
+      }
+    ]
   },
   {
     "id": 4155,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "snake",
-    "answers": [{"word": "snake", "def": "蛇 (ㄕㄜˊ)"}]
+    "answers": [
+      {
+        "word": "snake",
+        "def": "蛇 (ㄕㄜˊ)"
+      }
+    ]
   },
   {
     "id": 4156,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "turtle",
-    "answers": [{"word": "turtle", "def": "烏龜 (ㄨ ㄍㄨㄟ) / 海龜 (ㄏㄞˇ ㄍㄨㄟ)"}]
+    "answers": [
+      {
+        "word": "turtle",
+        "def": "烏龜 (ㄨ ㄍㄨㄟ) / 海龜 (ㄏㄞˇ ㄍㄨㄟ)"
+      }
+    ]
   },
   {
     "id": 4157,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "noisy",
-    "answers": [{"word": "noisy", "def": "吵鬧的 (ㄔㄠˇ ㄋㄠˋ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "noisy",
+        "def": "吵鬧的 (ㄔㄠˇ ㄋㄠˋ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 4158,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "fluffy",
-    "answers": [{"word": "fluffy", "def": "毛茸茸的 (ㄇㄠˊ ㄖㄨㄥˊ ㄖㄨㄥˊ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "fluffy",
+        "def": "毛茸茸的 (ㄇㄠˊ ㄖㄨㄥˊ ㄖㄨㄥˊ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 4159,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "tail",
-    "answers": [{"word": "tail", "def": "尾巴 (ㄨㄟˇ ㄅㄚ)"}]
+    "answers": [
+      {
+        "word": "tail",
+        "def": "尾巴 (ㄨㄟˇ ㄅㄚ)"
+      }
+    ]
   },
   {
     "id": 4160,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "tale",
-    "answers": [{"word": "tale", "def": "故事 (ㄍㄨˋ ㄕˋ)（同音字 tail）"}]
+    "answers": [
+      {
+        "word": "tale",
+        "def": "故事 (ㄍㄨˋ ㄕˋ)（同音字 tail）"
+      }
+    ]
   },
   {
     "id": 4161,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "chop",
-    "answers": [{"word": "chop", "def": "切 (ㄑㄧㄝ) / 砍 (ㄎㄢˇ)"}]
+    "answers": [
+      {
+        "word": "chop",
+        "def": "切 (ㄑㄧㄝ) / 砍 (ㄎㄢˇ)"
+      }
+    ]
   },
   {
     "id": 4162,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "flat",
-    "answers": [{"word": "flat", "def": "平的 (ㄆㄧㄥˊ ㄉㄜ˙) / 扁的 (ㄅㄧㄢˇ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "flat",
+        "def": "平的 (ㄆㄧㄥˊ ㄉㄜ˙) / 扁的 (ㄅㄧㄢˇ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 4163,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "ride",
-    "answers": [{"word": "ride", "def": "騎 (ㄑㄧˊ) / 乘坐 (ㄔㄥˊ ㄗㄨㄛˋ)"}]
+    "answers": [
+      {
+        "word": "ride",
+        "def": "騎 (ㄑㄧˊ) / 乘坐 (ㄔㄥˊ ㄗㄨㄛˋ)"
+      }
+    ]
   },
   {
     "id": 4164,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "carry",
-    "answers": [{"word": "carry", "def": "攜帶 (ㄒㄧ ㄉㄞˋ) / 搬運 (ㄅㄢ ㄩㄣˋ)"}]
+    "answers": [
+      {
+        "word": "carry",
+        "def": "攜帶 (ㄒㄧ ㄉㄞˋ) / 搬運 (ㄅㄢ ㄩㄣˋ)"
+      }
+    ]
   },
   {
     "id": 4165,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "idea",
-    "answers": [{"word": "idea", "def": "想法 (ㄒㄧㄤˇ ㄈㄚˇ) / 主意 (ㄓㄨˇ ㄧˋ)"}]
+    "answers": [
+      {
+        "word": "idea",
+        "def": "想法 (ㄒㄧㄤˇ ㄈㄚˇ) / 主意 (ㄓㄨˇ ㄧˋ)"
+      }
+    ]
   },
   {
     "id": 4166,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "everyone",
-    "answers": [{"word": "everyone", "def": "每個人 (ㄇㄟˇ ㄍㄜ˙ ㄖㄣˊ) / 大家 (ㄉㄚˋ ㄐㄧㄚ)"}]
+    "answers": [
+      {
+        "word": "everyone",
+        "def": "每個人 (ㄇㄟˇ ㄍㄜ˙ ㄖㄣˊ) / 大家 (ㄉㄚˋ ㄐㄧㄚ)"
+      }
+    ]
   },
   {
     "id": 4167,
     "type": "vocab",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "beautiful",
-    "answers": [{"word": "beautiful", "def": "美麗的 (ㄇㄟˇ ㄌㄧˋ ㄉㄜ˙) / 漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "beautiful",
+        "def": "美麗的 (ㄇㄟˇ ㄌㄧˋ ㄉㄜ˙) / 漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"
+      }
+    ]
   },
-  {"id": 4168, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "ocean", "answers": [{"word": "ocean", "def": "海洋 (ㄏㄞˇ ㄧㄤˊ)"}]},
-  {"id": 4169, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "alone", "answers": [{"word": "alone", "def": "單獨的、孤單的 (ㄉㄢ ㄉㄨˊ ㄉㄜ˙、ㄍㄨ ㄉㄢ ㄉㄜ˙)"}]},
-  {"id": 4170, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "close", "answers": [{"word": "close", "def": "靠近的；關閉 (ㄎㄠˋ ㄐㄧㄣˋ ㄉㄜ˙；ㄍㄨㄢ ㄅㄧˋ)"}]},
-  {"id": 4171, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "team", "answers": [{"word": "team", "def": "團隊 (ㄊㄨㄢˊ ㄉㄨㄟˋ)"}]},
-  {"id": 4172, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "search", "answers": [{"word": "search", "def": "搜尋 (ㄙㄡ ㄒㄩㄣˊ)"}]},
-  {"id": 4173, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "dangerous", "answers": [{"word": "dangerous", "def": "危險的 (ㄨㄟˊ ㄒㄧㄢˇ ㄉㄜ˙)"}]},
-  {"id": 4174, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "partner", "answers": [{"word": "partner", "def": "夥伴 (ㄏㄨㄛˇ ㄅㄢˋ)"}]},
-  {"id": 4175, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "group", "answers": [{"word": "group", "def": "群組、團體 (ㄑㄩㄣˊ ㄗㄨˇ、ㄊㄨㄢˊ ㄊㄧˇ)"}]},
-  {"id": 4176, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "together", "answers": [{"word": "together", "def": "一起 (ㄧ ㄑㄧˇ)"}]},
-  {"id": 4177, "type": "vocab", "term": "114-2", "weeks": ["W18"], "audioText": "river", "answers": [{"word": "river", "def": "河流 (ㄏㄜˊ ㄌㄧㄡˊ)"}]},
-  {"id": 4178, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "heart", "answers": [{"word": "heart", "def": "心臟 (ㄒㄧㄣ ㄓㄤˋ)"}]},
-  {"id": 4179, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "oxygen", "answers": [{"word": "oxygen", "def": "氧氣 (ㄧㄤˇ ㄑㄧˋ)"}]},
-  {"id": 4180, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "muscles", "answers": [{"word": "muscles", "def": "肌肉 (ㄐㄧ ㄖㄡˋ)"}]},
-  {"id": 4181, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "breathe", "answers": [{"word": "breathe", "def": "呼吸 (ㄏㄨ ㄒㄧ)"}]},
-  {"id": 4182, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "bend", "answers": [{"word": "bend", "def": "彎曲 (ㄨㄢ ㄑㄩ)"}]},
-  {"id": 4183, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "exercise", "answers": [{"word": "exercise", "def": "運動；鍛鍊 (ㄩㄣˋ ㄉㄨㄥˋ；ㄉㄨㄢˋ ㄌㄧㄢˋ)"}]},
-  {"id": 4184, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "body", "answers": [{"word": "body", "def": "身體 (ㄕㄣ ㄊㄧˇ)"}]},
-  {"id": 4185, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "flexible", "answers": [{"word": "flexible", "def": "柔軟的；有彈性的 (ㄖㄡˊ ㄖㄨㄢˇ ㄉㄜ˙；ㄧㄡˇ ㄊㄢˊ ㄒㄧㄥˋ ㄉㄜ˙)"}]},
-  {"id": 4186, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "stretch", "answers": [{"word": "stretch", "def": "伸展 (ㄕㄣ ㄓㄢˇ)"}]},
-  {"id": 4187, "type": "vocab", "term": "114-2", "weeks": ["W19"], "audioText": "dance", "answers": [{"word": "dance", "def": "跳舞 (ㄊㄧㄠˋ ㄨˇ)"}]}
-,
-  {"id": 4188, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "squirrel", "answers": [{"word": "squirrel", "def": "松鼠 (ㄙㄨㄥ ㄕㄨˇ)"}]},
-  {"id": 4189, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "wild", "answers": [{"word": "wild", "def": "野生的；狂野的 (ㄧㄝˇ ㄕㄥ ㄉㄜ˙；ㄎㄨㄤˊ ㄧㄝˇ ㄉㄜ˙)"}]},
-  {"id": 4190, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "cheetah", "answers": [{"word": "cheetah", "def": "獵豹 (ㄌㄧㄝˋ ㄅㄠˋ)"}]},
-  {"id": 4191, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "toad", "answers": [{"word": "toad", "def": "蟾蜍 (ㄔㄢˊ ㄔㄨˊ)"}]},
-  {"id": 4192, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "catch", "answers": [{"word": "catch", "def": "抓住；捕捉 (ㄓㄨㄚ ㄓㄨˋ；ㄅㄨˇ ㄓㄨㄛ)"}]},
-  {"id": 4193, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "tongue", "answers": [{"word": "tongue", "def": "舌頭 (ㄕㄜˊ ㄊㄡˊ)"}]},
-  {"id": 4194, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "smell", "answers": [{"word": "smell", "def": "聞；嗅 (ㄨㄣˊ；ㄒㄧㄡˋ)"}]},
-  {"id": 4195, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "hunt", "answers": [{"word": "hunt", "def": "狩獵；尋找 (ㄕㄡˋ ㄌㄧㄝˋ；ㄒㄩㄣˊ ㄓㄠˇ)"}]},
-  {"id": 4196, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "turtle", "answers": [{"word": "turtle", "def": "烏龜 (ㄨ ㄍㄨㄟ)"}]},
-  {"id": 4197, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "plant", "answers": [{"word": "plant", "def": "植物 (ㄓˊ ㄨˋ)"}]}
+  {
+    "id": 4168,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "ocean",
+    "answers": [
+      {
+        "word": "ocean",
+        "def": "海洋 (ㄏㄞˇ ㄧㄤˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4169,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "alone",
+    "answers": [
+      {
+        "word": "alone",
+        "def": "單獨的、孤單的 (ㄉㄢ ㄉㄨˊ ㄉㄜ˙、ㄍㄨ ㄉㄢ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4170,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "close",
+    "answers": [
+      {
+        "word": "close",
+        "def": "靠近的；關閉 (ㄎㄠˋ ㄐㄧㄣˋ ㄉㄜ˙；ㄍㄨㄢ ㄅㄧˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4171,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "team",
+    "answers": [
+      {
+        "word": "team",
+        "def": "團隊 (ㄊㄨㄢˊ ㄉㄨㄟˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4172,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "search",
+    "answers": [
+      {
+        "word": "search",
+        "def": "搜尋 (ㄙㄡ ㄒㄩㄣˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4173,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "dangerous",
+    "answers": [
+      {
+        "word": "dangerous",
+        "def": "危險的 (ㄨㄟˊ ㄒㄧㄢˇ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4174,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "partner",
+    "answers": [
+      {
+        "word": "partner",
+        "def": "夥伴 (ㄏㄨㄛˇ ㄅㄢˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4175,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "group",
+    "answers": [
+      {
+        "word": "group",
+        "def": "群組、團體 (ㄑㄩㄣˊ ㄗㄨˇ、ㄊㄨㄢˊ ㄊㄧˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4176,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "together",
+    "answers": [
+      {
+        "word": "together",
+        "def": "一起 (ㄧ ㄑㄧˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4177,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "river",
+    "answers": [
+      {
+        "word": "river",
+        "def": "河流 (ㄏㄜˊ ㄌㄧㄡˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4178,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "heart",
+    "answers": [
+      {
+        "word": "heart",
+        "def": "心臟 (ㄒㄧㄣ ㄓㄤˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4179,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "oxygen",
+    "answers": [
+      {
+        "word": "oxygen",
+        "def": "氧氣 (ㄧㄤˇ ㄑㄧˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4180,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "muscles",
+    "answers": [
+      {
+        "word": "muscles",
+        "def": "肌肉 (ㄐㄧ ㄖㄡˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4181,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "breathe",
+    "answers": [
+      {
+        "word": "breathe",
+        "def": "呼吸 (ㄏㄨ ㄒㄧ)"
+      }
+    ]
+  },
+  {
+    "id": 4182,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "bend",
+    "answers": [
+      {
+        "word": "bend",
+        "def": "彎曲 (ㄨㄢ ㄑㄩ)"
+      }
+    ]
+  },
+  {
+    "id": 4183,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "exercise",
+    "answers": [
+      {
+        "word": "exercise",
+        "def": "運動；鍛鍊 (ㄩㄣˋ ㄉㄨㄥˋ；ㄉㄨㄢˋ ㄌㄧㄢˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4184,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "body",
+    "answers": [
+      {
+        "word": "body",
+        "def": "身體 (ㄕㄣ ㄊㄧˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4185,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "flexible",
+    "answers": [
+      {
+        "word": "flexible",
+        "def": "柔軟的；有彈性的 (ㄖㄡˊ ㄖㄨㄢˇ ㄉㄜ˙；ㄧㄡˇ ㄊㄢˊ ㄒㄧㄥˋ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4186,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "stretch",
+    "answers": [
+      {
+        "word": "stretch",
+        "def": "伸展 (ㄕㄣ ㄓㄢˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4187,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "dance",
+    "answers": [
+      {
+        "word": "dance",
+        "def": "跳舞 (ㄊㄧㄠˋ ㄨˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4188,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "squirrel",
+    "answers": [
+      {
+        "word": "squirrel",
+        "def": "松鼠 (ㄙㄨㄥ ㄕㄨˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4189,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "wild",
+    "answers": [
+      {
+        "word": "wild",
+        "def": "野生的；狂野的 (ㄧㄝˇ ㄕㄥ ㄉㄜ˙；ㄎㄨㄤˊ ㄧㄝˇ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4190,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "cheetah",
+    "answers": [
+      {
+        "word": "cheetah",
+        "def": "獵豹 (ㄌㄧㄝˋ ㄅㄠˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4191,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "toad",
+    "answers": [
+      {
+        "word": "toad",
+        "def": "蟾蜍 (ㄔㄢˊ ㄔㄨˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4192,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "catch",
+    "answers": [
+      {
+        "word": "catch",
+        "def": "抓住；捕捉 (ㄓㄨㄚ ㄓㄨˋ；ㄅㄨˇ ㄓㄨㄛ)"
+      }
+    ]
+  },
+  {
+    "id": 4193,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "tongue",
+    "answers": [
+      {
+        "word": "tongue",
+        "def": "舌頭 (ㄕㄜˊ ㄊㄡˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4194,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "smell",
+    "answers": [
+      {
+        "word": "smell",
+        "def": "聞；嗅 (ㄨㄣˊ；ㄒㄧㄡˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4195,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "hunt",
+    "answers": [
+      {
+        "word": "hunt",
+        "def": "狩獵；尋找 (ㄕㄡˋ ㄌㄧㄝˋ；ㄒㄩㄣˊ ㄓㄠˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4196,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "turtle",
+    "answers": [
+      {
+        "word": "turtle",
+        "def": "烏龜 (ㄨ ㄍㄨㄟ)"
+      }
+    ]
+  },
+  {
+    "id": 4197,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "plant",
+    "answers": [
+      {
+        "word": "plant",
+        "def": "植物 (ㄓˊ ㄨˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4198,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "ladybug",
+    "answers": [
+      {
+        "word": "ladybug",
+        "def": "瓢蟲 (ㄆㄧㄠˊ ㄔㄨㄥˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4199,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "grasshopper",
+    "answers": [
+      {
+        "word": "grasshopper",
+        "def": "蚱蜢；蟈蟈 (ㄓㄚˋ ㄇㄥˇ；ㄍㄨㄛˋ ㄍㄨㄛ)"
+      }
+    ]
+  },
+  {
+    "id": 4200,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "caterpillar",
+    "answers": [
+      {
+        "word": "caterpillar",
+        "def": "毛毛蟲 (ㄇㄠˊ ㄇㄠˊ ㄔㄨㄥˊ)"
+      }
+    ]
+  },
+  {
+    "id": 4201,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "creep",
+    "answers": [
+      {
+        "word": "creep",
+        "def": "爬行；緩慢移動 (ㄆㄚˊ ㄒㄧㄥˊ；ㄏㄨㄢˇ ㄇㄢˋ ㄧˊ ㄉㄨㄥˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4202,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "different",
+    "answers": [
+      {
+        "word": "different",
+        "def": "不同的 (ㄅㄨˋ ㄊㄨㄥˊ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4203,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "same",
+    "answers": [
+      {
+        "word": "same",
+        "def": "相同的 (ㄒㄧㄤ ㄊㄨㄥˊ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4204,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "field",
+    "answers": [
+      {
+        "word": "field",
+        "def": "田野；草地 (ㄊㄧㄢˊ ㄧㄝˇ；ㄘㄠˇ ㄉㄧˋ)"
+      }
+    ]
+  },
+  {
+    "id": 4205,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "gold",
+    "answers": [
+      {
+        "word": "gold",
+        "def": "金色的 (ㄐㄧㄣ ㄙㄜˋ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 4206,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "wings",
+    "answers": [
+      {
+        "word": "wings",
+        "def": "翅膀（wing 的複數） (ㄔˋ ㄅㄤˇ)"
+      }
+    ]
+  },
+  {
+    "id": 4207,
+    "type": "vocab",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "butterfly",
+    "answers": [
+      {
+        "word": "butterfly",
+        "def": "蝴蝶 (ㄏㄨˊ ㄉㄧㄝˊ)"
+      }
+    ]
+  }
 ]
-

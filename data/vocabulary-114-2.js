@@ -1,4 +1,4 @@
-﻿window.VOCAB_114_2 = [
+window.VOCAB_114_2 = [
   {
     "id": 4001,
     "type": "vocab",
@@ -2089,6 +2089,15 @@
   {"id": 4194, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "smell", "answers": [{"word": "smell", "def": "聞；嗅 (ㄨㄣˊ；ㄒㄧㄡˋ)"}]},
   {"id": 4195, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "hunt", "answers": [{"word": "hunt", "def": "狩獵；尋找 (ㄕㄡˋ ㄌㄧㄝˋ；ㄒㄩㄣˊ ㄓㄠˇ)"}]},
   {"id": 4196, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "turtle", "answers": [{"word": "turtle", "def": "烏龜 (ㄨ ㄍㄨㄟ)"}]},
-  {"id": 4197, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "plant", "answers": [{"word": "plant", "def": "植物 (ㄓˊ ㄨˋ)"}]}
+  {"id": 4197, "type": "vocab", "term": "114-2", "weeks": ["W20"], "audioText": "plant", "answers": [{"word": "plant", "def": "植物 (ㄓˊ ㄨˋ)"}]},
+  {"id": 4198, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "ladybug", "answers": [{"word": "ladybug", "def": "瓢蟲 (ㄆㄧㄠˊ ㄔㄨㄥˊ)"}]},
+  {"id": 4199, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "grasshopper", "answers": [{"word": "grasshopper", "def": "蚱蜢；蟈蟈 (ㄓㄚˋ ㄇㄥˇ；ㄍㄨㄛˋ ㄍㄨㄛ)"}]},
+  {"id": 4200, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "caterpillar", "answers": [{"word": "caterpillar", "def": "毛毛蟲 (ㄇㄠˊ ㄇㄠˊ ㄔㄨㄥˊ)"}]},
+  {"id": 4201, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "creep", "answers": [{"word": "creep", "def": "爬行；緩慢移動 (ㄆㄚˊ ㄒㄧㄥˊ；ㄏㄨㄢˇ ㄇㄢˋ ㄧˊ ㄉㄨㄥˋ)"}]},
+  {"id": 4202, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "different", "answers": [{"word": "different", "def": "不同的 (ㄅㄨˋ ㄊㄨㄥˊ ㄉㄜ˙)"}]},
+  {"id": 4203, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "same", "answers": [{"word": "same", "def": "相同的 (ㄒㄧㄤ ㄊㄨㄥˊ ㄉㄜ˙)"}]},
+  {"id": 4204, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "field", "answers": [{"word": "field", "def": "田野；草地 (ㄊㄧㄢˊ ㄧㄝˇ；ㄘㄠˇ ㄉㄧˋ)"}]},
+  {"id": 4205, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "gold", "answers": [{"word": "gold", "def": "金色的 (ㄐㄧㄣ ㄙㄜˋ ㄉㄜ˙)"}]},
+  {"id": 4206, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "wings", "answers": [{"word": "wings", "def": "翅膀（wing 的複數） (ㄔˋ ㄅㄤˇ)"}]},
+  {"id": 4207, "type": "vocab", "term": "114-2", "weeks": ["W21"], "audioText": "butterfly", "answers": [{"word": "butterfly", "def": "蝴蝶 (ㄏㄨˊ ㄉㄧㄝˊ)"}]}
 ];
-

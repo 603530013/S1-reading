@@ -1,4 +1,4 @@
-﻿window.PHONICS_114_2 = [
+window.PHONICS_114_2 = [
   {
     "id": 3001,
     "type": "phonics",
@@ -2090,6 +2090,21 @@
   {"id": 3219, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "your", "answers": [{"word": "your", "def": "你的 (ㄋㄧˇ ㄉㄜ˙)"}]},
   {"id": 3220, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yellow", "answers": [{"word": "yellow", "def": "黃色（的） (ㄏㄨㄤˊ ㄙㄜˋ)"}]},
   {"id": 3221, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yes", "answers": [{"word": "yes", "def": "是；好的 (ㄕˋ；ㄏㄠˇ ㄉㄜ˙)"}]},
-  {"id": 3222, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yard", "answers": [{"word": "yard", "def": "院子；庭院 (ㄩㄢˋ ㄗ˙；ㄊㄧㄥˊ ㄩㄢˋ)"}]}
+  {"id": 3222, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yard", "answers": [{"word": "yard", "def": "院子；庭院 (ㄩㄢˋ ㄗ˙；ㄊㄧㄥˊ ㄩㄢˋ)"}]},
+  {"id": 3223, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "jump", "answers": [{"word": "jump", "def": "跳躍 (ㄊㄧㄠˋ ㄩㄝˋ)"}]},
+  {"id": 3224, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "lamp", "answers": [{"word": "lamp", "def": "燈 (ㄉㄥ)"}]},
+  {"id": 3225, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "desk", "answers": [{"word": "desk", "def": "書桌 (ㄕㄨ ㄓㄨㄛ)"}]},
+  {"id": 3226, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "mask", "answers": [{"word": "mask", "def": "面具；口罩 (ㄇㄧㄢˋ ㄐㄩˋ；ㄎㄡˇ ㄓㄠˋ)"}]},
+  {"id": 3227, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "sink", "answers": [{"word": "sink", "def": "水槽；下沉 (ㄕㄨㄟˇ ㄘㄠˊ；ㄒㄧㄚˋ ㄔㄣˊ)"}]},
+  {"id": 3228, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "think", "answers": [{"word": "think", "def": "思考；想 (ㄙ ㄎㄠˇ；ㄒㄧㄤˇ)"}]},
+  {"id": 3229, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "list", "answers": [{"word": "list", "def": "清單；列表 (ㄑㄧㄥ ㄉㄢ；ㄌㄧㄝˋ ㄅㄧㄠˇ)"}]},
+  {"id": 3230, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "nest", "answers": [{"word": "nest", "def": "鳥巢 (ㄋㄧㄠˇ ㄔㄠˊ)"}]},
+  {"id": 3231, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "hand", "answers": [{"word": "hand", "def": "手 (ㄕㄡˇ)"}]},
+  {"id": 3232, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "band", "answers": [{"word": "band", "def": "樂團；帶子 (ㄩㄝˋ ㄊㄨㄢˊ；ㄉㄞˋ ㄗ˙)"}]},
+  {"id": 3233, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "milk", "answers": [{"word": "milk", "def": "牛奶 (ㄋㄧㄡˊ ㄋㄞˇ)"}]},
+  {"id": 3234, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "silk", "answers": [{"word": "silk", "def": "絲綢 (ㄙ ㄔㄡˊ)"}]},
+  {"id": 3235, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "belt", "answers": [{"word": "belt", "def": "腰帶 (ㄧㄠ ㄉㄞˋ)"}]},
+  {"id": 3236, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "felt", "answers": [{"word": "felt", "def": "感覺到（feel 的過去式）；毛氈 (ㄍㄢˇ ㄐㄩㄝˊ ㄉㄠˋ；ㄇㄠˊ ㄓㄢ)"}]},
+  {"id": 3237, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "gift", "answers": [{"word": "gift", "def": "禮物 (ㄌㄧˇ ㄨˋ)"}]},
+  {"id": 3238, "type": "phonics", "term": "114-2", "weeks": ["W21"], "audioText": "tuft", "answers": [{"word": "tuft", "def": "一簇；一叢（毛、草等） (ㄧˋ ㄘㄨˋ；ㄧˋ ㄘㄨㄥˊ)"}]}
 ];
-

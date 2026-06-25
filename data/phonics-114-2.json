@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 3001,
     "type": "phonics",
@@ -1698,398 +1698,1560 @@
     "id": 3135,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "bracelet",
-    "answers": [{"word": "bracelet", "def": "手鐲 (ㄕㄡˇ ㄓㄨㄛˊ) / 手鏈 (ㄕㄡˇ ㄌㄧㄢˋ)"}]
+    "answers": [
+      {
+        "word": "bracelet",
+        "def": "手鐲 (ㄕㄡˇ ㄓㄨㄛˊ) / 手鏈 (ㄕㄡˇ ㄌㄧㄢˋ)"
+      }
+    ]
   },
   {
     "id": 3136,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "break",
-    "answers": [{"word": "break", "def": "打破 (ㄉㄚˇ ㄆㄛˋ) / 休息 (ㄒㄧㄡ ㄒㄧˊ)"}]
+    "answers": [
+      {
+        "word": "break",
+        "def": "打破 (ㄉㄚˇ ㄆㄛˋ) / 休息 (ㄒㄧㄡ ㄒㄧˊ)"
+      }
+    ]
   },
   {
     "id": 3137,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "broken",
-    "answers": [{"word": "broken", "def": "壞掉的 (ㄏㄨㄞˋ ㄉㄧㄠˋ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "broken",
+        "def": "壞掉的 (ㄏㄨㄞˋ ㄉㄧㄠˋ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 3138,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "brush",
-    "answers": [{"word": "brush", "def": "刷子 (ㄕㄨㄚ ㄗ˙) / 刷 (ㄕㄨㄚ)"}]
+    "answers": [
+      {
+        "word": "brush",
+        "def": "刷子 (ㄕㄨㄚ ㄗ˙) / 刷 (ㄕㄨㄚ)"
+      }
+    ]
   },
   {
     "id": 3139,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "braid",
-    "answers": [{"word": "braid", "def": "辮子 (ㄅㄧㄢˋ ㄗ˙)"}]
+    "answers": [
+      {
+        "word": "braid",
+        "def": "辮子 (ㄅㄧㄢˋ ㄗ˙)"
+      }
+    ]
   },
   {
     "id": 3140,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "blender",
-    "answers": [{"word": "blender", "def": "攪拌機 (ㄐㄧㄠˇ ㄅㄢˋ ㄐㄧ) / 果汁機 (ㄍㄨㄛˇ ㄓ ㄐㄧ)"}]
+    "answers": [
+      {
+        "word": "blender",
+        "def": "攪拌機 (ㄐㄧㄠˇ ㄅㄢˋ ㄐㄧ) / 果汁機 (ㄍㄨㄛˇ ㄓ ㄐㄧ)"
+      }
+    ]
   },
   {
     "id": 3141,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "blocks",
-    "answers": [{"word": "blocks", "def": "積木 (ㄐㄧ ㄇㄨˋ)（複數）"}]
+    "answers": [
+      {
+        "word": "blocks",
+        "def": "積木 (ㄐㄧ ㄇㄨˋ)（複數）"
+      }
+    ]
   },
   {
     "id": 3142,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "blanket",
-    "answers": [{"word": "blanket", "def": "毯子 (ㄊㄢˇ ㄗ˙) / 毛毯 (ㄇㄠˊ ㄊㄢˇ)"}]
+    "answers": [
+      {
+        "word": "blanket",
+        "def": "毯子 (ㄊㄢˇ ㄗ˙) / 毛毯 (ㄇㄠˊ ㄊㄢˇ)"
+      }
+    ]
   },
   {
     "id": 3143,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "grip",
-    "answers": [{"word": "grip", "def": "緊握 (ㄐㄧㄣˇ ㄨㄛˋ) / 握把 (ㄨㄛˋ ㄅㄚˇ)"}]
+    "answers": [
+      {
+        "word": "grip",
+        "def": "緊握 (ㄐㄧㄣˇ ㄨㄛˋ) / 握把 (ㄨㄛˋ ㄅㄚˇ)"
+      }
+    ]
   },
   {
     "id": 3144,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "grab",
-    "answers": [{"word": "grab", "def": "抓取 (ㄓㄨㄚ ㄑㄩˇ) / 一把抓住 (ㄧˋ ㄅㄚˇ ㄓㄨㄚ ㄓㄨˋ)"}]
+    "answers": [
+      {
+        "word": "grab",
+        "def": "抓取 (ㄓㄨㄚ ㄑㄩˇ) / 一把抓住 (ㄧˋ ㄅㄚˇ ㄓㄨㄚ ㄓㄨˋ)"
+      }
+    ]
   },
   {
     "id": 3145,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "grade",
-    "answers": [{"word": "grade", "def": "年級 (ㄋㄧㄢˊ ㄐㄧˊ) / 分數 (ㄈㄣ ㄕㄨˋ)"}]
+    "answers": [
+      {
+        "word": "grade",
+        "def": "年級 (ㄋㄧㄢˊ ㄐㄧˊ) / 分數 (ㄈㄣ ㄕㄨˋ)"
+      }
+    ]
   },
   {
     "id": 3146,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "grow",
-    "answers": [{"word": "grow", "def": "成長 (ㄔㄥˊ ㄓㄤˇ) / 種植 (ㄓㄨㄥˋ ㄓˊ)"}]
+    "answers": [
+      {
+        "word": "grow",
+        "def": "成長 (ㄔㄥˊ ㄓㄤˇ) / 種植 (ㄓㄨㄥˋ ㄓˊ)"
+      }
+    ]
   },
   {
     "id": 3147,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "globe",
-    "answers": [{"word": "globe", "def": "地球儀 (ㄉㄧˋ ㄑㄧㄡˊ ㄧˊ) / 地球 (ㄉㄧˋ ㄑㄧㄡˊ)"}]
+    "answers": [
+      {
+        "word": "globe",
+        "def": "地球儀 (ㄉㄧˋ ㄑㄧㄡˊ ㄧˊ) / 地球 (ㄉㄧˋ ㄑㄧㄡˊ)"
+      }
+    ]
   },
   {
     "id": 3148,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W15"],
+    "weeks": [
+      "W15"
+    ],
     "audioText": "glasses",
-    "answers": [{"word": "glasses", "def": "眼鏡 (ㄧㄢˇ ㄐㄧㄥˋ)（複數）"}]
+    "answers": [
+      {
+        "word": "glasses",
+        "def": "眼鏡 (ㄧㄢˇ ㄐㄧㄥˋ)（複數）"
+      }
+    ]
   },
   {
     "id": 3149,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "drip",
-    "answers": [{"word": "drip", "def": "滴下 (ㄉㄧ ㄒㄧㄚˋ) / 滴水 (ㄉㄧ ㄕㄨㄟˇ)"}]
+    "answers": [
+      {
+        "word": "drip",
+        "def": "滴下 (ㄉㄧ ㄒㄧㄚˋ) / 滴水 (ㄉㄧ ㄕㄨㄟˇ)"
+      }
+    ]
   },
   {
     "id": 3150,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "dress",
-    "answers": [{"word": "dress", "def": "洋裝 (ㄧㄤˊ ㄓㄨㄤ) / 穿衣服 (ㄔㄨㄢ ㄧ ㄈㄨˊ)"}]
+    "answers": [
+      {
+        "word": "dress",
+        "def": "洋裝 (ㄧㄤˊ ㄓㄨㄤ) / 穿衣服 (ㄔㄨㄢ ㄧ ㄈㄨˊ)"
+      }
+    ]
   },
   {
     "id": 3151,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "drill",
-    "answers": [{"word": "drill", "def": "鑽孔 (ㄗㄨㄢˋ ㄎㄨㄥˇ) / 訓練 (ㄒㄩㄣˋ ㄌㄧㄢˋ)"}]
+    "answers": [
+      {
+        "word": "drill",
+        "def": "鑽孔 (ㄗㄨㄢˋ ㄎㄨㄥˇ) / 訓練 (ㄒㄩㄣˋ ㄌㄧㄢˋ)"
+      }
+    ]
   },
   {
     "id": 3152,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "drive",
-    "answers": [{"word": "drive", "def": "開車 (ㄎㄞ ㄔㄜ)"}]
+    "answers": [
+      {
+        "word": "drive",
+        "def": "開車 (ㄎㄞ ㄔㄜ)"
+      }
+    ]
   },
   {
     "id": 3153,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "drum",
-    "answers": [{"word": "drum", "def": "鼓 (ㄍㄨˇ)"}]
+    "answers": [
+      {
+        "word": "drum",
+        "def": "鼓 (ㄍㄨˇ)"
+      }
+    ]
   },
   {
     "id": 3154,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "trick",
-    "answers": [{"word": "trick", "def": "把戲 (ㄅㄚˇ ㄒㄧˋ) / 技巧 (ㄐㄧˋ ㄑㄧㄠˇ)"}]
+    "answers": [
+      {
+        "word": "trick",
+        "def": "把戲 (ㄅㄚˇ ㄒㄧˋ) / 技巧 (ㄐㄧˋ ㄑㄧㄠˇ)"
+      }
+    ]
   },
   {
     "id": 3155,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "try",
-    "answers": [{"word": "try", "def": "嘗試 (ㄔㄤˊ ㄕˋ)"}]
+    "answers": [
+      {
+        "word": "try",
+        "def": "嘗試 (ㄔㄤˊ ㄕˋ)"
+      }
+    ]
   },
   {
     "id": 3156,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "treat",
-    "answers": [{"word": "treat", "def": "款待 (ㄎㄨㄢˇ ㄉㄞˋ) / 治療 (ㄓˋ ㄌㄧㄠˊ)"}]
+    "answers": [
+      {
+        "word": "treat",
+        "def": "款待 (ㄎㄨㄢˇ ㄉㄞˋ) / 治療 (ㄓˋ ㄌㄧㄠˊ)"
+      }
+    ]
   },
   {
     "id": 3157,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "train",
-    "answers": [{"word": "train", "def": "火車 (ㄏㄨㄛˇ ㄔㄜ) / 訓練 (ㄒㄩㄣˋ ㄌㄧㄢˋ)"}]
+    "answers": [
+      {
+        "word": "train",
+        "def": "火車 (ㄏㄨㄛˇ ㄔㄜ) / 訓練 (ㄒㄩㄣˋ ㄌㄧㄢˋ)"
+      }
+    ]
   },
   {
     "id": 3158,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "trip",
-    "answers": [{"word": "trip", "def": "旅行 (ㄌㄩˇ ㄒㄧㄥˊ)"}]
+    "answers": [
+      {
+        "word": "trip",
+        "def": "旅行 (ㄌㄩˇ ㄒㄧㄥˊ)"
+      }
+    ]
   },
   {
     "id": 3159,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "press",
-    "answers": [{"word": "press", "def": "按 (ㄢˋ) / 壓 (ㄧㄚ)"}]
+    "answers": [
+      {
+        "word": "press",
+        "def": "按 (ㄢˋ) / 壓 (ㄧㄚ)"
+      }
+    ]
   },
   {
     "id": 3160,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "prize",
-    "answers": [{"word": "prize", "def": "獎品 (ㄐㄧㄤˇ ㄆㄧㄣˇ)"}]
+    "answers": [
+      {
+        "word": "prize",
+        "def": "獎品 (ㄐㄧㄤˇ ㄆㄧㄣˇ)"
+      }
+    ]
   },
   {
     "id": 3161,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "pretty",
-    "answers": [{"word": "pretty", "def": "漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "pretty",
+        "def": "漂亮的 (ㄆㄧㄠˋ ㄌㄧㄤˋ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 3162,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "princess",
-    "answers": [{"word": "princess", "def": "公主 (ㄍㄨㄥ ㄓㄨˇ)"}]
+    "answers": [
+      {
+        "word": "princess",
+        "def": "公主 (ㄍㄨㄥ ㄓㄨˇ)"
+      }
+    ]
   },
   {
     "id": 3163,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W16"],
+    "weeks": [
+      "W16"
+    ],
     "audioText": "pride",
-    "answers": [{"word": "pride", "def": "驕傲 (ㄐㄧㄠ ㄠˋ) / 自豪 (ㄗˋ ㄏㄠˊ)"}]
+    "answers": [
+      {
+        "word": "pride",
+        "def": "驕傲 (ㄐㄧㄠ ㄠˋ) / 自豪 (ㄗˋ ㄏㄠˊ)"
+      }
+    ]
   },
   {
     "id": 3164,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "please",
-    "answers": [{"word": "please", "def": "請 (ㄑㄧㄥˇ)"}]
+    "answers": [
+      {
+        "word": "please",
+        "def": "請 (ㄑㄧㄥˇ)"
+      }
+    ]
   },
   {
     "id": 3165,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "plane",
-    "answers": [{"word": "plane", "def": "飛機 (ㄈㄟ ㄐㄧ)"}]
+    "answers": [
+      {
+        "word": "plane",
+        "def": "飛機 (ㄈㄟ ㄐㄧ)"
+      }
+    ]
   },
   {
     "id": 3166,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "play",
-    "answers": [{"word": "play", "def": "玩耍 (ㄨㄢˊ ㄕㄨㄚˇ)"}]
+    "answers": [
+      {
+        "word": "play",
+        "def": "玩耍 (ㄨㄢˊ ㄕㄨㄚˇ)"
+      }
+    ]
   },
   {
     "id": 3167,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "plop",
-    "answers": [{"word": "plop", "def": "撲通聲 (ㄆㄨ ㄊㄨㄥ ㄕㄥ) / 重重落下 (ㄓㄨㄥˋ ㄓㄨㄥˋ ㄌㄨㄛˋ ㄒㄧㄚˋ)"}]
+    "answers": [
+      {
+        "word": "plop",
+        "def": "撲通聲 (ㄆㄨ ㄊㄨㄥ ㄕㄥ) / 重重落下 (ㄓㄨㄥˋ ㄓㄨㄥˋ ㄌㄨㄛˋ ㄒㄧㄚˋ)"
+      }
+    ]
   },
   {
     "id": 3168,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "pluck",
-    "answers": [{"word": "pluck", "def": "拔 (ㄅㄚˊ) / 摘 (ㄓㄞ)"}]
+    "answers": [
+      {
+        "word": "pluck",
+        "def": "拔 (ㄅㄚˊ) / 摘 (ㄓㄞ)"
+      }
+    ]
   },
   {
     "id": 3169,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "slide",
-    "answers": [{"word": "slide", "def": "滑行 (ㄏㄨㄚˊ ㄒㄧㄥˊ) / 溜滑梯 (ㄌㄧㄡ ㄏㄨㄚˊ ㄊㄧ)"}]
+    "answers": [
+      {
+        "word": "slide",
+        "def": "滑行 (ㄏㄨㄚˊ ㄒㄧㄥˊ) / 溜滑梯 (ㄌㄧㄡ ㄏㄨㄚˊ ㄊㄧ)"
+      }
+    ]
   },
   {
     "id": 3170,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "slick",
-    "answers": [{"word": "slick", "def": "光滑的 (ㄍㄨㄤ ㄏㄨㄚˊ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "slick",
+        "def": "光滑的 (ㄍㄨㄤ ㄏㄨㄚˊ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 3171,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "slim",
-    "answers": [{"word": "slim", "def": "苗條的 (ㄇㄧㄠˊ ㄊㄧㄠˊ ㄉㄜ˙) / 瘦的 (ㄕㄡˋ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "slim",
+        "def": "苗條的 (ㄇㄧㄠˊ ㄊㄧㄠˊ ㄉㄜ˙) / 瘦的 (ㄕㄡˋ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 3172,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "slow",
-    "answers": [{"word": "slow", "def": "緩慢的 (ㄏㄨㄢˇ ㄇㄢˋ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "slow",
+        "def": "緩慢的 (ㄏㄨㄢˇ ㄇㄢˋ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 3173,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "slope",
-    "answers": [{"word": "slope", "def": "斜坡 (ㄒㄧㄝˊ ㄆㄛ)"}]
+    "answers": [
+      {
+        "word": "slope",
+        "def": "斜坡 (ㄒㄧㄝˊ ㄆㄛ)"
+      }
+    ]
   },
   {
     "id": 3174,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "sweet",
-    "answers": [{"word": "sweet", "def": "甜的 (ㄊㄧㄢˊ ㄉㄜ˙)"}]
+    "answers": [
+      {
+        "word": "sweet",
+        "def": "甜的 (ㄊㄧㄢˊ ㄉㄜ˙)"
+      }
+    ]
   },
   {
     "id": 3175,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "swim",
-    "answers": [{"word": "swim", "def": "游泳 (ㄧㄡˊ ㄩㄥˇ)"}]
+    "answers": [
+      {
+        "word": "swim",
+        "def": "游泳 (ㄧㄡˊ ㄩㄥˇ)"
+      }
+    ]
   },
   {
     "id": 3176,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "swan",
-    "answers": [{"word": "swan", "def": "天鵝 (ㄊㄧㄢ ㄜˊ)"}]
+    "answers": [
+      {
+        "word": "swan",
+        "def": "天鵝 (ㄊㄧㄢ ㄜˊ)"
+      }
+    ]
   },
   {
     "id": 3177,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "switch",
-    "answers": [{"word": "switch", "def": "開關 (ㄎㄞ ㄍㄨㄢ) / 切換 (ㄑㄧㄝ ㄏㄨㄢˋ)"}]
+    "answers": [
+      {
+        "word": "switch",
+        "def": "開關 (ㄎㄞ ㄍㄨㄢ) / 切換 (ㄑㄧㄝ ㄏㄨㄢˋ)"
+      }
+    ]
   },
   {
     "id": 3178,
     "type": "phonics",
     "term": "114-2",
-    "weeks": ["W17"],
+    "weeks": [
+      "W17"
+    ],
     "audioText": "swing",
-    "answers": [{"word": "swing", "def": "搖擺 (ㄧㄠˊ ㄅㄞˇ) / 鞦韆 (ㄑㄧㄡ ㄑㄧㄢ)"}]
+    "answers": [
+      {
+        "word": "swing",
+        "def": "搖擺 (ㄧㄠˊ ㄅㄞˇ) / 鞦韆 (ㄑㄧㄡ ㄑㄧㄢ)"
+      }
+    ]
   },
-  {"id": 3179, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scary", "answers": [{"word": "scary", "def": "可怕的 (ㄎㄜˇ ㄆㄚˋ ㄉㄜ˙)"}]},
-  {"id": 3180, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "score", "answers": [{"word": "score", "def": "分數 (ㄈㄣ ㄕㄨˋ)"}]},
-  {"id": 3181, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scar", "answers": [{"word": "scar", "def": "傷疤 (ㄕㄤ ㄅㄚ)"}]},
-  {"id": 3182, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scrub", "answers": [{"word": "scrub", "def": "用力擦洗 (ㄩㄥˋ ㄌㄧˋ ㄘㄚ ㄒㄧˇ)"}]},
-  {"id": 3183, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "scream", "answers": [{"word": "scream", "def": "尖叫 (ㄐㄧㄢ ㄐㄧㄠˋ)"}]},
-  {"id": 3184, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skunk", "answers": [{"word": "skunk", "def": "臭鼬 (ㄔㄡˋ ㄧㄡˋ)"}]},
-  {"id": 3185, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skirt", "answers": [{"word": "skirt", "def": "裙子 (ㄑㄩㄣˊ ˙ㄗ)"}]},
-  {"id": 3186, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "ski", "answers": [{"word": "ski", "def": "滑雪 (ㄏㄨㄚˊ ㄒㄩㄝˇ)"}]},
-  {"id": 3187, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skill", "answers": [{"word": "skill", "def": "技能 (ㄐㄧˋ ㄋㄥˊ)"}]},
-  {"id": 3188, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "skate", "answers": [{"word": "skate", "def": "溜冰；滑板 (ㄌㄧㄡˊ ㄅㄧㄥ；ㄏㄨㄚˊ ㄅㄢˇ)"}]},
-  {"id": 3189, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "square", "answers": [{"word": "square", "def": "正方形 (ㄓㄥˋ ㄈㄤ ㄒㄧㄥˊ)"}]},
-  {"id": 3190, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "squash", "answers": [{"word": "squash", "def": "南瓜；擠壓 (ㄋㄢˊ ㄍㄨㄚ；ㄐㄧˇ ㄧㄚ)"}]},
-  {"id": 3191, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "squid", "answers": [{"word": "squid", "def": "烏賊、魷魚 (ㄨ ㄗㄟˊ、ㄧㄡˊ ㄩˊ)"}]},
-  {"id": 3192, "type": "phonics", "term": "114-2", "weeks": ["W18"], "audioText": "squeak", "answers": [{"word": "squeak", "def": "吱吱叫 (ㄓ ㄓ ㄐㄧㄠˋ)"}]},
-  {"id": 3193, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "spoon", "answers": [{"word": "spoon", "def": "湯匙 (ㄊㄤ ㄔˊ)"}]},
-  {"id": 3194, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "sport", "answers": [{"word": "sport", "def": "運動 (ㄩㄣˋ ㄉㄨㄥˋ)"}]},
-  {"id": 3195, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "spot", "answers": [{"word": "spot", "def": "地點；斑點 (ㄉㄧˋ ㄉㄧㄢˇ；ㄅㄢ ㄉㄧㄢˇ)"}]},
-  {"id": 3196, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "spin", "answers": [{"word": "spin", "def": "旋轉 (ㄒㄩㄢˊ ㄓㄨㄢˇ)"}]},
-  {"id": 3197, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "speak", "answers": [{"word": "speak", "def": "說話 (ㄕㄨㄛ ㄏㄨㄚˋ)"}]},
-  {"id": 3198, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "star", "answers": [{"word": "star", "def": "星星 (ㄒㄧㄥ ㄒㄧㄥ)"}]},
-  {"id": 3199, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "story", "answers": [{"word": "story", "def": "故事 (ㄍㄨˋ ㄕˋ)"}]},
-  {"id": 3200, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "sticker", "answers": [{"word": "sticker", "def": "貼紙 (ㄊㄧㄝ ㄓˇ)"}]},
-  {"id": 3201, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "stone", "answers": [{"word": "stone", "def": "石頭 (ㄕˊ ㄊㄡˊ)"}]},
-  {"id": 3202, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "step", "answers": [{"word": "step", "def": "步伐；台階 (ㄅㄨˋ ㄈㄚ；ㄊㄞˊ ㄐㄧㄝ)"}]},
-  {"id": 3203, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "smile", "answers": [{"word": "smile", "def": "微笑 (ㄨㄟˊ ㄒㄧㄠˋ)"}]},
-  {"id": 3204, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "small", "answers": [{"word": "small", "def": "小的 (ㄒㄧㄠˇ ㄉㄜ˙)"}]},
-  {"id": 3205, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "snail", "answers": [{"word": "snail", "def": "蝸牛 (ㄨㄛ ㄋㄧㄡˊ)"}]},
-  {"id": 3206, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "snow", "answers": [{"word": "snow", "def": "雪 (ㄒㄩㄝˇ)"}]},
-  {"id": 3207, "type": "phonics", "term": "114-2", "weeks": ["W19"], "audioText": "snap", "answers": [{"word": "snap", "def": "喀嚓聲；突然折斷 (ㄎㄚˋ ㄔㄚ ㄕㄥ；ㄊㄨˊ ㄖㄢˊ ㄓㄜˊ ㄉㄨㄢˋ)"}]}
-,
-  {"id": 3208, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "try", "answers": [{"word": "try", "def": "嘗試 (ㄔㄤˊ ㄕˋ)"}]},
-  {"id": 3209, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "cry", "answers": [{"word": "cry", "def": "哭 (ㄎㄨ)"}]},
-  {"id": 3210, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "shy", "answers": [{"word": "shy", "def": "害羞的 (ㄏㄞˋ ㄒㄧㄡ ㄉㄜ˙)"}]},
-  {"id": 3211, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "fly", "answers": [{"word": "fly", "def": "飛；蒼蠅 (ㄈㄟ；ㄘㄤ ㄧㄥˊ)"}]},
-  {"id": 3212, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "sky", "answers": [{"word": "sky", "def": "天空 (ㄊㄧㄢ ㄎㄨㄥ)"}]},
-  {"id": 3213, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yummy", "answers": [{"word": "yummy", "def": "美味的；好吃的 (ㄇㄟˇ ㄨㄟˋ ㄉㄜ˙；ㄏㄠˇ ㄔ ㄉㄜ˙)"}]},
-  {"id": 3214, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "baby", "answers": [{"word": "baby", "def": "嬰兒 (ㄧㄥ ㄦˊ)"}]},
-  {"id": 3215, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "family", "answers": [{"word": "family", "def": "家庭；家人 (ㄐㄧㄚ ㄊㄧㄥˊ；ㄐㄧㄚ ㄖㄣˊ)"}]},
-  {"id": 3216, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "funny", "answers": [{"word": "funny", "def": "有趣的；好笑的 (ㄧㄡˇ ㄑㄩˋ ㄉㄜ˙；ㄏㄠˇ ㄒㄧㄠˋ ㄉㄜ˙)"}]},
-  {"id": 3217, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "happy", "answers": [{"word": "happy", "def": "快樂的 (ㄎㄨㄞˋ ㄌㄜˋ ㄉㄜ˙)"}]},
-  {"id": 3218, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yam", "answers": [{"word": "yam", "def": "山藥；番薯 (ㄕㄢ ㄧㄠˋ；ㄈㄢ ㄕㄨˇ)"}]},
-  {"id": 3219, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "your", "answers": [{"word": "your", "def": "你的 (ㄋㄧˇ ㄉㄜ˙)"}]},
-  {"id": 3220, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yellow", "answers": [{"word": "yellow", "def": "黃色（的） (ㄏㄨㄤˊ ㄙㄜˋ)"}]},
-  {"id": 3221, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yes", "answers": [{"word": "yes", "def": "是；好的 (ㄕˋ；ㄏㄠˇ ㄉㄜ˙)"}]},
-  {"id": 3222, "type": "phonics", "term": "114-2", "weeks": ["W20"], "audioText": "yard", "answers": [{"word": "yard", "def": "院子；庭院 (ㄩㄢˋ ㄗ˙；ㄊㄧㄥˊ ㄩㄢˋ)"}]}
+  {
+    "id": 3179,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "scary",
+    "answers": [
+      {
+        "word": "scary",
+        "def": "可怕的 (ㄎㄜˇ ㄆㄚˋ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3180,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "score",
+    "answers": [
+      {
+        "word": "score",
+        "def": "分數 (ㄈㄣ ㄕㄨˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3181,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "scar",
+    "answers": [
+      {
+        "word": "scar",
+        "def": "傷疤 (ㄕㄤ ㄅㄚ)"
+      }
+    ]
+  },
+  {
+    "id": 3182,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "scrub",
+    "answers": [
+      {
+        "word": "scrub",
+        "def": "用力擦洗 (ㄩㄥˋ ㄌㄧˋ ㄘㄚ ㄒㄧˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3183,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "scream",
+    "answers": [
+      {
+        "word": "scream",
+        "def": "尖叫 (ㄐㄧㄢ ㄐㄧㄠˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3184,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "skunk",
+    "answers": [
+      {
+        "word": "skunk",
+        "def": "臭鼬 (ㄔㄡˋ ㄧㄡˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3185,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "skirt",
+    "answers": [
+      {
+        "word": "skirt",
+        "def": "裙子 (ㄑㄩㄣˊ ˙ㄗ)"
+      }
+    ]
+  },
+  {
+    "id": 3186,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "ski",
+    "answers": [
+      {
+        "word": "ski",
+        "def": "滑雪 (ㄏㄨㄚˊ ㄒㄩㄝˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3187,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "skill",
+    "answers": [
+      {
+        "word": "skill",
+        "def": "技能 (ㄐㄧˋ ㄋㄥˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3188,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "skate",
+    "answers": [
+      {
+        "word": "skate",
+        "def": "溜冰；滑板 (ㄌㄧㄡˊ ㄅㄧㄥ；ㄏㄨㄚˊ ㄅㄢˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3189,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "square",
+    "answers": [
+      {
+        "word": "square",
+        "def": "正方形 (ㄓㄥˋ ㄈㄤ ㄒㄧㄥˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3190,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "squash",
+    "answers": [
+      {
+        "word": "squash",
+        "def": "南瓜；擠壓 (ㄋㄢˊ ㄍㄨㄚ；ㄐㄧˇ ㄧㄚ)"
+      }
+    ]
+  },
+  {
+    "id": 3191,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "squid",
+    "answers": [
+      {
+        "word": "squid",
+        "def": "烏賊、魷魚 (ㄨ ㄗㄟˊ、ㄧㄡˊ ㄩˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3192,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W18"
+    ],
+    "audioText": "squeak",
+    "answers": [
+      {
+        "word": "squeak",
+        "def": "吱吱叫 (ㄓ ㄓ ㄐㄧㄠˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3193,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "spoon",
+    "answers": [
+      {
+        "word": "spoon",
+        "def": "湯匙 (ㄊㄤ ㄔˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3194,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "sport",
+    "answers": [
+      {
+        "word": "sport",
+        "def": "運動 (ㄩㄣˋ ㄉㄨㄥˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3195,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "spot",
+    "answers": [
+      {
+        "word": "spot",
+        "def": "地點；斑點 (ㄉㄧˋ ㄉㄧㄢˇ；ㄅㄢ ㄉㄧㄢˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3196,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "spin",
+    "answers": [
+      {
+        "word": "spin",
+        "def": "旋轉 (ㄒㄩㄢˊ ㄓㄨㄢˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3197,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "speak",
+    "answers": [
+      {
+        "word": "speak",
+        "def": "說話 (ㄕㄨㄛ ㄏㄨㄚˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3198,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "star",
+    "answers": [
+      {
+        "word": "star",
+        "def": "星星 (ㄒㄧㄥ ㄒㄧㄥ)"
+      }
+    ]
+  },
+  {
+    "id": 3199,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "story",
+    "answers": [
+      {
+        "word": "story",
+        "def": "故事 (ㄍㄨˋ ㄕˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3200,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "sticker",
+    "answers": [
+      {
+        "word": "sticker",
+        "def": "貼紙 (ㄊㄧㄝ ㄓˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3201,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "stone",
+    "answers": [
+      {
+        "word": "stone",
+        "def": "石頭 (ㄕˊ ㄊㄡˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3202,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "step",
+    "answers": [
+      {
+        "word": "step",
+        "def": "步伐；台階 (ㄅㄨˋ ㄈㄚ；ㄊㄞˊ ㄐㄧㄝ)"
+      }
+    ]
+  },
+  {
+    "id": 3203,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "smile",
+    "answers": [
+      {
+        "word": "smile",
+        "def": "微笑 (ㄨㄟˊ ㄒㄧㄠˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3204,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "small",
+    "answers": [
+      {
+        "word": "small",
+        "def": "小的 (ㄒㄧㄠˇ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3205,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "snail",
+    "answers": [
+      {
+        "word": "snail",
+        "def": "蝸牛 (ㄨㄛ ㄋㄧㄡˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3206,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "snow",
+    "answers": [
+      {
+        "word": "snow",
+        "def": "雪 (ㄒㄩㄝˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3207,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W19"
+    ],
+    "audioText": "snap",
+    "answers": [
+      {
+        "word": "snap",
+        "def": "喀嚓聲；突然折斷 (ㄎㄚˋ ㄔㄚ ㄕㄥ；ㄊㄨˊ ㄖㄢˊ ㄓㄜˊ ㄉㄨㄢˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3208,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "try",
+    "answers": [
+      {
+        "word": "try",
+        "def": "嘗試 (ㄔㄤˊ ㄕˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3209,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "cry",
+    "answers": [
+      {
+        "word": "cry",
+        "def": "哭 (ㄎㄨ)"
+      }
+    ]
+  },
+  {
+    "id": 3210,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "shy",
+    "answers": [
+      {
+        "word": "shy",
+        "def": "害羞的 (ㄏㄞˋ ㄒㄧㄡ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3211,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "fly",
+    "answers": [
+      {
+        "word": "fly",
+        "def": "飛；蒼蠅 (ㄈㄟ；ㄘㄤ ㄧㄥˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3212,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "sky",
+    "answers": [
+      {
+        "word": "sky",
+        "def": "天空 (ㄊㄧㄢ ㄎㄨㄥ)"
+      }
+    ]
+  },
+  {
+    "id": 3213,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "yummy",
+    "answers": [
+      {
+        "word": "yummy",
+        "def": "美味的；好吃的 (ㄇㄟˇ ㄨㄟˋ ㄉㄜ˙；ㄏㄠˇ ㄔ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3214,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "baby",
+    "answers": [
+      {
+        "word": "baby",
+        "def": "嬰兒 (ㄧㄥ ㄦˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3215,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "family",
+    "answers": [
+      {
+        "word": "family",
+        "def": "家庭；家人 (ㄐㄧㄚ ㄊㄧㄥˊ；ㄐㄧㄚ ㄖㄣˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3216,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "funny",
+    "answers": [
+      {
+        "word": "funny",
+        "def": "有趣的；好笑的 (ㄧㄡˇ ㄑㄩˋ ㄉㄜ˙；ㄏㄠˇ ㄒㄧㄠˋ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3217,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "happy",
+    "answers": [
+      {
+        "word": "happy",
+        "def": "快樂的 (ㄎㄨㄞˋ ㄌㄜˋ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3218,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "yam",
+    "answers": [
+      {
+        "word": "yam",
+        "def": "山藥；番薯 (ㄕㄢ ㄧㄠˋ；ㄈㄢ ㄕㄨˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3219,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "your",
+    "answers": [
+      {
+        "word": "your",
+        "def": "你的 (ㄋㄧˇ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3220,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "yellow",
+    "answers": [
+      {
+        "word": "yellow",
+        "def": "黃色（的） (ㄏㄨㄤˊ ㄙㄜˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3221,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "yes",
+    "answers": [
+      {
+        "word": "yes",
+        "def": "是；好的 (ㄕˋ；ㄏㄠˇ ㄉㄜ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3222,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W20"
+    ],
+    "audioText": "yard",
+    "answers": [
+      {
+        "word": "yard",
+        "def": "院子；庭院 (ㄩㄢˋ ㄗ˙；ㄊㄧㄥˊ ㄩㄢˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3223,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "jump",
+    "answers": [
+      {
+        "word": "jump",
+        "def": "跳躍 (ㄊㄧㄠˋ ㄩㄝˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3224,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "lamp",
+    "answers": [
+      {
+        "word": "lamp",
+        "def": "燈 (ㄉㄥ)"
+      }
+    ]
+  },
+  {
+    "id": 3225,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "desk",
+    "answers": [
+      {
+        "word": "desk",
+        "def": "書桌 (ㄕㄨ ㄓㄨㄛ)"
+      }
+    ]
+  },
+  {
+    "id": 3226,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "mask",
+    "answers": [
+      {
+        "word": "mask",
+        "def": "面具；口罩 (ㄇㄧㄢˋ ㄐㄩˋ；ㄎㄡˇ ㄓㄠˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3227,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "sink",
+    "answers": [
+      {
+        "word": "sink",
+        "def": "水槽；下沉 (ㄕㄨㄟˇ ㄘㄠˊ；ㄒㄧㄚˋ ㄔㄣˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3228,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "think",
+    "answers": [
+      {
+        "word": "think",
+        "def": "思考；想 (ㄙ ㄎㄠˇ；ㄒㄧㄤˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3229,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "list",
+    "answers": [
+      {
+        "word": "list",
+        "def": "清單；列表 (ㄑㄧㄥ ㄉㄢ；ㄌㄧㄝˋ ㄅㄧㄠˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3230,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "nest",
+    "answers": [
+      {
+        "word": "nest",
+        "def": "鳥巢 (ㄋㄧㄠˇ ㄔㄠˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3231,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "hand",
+    "answers": [
+      {
+        "word": "hand",
+        "def": "手 (ㄕㄡˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3232,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "band",
+    "answers": [
+      {
+        "word": "band",
+        "def": "樂團；帶子 (ㄩㄝˋ ㄊㄨㄢˊ；ㄉㄞˋ ㄗ˙)"
+      }
+    ]
+  },
+  {
+    "id": 3233,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "milk",
+    "answers": [
+      {
+        "word": "milk",
+        "def": "牛奶 (ㄋㄧㄡˊ ㄋㄞˇ)"
+      }
+    ]
+  },
+  {
+    "id": 3234,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "silk",
+    "answers": [
+      {
+        "word": "silk",
+        "def": "絲綢 (ㄙ ㄔㄡˊ)"
+      }
+    ]
+  },
+  {
+    "id": 3235,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "belt",
+    "answers": [
+      {
+        "word": "belt",
+        "def": "腰帶 (ㄧㄠ ㄉㄞˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3236,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "felt",
+    "answers": [
+      {
+        "word": "felt",
+        "def": "感覺到（feel 的過去式）；毛氈 (ㄍㄢˇ ㄐㄩㄝˊ ㄉㄠˋ；ㄇㄠˊ ㄓㄢ)"
+      }
+    ]
+  },
+  {
+    "id": 3237,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "gift",
+    "answers": [
+      {
+        "word": "gift",
+        "def": "禮物 (ㄌㄧˇ ㄨˋ)"
+      }
+    ]
+  },
+  {
+    "id": 3238,
+    "type": "phonics",
+    "term": "114-2",
+    "weeks": [
+      "W21"
+    ],
+    "audioText": "tuft",
+    "answers": [
+      {
+        "word": "tuft",
+        "def": "一簇；一叢（毛、草等） (ㄧˋ ㄘㄨˋ；ㄧˋ ㄘㄨㄥˊ)"
+      }
+    ]
+  }
 ]
-
