@@ -67,6 +67,8 @@ body.mu12{background:linear-gradient(180deg,#f0fdfa,#99f6e4)}
 .aheader{display:flex;align-items:center;gap:9px;margin-bottom:14px;flex-wrap:wrap}
 .backbtn{background:white;border:none;border-radius:50%;width:38px;height:38px;font-size:1.1em;cursor:pointer;box-shadow:0 3px 9px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;transition:transform .2s}
 .backbtn:hover{transform:scale(1.1)}
+.home-link{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.2);color:white;border:none;border-radius:20px;padding:7px 14px;font-family:'Baloo 2',cursive;font-size:.85em;cursor:pointer;text-decoration:none;backdrop-filter:blur(4px);z-index:10}
+.home-link:hover{background:rgba(255,255,255,.35)}
 .atitle{font-family:'Baloo 2',cursive;font-size:1.3em;color:var(--dark)}
 .badges{display:flex;gap:5px;flex-wrap:wrap}
 .bdg{padding:3px 9px;border-radius:11px;font-size:.74em;font-weight:700;font-family:'Baloo 2',cursive;color:white}
@@ -188,6 +190,7 @@ td{padding:5px 8px}
 <body>
 
 <div id="landing">
+  <a class="home-link" href="index.html">🏠 首頁</a>
   <div class="ltitle">🎓 英文複習樂園</div>
   <div class="lsub">選擇要複習的 Unit！</div>
   <div class="ugrid">
