@@ -132,6 +132,7 @@
   var matchedInRound = 0;
   var currentPairs = [];
   var selLeft = null;
+  var selRight = null;
 
   $btnStart.addEventListener('click', function(){
     var sel = selector.getSelection();
@@ -156,6 +157,7 @@
     round++;
     matchedInRound = 0;
     selLeft = null;
+    selRight = null;
     $nextRow.classList.add('hidden');
     // 抽 N 題
     var n = Math.min(PAIRS_PER_ROUND, pool.length);
@@ -190,33 +192,38 @@
 
   function pickLeft(idx, elem){
     if(elem.classList.contains('matched')) return;
-    // 取消之前選的
+    // 取消之前選的（同一邊）
     Array.from($left.children).forEach(function(c){c.classList.remove('sel');});
     elem.classList.add('sel');
     selLeft = {idx:idx, elem:elem};
+    if(selRight) tryMatch();
   }
   function pickRight(idx, elem){
     if(elem.classList.contains('matched')) return;
-    if(!selLeft){
-      // 閃一下提示
-      elem.classList.add('shake');
-      setTimeout(function(){elem.classList.remove('shake');}, 400);
-      return;
-    }
+    // 取消之前選的（同一邊）
+    Array.from($right.children).forEach(function(c){c.classList.remove('sel');});
+    elem.classList.add('sel');
+    selRight = {idx:idx, elem:elem};
+    if(selLeft) tryMatch();
+  }
+  function tryMatch(){
     totalAttempts++;
     $attemptText.textContent = '嘗試次數：' + totalAttempts;
 
-    if(selLeft.idx === idx){
+    var lElem = selLeft.elem, rElem = selRight.elem;
+    var matchedIdx = selLeft.idx;
+    if(selLeft.idx === selRight.idx){
       // 配對成功
-      selLeft.elem.classList.remove('sel');
-      selLeft.elem.classList.add('matched');
-      elem.classList.add('matched');
-      selLeft = null;
+      lElem.classList.remove('sel');
+      rElem.classList.remove('sel');
+      lElem.classList.add('matched');
+      rElem.classList.add('matched');
+      selLeft = null; selRight = null;
       matchedInRound++;
       totalPairs++;
       $matchCount.textContent = '已配對 ' + matchedInRound + ' / ' + currentPairs.length;
       // 播放單字發音
-      var word = selLeft ? '' : currentPairs[idx].answers[0].word;
+      var word = currentPairs[matchedIdx].answers[0].word;
       if(word) speak(word);
       if(matchedInRound >= currentPairs.length){
         if(pool.length === 0){
@@ -227,14 +234,14 @@
       }
     } else {
       // 配對失敗
-      elem.classList.add('shake');
-      var leftElem = selLeft.elem;
-      leftElem.classList.add('shake');
+      lElem.classList.add('shake');
+      rElem.classList.add('shake');
       setTimeout(function(){
-        elem.classList.remove('shake');
-        leftElem.classList.remove('shake','sel');
+        lElem.classList.remove('shake','sel');
+        rElem.classList.remove('shake','sel');
       }, 400);
       selLeft = null;
+      selRight = null;
     }
   }
 
