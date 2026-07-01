@@ -1,0 +1,16 @@
+﻿## Summary
+
+- **ff-review.html**: Updated U10 grammar to "What's the weather like?" pattern; added "What are ___ doing?" to U12; added U1-7 and U8-15 group review buttons
+- **grammar-review.html**: Added U1-11 and U12-22 group review buttons with combined fill/error/quiz data
+- **reading-review.html**: Integrated U7-U12 reading content; added U1-6 and U7-12 group review buttons
+- **reading-review-2.html**: Standalone U7-U12 review page (also integrated into reading-review.html)
+- **data files**: Added W20 phonics (15 words, IDs 3208-3222) and vocabulary (10 words, IDs 4188-4197) to all four data files
+
+## Test plan
+
+- [ ] Open reading-review.html and verify U7-U12 unit buttons and group review buttons work
+- [ ] Open ff-review.html and verify U10 weather grammar card, U12 present continuous, group buttons
+- [ ] Open grammar-review.html and verify U1-11 and U12-22 group review buttons launch combined games
+- [ ] Check phonics/vocabulary data files for W20 entries (IDs 3208-3222 and 4188-4197)
+
+Generated with Claude Code

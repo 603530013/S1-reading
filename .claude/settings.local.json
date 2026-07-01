@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-Content \"C:\\\\Users\\\\dance\\\\Documents\\\\Kids Frobel game\\\\S1-reading\\\\data\\\\phonics-114-2.json\")",
+      "Bash(Select-Object -Last 30)",
+      "PowerShell($content = Get-Content \"C:\\\\Users\\\\dance\\\\Documents\\\\Kids Frobel game\\\\S1-reading\\\\data\\\\phonics-114-2.json\" -Encoding UTF8 -Raw; $content.Substring\\($content.Length - 300\\))",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git checkout *)"
+    ]
+  }
+}
