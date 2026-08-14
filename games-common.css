@@ -76,6 +76,7 @@ body{
   font-size:.85em;font-weight:800;
 }
 .term-badge.t2{background:#ec4899}
+.term-badge.t3{background:#0ea5e9}
 .week-grid{display:flex;flex-wrap:wrap;gap:8px}
 .week-chip{
   background:white;border:2px solid transparent;border-radius:10px;

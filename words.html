@@ -71,8 +71,9 @@
     <div class="info-box">
       資料依學期與類型分檔儲存，方便單獨編輯或分享：
       <ul>
-        <li><b>114-1</b> · Phonics（自然發音）+ Vocabulary（課文單字）</li>
+        <li><b>115-1</b> · Phonics（自然發音）+ Vocabulary（課文單字）</li>
         <li><b>114-2</b> · Phonics + Vocabulary</li>
+        <li><b>114-1</b> · Phonics + Vocabulary</li>
       </ul>
       檔案位於 <code>data/</code> 資料夾，提供 <code>.json</code>（純資料）與 <code>.js</code>（瀏覽器全域封裝）兩種版本。
     </div>
@@ -80,20 +81,24 @@
   </div>
 </div>
 
-<script src="data/phonics-114-1.js"></script>
-<script src="data/vocabulary-114-1.js"></script>
+<script src="data/phonics-115-1.js"></script>
+<script src="data/vocabulary-115-1.js"></script>
 <script src="data/phonics-114-2.js"></script>
 <script src="data/vocabulary-114-2.js"></script>
+<script src="data/phonics-114-1.js"></script>
+<script src="data/vocabulary-114-1.js"></script>
 <script src="games-common.js"></script>
 <script>
 (function(){
   var stats = document.getElementById('stats');
   function cnt(arr){ return (arr||[]).length; }
   var data = [
-    {label:'114-1 Phonics', n:cnt(window.PHONICS_114_1)},
-    {label:'114-1 Vocab', n:cnt(window.VOCAB_114_1)},
+    {label:'115-1 Phonics', n:cnt(window.PHONICS_115_1)},
+    {label:'115-1 Vocab', n:cnt(window.VOCAB_115_1)},
     {label:'114-2 Phonics', n:cnt(window.PHONICS_114_2)},
-    {label:'114-2 Vocab', n:cnt(window.VOCAB_114_2)}
+    {label:'114-2 Vocab', n:cnt(window.VOCAB_114_2)},
+    {label:'114-1 Phonics', n:cnt(window.PHONICS_114_1)},
+    {label:'114-1 Vocab', n:cnt(window.VOCAB_114_1)}
   ];
   data.forEach(function(d){
     var box = el('div',{cls:'stat-box'},[

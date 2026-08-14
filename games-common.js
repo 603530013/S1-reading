@@ -1,16 +1,22 @@
 /* ===== 英文複習樂園 · 共用 JS 工具 =====
    Requires: data/phonics-114-1.js, data/vocabulary-114-1.js,
-             data/phonics-114-2.js, data/vocabulary-114-2.js
+             data/phonics-114-2.js, data/vocabulary-114-2.js,
+             data/phonics-115-1.js, data/vocabulary-115-1.js
    (each sets a window global with the dataset array)
 */
+
+/* 學期列表（新學期在此新增即可，由新到舊排序） */
+var TERMS = ['115-1','114-2','114-1'];
 
 /* ---------- 資料彙整 ---------- */
 function getAllData(){
   return [].concat(
-    (window.PHONICS_114_1||[]),
-    (window.VOCAB_114_1||[]),
+    (window.PHONICS_115_1||[]),
+    (window.VOCAB_115_1||[]),
     (window.PHONICS_114_2||[]),
-    (window.VOCAB_114_2||[])
+    (window.VOCAB_114_2||[]),
+    (window.PHONICS_114_1||[]),
+    (window.VOCAB_114_1||[])
   );
 }
 /* 依條件篩選：type='phonics'|'vocab'|'all', terms: set of '114-1','114-2',
@@ -124,22 +130,26 @@ function buildWeekSelector(container, contentType, onChange){
   contentType = contentType || 'all';
 
   // 狀態：每個 term 的已選 weeks
-  var state = { '114-1': new Set(), '114-2': new Set() };
+  var state = {};
+  TERMS.forEach(function(t){ state[t] = new Set(); });
 
-  function emit(){
-    if(onChange) onChange({
-      weeks: { '114-1': new Set(state['114-1']), '114-2': new Set(state['114-2']) },
-      type: contentType
-    });
+  function cloneState(){
+    var out = {};
+    TERMS.forEach(function(t){ out[t] = new Set(state[t]); });
+    return out;
   }
 
-  ['114-1','114-2'].forEach(function(term, idx){
+  function emit(){
+    if(onChange) onChange({ weeks: cloneState(), type: contentType });
+  }
+
+  TERMS.forEach(function(term, idx){
     var weeks = getWeeksForTerm(term, contentType);
     if(weeks.length===0) return;
 
     var sec = el('div',{cls:'term-section'});
     var hd = el('div',{cls:'term-section-hd'},[
-      el('span',{cls:'term-badge'+(idx===1?' t2':''), text:term + ' 學期'}),
+      el('span',{cls:'term-badge'+(idx>0?' t'+(idx+1):''), text:term + ' 學期'}),
       el('button',{cls:'btn-ghost btn-sm',text:'全選/取消',on:{click:function(){
         var allOn = weeks.every(function(w){return state[term].has(w);});
         weeks.forEach(function(w){ allOn ? state[term].delete(w) : state[term].add(w); });
@@ -180,7 +190,9 @@ function buildWeekSelector(container, contentType, onChange){
   // 直接重繪 chip class（不重建 DOM）
   function refresh(){
     var secs = container.querySelectorAll('.term-section');
-    ['114-1','114-2'].forEach(function(term, idx){
+    // 只針對有渲染的 term（有些學期可能沒資料因此不會出現在 DOM）
+    var renderedTerms = TERMS.filter(function(t){ return getWeeksForTerm(t, contentType).length>0; });
+    renderedTerms.forEach(function(term, idx){
       var sec = secs[idx];
       if(!sec) return;
       var weeks = getWeeksForTerm(term, contentType);
@@ -197,14 +209,11 @@ function buildWeekSelector(container, contentType, onChange){
 
   return {
     getSelection: function(){
-      return {
-        weeks: { '114-1': new Set(state['114-1']), '114-2': new Set(state['114-2']) },
-        type: contentType
-      };
+      return { weeks: cloneState(), type: contentType };
     },
     setType: function(t){ contentType = t; buildWeekSelector(container, contentType, onChange); },
     selectAll: function(){
-      ['114-1','114-2'].forEach(function(term){
+      TERMS.forEach(function(term){
         getWeeksForTerm(term, contentType).forEach(function(w){ state[term].add(w); });
       });
       refresh();
