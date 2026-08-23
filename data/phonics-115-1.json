@@ -158,5 +158,93 @@
     "weeks": ["W2"],
     "audioText": "awesome",
     "answers": [{"word": "awesome", "def": "很棒的 (ㄏㄣˇ ㄅㄤˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 5021,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "house",
+    "answers": [{"word": "house", "def": "房子 (ㄈㄤˊ ㄗ˙)"}]
+  },
+  {
+    "id": 5022,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "mouth",
+    "answers": [{"word": "mouth", "def": "嘴巴 (ㄗㄨㄟˇ ㄅㄚ˙)"}]
+  },
+  {
+    "id": 5023,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "count",
+    "answers": [{"word": "count", "def": "數 (ㄕㄨˇ)"}]
+  },
+  {
+    "id": 5024,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "cloud",
+    "answers": [{"word": "cloud", "def": "雲 (ㄩㄣˊ)"}]
+  },
+  {
+    "id": 5025,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "bounce",
+    "answers": [{"word": "bounce", "def": "彈跳 (ㄊㄢˊ ㄊㄧㄠˋ)"}]
+  },
+  {
+    "id": 5026,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "flower",
+    "answers": [{"word": "flower", "def": "花 (ㄏㄨㄚ)"}]
+  },
+  {
+    "id": 5027,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "flour",
+    "answers": [{"word": "flour", "def": "麵粉 (ㄇㄧㄢˋ ㄈㄣˇ)"}]
+  },
+  {
+    "id": 5028,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "crown",
+    "answers": [{"word": "crown", "def": "皇冠 (ㄏㄨㄤˊ ㄍㄨㄢ)"}]
+  },
+  {
+    "id": 5029,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "cow",
+    "answers": [{"word": "cow", "def": "牛 (ㄋㄧㄡˊ)"}]
+  },
+  {
+    "id": 5030,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "brown",
+    "answers": [{"word": "brown", "def": "棕色的 (ㄗㄨㄥ ㄙㄜˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 5031,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W3"],
+    "audioText": "down",
+    "answers": [{"word": "down", "def": "向下 (ㄒㄧㄤˋ ㄒㄧㄚˋ)"}]
   }
 ]

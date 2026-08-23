@@ -30,5 +30,20 @@ window.VOCAB_115_1 = [
   {"id": 6029, "type": "vocab", "term": "115-1", "weeks": ["W2"], "audioText": "Thursday", "answers": [{"word": "Thursday", "def": "星期四 (ㄒㄧㄥ ㄑㄧˊ ㄙˋ)"}]},
   {"id": 6030, "type": "vocab", "term": "115-1", "weeks": ["W2"], "audioText": "Friday", "answers": [{"word": "Friday", "def": "星期五 (ㄒㄧㄥ ㄑㄧˊ ㄨˇ)"}]},
   {"id": 6031, "type": "vocab", "term": "115-1", "weeks": ["W2"], "audioText": "Saturday", "answers": [{"word": "Saturday", "def": "星期六 (ㄒㄧㄥ ㄑㄧˊ ㄌㄧㄡˋ)"}]},
-  {"id": 6032, "type": "vocab", "term": "115-1", "weeks": ["W2"], "audioText": "Sunday", "answers": [{"word": "Sunday", "def": "星期日 (ㄒㄧㄥ ㄑㄧˊ ㄖˋ)"}]}
+  {"id": 6032, "type": "vocab", "term": "115-1", "weeks": ["W2"], "audioText": "Sunday", "answers": [{"word": "Sunday", "def": "星期日 (ㄒㄧㄥ ㄑㄧˊ ㄖˋ)"}]},
+  {"id": 6033, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "stretch", "answers": [{"word": "stretch", "def": "伸展 (ㄕㄣ ㄓㄢˇ)"}]},
+  {"id": 6034, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "take off", "answers": [{"word": "take off", "def": "起飛 (ㄑㄧˇ ㄈㄟ)"}]},
+  {"id": 6035, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "sleepy", "answers": [{"word": "sleepy", "def": "想睡覺的 (ㄒㄧㄤˇ ㄕㄨㄟˋ ㄐㄧㄠˋ ㄉㄜ˙)"}]},
+  {"id": 6036, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "rest", "answers": [{"word": "rest", "def": "休息 (ㄒㄧㄡ ㄒㄧˊ)"}]},
+  {"id": 6037, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "gray", "answers": [{"word": "gray", "def": "灰色的 (ㄏㄨㄟ ㄙㄜˋ ㄉㄜ˙)"}]},
+  {"id": 6038, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "dry", "answers": [{"word": "dry", "def": "乾的 (ㄍㄢ ㄉㄜ˙)"}]},
+  {"id": 6039, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "boat", "answers": [{"word": "boat", "def": "船 (ㄔㄨㄢˊ)"}]},
+  {"id": 6040, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "fluffy", "answers": [{"word": "fluffy", "def": "蓬鬆的 (ㄆㄥˊ ㄙㄨㄥ ㄉㄜ˙)"}]},
+  {"id": 6041, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "happens", "answers": [{"word": "happens", "def": "發生 (ㄈㄚ ㄕㄥ)"}]},
+  {"id": 6042, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "change", "answers": [{"word": "change", "def": "改變 (ㄍㄞˇ ㄅㄧㄢˋ)"}]},
+  {"id": 6043, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "color", "answers": [{"word": "color", "def": "顏色 (ㄧㄢˊ ㄙㄜˋ)"}]},
+  {"id": 6044, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "trip", "answers": [{"word": "trip", "def": "旅行 (ㄌㄩˇ ㄒㄧㄥˊ)"}]},
+  {"id": 6045, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "teach", "answers": [{"word": "teach", "def": "教 (ㄐㄧㄠ)"}]},
+  {"id": 6046, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "tell", "answers": [{"word": "tell", "def": "告訴 (ㄍㄠˋ ㄙㄨˋ)"}]},
+  {"id": 6047, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "clouds", "answers": [{"word": "clouds", "def": "雲 (ㄩㄣˊ)"}]}
 ];
