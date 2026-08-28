@@ -246,5 +246,85 @@ window.PHONICS_115_1 = [
     "weeks": ["W3"],
     "audioText": "down",
     "answers": [{"word": "down", "def": "向下 (ㄒㄧㄤˋ ㄒㄧㄚˋ)"}]
+  },
+  {
+    "id": 5032,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "boot",
+    "answers": [{"word": "boot", "def": "靴子 (ㄒㄩㄝ ㄗ˙)"}]
+  },
+  {
+    "id": 5033,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "moon",
+    "answers": [{"word": "moon", "def": "月亮 (ㄩㄝˋ ㄌㄧㄤˋ)"}]
+  },
+  {
+    "id": 5034,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "school",
+    "answers": [{"word": "school", "def": "學校 (ㄒㄩㄝˊ ㄒㄧㄠˋ)"}]
+  },
+  {
+    "id": 5035,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "spoon",
+    "answers": [{"word": "spoon", "def": "湯匙 (ㄊㄤ ㄔˊ)"}]
+  },
+  {
+    "id": 5036,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "room",
+    "answers": [{"word": "room", "def": "房間 (ㄈㄤˊ ㄐㄧㄢ)"}]
+  },
+  {
+    "id": 5037,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "cook",
+    "answers": [{"word": "cook", "def": "煮 (ㄓㄨˇ)"}]
+  },
+  {
+    "id": 5038,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "wood",
+    "answers": [{"word": "wood", "def": "木頭 (ㄇㄨˋ ㄊㄡˊ)"}]
+  },
+  {
+    "id": 5039,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "book",
+    "answers": [{"word": "book", "def": "書 (ㄕㄨ)"}]
+  },
+  {
+    "id": 5040,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "good",
+    "answers": [{"word": "good", "def": "好的 (ㄏㄠˇ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 5041,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W4"],
+    "audioText": "foot",
+    "answers": [{"word": "foot", "def": "腳 (ㄐㄧㄠˇ)"}]
   }
 ];

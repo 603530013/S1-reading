@@ -45,5 +45,20 @@ window.VOCAB_115_1 = [
   {"id": 6044, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "trip", "answers": [{"word": "trip", "def": "旅行 (ㄌㄩˇ ㄒㄧㄥˊ)"}]},
   {"id": 6045, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "teach", "answers": [{"word": "teach", "def": "教 (ㄐㄧㄠ)"}]},
   {"id": 6046, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "tell", "answers": [{"word": "tell", "def": "告訴 (ㄍㄠˋ ㄙㄨˋ)"}]},
-  {"id": 6047, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "clouds", "answers": [{"word": "clouds", "def": "雲 (ㄩㄣˊ)"}]}
+  {"id": 6047, "type": "vocab", "term": "115-1", "weeks": ["W3"], "audioText": "clouds", "answers": [{"word": "clouds", "def": "雲 (ㄩㄣˊ)"}]},
+  {"id": 6048, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "read comics", "answers": [{"word": "read comics", "def": "看漫畫 (ㄎㄢˋ ㄇㄢˋ ㄏㄨㄚˋ)"}]},
+  {"id": 6049, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "skateboard", "answers": [{"word": "skateboard", "def": "玩滑板 (ㄨㄢˊ ㄏㄨㄚˊ ㄅㄢˇ)"}]},
+  {"id": 6050, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "do gymnastics", "answers": [{"word": "do gymnastics", "def": "做體操 (ㄗㄨㄛˋ ㄊㄧˇ ㄘㄠ)"}]},
+  {"id": 6051, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "play chess", "answers": [{"word": "play chess", "def": "下棋 (ㄒㄧㄚˋ ㄑㄧˊ)"}]},
+  {"id": 6052, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "fish", "answers": [{"word": "fish", "def": "釣魚 (ㄉㄧㄠˋ ㄩˊ)"}]},
+  {"id": 6053, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "play basketball", "answers": [{"word": "play basketball", "def": "打籃球 (ㄉㄚˇ ㄌㄢˊ ㄑㄧㄡˊ)"}]},
+  {"id": 6054, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "take photos", "answers": [{"word": "take photos", "def": "拍照 (ㄆㄞ ㄓㄠˋ)"}]},
+  {"id": 6055, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "play volleyball", "answers": [{"word": "play volleyball", "def": "打排球 (ㄉㄚˇ ㄆㄞˊ ㄑㄧㄡˊ)"}]},
+  {"id": 6056, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "play the guitar", "answers": [{"word": "play the guitar", "def": "彈吉他 (ㄊㄢˊ ㄐㄧˊ ㄊㄚ)"}]},
+  {"id": 6057, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "shop", "answers": [{"word": "shop", "def": "購物 (ㄍㄡˋ ㄨˋ)"}]},
+  {"id": 6058, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "cook", "answers": [{"word": "cook", "def": "烹調 (ㄆㄥ ㄊㄧㄠˊ)"}]},
+  {"id": 6059, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "paint", "answers": [{"word": "paint", "def": "上漆 (ㄕㄤˋ ㄑㄧ)"}]},
+  {"id": 6060, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "play the piano", "answers": [{"word": "play the piano", "def": "彈鋼琴 (ㄊㄢˊ ㄍㄤ ㄑㄧㄣˊ)"}]},
+  {"id": 6061, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "visit family", "answers": [{"word": "visit family", "def": "探望家人 (ㄊㄢˋ ㄨㄤˋ ㄐㄧㄚ ㄖㄣˊ)"}]},
+  {"id": 6062, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "continents", "answers": [{"word": "continents", "def": "洲 (ㄓㄡ)"}]}
 ];
