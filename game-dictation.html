@@ -13,6 +13,16 @@
 }
 .play-btn:hover{transform:scale(1.08);background:#9333ea}
 .play-btn:disabled{background:#d4d4d8;box-shadow:none;cursor:not-allowed}
+.wrong-list{margin-top:16px;text-align:left}
+.wrong-list h3{font-family:'Baloo 2',cursive;font-size:1.05em;color:#a21caf;margin-bottom:10px}
+.wrong-item{
+  background:#fef2f2;border:2px solid #fecaca;border-radius:14px;
+  padding:10px 14px;margin-bottom:8px;
+}
+.wrong-item .wi-ans{font-family:'Baloo 2',cursive;font-size:1.1em;color:#7e22ce;font-weight:800}
+.wrong-item .wi-def{font-size:.9em;color:#6b7280;margin-left:6px}
+.wrong-item .wi-user{font-size:.9em;color:#b91c1c;margin-top:4px}
+.wrong-item .wi-user b{color:#991b1b}
 </style>
 </head>
 <body>
@@ -77,6 +87,10 @@
       <div class="stat-box"><div class="n" id="r-wrong">0</div><div class="l">答錯</div></div>
       <div class="stat-box"><div class="n" id="r-rate">0%</div><div class="l">正確率</div></div>
     </div>
+    <div id="wrong-list" class="wrong-list hidden">
+      <h3>📝 錯題回顧</h3>
+      <div id="wrong-items"></div>
+    </div>
     <div class="btn-row">
       <button class="btn" id="btn-again">再玩一次 🔁</button>
       <a class="btn-outline" href="words.html" style="text-decoration:none;display:inline-block">選其他遊戲</a>
@@ -131,6 +145,7 @@
   var questions = [];
   var idx = 0, correct = 0, wrong = 0;
   var answered = false;
+  var wrongList = [];
 
   $btnStart.addEventListener('click', function(){
     var sel = selector.getSelection();
@@ -138,6 +153,7 @@
     if(items.length===0){ alert('請先選擇至少一個週次！'); return; }
     questions = shuffle(items);
     idx = 0; correct = 0; wrong = 0;
+    wrongList = [];
     $setup.classList.add('hidden');
     $result.classList.add('hidden');
     $play.classList.remove('hidden');
@@ -183,7 +199,8 @@
   function check(){
     if(answered) return;
     var q = questions[idx];
-    var user = ($input.value || '').trim().toLowerCase();
+    var rawUser = ($input.value || '').trim();
+    var user = rawUser.toLowerCase();
     var ans = q.answers[0].word.toLowerCase();
     answered = true;
     $btnCheck.disabled = true;
@@ -199,6 +216,11 @@
       $input.classList.add('wrong');
       $feedback.className = 'feedback ng';
       $feedback.textContent = '答錯了！正確答案：' + q.answers[0].word + '（' + q.answers[0].def + '）';
+      wrongList.push({
+        word: q.answers[0].word,
+        def: q.answers[0].def,
+        userAnswer: rawUser || '（空白未作答）'
+      });
     }
     $feedback.classList.remove('hidden');
     $scoreText.textContent = '✅ ' + correct + '　❌ ' + wrong;
@@ -220,6 +242,28 @@
     var total = correct + wrong;
     var rate = total>0 ? Math.round(correct/total*100) : 0;
     document.getElementById('r-rate').textContent = rate + '%';
+
+    var $wrongList = document.getElementById('wrong-list');
+    var $wrongItems = document.getElementById('wrong-items');
+    $wrongItems.innerHTML = '';
+    if(wrongList.length === 0){
+      $wrongList.classList.add('hidden');
+    } else {
+      wrongList.forEach(function(w){
+        var item = el('div', {cls:'wrong-item'}, [
+          el('div', {}, [
+            el('span', {cls:'wi-ans', text: w.word}),
+            el('span', {cls:'wi-def', text: w.def})
+          ]),
+          el('div', {cls:'wi-user'}, [
+            '你的答案：',
+            el('b', {text: w.userAnswer})
+          ])
+        ]);
+        $wrongItems.appendChild(item);
+      });
+      $wrongList.classList.remove('hidden');
+    }
   }
 
   $btnExit.addEventListener('click', function(){
