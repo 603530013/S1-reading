@@ -326,5 +326,85 @@
     "weeks": ["W4"],
     "audioText": "foot",
     "answers": [{"word": "foot", "def": "腳 (ㄐㄧㄠˇ)"}]
+  },
+  {
+    "id": 5042,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "packrat",
+    "answers": [{"word": "packrat", "def": "囤積狂 (ㄊㄨㄣˊ ㄐㄧ ㄎㄨㄤˊ) / 林鼠 (ㄌㄧㄣˊ ㄕㄨˇ)"}]
+  },
+  {
+    "id": 5043,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "backpack",
+    "answers": [{"word": "backpack", "def": "背包 (ㄅㄟ ㄅㄠ)"}]
+  },
+  {
+    "id": 5044,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "trashcan",
+    "answers": [{"word": "trashcan", "def": "垃圾桶 (ㄌㄜˋ ㄙㄜˋ ㄊㄨㄥˇ)"}]
+  },
+  {
+    "id": 5045,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "magnet",
+    "answers": [{"word": "magnet", "def": "磁鐵 (ㄘˊ ㄊㄧㄝˇ)"}]
+  },
+  {
+    "id": 5046,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "handbag",
+    "answers": [{"word": "handbag", "def": "手提包 (ㄕㄡˇ ㄊㄧˊ ㄅㄠ)"}]
+  },
+  {
+    "id": 5047,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "blast",
+    "answers": [{"word": "blast", "def": "爆炸 (ㄅㄠˋ ㄓㄚˋ)"}]
+  },
+  {
+    "id": 5048,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "flapjack",
+    "answers": [{"word": "flapjack", "def": "鬆餅 (ㄙㄨㄥ ㄅㄧㄥˇ)"}]
+  },
+  {
+    "id": 5049,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "catnap",
+    "answers": [{"word": "catnap", "def": "小睡 (ㄒㄧㄠˇ ㄕㄨㄟˋ)"}]
+  },
+  {
+    "id": 5050,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "plastic",
+    "answers": [{"word": "plastic", "def": "塑膠 (ㄙㄨˋ ㄐㄧㄠ)"}]
+  },
+  {
+    "id": 5051,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W5"],
+    "audioText": "sandbag",
+    "answers": [{"word": "sandbag", "def": "沙包 (ㄕㄚ ㄅㄠ)"}]
   }
 ]

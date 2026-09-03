@@ -60,5 +60,21 @@
   {"id": 6059, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "paint", "answers": [{"word": "paint", "def": "上漆 (ㄕㄤˋ ㄑㄧ)"}]},
   {"id": 6060, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "play the piano", "answers": [{"word": "play the piano", "def": "彈鋼琴 (ㄊㄢˊ ㄍㄤ ㄑㄧㄣˊ)"}]},
   {"id": 6061, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "visit family", "answers": [{"word": "visit family", "def": "探望家人 (ㄊㄢˋ ㄨㄤˋ ㄐㄧㄚ ㄖㄣˊ)"}]},
-  {"id": 6062, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "continents", "answers": [{"word": "continents", "def": "洲 (ㄓㄡ)"}]}
+  {"id": 6062, "type": "vocab", "term": "115-1", "weeks": ["W4"], "audioText": "continents", "answers": [{"word": "continents", "def": "洲 (ㄓㄡ)"}]},
+  {"id": 6063, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "computer", "answers": [{"word": "computer", "def": "電腦 (ㄉㄧㄢˋ ㄋㄠˇ)"}]},
+  {"id": 6064, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "television", "answers": [{"word": "television", "def": "電視 (ㄉㄧㄢˋ ㄕˋ)"}]},
+  {"id": 6065, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "TV", "answers": [{"word": "TV", "def": "電視 (ㄉㄧㄢˋ ㄕˋ)"}]},
+  {"id": 6066, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "DVD player", "answers": [{"word": "DVD player", "def": "DVD播放器 (DVD ㄅㄛ ㄈㄤˋ ㄑㄧˋ)"}]},
+  {"id": 6067, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "cellphone", "answers": [{"word": "cellphone", "def": "手機 (ㄕㄡˇ ㄐㄧ)"}]},
+  {"id": 6068, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "camera", "answers": [{"word": "camera", "def": "相機 (ㄒㄧㄤˋ ㄐㄧ)"}]},
+  {"id": 6069, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "turn on", "answers": [{"word": "turn on", "def": "打開(電器) (ㄉㄚˇ ㄎㄞ)"}]},
+  {"id": 6070, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "turn off", "answers": [{"word": "turn off", "def": "關掉(電器) (ㄍㄨㄢ ㄉㄧㄠˋ)"}]},
+  {"id": 6071, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "project", "answers": [{"word": "project", "def": "專題計畫 (ㄓㄨㄢ ㄊㄧˊ ㄐㄧˋ ㄏㄨㄚˋ)"}]},
+  {"id": 6072, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "collection", "answers": [{"word": "collection", "def": "收藏 (ㄕㄡ ㄘㄤˊ)"}]},
+  {"id": 6073, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "sticker", "answers": [{"word": "sticker", "def": "貼紙 (ㄊㄧㄝ ㄓˇ)"}]},
+  {"id": 6074, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "boring", "answers": [{"word": "boring", "def": "讓人覺得無聊的 (ㄖㄤˋ ㄖㄣˊ ㄐㄩㄝˊ ㄉㄜ˙ ㄨˊ ㄌㄧㄠˊ ㄉㄜ˙)"}]},
+  {"id": 6075, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "broken", "answers": [{"word": "broken", "def": "壞掉的 (ㄏㄨㄞˋ ㄉㄧㄠˋ ㄉㄜ˙)"}]},
+  {"id": 6076, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "comics", "answers": [{"word": "comics", "def": "漫畫 (ㄇㄢˋ ㄏㄨㄚˋ)"}]},
+  {"id": 6077, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "pin", "answers": [{"word": "pin", "def": "圖釘 (ㄊㄨˊ ㄉㄧㄥ)"}]},
+  {"id": 6078, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "shell", "answers": [{"word": "shell", "def": "貝殼 (ㄅㄟˋ ㄎㄜˊ)"}]}
 ]
