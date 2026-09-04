@@ -114,7 +114,7 @@ function speak(text, opts){
     var u = new SpeechSynthesisUtterance(text);
     if(_voice) u.voice = _voice;
     u.lang = (opts && opts.lang) || 'en-US';
-    u.rate = (opts && opts.rate) || 0.9;
+    u.rate = (opts && opts.rate) || 0.8;
     u.pitch = (opts && opts.pitch) || 1;
     speechSynthesis.speak(u);
   }catch(e){ console.warn(e); }
