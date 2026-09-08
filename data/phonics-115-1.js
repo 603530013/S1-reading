@@ -477,7 +477,7 @@ window.PHONICS_115_1 = [
     "term": "115-1",
     "weeks": ["W6"],
     "audioText": "misfit",
-    "answers": [{"word": "misfit", "def": "格格不入的人 (ㄍㄜˊ ㄍㄜˊ ㄅㄨˋ ㄖㄨˋ ㄉㄜ˙ ㄖㄣˊ)"}]
+    "answers": [{"word": "misfit", "def": "格格不入的人 (ㄍㄜˊ ㄍㄜˊ ㄅㄨˊ ㄖㄨˋ ㄉㄜ˙ ㄖㄣˊ)"}]
   },
   {
     "id": 5061,
