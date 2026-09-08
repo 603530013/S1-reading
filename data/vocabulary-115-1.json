@@ -76,5 +76,20 @@
   {"id": 6075, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "broken", "answers": [{"word": "broken", "def": "壞掉的 (ㄏㄨㄞˋ ㄉㄧㄠˋ ㄉㄜ˙)"}]},
   {"id": 6076, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "comics", "answers": [{"word": "comics", "def": "漫畫 (ㄇㄢˋ ㄏㄨㄚˋ)"}]},
   {"id": 6077, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "pin", "answers": [{"word": "pin", "def": "圖釘 (ㄊㄨˊ ㄉㄧㄥ)"}]},
-  {"id": 6078, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "shell", "answers": [{"word": "shell", "def": "貝殼 (ㄅㄟˋ ㄎㄜˊ)"}]}
+  {"id": 6078, "type": "vocab", "term": "115-1", "weeks": ["W5"], "audioText": "shell", "answers": [{"word": "shell", "def": "貝殼 (ㄅㄟˋ ㄎㄜˊ)"}]},
+  {"id": 6079, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "sunrise", "answers": [{"word": "sunrise", "def": "日出 (ㄖˋ ㄔㄨ)"}]},
+  {"id": 6080, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "sunset", "answers": [{"word": "sunset", "def": "日落 (ㄖˋ ㄌㄨㄛˋ)"}]},
+  {"id": 6081, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "sunlight", "answers": [{"word": "sunlight", "def": "陽光 (ㄧㄤˊ ㄍㄨㄤ)"}]},
+  {"id": 6082, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "mark", "answers": [{"word": "mark", "def": "標記 (ㄅㄧㄠ ㄐㄧˋ)"}]},
+  {"id": 6083, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "sundial", "answers": [{"word": "sundial", "def": "日晷 (ㄖˋ ㄍㄨㄟˇ)"}]},
+  {"id": 6084, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "shadow", "answers": [{"word": "shadow", "def": "影子 (ㄧㄥˇ ㄗ˙)"}]},
+  {"id": 6085, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "noon", "answers": [{"word": "noon", "def": "正午 (ㄓㄥˋ ㄨˇ)"}]},
+  {"id": 6086, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "TV show", "answers": [{"word": "TV show", "def": "電視節目 (ㄉㄧㄢˋ ㄕˋ ㄐㄧㄝˊ ㄇㄨˋ)"}]},
+  {"id": 6087, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "dawn", "answers": [{"word": "dawn", "def": "黎明 (ㄌㄧˊ ㄇㄧㄥˊ)"}]},
+  {"id": 6088, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "dusk", "answers": [{"word": "dusk", "def": "黃昏 (ㄏㄨㄤˊ ㄏㄨㄣ)"}]},
+  {"id": 6089, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "twilight", "answers": [{"word": "twilight", "def": "暮光 (ㄇㄨˋ ㄍㄨㄤ)"}]},
+  {"id": 6090, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "midnight", "answers": [{"word": "midnight", "def": "半夜 (ㄅㄢˋ ㄧㄝˋ)"}]},
+  {"id": 6091, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "the next day", "answers": [{"word": "the next day", "def": "隔天 (ㄍㄜˊ ㄊㄧㄢ)"}]},
+  {"id": 6092, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "rock", "answers": [{"word": "rock", "def": "岩石 (ㄧㄢˊ ㄕˊ)"}]},
+  {"id": 6093, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "tell time", "answers": [{"word": "tell time", "def": "看時間 (ㄎㄢˋ ㄕˊ ㄐㄧㄢ)"}]}
 ]
