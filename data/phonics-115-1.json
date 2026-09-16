@@ -486,5 +486,85 @@
     "weeks": ["W6"],
     "audioText": "pinprick",
     "answers": [{"word": "pinprick", "def": "針刺 (ㄓㄣ ㄘˋ)"}]
+  },
+  {
+    "id": 5062,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "mug",
+    "answers": [{"word": "mug", "def": "馬克杯 (ㄇㄚˇ ㄎㄜˋ ㄅㄟ)"}]
+  },
+  {
+    "id": 5063,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "rug",
+    "answers": [{"word": "rug", "def": "地毯 (ㄉㄧˋ ㄊㄢˇ)"}]
+  },
+  {
+    "id": 5064,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "cub",
+    "answers": [{"word": "cub", "def": "幼獸 (ㄧㄡˋ ㄕㄡˋ)"}]
+  },
+  {
+    "id": 5065,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "tub",
+    "answers": [{"word": "tub", "def": "浴缸 (ㄩˋ ㄍㄤ)"}]
+  },
+  {
+    "id": 5066,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "sun",
+    "answers": [{"word": "sun", "def": "太陽 (ㄊㄞˋ ㄧㄤˊ)"}]
+  },
+  {
+    "id": 5067,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "fun",
+    "answers": [{"word": "fun", "def": "樂趣 (ㄌㄜˋ ㄑㄩˋ)"}]
+  },
+  {
+    "id": 5068,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "duck",
+    "answers": [{"word": "duck", "def": "鴨子 (ㄧㄚ ㄗ˙)"}]
+  },
+  {
+    "id": 5069,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "luck",
+    "answers": [{"word": "luck", "def": "運氣 (ㄩㄣˋ ㄑㄧˋ)"}]
+  },
+  {
+    "id": 5070,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "bus",
+    "answers": [{"word": "bus", "def": "公車 (ㄍㄨㄥ ㄔㄜ)"}]
+  },
+  {
+    "id": 5071,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W7"],
+    "audioText": "fussy",
+    "answers": [{"word": "fussy", "def": "挑剔的 (ㄊㄧㄠ ㄊㄧˋ ㄉㄜ˙)"}]
   }
 ]

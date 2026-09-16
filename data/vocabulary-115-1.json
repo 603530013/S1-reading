@@ -91,5 +91,15 @@
   {"id": 6090, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "midnight", "answers": [{"word": "midnight", "def": "半夜 (ㄅㄢˋ ㄧㄝˋ)"}]},
   {"id": 6091, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "the next day", "answers": [{"word": "the next day", "def": "隔天 (ㄍㄜˊ ㄊㄧㄢ)"}]},
   {"id": 6092, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "rock", "answers": [{"word": "rock", "def": "岩石 (ㄧㄢˊ ㄕˊ)"}]},
-  {"id": 6093, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "tell time", "answers": [{"word": "tell time", "def": "看時間 (ㄎㄢˋ ㄕˊ ㄐㄧㄢ)"}]}
+  {"id": 6093, "type": "vocab", "term": "115-1", "weeks": ["W6"], "audioText": "tell time", "answers": [{"word": "tell time", "def": "看時間 (ㄎㄢˋ ㄕˊ ㄐㄧㄢ)"}]},
+  {"id": 6094, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "favorite", "answers": [{"word": "favorite", "def": "最喜愛的 (ㄗㄨㄟˋ ㄒㄧˇ ㄞˋ ㄉㄜ˙)"}]},
+  {"id": 6095, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "interesting", "answers": [{"word": "interesting", "def": "覺得有趣的 (ㄐㄩㄝˊ ㄉㄜ˙ ㄧㄡˇ ㄑㄩˋ ㄉㄜ˙)"}]},
+  {"id": 6096, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "match", "answers": [{"word": "match", "def": "配對 (ㄆㄟˋ ㄉㄨㄟˋ)"}]},
+  {"id": 6097, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "ordinary", "answers": [{"word": "ordinary", "def": "平凡的 (ㄆㄧㄥˊ ㄈㄢˊ ㄉㄜ˙)"}]},
+  {"id": 6098, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "downstairs", "answers": [{"word": "downstairs", "def": "樓下 (ㄌㄡˊ ㄒㄧㄚˋ)"}]},
+  {"id": 6099, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "brightest", "answers": [{"word": "brightest", "def": "最明亮的 (ㄗㄨㄟˋ ㄇㄧㄥˊ ㄌㄧㄤˋ ㄉㄜ˙)"}]},
+  {"id": 6100, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "medicine", "answers": [{"word": "medicine", "def": "藥物 (ㄧㄠˋ ㄨˋ)"}]},
+  {"id": 6101, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "swimsuit", "answers": [{"word": "swimsuit", "def": "泳裝 (ㄩㄥˇ ㄓㄨㄤ)"}]},
+  {"id": 6102, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "powerful", "answers": [{"word": "powerful", "def": "強大的 (ㄑㄧㄤˊ ㄉㄚˋ ㄉㄜ˙)"}]},
+  {"id": 6103, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "greatest", "answers": [{"word": "greatest", "def": "最偉大的 (ㄗㄨㄟˋ ㄨㄟˇ ㄉㄚˋ ㄉㄜ˙)"}]}
 ]
