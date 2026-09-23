@@ -101,5 +101,15 @@
   {"id": 6100, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "medicine", "answers": [{"word": "medicine", "def": "藥物 (ㄧㄠˋ ㄨˋ)"}]},
   {"id": 6101, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "swimsuit", "answers": [{"word": "swimsuit", "def": "泳裝 (ㄩㄥˇ ㄓㄨㄤ)"}]},
   {"id": 6102, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "powerful", "answers": [{"word": "powerful", "def": "強大的 (ㄑㄧㄤˊ ㄉㄚˋ ㄉㄜ˙)"}]},
-  {"id": 6103, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "greatest", "answers": [{"word": "greatest", "def": "最偉大的 (ㄗㄨㄟˋ ㄨㄟˇ ㄉㄚˋ ㄉㄜ˙)"}]}
+  {"id": 6103, "type": "vocab", "term": "115-1", "weeks": ["W7"], "audioText": "greatest", "answers": [{"word": "greatest", "def": "最偉大的 (ㄗㄨㄟˋ ㄨㄟˇ ㄉㄚˋ ㄉㄜ˙)"}]},
+  {"id": 6104, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "factory", "answers": [{"word": "factory", "def": "工廠 (ㄍㄨㄥ ㄔㄤˇ)"}]},
+  {"id": 6105, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "repeat", "answers": [{"word": "repeat", "def": "重複 (ㄔㄨㄥˊ ㄈㄨˋ)"}]},
+  {"id": 6106, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "explore", "answers": [{"word": "explore", "def": "探索 (ㄊㄢˋ ㄙㄨㄛˇ)"}]},
+  {"id": 6107, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "postcard", "answers": [{"word": "postcard", "def": "明信片 (ㄇㄧㄥˊ ㄒㄧㄣˋ ㄆㄧㄢˋ)"}]},
+  {"id": 6108, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "summer", "answers": [{"word": "summer", "def": "夏天 (ㄒㄧㄚˋ ㄊㄧㄢ)"}]},
+  {"id": 6109, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "autumn", "answers": [{"word": "autumn", "def": "秋天 (ㄑㄧㄡ ㄊㄧㄢ)"}]},
+  {"id": 6110, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "earth", "answers": [{"word": "earth", "def": "地球 (ㄉㄧˋ ㄑㄧㄡˊ)"}]},
+  {"id": 6111, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "pharmacy", "answers": [{"word": "pharmacy", "def": "藥局 (ㄧㄠˋ ㄐㄩˊ)"}]},
+  {"id": 6112, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "precise", "answers": [{"word": "precise", "def": "精準的 (ㄐㄧㄥ ㄓㄨㄣˇ ㄉㄜ˙)"}]},
+  {"id": 6113, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "swift", "answers": [{"word": "swift", "def": "敏捷的 (ㄇㄧㄣˇ ㄐㄧㄝˊ ㄉㄜ˙)"}]}
 ]

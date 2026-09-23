@@ -566,5 +566,85 @@
     "weeks": ["W7"],
     "audioText": "fussy",
     "answers": [{"word": "fussy", "def": "挑剔的 (ㄊㄧㄠ ㄊㄧˋ ㄉㄜ˙)"}]
+  },
+  {
+    "id": 5072,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "stock",
+    "answers": [{"word": "stock", "def": "庫存 (ㄎㄨˋ ㄘㄨㄣˊ)"}]
+  },
+  {
+    "id": 5073,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "top",
+    "answers": [{"word": "top", "def": "頂端 (ㄉㄧㄥˇ ㄉㄨㄢ)"}]
+  },
+  {
+    "id": 5074,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "stop",
+    "answers": [{"word": "stop", "def": "停止 (ㄊㄧㄥˊ ㄓˇ)"}]
+  },
+  {
+    "id": 5075,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "pot",
+    "answers": [{"word": "pot", "def": "鍋子 (ㄍㄨㄛ ㄗ˙)"}]
+  },
+  {
+    "id": 5076,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "spot",
+    "answers": [{"word": "spot", "def": "斑點 (ㄅㄢ ㄉㄧㄢˇ)"}]
+  },
+  {
+    "id": 5077,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "lock",
+    "answers": [{"word": "lock", "def": "鎖 (ㄙㄨㄛˇ)"}]
+  },
+  {
+    "id": 5078,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "block",
+    "answers": [{"word": "block", "def": "積木 (ㄐㄧ ㄇㄨˋ)"}]
+  },
+  {
+    "id": 5079,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "box",
+    "answers": [{"word": "box", "def": "箱子 (ㄒㄧㄤ ㄗ˙)"}]
+  },
+  {
+    "id": 5080,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "log",
+    "answers": [{"word": "log", "def": "圓木 (ㄩㄢˊ ㄇㄨˋ)"}]
+  },
+  {
+    "id": 5081,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W8"],
+    "audioText": "sock",
+    "answers": [{"word": "sock", "def": "襪子 (ㄨㄚˋ ㄗ˙)"}]
   }
 ]
