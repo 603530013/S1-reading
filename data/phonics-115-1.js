@@ -646,5 +646,85 @@ window.PHONICS_115_1 = [
     "weeks": ["W8"],
     "audioText": "sock",
     "answers": [{"word": "sock", "def": "襪子 (ㄨㄚˋ ㄗ˙)"}]
+  },
+  {
+    "id": 5082,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "bike",
+    "answers": [{"word": "bike", "def": "腳踏車 (ㄐㄧㄠˇ ㄊㄚˋ ㄔㄜ)"}]
+  },
+  {
+    "id": 5083,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "bite",
+    "answers": [{"word": "bite", "def": "咬 (ㄧㄠˇ)"}]
+  },
+  {
+    "id": 5084,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "dime",
+    "answers": [{"word": "dime", "def": "十分錢硬幣 (ㄕˊ ㄈㄣ ㄑㄧㄢˊ ㄧㄥˋ ㄅㄧˋ)"}]
+  },
+  {
+    "id": 5085,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "smile",
+    "answers": [{"word": "smile", "def": "微笑 (ㄨㄟ ㄒㄧㄠˋ)"}]
+  },
+  {
+    "id": 5086,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "mine",
+    "answers": [{"word": "mine", "def": "我的 (ㄨㄛˇ ㄉㄜ˙) / 礦坑 (ㄎㄨㄤˋ ㄎㄥ)"}]
+  },
+  {
+    "id": 5087,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "kite",
+    "answers": [{"word": "kite", "def": "風箏 (ㄈㄥ ㄓㄥ)"}]
+  },
+  {
+    "id": 5088,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "pine",
+    "answers": [{"word": "pine", "def": "松樹 (ㄙㄨㄥ ㄕㄨˋ)"}]
+  },
+  {
+    "id": 5089,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "nine",
+    "answers": [{"word": "nine", "def": "九 (ㄐㄧㄡˇ)"}]
+  },
+  {
+    "id": 5090,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "line",
+    "answers": [{"word": "line", "def": "線 (ㄒㄧㄢˋ)"}]
+  },
+  {
+    "id": 5091,
+    "type": "phonics",
+    "term": "115-1",
+    "weeks": ["W11"],
+    "audioText": "shine",
+    "answers": [{"word": "shine", "def": "發光 (ㄈㄚ ㄍㄨㄤ)"}]
   }
 ];

@@ -111,5 +111,15 @@
   {"id": 6110, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "earth", "answers": [{"word": "earth", "def": "地球 (ㄉㄧˋ ㄑㄧㄡˊ)"}]},
   {"id": 6111, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "pharmacy", "answers": [{"word": "pharmacy", "def": "藥局 (ㄧㄠˋ ㄐㄩˊ)"}]},
   {"id": 6112, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "precise", "answers": [{"word": "precise", "def": "精準的 (ㄐㄧㄥ ㄓㄨㄣˇ ㄉㄜ˙)"}]},
-  {"id": 6113, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "swift", "answers": [{"word": "swift", "def": "敏捷的 (ㄇㄧㄣˇ ㄐㄧㄝˊ ㄉㄜ˙)"}]}
+  {"id": 6113, "type": "vocab", "term": "115-1", "weeks": ["W8"], "audioText": "swift", "answers": [{"word": "swift", "def": "敏捷的 (ㄇㄧㄣˇ ㄐㄧㄝˊ ㄉㄜ˙)"}]},
+  {"id": 6114, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "wheels", "answers": [{"word": "wheels", "def": "輪子 (ㄌㄨㄣˊ ㄗ˙)"}]},
+  {"id": 6115, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "button", "answers": [{"word": "button", "def": "鈕扣 (ㄋㄧㄡˇ ㄎㄡˋ)"}]},
+  {"id": 6116, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "propeller", "answers": [{"word": "propeller", "def": "螺旋槳 (ㄌㄨㄛˊ ㄒㄩㄢˊ ㄐㄧㄤˇ)"}]},
+  {"id": 6117, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "laundry", "answers": [{"word": "laundry", "def": "待洗衣物 (ㄉㄞˋ ㄒㄧˇ ㄧ ㄨˋ)"}]},
+  {"id": 6118, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "elementary", "answers": [{"word": "elementary", "def": "初級的 (ㄔㄨ ㄐㄧˊ ㄉㄜ˙)"}]},
+  {"id": 6119, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "humidity", "answers": [{"word": "humidity", "def": "濕度 (ㄕ ㄉㄨˋ)"}]},
+  {"id": 6120, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "feather", "answers": [{"word": "feather", "def": "羽毛 (ㄩˇ ㄇㄠˊ)"}]},
+  {"id": 6121, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "dangerous", "answers": [{"word": "dangerous", "def": "危險的 (ㄨㄟˊ ㄒㄧㄢˇ ㄉㄜ˙)"}]},
+  {"id": 6122, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "volcano", "answers": [{"word": "volcano", "def": "火山 (ㄏㄨㄛˇ ㄕㄢ)"}]},
+  {"id": 6123, "type": "vocab", "term": "115-1", "weeks": ["W11"], "audioText": "handle", "answers": [{"word": "handle", "def": "把手 (ㄅㄚˇ ㄕㄡˇ)"}]}
 ]
