@@ -73,17 +73,115 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
 .pop-inner p{color:#64748b;margin-bottom:16px}
 .pop-inner .ok{background:#fb923c;color:white;border:none;padding:10px 26px;border-radius:20px;font-family:'Baloo 2',cursive;font-weight:700;cursor:pointer}
 .story-box{background:#fff7ed;border:2px solid #fed7aa;border-radius:14px;padding:16px;line-height:2;font-size:1em;color:#1e293b;margin-bottom:12px}
+.sem-head{font-family:'Baloo 2',cursive;font-size:1.2em;font-weight:800;color:#9a3412;margin:4px 2px 12px}
+.grp-head{font-family:'Baloo 2',cursive;font-weight:800;color:#c2410c;font-size:1em;margin:6px 2px 10px}
+.s-btn:disabled:hover{transform:none;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.ffr{--ac:#ea580c;--acl:#fff7ed;--acd:#9a3412;--dark:#1e293b;--gray:#64748b}
+.ffr .pill{font-family:'Baloo 2',cursive;font-size:.9em;padding:4px 12px;border-radius:11px;display:inline-block;margin-bottom:8px;font-weight:800;background:var(--acl);color:var(--acd)}
+.ffr .pill-gold{background:#fef9c3;color:#854d0e}
+.ffr .pill-blue{background:#eff6ff;color:#1e40af}
+.ffr .gtable{width:100%;border-collapse:collapse;font-size:.88em;border-radius:12px;overflow:hidden;margin-bottom:10px}
+.ffr .gtable thead tr{background:var(--ac);color:#fff}
+.ffr .gtable th{padding:8px 10px;font-family:'Baloo 2',cursive;text-align:left}
+.ffr .gtable tbody tr:nth-child(odd){background:var(--acl)}
+.ffr .gtable tbody tr:nth-child(even){background:#fff}
+.ffr .gtable td{padding:7px 10px;color:var(--dark)}
+.ffr .gtable .en{font-weight:700;color:var(--acd)}
+.ffr .zh{color:var(--gray);font-size:.88em}
+.ffr .kp-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.ffr .kp-list li{display:flex;align-items:flex-start;gap:9px;padding:9px 12px;border-radius:11px;background:var(--acl);border-left:4px solid var(--ac);font-size:.92em}
+.ffr .kp-list li .en{font-weight:700;color:var(--dark)}
+.ffr .kp-list li .zh{font-size:.85em;color:var(--gray);margin-top:2px}
+.ffr .kp-list .num{background:var(--ac);color:#fff;font-family:'Baloo 2',cursive;font-weight:800;font-size:.9em;min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ffr .dialogue{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.ffr .dbubble{display:flex;align-items:flex-start;gap:9px}
+.ffr .dbubble.right{flex-direction:row-reverse}
+.ffr .davatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.3em}
+.ffr .dtext{background:#f1f5f9;border-radius:14px;padding:9px 13px;font-size:.92em;color:var(--dark);max-width:85%;line-height:1.5}
+.ffr .dbubble.right .dtext{background:var(--acl);color:var(--acd)}
+.ffr .dtext b{color:var(--ac)}
+.ffr .dname{font-size:.72em;color:#94a3b8;margin-bottom:2px}
 </style>
 </head>
 <body>
 <div class="wrap">
 <div class="hd">
-  <h1>📝 S1A 期中總複習</h1>
+  <h1>📝 期中總複習</h1>
   <a class="back" href="index.html">← 回首頁</a>
 </div>
-<p class="subtle">April 2026 Midterm Test Review · 選擇項目開始複習</p>
+<p class="subtle">Midterm Review · 先選擇學期，再選擇項目開始複習</p>
 
-<div id="landing">
+<div id="sem-select">
+  <div class="landing-grid">
+    <button class="s-btn" style="border-left:6px solid #ea580c" onclick="enterSemester('s2')">
+      <div class="sicon">📗</div>
+      <div class="stit" style="color:#ea580c">S2-1</div>
+      <div class="scn">期中考總複習：Family and Friends U1–4・Phonics・Vocabulary</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #f59e0b" onclick="enterSemester('s1')">
+      <div class="sicon">📙</div>
+      <div class="stit" style="color:#f59e0b">S1-2</div>
+      <div class="scn">April 2026 期中總複習（8 個項目）</div>
+    </button>
+  </div>
+</div>
+
+<div id="landing-s2" class="hidden">
+  <div class="sem-head">📗 S2-1 · 期中考總複習</div>
+  <div class="grp-head">📚 Family and Friends（Unit 1–4）</div>
+  <div class="landing-grid">
+    <button class="s-btn" style="border-left:6px solid #ea580c" onclick="enterSection('s2u1')">
+      <div class="sicon">🌏</div>
+      <div class="stit" style="color:#ea580c">Unit 1</div>
+      <div class="scn">They're from Australia!</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #ea580c" onclick="enterSection('s2u2')">
+      <div class="sicon">🎣</div>
+      <div class="stit" style="color:#ea580c">Unit 2</div>
+      <div class="scn">My weekend</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #ea580c" onclick="enterSection('s2u3')">
+      <div class="sicon">🎧</div>
+      <div class="stit" style="color:#ea580c">Unit 3</div>
+      <div class="scn">My things</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #ea580c" onclick="enterSection('s2u4')">
+      <div class="sicon">🏖️</div>
+      <div class="stit" style="color:#ea580c">Unit 4</div>
+      <div class="scn">We're having fun at the beach!</div>
+    </button>
+  </div>
+  <div class="grp-head">🔤 Phonics／📘 Vocabulary（W1–W8、W11）</div>
+  <div class="landing-grid">
+    <button class="s-btn" style="border-left:6px solid #f59e0b" onclick="enterSection('s2phonics')">
+      <div class="sicon">🔤</div>
+      <div class="stit" style="color:#f59e0b">Phonics</div>
+      <div class="scn">發音／拼字</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #10b981" onclick="enterSection('s2vocab')">
+      <div class="sicon">📘</div>
+      <div class="stit" style="color:#10b981">Vocabulary</div>
+      <div class="scn">單字</div>
+    </button>
+  </div>
+  <div class="grp-head">📖 Reading／🧠 Grammar</div>
+  <div class="landing-grid">
+    <button class="s-btn" disabled style="border-left:6px solid #cbd5e1;opacity:.55;cursor:not-allowed">
+      <div class="sicon">📖</div>
+      <div class="stit" style="color:#94a3b8">Reading</div>
+      <div class="scn">期中範圍確認後加入</div>
+    </button>
+    <button class="s-btn" disabled style="border-left:6px solid #cbd5e1;opacity:.55;cursor:not-allowed">
+      <div class="sicon">🧠</div>
+      <div class="stit" style="color:#94a3b8">Grammar</div>
+      <div class="scn">期中範圍確認後加入</div>
+    </button>
+  </div>
+  <div class="actions" style="margin-top:0"><button class="btn br" onclick="backToSemester()">← 回學期選擇</button></div>
+</div>
+
+<div id="landing" class="hidden">
+  <div class="sem-head">📙 S1-2 · April 2026 Midterm Test Review</div>
   <div class="landing-grid">
     <button class="s-btn" style="border-left:6px solid #f59e0b" onclick="enterSection('phonics')">
       <div class="sicon">🔤</div>
@@ -126,6 +224,7 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
       <div class="scn">學科單字</div>
     </button>
   </div>
+  <div class="actions" style="margin-top:0"><button class="btn br" onclick="backToSemester()">← 回學期選擇</button></div>
 </div>
 
 <div id="rv-phonics" class="card hidden" style="border-top:6px solid #f59e0b">
@@ -383,6 +482,548 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
   </div>
 </div>
 
+<div id="rv-s2u1" class="ffr hidden">
+      <div class="card">
+        <h2>🗂️ 單字：Countries 國家 & Seasons 季節</h2>
+        <div class="pill">8 個國家 + 4 個季節</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🇰🇷</span><div><div class="en">South Korea</div><div class="zh">南韓</div></div></li>
+          <li><span class="num">🇻🇳</span><div><div class="en">Vietnam</div><div class="zh">越南</div></div></li>
+          <li><span class="num">🇲🇽</span><div><div class="en">Mexico</div><div class="zh">墨西哥</div></div></li>
+          <li><span class="num">🇪🇸</span><div><div class="en">Spain</div><div class="zh">西班牙</div></div></li>
+          <li><span class="num">🇹🇭</span><div><div class="en">Thailand</div><div class="zh">泰國</div></div></li>
+          <li><span class="num">🇦🇺</span><div><div class="en">Australia</div><div class="zh">澳洲</div></div></li>
+          <li><span class="num">🇺🇸</span><div><div class="en">the U.S.A.</div><div class="zh">美國</div></div></li>
+          <li><span class="num">🇧🇷</span><div><div class="en">Brazil</div><div class="zh">巴西</div></div></li>
+          <li><span class="num">🌱</span><div><div class="en">spring</div><div class="zh">春天</div></div></li>
+          <li><span class="num">☀️</span><div><div class="en">summer</div><div class="zh">夏天</div></div></li>
+          <li><span class="num">🍂</span><div><div class="en">fall</div><div class="zh">秋天</div></div></li>
+          <li><span class="num">❄️</span><div><div class="en">winter</div><div class="zh">冬天</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：be 動詞 + from</h2>
+        <div class="pill">Where are you from?</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定句</th><th>問句</th></tr></thead>
+          <tbody>
+            <tr><td><b>I</b></td><td><span class="en">I'm from South Korea.</span><br><span class="zh">我來自南韓。</span></td><td><span class="en">Where are you from?</span><br><span class="zh">你來自哪裡？</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He's from Brazil.</span><br><span class="zh">他來自巴西。</span></td><td><span class="en">Where is he from?</span><br><span class="zh">他來自哪裡？</span></td></tr>
+            <tr><td><b>You / We / They</b></td><td><span class="en">They're from Mexico.</span><br><span class="zh">他們來自墨西哥。</span></td><td><span class="en">Where are they from?</span><br><span class="zh">他們來自哪裡？</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 回答也可以說：<b>We're from Spain.</b>（我們來自西班牙）</p>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：Consonant blends</h2>
+        <div class="pill">子音組合</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">cr</span><div><div class="en">crayon</div><div class="zh">蠟筆</div></div></li>
+          <li><span class="num">br</span><div><div class="en">brush</div><div class="zh">刷子</div></div></li>
+          <li><span class="num">dr</span><div><div class="en">drink</div><div class="zh">喝</div></div></li>
+          <li><span class="num">sp</span><div><div class="en">spoon</div><div class="zh">湯匙</div></div></li>
+          <li><span class="num">sn</span><div><div class="en">snake</div><div class="zh">蛇</div></div></li>
+          <li><span class="num">pl</span><div><div class="en">play</div><div class="zh">玩</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：什麼時候要大寫？</h2>
+        <div class="pill pill-gold">Capital letters</div>
+        <table class="gtable">
+          <thead><tr><th>要大寫</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>國家</b></td><td>Spain, Brazil, Thailand</td></tr>
+            <tr><td><b>月份</b></td><td>April, December</td></tr>
+            <tr><td><b>人名</b></td><td>Billy, Jenny</td></tr>
+            <tr><td><b>句子開頭</b></td><td>My name is Helen.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🎭 故事對話：They're from Australia!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Holly</div><div class="dtext">Where are those people from?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">They aren't from Australia. <b>They're from Mexico.</b></div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Holly</div><div class="dtext">Look! Are they our cousins?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">No, Holly. <b>They're from Vietnam.</b> Our cousins are from Australia.</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Look behind you, Holly! I'm Amy and this is Leo.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Leo</div><div class="dtext">We're your cousins. It's nice to meet you!</div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🐻 閱讀：The Lazy Bear</h2>
+        <div class="pill">四季的故事</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🌱</span><div><div class="en">Spring：warm and sunny</div><div class="zh">動物們都醒了，但熊 Bruno 還在睡。</div></div></li>
+          <li><span class="num">☀️</span><div><div class="en">Summer：hot, lots of flowers</div><div class="zh">動物們很開心，Bruno 還在睡。</div></div></li>
+          <li><span class="num">🍂</span><div><div class="en">Fall：red, yellow, and orange leaves</div><div class="zh">動物們想睡了，準備過冬。</div></div></li>
+          <li><span class="num">❄️</span><div><div class="en">Winter：Bruno is awake!</div><div class="zh">Bruno 醒了，但大家都睡了，他很孤單。</div></div></li>
+          <li><span class="num">🌱</span><div><div class="en">Spring again：Bruno is happy and hungry</div><div class="zh">春天又來了，Bruno 醒來想吃早餐！</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🃏 Fluency Time! 1：Playing games</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tom</div><div class="dtext">Let's play Snap!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Anna</div><div class="dtext">OK. That's a great idea. <b>Whose turn is it?</b></div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tom</div><div class="dtext"><b>It's my turn.</b> Snap!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Anna</div><div class="dtext">How many cards do you have?</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tom</div><div class="dtext">Ten. <b>I'm the winner!</b> I have more cards than you.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Anna</div><div class="dtext"><b>Congratulations.</b></div></div></div>
+        </div>
+      </div>
+  <div class="card" style="border-top:6px solid #ea580c">
+    <h2>🌏 Unit 1 練習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(They're from Australia!)</span></h2>
+    <h3 style="margin-top:4px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+    <div id="fill-s2u1"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkFill('s2u1')">✅ 檢查填空</button>
+      <button class="btn bg" onclick="initFill('s2u1')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+    <div id="err-s2u1"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkErrors('s2u1')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initError('s2u1')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+    <div id="quiz-s2u1"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkQuiz('s2u1')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initQuiz('s2u1')">🔄 再玩</button>
+    </div>
+    <div class="score" id="quiz-score-s2u1">
+      <div class="stars" id="quiz-stars-s2u1"></div>
+      <div class="snum" id="quiz-snum-s2u1"></div>
+      <div id="quiz-msg-s2u1"></div>
+    </div>
+    <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+      <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+    </div>
+  </div>
+</div>
+<div id="rv-s2u2" class="ffr hidden">
+      <div class="card">
+        <h2>🗂️ 單字：Hobbies 興趣</h2>
+        <div class="pill">14 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">📚</span><div><div class="en">read comics</div><div class="zh">看漫畫</div></div></li>
+          <li><span class="num">🛹</span><div><div class="en">skateboard</div><div class="zh">玩滑板</div></div></li>
+          <li><span class="num">🤸</span><div><div class="en">do gymnastics</div><div class="zh">做體操</div></div></li>
+          <li><span class="num">♟️</span><div><div class="en">play chess</div><div class="zh">下西洋棋</div></div></li>
+          <li><span class="num">🎣</span><div><div class="en">fish</div><div class="zh">釣魚</div></div></li>
+          <li><span class="num">🏀</span><div><div class="en">play basketball</div><div class="zh">打籃球</div></div></li>
+          <li><span class="num">📸</span><div><div class="en">take photos</div><div class="zh">拍照</div></div></li>
+          <li><span class="num">🏐</span><div><div class="en">play volleyball</div><div class="zh">打排球</div></div></li>
+          <li><span class="num">🎸</span><div><div class="en">play the guitar</div><div class="zh">彈吉他</div></div></li>
+          <li><span class="num">🛍️</span><div><div class="en">shop</div><div class="zh">購物</div></div></li>
+          <li><span class="num">🍳</span><div><div class="en">cook</div><div class="zh">烹飪</div></div></li>
+          <li><span class="num">🎨</span><div><div class="en">paint</div><div class="zh">畫畫</div></div></li>
+          <li><span class="num">🎹</span><div><div class="en">play the piano</div><div class="zh">彈鋼琴</div></div></li>
+          <li><span class="num">👨‍👩‍👧</span><div><div class="en">visit family</div><div class="zh">拜訪家人</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：like + V-ing</h2>
+        <div class="pill">喜歡做某事</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定 / 否定</th><th>問句與回答</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / You / We / They</b></td><td><span class="en">I like reading.</span><br><span class="zh">我喜歡閱讀。</span><br><span class="en">I don't like fishing.</span><br><span class="zh">我不喜歡釣魚。</span></td><td><span class="en">Do you like playing chess?</span><br><span class="zh">你喜歡下棋嗎？</span><br><span class="en">Yes, I do. / No, I don't.</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He likes skateboarding.</span><br><span class="zh">他喜歡滑板。</span><br><span class="en">He doesn't like fishing.</span><br><span class="zh">他不喜歡釣魚。</span></td><td><span class="en">Does he like playing chess?</span><br><span class="zh">他喜歡下棋嗎？</span><br><span class="en">Yes, he does. / No, he doesn't.</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 <b>like</b> 後面的動詞要加 <b>-ing</b>。<br>第三人稱單數（he / she / it）用 <b>likes</b> / <b>doesn't like</b>，問句用 <b>Does</b> + 動詞原形。</p>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：Magic e</h2>
+        <div class="pill">魔法 e 讓母音念長音</div>
+        <table class="gtable">
+          <thead><tr><th>拼法</th><th>單字</th></tr></thead>
+          <tbody>
+            <tr><td><b>a_e</b></td><td>face（臉）、space（太空）</td></tr>
+            <tr><td><b>i_e</b></td><td>kite（風箏）、bike（腳踏車）</td></tr>
+            <tr><td><b>o_e</b></td><td>rope（繩子）、stone（石頭）</td></tr>
+            <tr><td><b>u_e</b></td><td>June（六月）、cube（立方體）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：縮寫 Short forms</h2>
+        <div class="pill">用 ' 省略符號</div>
+        <table class="gtable">
+          <thead><tr><th>完整形式</th><th>縮寫</th></tr></thead>
+          <tbody>
+            <tr><td><b>I am</b></td><td>I'm</td></tr>
+            <tr><td><b>she is</b></td><td>she's</td></tr>
+            <tr><td><b>it is</b></td><td>it's</td></tr>
+            <tr><td><b>we are</b></td><td>we're</td></tr>
+            <tr><td><b>they are</b></td><td>they're</td></tr>
+            <tr><td><b>is not</b></td><td>isn't</td></tr>
+            <tr><td><b>are not</b></td><td>aren't</td></tr>
+            <tr><td><b>do not</b></td><td>don't</td></tr>
+            <tr><td><b>does not</b></td><td>doesn't</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🌍 Geography Time：Continents 七大洲</h2>
+        <div class="pill">7 個大洲</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🌍</span><div><div class="en">Europe</div><div class="zh">歐洲（例：Spain, Poland）</div></div></li>
+          <li><span class="num">🌎</span><div><div class="en">North America</div><div class="zh">北美洲（例：the U.S.A., Mexico）</div></div></li>
+          <li><span class="num">🌏</span><div><div class="en">Asia</div><div class="zh">亞洲（例：Thailand, South Korea）</div></div></li>
+          <li><span class="num">🌎</span><div><div class="en">South America</div><div class="zh">南美洲（例：Brazil, Peru）</div></div></li>
+          <li><span class="num">🌍</span><div><div class="en">Africa</div><div class="zh">非洲（例：Egypt, Morocco）</div></div></li>
+          <li><span class="num">🦘</span><div><div class="en">Australia</div><div class="zh">大洋洲／澳洲</div></div></li>
+          <li><span class="num">🧊</span><div><div class="en">Antarctica</div><div class="zh">南極洲（很冷，沒有人住）</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎣 故事對話：My weekend</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">I have lots of fish! Come on, Max!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext"><b>I don't like fishing.</b> I like reading.</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Fishing is easy. You can read your book, too.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">I have a fish! Help!</div></div></div>
+          <div class="dbubble"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">That's a great fish, Max!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">Let's stay! <b>I like fishing now!</b></div></div></div>
+        </div>
+      </div>
+  <div class="card" style="border-top:6px solid #ea580c">
+    <h2>🎣 Unit 2 練習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(My weekend)</span></h2>
+    <h3 style="margin-top:4px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+    <div id="fill-s2u2"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkFill('s2u2')">✅ 檢查填空</button>
+      <button class="btn bg" onclick="initFill('s2u2')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+    <div id="err-s2u2"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkErrors('s2u2')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initError('s2u2')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+    <div id="quiz-s2u2"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkQuiz('s2u2')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initQuiz('s2u2')">🔄 再玩</button>
+    </div>
+    <div class="score" id="quiz-score-s2u2">
+      <div class="stars" id="quiz-stars-s2u2"></div>
+      <div class="snum" id="quiz-snum-s2u2"></div>
+      <div id="quiz-msg-s2u2"></div>
+    </div>
+    <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+      <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+    </div>
+  </div>
+</div>
+<div id="rv-s2u3" class="ffr hidden">
+      <div class="card">
+        <h2>🗂️ 單字：My things 我的東西</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">💻</span><div><div class="en">computer</div><div class="zh">電腦</div></div></li>
+          <li><span class="num">📺</span><div><div class="en">TV</div><div class="zh">電視</div></div></li>
+          <li><span class="num">📀</span><div><div class="en">DVD player</div><div class="zh">DVD 播放機</div></div></li>
+          <li><span class="num">💿</span><div><div class="en">CD player</div><div class="zh">CD 播放機</div></div></li>
+          <li><span class="num">🎵</span><div><div class="en">MP3 player</div><div class="zh">MP3 播放器</div></div></li>
+          <li><span class="num">📷</span><div><div class="en">camera</div><div class="zh">相機</div></div></li>
+          <li><span class="num">🔛</span><div><div class="en">turn on</div><div class="zh">打開（電器）</div></div></li>
+          <li><span class="num">📴</span><div><div class="en">turn off</div><div class="zh">關掉（電器）</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：your / our / their</h2>
+        <div class="pill">「誰的」</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>所有格</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>You</b></td><td>your</td><td><span class="en">This is your CD.</span><br><span class="zh">這是你的 CD。</span></td></tr>
+            <tr><td><b>We</b></td><td>our</td><td><span class="en">That's our computer.</span><br><span class="zh">那是我們的電腦。</span></td></tr>
+            <tr><td><b>They</b></td><td>their</td><td><span class="en">That's their CD player.</span><br><span class="zh">那是他們的 CD 播放機。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🙏 文法：Can 的請求與許可</h2>
+        <div class="pill">Can I ...? / Can you ...?</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">?</span><div><div class="en">Can I use your computer?</div><div class="zh">我可以用你的電腦嗎？</div></div></li>
+          <li><span class="num">✓</span><div><div class="en">Yes, you can.</div><div class="zh">可以。</div></div></li>
+          <li><span class="num">✗</span><div><div class="en">No, you can't.</div><div class="zh">不可以。</div></div></li>
+          <li><span class="num">🙏</span><div><div class="en">Can you turn off the DVD player, please?</div><div class="zh">請你關掉 DVD 播放機好嗎？</div></div></li>
+        </ul>
+        <div class="pill pill-gold">📝 常見請求</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">📺</span><div><div class="en">turn on the TV</div><div class="zh">打開電視</div></div></li>
+          <li><span class="num">🎧</span><div><div class="en">turn off the CD player</div><div class="zh">關掉 CD 播放機</div></div></li>
+          <li><span class="num">🪟</span><div><div class="en">open the window</div><div class="zh">開窗</div></div></li>
+          <li><span class="num">🚪</span><div><div class="en">close the door</div><div class="zh">關門</div></div></li>
+          <li><span class="num">🧥</span><div><div class="en">put on your coat</div><div class="zh">穿上外套</div></div></li>
+          <li><span class="num">📝</span><div><div class="en">help me with my homework</div><div class="zh">幫我寫功課</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：Words with ar</h2>
+        <div class="pill">ar 念 /ɑr/</div>
+        <table class="gtable">
+          <thead><tr><th>單字</th><th>押韻配對</th></tr></thead>
+          <tbody>
+            <tr><td><b>car, park, shark, star, scarf</b></td><td>star ↔ car　｜　shark ↔ park</td></tr>
+            <tr><td><b>art, farm, arm, start</b></td><td>start ↔ art　｜　arm ↔ farm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🗂️ 閱讀：Collections 收藏</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🏷️</span><div><div class="en">stickers</div><div class="zh">貼紙</div></div></li>
+          <li><span class="num">🖼️</span><div><div class="en">posters</div><div class="zh">海報</div></div></li>
+          <li><span class="num">📚</span><div><div class="en">comics</div><div class="zh">漫畫</div></div></li>
+          <li><span class="num">💌</span><div><div class="en">postcards</div><div class="zh">明信片</div></div></li>
+          <li><span class="num">📌</span><div><div class="en">pins</div><div class="zh">別針／徽章</div></div></li>
+          <li><span class="num">🐚</span><div><div class="en">shells</div><div class="zh">貝殼</div></div></li>
+        </ul>
+        <div class="pill pill-blue">👦👧 Our Collections</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">⚽</span><div><div class="en">Tony, 9：loves soccer</div><div class="zh">收集足球貼紙，有 60 張，放在特別的貼紙本裡。</div></div></li>
+          <li><span class="num">📌</span><div><div class="en">Emily, 10：pin collection</div><div class="zh">有 50 個別針，戴在外套、包包和帽子上。</div></div></li>
+          <li><span class="num">🐚</span><div><div class="en">Jon：shell collection</div><div class="zh">有 100 個貝殼。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：標點符號 Punctuation</h2>
+        <div class="pill">. , ?</div>
+        <table class="gtable">
+          <thead><tr><th>符號</th><th>名稱</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>.</b></td><td>period 句號</td><td><span class="en">I collect pins and stickers.</span><br><span class="zh">我收集別針和貼紙。</span></td></tr>
+            <tr><td><b>,</b></td><td>comma 逗號</td><td><span class="en">We have a CD player, a computer, and a television.</span><br><span class="zh">列舉時用逗號隔開。</span></td></tr>
+            <tr><td><b>?</b></td><td>question mark 問號</td><td><span class="en">Can I use your camera?</span><br><span class="zh">問句句尾用問號。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+  <div class="card" style="border-top:6px solid #ea580c">
+    <h2>🎧 Unit 3 練習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(My things)</span></h2>
+    <h3 style="margin-top:4px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+    <div id="fill-s2u3"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkFill('s2u3')">✅ 檢查填空</button>
+      <button class="btn bg" onclick="initFill('s2u3')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+    <div id="err-s2u3"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkErrors('s2u3')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initError('s2u3')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+    <div id="quiz-s2u3"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkQuiz('s2u3')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initQuiz('s2u3')">🔄 再玩</button>
+    </div>
+    <div class="score" id="quiz-score-s2u3">
+      <div class="stars" id="quiz-stars-s2u3"></div>
+      <div class="snum" id="quiz-snum-s2u3"></div>
+      <div id="quiz-msg-s2u3"></div>
+    </div>
+    <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+      <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+    </div>
+  </div>
+</div>
+<div id="rv-s2u4" class="ffr hidden">
+      <div class="card">
+        <h2>🗂️ 單字：Water sports 水上運動</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🏊</span><div><div class="en">swim</div><div class="zh">游泳</div></div></li>
+          <li><span class="num">⛵</span><div><div class="en">sail</div><div class="zh">航行／開帆船</div></div></li>
+          <li><span class="num">🤿</span><div><div class="en">dive</div><div class="zh">潛水</div></div></li>
+          <li><span class="num">🏄</span><div><div class="en">surf</div><div class="zh">衝浪</div></div></li>
+          <li><span class="num">🛶</span><div><div class="en">kayak</div><div class="zh">划獨木舟</div></div></li>
+          <li><span class="num">🌬️</span><div><div class="en">windsurf</div><div class="zh">風帆衝浪</div></div></li>
+          <li><span class="num">🐠</span><div><div class="en">snorkel</div><div class="zh">浮潛</div></div></li>
+          <li><span class="num">🎿</span><div><div class="en">waterski</div><div class="zh">滑水</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Adjectives 形容地方</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🚫</span><div><div class="en">polluted</div><div class="zh">被汙染的</div></div></li>
+          <li><span class="num">💧</span><div><div class="en">clean</div><div class="zh">乾淨的</div></div></li>
+          <li><span class="num">⚠️</span><div><div class="en">dangerous</div><div class="zh">危險的</div></div></li>
+          <li><span class="num">🛡️</span><div><div class="en">safe</div><div class="zh">安全的</div></div></li>
+          <li><span class="num">🌅</span><div><div class="en">beautiful</div><div class="zh">美麗的</div></div></li>
+          <li><span class="num">👎</span><div><div class="en">ugly</div><div class="zh">醜的</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：現在進行式 Present progressive</h2>
+        <div class="pill">be + 動詞 -ing</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定</th><th>否定</th></tr></thead>
+          <tbody>
+            <tr><td><b>I</b></td><td><span class="en">I'm swimming.</span><br><span class="zh">我正在游泳。</span></td><td><span class="en">I'm not swimming.</span><br><span class="zh">我沒在游泳。</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He's surfing.</span><br><span class="zh">他正在衝浪。</span></td><td><span class="en">He isn't snorkeling.</span><br><span class="zh">他沒在浮潛。</span></td></tr>
+            <tr><td><b>You / We / They</b></td><td><span class="en">We're sailing.</span><br><span class="zh">我們正在開帆船。</span></td><td><span class="en">They aren't waterskiing.</span><br><span class="zh">他們沒在滑水。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold">✍️ 加 ing 的拼法</div>
+        <table class="gtable">
+          <thead><tr><th>規則</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>直接加 ing</b></td><td>sail → sailing、play → playing、cook → cooking</td></tr>
+            <tr><td><b>短母音 + 一個子音：雙寫子音</b></td><td>swim → swimming、run → running</td></tr>
+            <tr><td><b>字尾 e：去 e 再加 ing</b></td><td>dive → diving、ride → riding、take → taking、write → writing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：all 結尾</h2>
+        <div class="pill">all 念 /ɔl/</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">⚽</span><div><div class="en">ball</div><div class="zh">球</div></div></li>
+          <li><span class="num">🏬</span><div><div class="en">mall</div><div class="zh">購物中心</div></div></li>
+          <li><span class="num">🧱</span><div><div class="en">wall</div><div class="zh">牆</div></div></li>
+          <li><span class="num">🦒</span><div><div class="en">tall</div><div class="zh">高的</div></div></li>
+          <li><span class="num">🐭</span><div><div class="en">small</div><div class="zh">小的</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗣️ Fluency Time! 2：Things in common</h2>
+        <table class="gtable">
+          <thead><tr><th>說法</th><th>意思</th></tr></thead>
+          <tbody>
+            <tr><td><b>I love playing soccer!</b></td><td>我愛踢足球！</td></tr>
+            <tr><td><b>I don't. I prefer playing tennis.</b></td><td>我不愛。我比較喜歡打網球。</td></tr>
+            <tr><td><b>I don't like skateboarding. — <b>Neither do I.</b></b></td><td>我不喜歡滑板。— 我也不喜歡。（否定）</td></tr>
+            <tr><td><b>I like playing volleyball. — <b>So do I!</b></b></td><td>我喜歡打排球。— 我也是！（肯定）</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 同意「喜歡」用 <b>So do I</b>；同意「不喜歡」用 <b>Neither do I</b>。</p>
+      </div>
+      <div class="card">
+        <h2>🏖️ 故事對話：We're having fun at the beach!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">We're having fun at the beach!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👩</div><div><div class="dname">Mom</div><div class="dtext">Is Max in the water?</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">No, he isn't. <b>He's reading his book.</b></div></div></div>
+          <div class="dbubble right"><div class="davatar">👩</div><div><div class="dname">Mom</div><div class="dtext">Is Leo snorkeling?</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">No, he isn't. <b>He's surfing</b> and he's very good!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">Oh, no! Leo is falling!</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Leo isn't surfing now. <b>He's swimming!</b></div></div></div>
+        </div>
+      </div>
+  <div class="card" style="border-top:6px solid #ea580c">
+    <h2>🏖️ Unit 4 練習 <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(We're having fun at the beach!)</span></h2>
+    <h3 style="margin-top:4px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+    <div id="fill-s2u4"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkFill('s2u4')">✅ 檢查填空</button>
+      <button class="btn bg" onclick="initFill('s2u4')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+    <div id="err-s2u4"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkErrors('s2u4')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initError('s2u4')">🔄 再玩</button>
+    </div>
+    <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+    <div id="quiz-s2u4"></div>
+    <div class="actions">
+      <button class="btn bt" onclick="checkQuiz('s2u4')">✅ 檢查答案</button>
+      <button class="btn bg" onclick="initQuiz('s2u4')">🔄 再玩</button>
+    </div>
+    <div class="score" id="quiz-score-s2u4">
+      <div class="stars" id="quiz-stars-s2u4"></div>
+      <div class="snum" id="quiz-snum-s2u4"></div>
+      <div id="quiz-msg-s2u4"></div>
+    </div>
+    <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+      <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+    </div>
+  </div>
+</div>
+<div id="rv-s2phonics" class="card hidden" style="border-top:6px solid #f59e0b">
+  <h2>🔤 Phonics <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(發音／拼字 · S2-1 W1–W8、W11)</span></h2>
+  <div class="tp">🔤 <b>期中考範圍：W1–W8、W11</b></div>
+  <div class="tp"><b>W1</b>：point 指 / 點、coin 硬幣、toy 玩具、soy milk 豆漿、noisy 吵鬧的、boil 煮沸、oink 豬叫聲、enjoy 享受、cowboy 牛仔、oyster 牡蠣</div>
+  <div class="tp"><b>W2</b>：sauce 醬汁、pause 暫停、August 八月、fault 過錯、because 因為、draw 畫、paw 爪子、claw 爪、straw 吸管、awesome 很棒的</div>
+  <div class="tp"><b>W3</b>：house 房子、mouth 嘴巴、count 數、cloud 雲、bounce 彈跳、flower 花、flour 麵粉、crown 皇冠、cow 牛、brown 棕色的、down 向下</div>
+  <div class="tp"><b>W4</b>：boot 靴子、moon 月亮、school 學校、spoon 湯匙、room 房間、cook 煮、wood 木頭、book 書、good 好的、foot 腳</div>
+  <div class="tp"><b>W5</b>：packrat 囤積狂 / 林鼠、backpack 背包、trashcan 垃圾桶、magnet 磁鐵、handbag 手提包、blast 爆炸、flapjack 鬆餅、catnap 小睡、plastic 塑膠、sandbag 沙包</div>
+  <div class="tp"><b>W6</b>：dinner 晚餐、insect 昆蟲、kitten 小貓、sister 姊妹、window 窗戶、fishstick 魚條、windmill 風車、bigwig 大人物、misfit 格格不入的人、pinprick 針刺</div>
+  <div class="tp"><b>W7</b>：mug 馬克杯、rug 地毯、cub 幼獸、tub 浴缸、sun 太陽、fun 樂趣、duck 鴨子、luck 運氣、bus 公車、fussy 挑剔的</div>
+  <div class="tp"><b>W8</b>：stock 庫存、top 頂端、stop 停止、pot 鍋子、spot 斑點、lock 鎖、block 積木、box 箱子、log 圓木、sock 襪子</div>
+  <div class="tp"><b>W11</b>：bike 腳踏車、bite 咬、dime 十分錢硬幣、smile 微笑、mine 我的 / 礦坑、kite 風箏、pine 松樹、nine 九、line 線、shine 發光</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2phonics"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2phonics')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2phonics')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2phonics"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2phonics')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2phonics')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2phonics">
+    <div class="stars" id="quiz-stars-s2phonics"></div>
+    <div class="snum" id="quiz-snum-s2phonics"></div>
+    <div id="quiz-msg-s2phonics"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2vocab" class="card hidden" style="border-top:6px solid #10b981">
+  <h2>📘 Vocabulary <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單字 · S2-1 W1–W8、W11)</span></h2>
+  <div class="tp">📘 <b>期中考範圍：W1–W8、W11</b></div>
+  <div class="tp"><b>W1</b>：January 一月、February 二月、March 三月、April 四月、May 五月、June 六月、July 七月、August 八月、September 九月、October 十月、November 十一月、December 十二月、month 月份、year 年、calendar 月曆 / 日曆</div>
+  <div class="tp"><b>W2</b>：South Korea 南韓、Vietnam 越南、Mexico 墨西哥、Spain 西班牙、Thailand 泰國、Taiwan 台灣、Australia 澳洲、USA 美國、America 美國、Brazil 巴西、Monday 星期一、Tuesday 星期二、Wednesday 星期三、Thursday 星期四、Friday 星期五、Saturday 星期六、Sunday 星期日</div>
+  <div class="tp"><b>W3</b>：stretch 伸展、take off 起飛、sleepy 想睡覺的、rest 休息、gray 灰色的、dry 乾的、boat 船、fluffy 蓬鬆的、happens 發生、change 改變、color 顏色、trip 旅行、teach 教、tell 告訴、clouds 雲</div>
+  <div class="tp"><b>W4</b>：read comics 看漫畫、skateboard 玩滑板、do gymnastics 做體操、play chess 下棋、fish 釣魚、play basketball 打籃球、take photos 拍照、play volleyball 打排球、play the guitar 彈吉他、shop 購物、cook 烹調、paint 上漆、play the piano 彈鋼琴、visit family 探望家人、continents 洲</div>
+  <div class="tp"><b>W5</b>：computer 電腦、television 電視、TV 電視、DVD player DVD播放器、cellphone 手機、camera 相機、turn on 打開、turn off 關掉、project 專題計畫、collection 收藏、sticker 貼紙、boring 讓人覺得無聊的、broken 壞掉的、comics 漫畫、pin 圖釘、shell 貝殼</div>
+  <div class="tp"><b>W6</b>：sunrise 日出、sunset 日落、sunlight 陽光、mark 標記、sundial 日晷、shadow 影子、noon 正午、TV show 電視節目、dawn 黎明、dusk 黃昏、twilight 暮光、midnight 半夜、the next day 隔天、rock 岩石、tell time 看時間</div>
+  <div class="tp"><b>W7</b>：favorite 最喜愛的、interesting 覺得有趣的、match 配對、ordinary 平凡的、downstairs 樓下、brightest 最明亮的、medicine 藥物、swimsuit 泳裝、powerful 強大的、greatest 最偉大的</div>
+  <div class="tp"><b>W8</b>：factory 工廠、repeat 重複、explore 探索、postcard 明信片、summer 夏天、autumn 秋天、earth 地球、pharmacy 藥局、precise 精準的、swift 敏捷的</div>
+  <div class="tp"><b>W11</b>：wheels 輪子、button 鈕扣、propeller 螺旋槳、laundry 待洗衣物、elementary 初級的、humidity 濕度、feather 羽毛、dangerous 危險的、volcano 火山、handle 把手</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2vocab"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2vocab')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2vocab')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2vocab"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2vocab')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2vocab')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2vocab">
+    <div class="stars" id="quiz-stars-s2vocab"></div>
+    <div class="snum" id="quiz-snum-s2vocab"></div>
+    <div id="quiz-msg-s2vocab"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+
 <div class="pop" id="pop">
   <div class="pop-inner">
     <div class="emo" id="pop-emo">🎉</div>
@@ -399,7 +1040,28 @@ var FILL_DATA = {"phonics": [{"title": "長母音 a (a_e / ai / ay)", "sentences
 var ERROR_DATA = {"phonics": [], "vocabulary": [], "sentences": [{"sentence": "This are a table.", "errors": [{"word": "are", "correct": "is", "reason": "This 後面用 is"}]}, {"sentence": "These is pencils.", "errors": [{"word": "is", "correct": "are", "reason": "These 後面用 are"}]}, {"sentence": "Those is rulers.", "errors": [{"word": "is", "correct": "are", "reason": "複數用 are"}]}, {"sentence": "Can he skateboards?", "errors": [{"word": "skateboards", "correct": "skateboard", "reason": "Can 後面用原形動詞"}]}, {"sentence": "Does he has milkshake?", "errors": [{"word": "has", "correct": "have", "reason": "Does 後面用原形 have"}]}, {"sentence": "Is this you book?", "errors": [{"word": "you", "correct": "your", "reason": "應用所有格 your"}]}], "proofreading": [{"sentence": "this is my book", "errors": [{"word": "this", "correct": "This", "reason": "句首大寫"}, {"word": "book", "correct": "book.", "reason": "句尾加句號"}]}, {"sentence": "she is miss yvonne.", "errors": [{"word": "she", "correct": "She", "reason": "句首大寫"}, {"word": "miss", "correct": "Miss", "reason": "名字大寫"}, {"word": "yvonne.", "correct": "Yvonne.", "reason": "名字大寫"}]}, {"sentence": "We have art on tuesdays.", "errors": [{"word": "tuesdays.", "correct": "Tuesdays.", "reason": "星期名大寫"}]}, {"sentence": "Is this a pen", "errors": [{"word": "pen", "correct": "pen?", "reason": "問句用問號"}]}, {"sentence": "i am hungry", "errors": [{"word": "i", "correct": "I", "reason": "I 永遠大寫"}, {"word": "hungry", "correct": "hungry.", "reason": "句尾加句號"}]}, {"sentence": "can he skate", "errors": [{"word": "can", "correct": "Can", "reason": "句首大寫"}, {"word": "skate", "correct": "skate?", "reason": "問句用問號"}]}, {"sentence": "my name is mary", "errors": [{"word": "my", "correct": "My", "reason": "句首大寫"}, {"word": "mary", "correct": "Mary", "reason": "名字大寫"}, {"word": "mary", "correct": "Mary.", "reason": "加句號"}]}], "grammar": [], "reading": [], "story": [], "subject": []};
 var QUIZ_DATA = {"phonics": [{"q": "cake 的長 a 是哪一種拼法？", "opts": ["a_e", "ai", "ay", "a"], "c": 0}, {"q": "play 的長 a 拼法是？", "opts": ["a_e", "ai", "ay", "a"], "c": 2}, {"q": "meat 的長 e 拼法是？", "opts": ["ee", "ea", "e", "y"], "c": 1}, {"q": "night 的長 i 拼法是？", "opts": ["i_e", "ie", "igh", "y"], "c": 2}, {"q": "snow 的長 o 拼法是？", "opts": ["o_e", "oe", "ow", "oa"], "c": 2}, {"q": "fruit 的長 u 拼法是？", "opts": ["u_e", "ui", "ue", "u"], "c": 1}, {"q": "chair 的 blend 是？", "opts": ["ch", "sh", "th", "gr"], "c": 0}, {"q": "truck 的 blend 是？", "opts": ["tr", "dr", "br", "fr"], "c": 0}, {"q": "flower 的 blend 是？", "opts": ["fl", "pl", "bl", "cl"], "c": 0}, {"q": "blue 的 blend 是？", "opts": ["bl", "pl", "cl", "gl"], "c": 0}], "vocabulary": [{"q": "🥗 沙拉 是？", "opts": ["pizza", "salad", "cheese", "fries"], "c": 1}, {"q": "🍟 薯條 是？", "opts": ["fries", "chicken", "milkshake", "cheese"], "c": 0}, {"q": "🥤 奶昔 是？", "opts": ["juice", "soda", "milkshake", "milk"], "c": 2}, {"q": "50 是？", "opts": ["fifteen", "fifty", "fivety", "five"], "c": 1}, {"q": "70 是？", "opts": ["seventeen", "sevty", "seventy", "seven"], "c": 2}, {"q": "😨 害怕 是？", "opts": ["scared", "angry", "tired", "brave"], "c": 0}, {"q": "💪 勇敢 是？", "opts": ["scared", "brave", "nervous", "sad"], "c": 1}, {"q": "📋 白板 是？", "opts": ["poster", "whiteboard", "drawer", "cabinet"], "c": 1}, {"q": "🎨 美術 是？", "opts": ["art", "music", "science", "P.E."], "c": 0}, {"q": "🏃 體育 是？", "opts": ["gym", "field", "P.E.", "yard"], "c": 2}, {"q": "🏋️ 體育館 是？", "opts": ["gym", "field", "school yard", "art room"], "c": 0}], "sentences": [{"q": "___ is a chair. (遠的一張)", "opts": ["This", "These", "That", "Those"], "c": 2}, {"q": "___ are pencils. (近的)", "opts": ["This", "These", "That", "Those"], "c": 1}, {"q": "Are they happy? → Yes, they ___.", "opts": ["is", "are", "am", "aren't"], "c": 1}, {"q": "Can he skateboard? → No, he ___.", "opts": ["can", "doesn't", "can't", "isn't"], "c": 2}, {"q": "Does he have milkshake? → Yes, he ___.", "opts": ["is", "can", "does", "has"], "c": 2}, {"q": "Is this your book? → No, it ___.", "opts": ["aren't", "can't", "isn't", "doesn't"], "c": 2}], "proofreading": [{"q": "哪個是「我」，一定要大寫？", "opts": ["me", "I", "my", "i"], "c": 1}, {"q": "星期一 Monday 要？", "opts": ["全大寫", "首字大寫", "全小寫", "不用大寫"], "c": 1}, {"q": "人名要？", "opts": ["小寫", "首字大寫", "全大寫", "都可以"], "c": 1}, {"q": "問句最後要？", "opts": ["句號 .", "問號 ?", "驚嘆號 !", "什麼都不用"], "c": 1}, {"q": "陳述句最後要？", "opts": ["句號 .", "問號 ?", "驚嘆號 !", "什麼都不用"], "c": 0}], "grammar": [{"q": "John can swim → ___ can swim.", "opts": ["She", "I", "He", "They"], "c": 2}, {"q": "She hurt ___ (她自己).", "opts": ["himself", "herself", "itself", "myself"], "c": 1}, {"q": "___ is a pencil (近).", "opts": ["That", "These", "This", "Those"], "c": 2}, {"q": "___ are trees (遠).", "opts": ["These", "Those", "This", "That"], "c": 1}, {"q": "___ elephant", "opts": ["a", "an", "the", "無"], "c": 1}, {"q": "box 的複數是？", "opts": ["boxs", "boxes", "boxies", "box"], "c": 1}, {"q": "water 是？", "opts": ["可數", "不可數", "都可以", "不知道"], "c": 1}, {"q": "「眼鏡」是？", "opts": ["spectacle", "spectacles", "glass", "glasses"], "c": 1}, {"q": "a ___ cat (胖)", "opts": ["fats", "a fat", "fat", "fatty"], "c": 2}], "reading": [{"q": "🥚 下蛋 lay eggs 的 lay 是？", "opts": ["吃", "放/產", "跑", "睡"], "c": 1}, {"q": "🐦 鳥喙 是？", "opts": ["feather", "beak", "wing", "claw"], "c": 1}, {"q": "🛁 take a ___", "opts": ["nap", "bath", "walk", "sleep"], "c": 1}, {"q": "💤 take a ___ (午睡)", "opts": ["nap", "bath", "walk", "sleep"], "c": 0}, {"q": "🌱 植物是？", "opts": ["plant", "flour", "vine", "seed"], "c": 0}, {"q": "🦔 刺蝟 是？", "opts": ["rabbit", "hedgehog", "cricket", "bear"], "c": 1}, {"q": "🧤 連指手套 是？", "opts": ["glove", "mitten", "sock", "scarf"], "c": 1}, {"q": "擁擠 是？", "opts": ["crowded", "empty", "cold", "warm"], "c": 0}, {"q": "🌾 小麥 是？", "opts": ["rice", "wheat", "flour", "bread"], "c": 1}, {"q": "🚚 卡車 是？", "opts": ["car", "truck", "bus", "train"], "c": 1}, {"q": "遞送 是？", "opts": ["deliver", "deliver", "taste", "pick"], "c": 0}, {"q": "在過去 in the ___", "opts": ["now", "past", "future", "ago"], "c": 1}], "story": [{"q": "Who gets new mittens?", "opts": ["Mice", "Lance", "Rabbit", "Bear"], "c": 1}, {"q": "What does Lance go out to find?", "opts": ["food", "friends", "firewood", "flowers"], "c": 2}, {"q": "Who finds the mitten first?", "opts": ["Rabbit", "Bear", "Mice", "Cricket"], "c": 2}, {"q": "Why does Rabbit go in?", "opts": ["cold", "hungry", "sleepy", "afraid"], "c": 2}, {"q": "Why does Hedgehog go in?", "opts": ["cold", "hungry", "sleepy", "afraid"], "c": 0}, {"q": "Why does Bear go in?", "opts": ["cold", "hungry", "tired", "angry"], "c": 2}, {"q": "Who is the last to go in?", "opts": ["Bear", "Cricket", "Hedgehog", "Rabbit"], "c": 1}, {"q": "What happens at the end?", "opts": ["They share food", "The mitten breaks", "They sleep", "Lance finds it"], "c": 1}, {"q": "What does 'crowded' mean?", "opts": ["空的", "擁擠", "冷的", "安靜"], "c": 1}, {"q": "What sound does the mitten make?", "opts": ["Rip! Snap! POP!", "Bang!", "Crash!", "Boom!"], "c": 0}], "subject": [{"q": "1/2 是？", "opts": ["whole", "half", "third", "quarter"], "c": 1}, {"q": "1/4 是？", "opts": ["whole", "half", "third", "quarter"], "c": 3}, {"q": "1/3 是？", "opts": ["whole", "half", "third", "quarter"], "c": 2}, {"q": "整個 是?", "opts": ["whole", "half", "third", "quarter"], "c": 0}, {"q": "畫家 是？", "opts": ["artist", "mirror", "face", "background"], "c": 0}, {"q": "鏡子 是？", "opts": ["artist", "mirror", "skin", "face"], "c": 1}, {"q": "皮膚 是？", "opts": ["skin", "face", "background", "mirror"], "c": 0}, {"q": "背景 是？", "opts": ["skin", "face", "mirror", "background"], "c": 3}, {"q": "臉 是？", "opts": ["skin", "face", "background", "mirror"], "c": 1}]};
 
+Object.assign(FILL_DATA, {"s2u1":[{"title":"Where are you from? · be + from","sentences":[{"hint":"👦 Bao · 9 歲","before":"Bao is nine. ","after":" from Vietnam. 🇻🇳","ans":"He's"},{"hint":"👧 Jenny · 8 歲","before":"Jenny is eight. ","after":" from Australia. 🇦🇺","ans":"She's"},{"hint":"👭 Maria and I","before":"Maria and I are friends. ","after":" from Mexico. 🇲🇽","ans":"We're"},{"hint":"👬 Jack and Carl","before":"Jack and Carl are brothers. ","after":" from the U.S.A. 🇺🇸","ans":"They're"}],"wordBank":["He's","She's","We're","They're"]},{"title":"The Lazy Bear · 四季","sentences":[{"hint":"🌱 溫暖晴朗","before":"It's ","after":" in the forest. It's warm and sunny.","ans":"spring"},{"hint":"🌸 很熱很多花","before":"Now it's ","after":". It's hot and there are lots of flowers.","ans":"summer"},{"hint":"🍂 葉子變色","before":"In the ","after":", the leaves are red, yellow, and orange.","ans":"fall"},{"hint":"❄️ 動物都睡了","before":"Now it's ","after":". The animals are all asleep in their warm homes.","ans":"winter"}],"wordBank":["spring","summer","fall","winter"]},{"title":"Consonant blends · 子音組合","sentences":[{"hint":"🖍️ crayon","before":"","after":"ayon","ans":"cr"},{"hint":"🥤 drink","before":"","after":"ink","ans":"dr"},{"hint":"🥄 spoon","before":"","after":"oon","ans":"sp"},{"hint":"🐍 snake","before":"","after":"ake","ans":"sn"},{"hint":"🎮 play","before":"","after":"ay","ans":"pl"}],"wordBank":["cr","dr","sp","sn","pl"]}],"s2u2":[{"title":"like / likes / don't like / doesn't like","sentences":[{"hint":"😊 Lucas ✔ 排球","before":"Lucas ","after":" playing volleyball.","ans":"likes"},{"hint":"😞 Lucas ✘ 釣魚","before":"He ","after":" fishing.","ans":"doesn't like"},{"hint":"😞 Jo and Sue ✘ 體操","before":"Jo and Sue ","after":" doing gymnastics.","ans":"don't like"},{"hint":"😊 Jo and Sue ✔ 鋼琴","before":"They ","after":" playing the piano.","ans":"like"},{"hint":"😊 Rosa ✔ 漫畫","before":"Rosa ","after":" reading comics.","ans":"likes"},{"hint":"😞 Rosa ✘ 西洋棋","before":"She ","after":" playing chess.","ans":"doesn't like"}],"wordBank":["like","likes","don't like","doesn't like"]},{"title":"Magic e · 魔法 e","sentences":[{"hint":"🚲","before":"I can ride a ","after":".","ans":"bike"},{"hint":"🧊","before":"I have a puzzle. It's a ","after":".","ans":"cube"},{"hint":"🪢","before":"My jump ","after":" is very long.","ans":"rope"},{"hint":"🚀","before":"Look! This toy is from ","after":".","ans":"space"},{"hint":"🪨","before":"The dog is sitting on a big ","after":".","ans":"stone"}],"wordBank":["bike","cube","rope","space","stone"]},{"title":"Continents · 七大洲","sentences":[{"hint":"🌮 墨西哥","before":"Mexico is in ","after":".","ans":"North America"},{"hint":"⚽ 巴西","before":"Brazil is in ","after":".","ans":"South America"},{"hint":"🐘 泰國","before":"Thailand is in ","after":".","ans":"Asia"},{"hint":"🏜️ 埃及","before":"Egypt is in ","after":".","ans":"Africa"},{"hint":"🏰 西班牙","before":"Spain is in ","after":".","ans":"Europe"}],"wordBank":["North America","South America","Asia","Africa","Europe"]}],"s2u3":[{"title":"your / our / their","sentences":[{"hint":"🙋 you 你的","before":"Is this ","after":" camera?","ans":"your"},{"hint":"🙋 we 我們的","before":"Yes, it's ","after":" camera.","ans":"our"},{"hint":"🙋 they 他們的","before":"That's ","after":" CD player.","ans":"their"},{"hint":"🙋 we 我們的","before":"This is ","after":" computer.","ans":"our"},{"hint":"🙋 you 你的","before":"Can I use ","after":" MP3 player?","ans":"your"}],"wordBank":["your","our","their"]},{"title":"Can I ...? / Can you ...? 請求與許可","sentences":[{"hint":"🙏 借用","before":"Can I ","after":" your computer?","ans":"use"},{"hint":"📺 打開","before":"Can you ","after":" on the TV, please?","ans":"turn"},{"hint":"🪟 開窗","before":"Can you ","after":" the window, please?","ans":"open"},{"hint":"✅ 可以","before":"Can I use your camera? — Yes, you ","after":".","ans":"can"},{"hint":"🚫 不可以","before":"Can we turn on the TV? — No, you ","after":".","ans":"can't"}],"wordBank":["use","turn","open","can","can't"]},{"title":"Collections · Tony or Emily?","sentences":[{"hint":"⚽","before":"","after":" loves soccer.","ans":"Tony"},{"hint":"📌","before":"","after":" has a pin collection.","ans":"Emily"},{"hint":"5️⃣0️⃣","before":"","after":" has 50 pins.","ans":"Emily"},{"hint":"6️⃣0️⃣","before":"","after":" has 60 stickers.","ans":"Tony"},{"hint":"📒","before":"","after":" has a special book.","ans":"Tony"},{"hint":"🧥","before":"","after":" wears pins on her jackets.","ans":"Emily"}],"wordBank":["Tony","Emily"]}],"s2u4":[{"title":"Present progressive · 's / 're / isn't / aren't","sentences":[{"hint":"👫 They · 肯定","before":"They ","after":" taking photos.","ans":"'re"},{"hint":"👫 They · 否定","before":"They ","after":" drawing pictures.","ans":"aren't"},{"hint":"👧 She · 否定","before":"She ","after":" playing with a ball.","ans":"isn't"},{"hint":"👧 She · 肯定","before":"She ","after":" reading a book.","ans":"'s"},{"hint":"🧑‍🤝‍🧑 We · 否定","before":"We ","after":" swimming.","ans":"aren't"},{"hint":"🧑‍🤝‍🧑 We · 肯定","before":"We ","after":" windsurfing.","ans":"'re"}],"wordBank":["'s","'re","isn't","aren't"]},{"title":"like + V-ing · 動詞加 ing 的拼法","sentences":[{"hint":"👀 watch","before":"I like ","after":" dolphins.","ans":"watching"},{"hint":"📸 take（去 e）","before":"Do you like ","after":" photos?","ans":"taking"},{"hint":"🍳 cook","before":"I like ","after":".","ans":"cooking"},{"hint":"✉️ write（去 e）","before":"Does Joanna like ","after":" emails?","ans":"writing"},{"hint":"🎧 listen","before":"My friend doesn't like ","after":" to music.","ans":"listening"},{"hint":"📖 read","before":"Do you like ","after":"?","ans":"reading"}],"wordBank":["watching","taking","cooking","writing","listening","reading"]},{"title":"Dolphin Dreams · 形容詞","sentences":[{"hint":"🐬 不醜","before":"Dolphins aren't ugly. They are ","after":".","ans":"beautiful"},{"hint":"🚫 髒的","before":"Dolphins can't live in ","after":" water.","ans":"polluted"},{"hint":"💧 乾淨的","before":"They can live in ","after":" water.","ans":"clean"},{"hint":"🛡️ 安全","before":"Dolphins are safe. They aren't ","after":".","ans":"dangerous"}],"wordBank":["beautiful","polluted","clean","dangerous"]},{"title":"all endings · all 結尾","sentences":[{"hint":"🧱 牆","before":"","after":"all","ans":"w"},{"hint":"🦒 高","before":"","after":"all","ans":"t"},{"hint":"🐭 小","before":"","after":"all","ans":"sm"},{"hint":"🏬 商場","before":"","after":"all","ans":"m"},{"hint":"⚽ 球","before":"","after":"all","ans":"b"}],"wordBank":["w","t","sm","m","b"]}]});
+Object.assign(ERROR_DATA, {"s2u1":[{"sentence":"jenny is ten. she's from brazil.","errors":[{"word":"jenny","correct":"Jenny","reason":"人名第一個字母大寫"},{"word":"she's","correct":"She's","reason":"句首大寫"},{"word":"brazil.","correct":"Brazil.","reason":"國家名稱要大寫"}]},{"sentence":"Bao are nine. He's from vietnam.","errors":[{"word":"are","correct":"is","reason":"Bao 是單數，用 is"},{"word":"vietnam.","correct":"Vietnam.","reason":"國家名稱要大寫"}]},{"sentence":"It's hot in australia in december.","errors":[{"word":"australia","correct":"Australia","reason":"國家名稱要大寫"},{"word":"december.","correct":"December.","reason":"月份要大寫"}]},{"sentence":"Where is they from?","errors":[{"word":"is","correct":"are","reason":"they 後面用 are"}]},{"sentence":"is Kim from thailand?","errors":[{"word":"is","correct":"Is","reason":"句首大寫"},{"word":"thailand?","correct":"Thailand?","reason":"國家名稱要大寫"}]}],"s2u2":[{"sentence":"She don't like fishing.","errors":[{"word":"don't","correct":"doesn't","reason":"She 是第三人稱單數，用 doesn't"}]},{"sentence":"Does he likes playing chess?","errors":[{"word":"likes","correct":"like","reason":"Does 後面動詞用原形"}]},{"sentence":"i like read comics.","errors":[{"word":"i","correct":"I","reason":"我 I 永遠大寫"},{"word":"read","correct":"reading","reason":"like 後面接動詞 + ing"}]},{"sentence":"They doesn't like skateboarding.","errors":[{"word":"doesn't","correct":"don't","reason":"They 後面用 don't"}]},{"sentence":"My aunt like cooking.","errors":[{"word":"like","correct":"likes","reason":"My aunt 是第三人稱單數，動詞加 s"}]}],"s2u3":[{"sentence":"Can I use you computer?","errors":[{"word":"you","correct":"your","reason":"「你的」要用 your"}]},{"sentence":"can i use your camera?","errors":[{"word":"can","correct":"Can","reason":"句首大寫"},{"word":"i","correct":"I","reason":"我 I 永遠大寫"}]},{"sentence":"Yes, you cant.","errors":[{"word":"cant.","correct":"can't.","reason":"縮寫需要省略符號 '"}]},{"sentence":"That's they CD player.","errors":[{"word":"they","correct":"their","reason":"「他們的」要用 their"}]},{"sentence":"I collect pins and stickers","errors":[{"word":"stickers","correct":"stickers.","reason":"句尾需要句號"}]},{"sentence":"Do you have a sister.","errors":[{"word":"sister.","correct":"sister?","reason":"問句句尾要用問號"}]}],"s2u4":[{"sentence":"She isnt surfing.","errors":[{"word":"isnt","correct":"isn't","reason":"縮寫需要省略符號 '"}]},{"sentence":"They is kayaking.","errors":[{"word":"is","correct":"are","reason":"They 後面用 are"}]},{"sentence":"He's swiming.","errors":[{"word":"swiming.","correct":"swimming.","reason":"swim 要雙寫 m 再加 ing"}]},{"sentence":"We're takeing photos.","errors":[{"word":"takeing","correct":"taking","reason":"take 去掉 e 再加 ing"}]},{"sentence":"I'm not sail.","errors":[{"word":"sail.","correct":"sailing.","reason":"現在進行式：動詞 + ing"}]}]});
+Object.assign(QUIZ_DATA, {"s2u1":[{"q":"Holly and Max's cousins are from ___.","opts":["Mexico","Vietnam","Australia","Brazil"],"c":2},{"q":"'Where are you from?' — '___ from Mexico.'","opts":["I'm","He's","She's","It's"],"c":0},{"q":"Jack and Carl are brothers. ___ from the U.S.A.","opts":["He's","She's","We're","They're"],"c":3},{"q":"Which sentence is correct?","opts":["she's from brazil.","She's from Brazil.","she's from Brazil.","She's from brazil."],"c":1},{"q":"Bruno the bear is very ___. He is still asleep in summer!","opts":["lazy","busy","kind","angry"],"c":0},{"q":"___ink (🥤 drink) — which letters?","opts":["br","dr","cr","tr"],"c":1},{"q":"'Whose turn is it?' — '___'","opts":["It's my turn.","It's a card.","I'm nine.","Yes, it is."],"c":0},{"q":"In the fall, the leaves are ___.","opts":["green","red, yellow, and orange","white","blue"],"c":1}],"s2u2":[{"q":"I ___ fishing. I like reading.","opts":["don't like","doesn't like","likes","not like"],"c":0},{"q":"Max says: 'I don't like fishing. I like ___.'","opts":["reading","chess","volleyball","cooking"],"c":0},{"q":"Does Janet like playing basketball?","opts":["Yes, she does.","No, she doesn't.","Yes, she is.","No, she isn't."],"c":1},{"q":"Does Kelly like reading comics?","opts":["Yes, she does.","No, she doesn't.","Yes, she is.","No, she isn't."],"c":0},{"q":"Which letters make the word? k_t_ (🪁)","opts":["a_e","i_e","o_e","u_e"],"c":1},{"q":"Thailand is in ___.","opts":["Europe","Asia","Africa","Australia"],"c":1},{"q":"How many continents are there in the world?","opts":["five","six","seven","eight"],"c":2},{"q":"does not → short form","opts":["don't","doesn't","isn't","aren't"],"c":1}],"s2u3":[{"q":"That's ___ CD player. (they)","opts":["your","our","their","my"],"c":2},{"q":"'Can I use your camera?' — 'Yes, you ___.'","opts":["can","can't","do","are"],"c":0},{"q":"'Can we turn on the TV?' (✗) — 'No, you ___.'","opts":["can","can't","don't","aren't"],"c":1},{"q":"Which word has ar?","opts":["car","cow","coin","cube"],"c":0},{"q":"Which word rhymes with star?","opts":["car","park","shark","scarf"],"c":0},{"q":"Tony has a collection of 60 ___.","opts":["pins","stickers","shells","postcards"],"c":1},{"q":"Do you have lots of comics__  (which punctuation?)","opts":[".",",","?","!"],"c":2},{"q":"Can you ___ off the DVD player, please?","opts":["turn","put","take","open"],"c":0}],"s2u4":[{"q":"'Is Max in the water?' — 'No, he isn't. He's ___.'","opts":["reading","swimming","surfing","sailing"],"c":0},{"q":"Leo isn't snorkeling. He's ___.","opts":["sailing","surfing","reading","diving"],"c":1},{"q":"They ___ surfing. (✔)","opts":["is","am","are","isn't"],"c":2},{"q":"dive → ?","opts":["diveing","diving","divving","dives"],"c":1},{"q":"swim → ?","opts":["swiming","swimming","swimmming","swimes"],"c":1},{"q":"Dolphins can't live in ___ water.","opts":["clean","polluted","beautiful","safe"],"c":1},{"q":"Tom: 'I love playing soccer!' Anna: 'I don't. I ___ playing tennis.'","opts":["prefer","prepare","pray","please"],"c":0},{"q":"'I don't like fishing.' — '___ do I.'","opts":["So","Neither","Too","Also"],"c":1}]});
+Object.assign(FILL_DATA, {"s2phonics":[{"title":"W1 · 10 個單字","sentences":[{"hint":"指 / 點","before":"","after":"","ans":"point"},{"hint":"硬幣","before":"","after":"","ans":"coin"},{"hint":"玩具","before":"","after":"","ans":"toy"},{"hint":"豆漿","before":"","after":"","ans":"soy milk"},{"hint":"吵鬧的","before":"","after":"","ans":"noisy"},{"hint":"煮沸","before":"","after":"","ans":"boil"},{"hint":"豬叫聲","before":"","after":"","ans":"oink"},{"hint":"享受","before":"","after":"","ans":"enjoy"},{"hint":"牛仔","before":"","after":"","ans":"cowboy"},{"hint":"牡蠣","before":"","after":"","ans":"oyster"}],"wordBank":["point","coin","toy","soy milk","noisy","boil","oink","enjoy","cowboy","oyster"]},{"title":"W2 · 10 個單字","sentences":[{"hint":"醬汁","before":"","after":"","ans":"sauce"},{"hint":"暫停","before":"","after":"","ans":"pause"},{"hint":"八月","before":"","after":"","ans":"August"},{"hint":"過錯","before":"","after":"","ans":"fault"},{"hint":"因為","before":"","after":"","ans":"because"},{"hint":"畫","before":"","after":"","ans":"draw"},{"hint":"爪子","before":"","after":"","ans":"paw"},{"hint":"爪","before":"","after":"","ans":"claw"},{"hint":"吸管","before":"","after":"","ans":"straw"},{"hint":"很棒的","before":"","after":"","ans":"awesome"}],"wordBank":["sauce","pause","August","fault","because","draw","paw","claw","straw","awesome"]},{"title":"W3 · 11 個單字","sentences":[{"hint":"房子","before":"","after":"","ans":"house"},{"hint":"嘴巴","before":"","after":"","ans":"mouth"},{"hint":"數","before":"","after":"","ans":"count"},{"hint":"雲","before":"","after":"","ans":"cloud"},{"hint":"彈跳","before":"","after":"","ans":"bounce"},{"hint":"花","before":"","after":"","ans":"flower"},{"hint":"麵粉","before":"","after":"","ans":"flour"},{"hint":"皇冠","before":"","after":"","ans":"crown"},{"hint":"牛","before":"","after":"","ans":"cow"},{"hint":"棕色的","before":"","after":"","ans":"brown"},{"hint":"向下","before":"","after":"","ans":"down"}],"wordBank":["house","mouth","count","cloud","bounce","flower","flour","crown","cow","brown","down"]},{"title":"W4 · 10 個單字","sentences":[{"hint":"靴子","before":"","after":"","ans":"boot"},{"hint":"月亮","before":"","after":"","ans":"moon"},{"hint":"學校","before":"","after":"","ans":"school"},{"hint":"湯匙","before":"","after":"","ans":"spoon"},{"hint":"房間","before":"","after":"","ans":"room"},{"hint":"煮","before":"","after":"","ans":"cook"},{"hint":"木頭","before":"","after":"","ans":"wood"},{"hint":"書","before":"","after":"","ans":"book"},{"hint":"好的","before":"","after":"","ans":"good"},{"hint":"腳","before":"","after":"","ans":"foot"}],"wordBank":["boot","moon","school","spoon","room","cook","wood","book","good","foot"]},{"title":"W5 · 10 個單字","sentences":[{"hint":"囤積狂 / 林鼠","before":"","after":"","ans":"packrat"},{"hint":"背包","before":"","after":"","ans":"backpack"},{"hint":"垃圾桶","before":"","after":"","ans":"trashcan"},{"hint":"磁鐵","before":"","after":"","ans":"magnet"},{"hint":"手提包","before":"","after":"","ans":"handbag"},{"hint":"爆炸","before":"","after":"","ans":"blast"},{"hint":"鬆餅","before":"","after":"","ans":"flapjack"},{"hint":"小睡","before":"","after":"","ans":"catnap"},{"hint":"塑膠","before":"","after":"","ans":"plastic"},{"hint":"沙包","before":"","after":"","ans":"sandbag"}],"wordBank":["packrat","backpack","trashcan","magnet","handbag","blast","flapjack","catnap","plastic","sandbag"]},{"title":"W6 · 10 個單字","sentences":[{"hint":"晚餐","before":"","after":"","ans":"dinner"},{"hint":"昆蟲","before":"","after":"","ans":"insect"},{"hint":"小貓","before":"","after":"","ans":"kitten"},{"hint":"姊妹","before":"","after":"","ans":"sister"},{"hint":"窗戶","before":"","after":"","ans":"window"},{"hint":"魚條","before":"","after":"","ans":"fishstick"},{"hint":"風車","before":"","after":"","ans":"windmill"},{"hint":"大人物","before":"","after":"","ans":"bigwig"},{"hint":"格格不入的人","before":"","after":"","ans":"misfit"},{"hint":"針刺","before":"","after":"","ans":"pinprick"}],"wordBank":["dinner","insect","kitten","sister","window","fishstick","windmill","bigwig","misfit","pinprick"]},{"title":"W7 · 10 個單字","sentences":[{"hint":"馬克杯","before":"","after":"","ans":"mug"},{"hint":"地毯","before":"","after":"","ans":"rug"},{"hint":"幼獸","before":"","after":"","ans":"cub"},{"hint":"浴缸","before":"","after":"","ans":"tub"},{"hint":"太陽","before":"","after":"","ans":"sun"},{"hint":"樂趣","before":"","after":"","ans":"fun"},{"hint":"鴨子","before":"","after":"","ans":"duck"},{"hint":"運氣","before":"","after":"","ans":"luck"},{"hint":"公車","before":"","after":"","ans":"bus"},{"hint":"挑剔的","before":"","after":"","ans":"fussy"}],"wordBank":["mug","rug","cub","tub","sun","fun","duck","luck","bus","fussy"]},{"title":"W8 · 10 個單字","sentences":[{"hint":"庫存","before":"","after":"","ans":"stock"},{"hint":"頂端","before":"","after":"","ans":"top"},{"hint":"停止","before":"","after":"","ans":"stop"},{"hint":"鍋子","before":"","after":"","ans":"pot"},{"hint":"斑點","before":"","after":"","ans":"spot"},{"hint":"鎖","before":"","after":"","ans":"lock"},{"hint":"積木","before":"","after":"","ans":"block"},{"hint":"箱子","before":"","after":"","ans":"box"},{"hint":"圓木","before":"","after":"","ans":"log"},{"hint":"襪子","before":"","after":"","ans":"sock"}],"wordBank":["stock","top","stop","pot","spot","lock","block","box","log","sock"]},{"title":"W11 · 10 個單字","sentences":[{"hint":"腳踏車","before":"","after":"","ans":"bike"},{"hint":"咬","before":"","after":"","ans":"bite"},{"hint":"十分錢硬幣","before":"","after":"","ans":"dime"},{"hint":"微笑","before":"","after":"","ans":"smile"},{"hint":"我的 / 礦坑","before":"","after":"","ans":"mine"},{"hint":"風箏","before":"","after":"","ans":"kite"},{"hint":"松樹","before":"","after":"","ans":"pine"},{"hint":"九","before":"","after":"","ans":"nine"},{"hint":"線","before":"","after":"","ans":"line"},{"hint":"發光","before":"","after":"","ans":"shine"}],"wordBank":["bike","bite","dime","smile","mine","kite","pine","nine","line","shine"]}],"s2vocab":[{"title":"W1 · 15 個單字","sentences":[{"hint":"一月","before":"","after":"","ans":"January"},{"hint":"二月","before":"","after":"","ans":"February"},{"hint":"三月","before":"","after":"","ans":"March"},{"hint":"四月","before":"","after":"","ans":"April"},{"hint":"五月","before":"","after":"","ans":"May"},{"hint":"六月","before":"","after":"","ans":"June"},{"hint":"七月","before":"","after":"","ans":"July"},{"hint":"八月","before":"","after":"","ans":"August"},{"hint":"九月","before":"","after":"","ans":"September"},{"hint":"十月","before":"","after":"","ans":"October"},{"hint":"十一月","before":"","after":"","ans":"November"},{"hint":"十二月","before":"","after":"","ans":"December"},{"hint":"月份","before":"","after":"","ans":"month"},{"hint":"年","before":"","after":"","ans":"year"},{"hint":"月曆 / 日曆","before":"","after":"","ans":"calendar"}],"wordBank":["January","February","March","April","May","June","July","August","September","October","November","December","month","year","calendar"]},{"title":"W2 · 17 個單字","sentences":[{"hint":"南韓","before":"","after":"","ans":"South Korea"},{"hint":"越南","before":"","after":"","ans":"Vietnam"},{"hint":"墨西哥","before":"","after":"","ans":"Mexico"},{"hint":"西班牙","before":"","after":"","ans":"Spain"},{"hint":"泰國","before":"","after":"","ans":"Thailand"},{"hint":"台灣","before":"","after":"","ans":"Taiwan"},{"hint":"澳洲","before":"","after":"","ans":"Australia"},{"hint":"美國","before":"","after":"","ans":"USA"},{"hint":"巴西","before":"","after":"","ans":"Brazil"},{"hint":"星期一","before":"","after":"","ans":"Monday"},{"hint":"星期二","before":"","after":"","ans":"Tuesday"},{"hint":"星期三","before":"","after":"","ans":"Wednesday"},{"hint":"星期四","before":"","after":"","ans":"Thursday"},{"hint":"星期五","before":"","after":"","ans":"Friday"},{"hint":"星期六","before":"","after":"","ans":"Saturday"},{"hint":"星期日","before":"","after":"","ans":"Sunday"}],"wordBank":["South Korea","Vietnam","Mexico","Spain","Thailand","Taiwan","Australia","USA","Brazil","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]},{"title":"W3 · 15 個單字","sentences":[{"hint":"伸展","before":"","after":"","ans":"stretch"},{"hint":"起飛","before":"","after":"","ans":"take off"},{"hint":"想睡覺的","before":"","after":"","ans":"sleepy"},{"hint":"休息","before":"","after":"","ans":"rest"},{"hint":"灰色的","before":"","after":"","ans":"gray"},{"hint":"乾的","before":"","after":"","ans":"dry"},{"hint":"船","before":"","after":"","ans":"boat"},{"hint":"蓬鬆的","before":"","after":"","ans":"fluffy"},{"hint":"發生","before":"","after":"","ans":"happens"},{"hint":"改變","before":"","after":"","ans":"change"},{"hint":"顏色","before":"","after":"","ans":"color"},{"hint":"旅行","before":"","after":"","ans":"trip"},{"hint":"教","before":"","after":"","ans":"teach"},{"hint":"告訴","before":"","after":"","ans":"tell"},{"hint":"雲","before":"","after":"","ans":"clouds"}],"wordBank":["stretch","take off","sleepy","rest","gray","dry","boat","fluffy","happens","change","color","trip","teach","tell","clouds"]},{"title":"W4 · 15 個單字","sentences":[{"hint":"看漫畫","before":"","after":"","ans":"read comics"},{"hint":"玩滑板","before":"","after":"","ans":"skateboard"},{"hint":"做體操","before":"","after":"","ans":"do gymnastics"},{"hint":"下棋","before":"","after":"","ans":"play chess"},{"hint":"釣魚","before":"","after":"","ans":"fish"},{"hint":"打籃球","before":"","after":"","ans":"play basketball"},{"hint":"拍照","before":"","after":"","ans":"take photos"},{"hint":"打排球","before":"","after":"","ans":"play volleyball"},{"hint":"彈吉他","before":"","after":"","ans":"play the guitar"},{"hint":"購物","before":"","after":"","ans":"shop"},{"hint":"烹調","before":"","after":"","ans":"cook"},{"hint":"上漆","before":"","after":"","ans":"paint"},{"hint":"彈鋼琴","before":"","after":"","ans":"play the piano"},{"hint":"探望家人","before":"","after":"","ans":"visit family"},{"hint":"洲","before":"","after":"","ans":"continents"}],"wordBank":["read comics","skateboard","do gymnastics","play chess","fish","play basketball","take photos","play volleyball","play the guitar","shop","cook","paint","play the piano","visit family","continents"]},{"title":"W5 · 16 個單字","sentences":[{"hint":"電腦","before":"","after":"","ans":"computer"},{"hint":"電視","before":"","after":"","ans":"television"},{"hint":"DVD播放器","before":"","after":"","ans":"DVD player"},{"hint":"手機","before":"","after":"","ans":"cellphone"},{"hint":"相機","before":"","after":"","ans":"camera"},{"hint":"打開","before":"","after":"","ans":"turn on"},{"hint":"關掉","before":"","after":"","ans":"turn off"},{"hint":"專題計畫","before":"","after":"","ans":"project"},{"hint":"收藏","before":"","after":"","ans":"collection"},{"hint":"貼紙","before":"","after":"","ans":"sticker"},{"hint":"讓人覺得無聊的","before":"","after":"","ans":"boring"},{"hint":"壞掉的","before":"","after":"","ans":"broken"},{"hint":"漫畫","before":"","after":"","ans":"comics"},{"hint":"圖釘","before":"","after":"","ans":"pin"},{"hint":"貝殼","before":"","after":"","ans":"shell"}],"wordBank":["computer","television","DVD player","cellphone","camera","turn on","turn off","project","collection","sticker","boring","broken","comics","pin","shell"]},{"title":"W6 · 15 個單字","sentences":[{"hint":"日出","before":"","after":"","ans":"sunrise"},{"hint":"日落","before":"","after":"","ans":"sunset"},{"hint":"陽光","before":"","after":"","ans":"sunlight"},{"hint":"標記","before":"","after":"","ans":"mark"},{"hint":"日晷","before":"","after":"","ans":"sundial"},{"hint":"影子","before":"","after":"","ans":"shadow"},{"hint":"正午","before":"","after":"","ans":"noon"},{"hint":"電視節目","before":"","after":"","ans":"TV show"},{"hint":"黎明","before":"","after":"","ans":"dawn"},{"hint":"黃昏","before":"","after":"","ans":"dusk"},{"hint":"暮光","before":"","after":"","ans":"twilight"},{"hint":"半夜","before":"","after":"","ans":"midnight"},{"hint":"隔天","before":"","after":"","ans":"the next day"},{"hint":"岩石","before":"","after":"","ans":"rock"},{"hint":"看時間","before":"","after":"","ans":"tell time"}],"wordBank":["sunrise","sunset","sunlight","mark","sundial","shadow","noon","TV show","dawn","dusk","twilight","midnight","the next day","rock","tell time"]},{"title":"W7 · 10 個單字","sentences":[{"hint":"最喜愛的","before":"","after":"","ans":"favorite"},{"hint":"覺得有趣的","before":"","after":"","ans":"interesting"},{"hint":"配對","before":"","after":"","ans":"match"},{"hint":"平凡的","before":"","after":"","ans":"ordinary"},{"hint":"樓下","before":"","after":"","ans":"downstairs"},{"hint":"最明亮的","before":"","after":"","ans":"brightest"},{"hint":"藥物","before":"","after":"","ans":"medicine"},{"hint":"泳裝","before":"","after":"","ans":"swimsuit"},{"hint":"強大的","before":"","after":"","ans":"powerful"},{"hint":"最偉大的","before":"","after":"","ans":"greatest"}],"wordBank":["favorite","interesting","match","ordinary","downstairs","brightest","medicine","swimsuit","powerful","greatest"]},{"title":"W8 · 10 個單字","sentences":[{"hint":"工廠","before":"","after":"","ans":"factory"},{"hint":"重複","before":"","after":"","ans":"repeat"},{"hint":"探索","before":"","after":"","ans":"explore"},{"hint":"明信片","before":"","after":"","ans":"postcard"},{"hint":"夏天","before":"","after":"","ans":"summer"},{"hint":"秋天","before":"","after":"","ans":"autumn"},{"hint":"地球","before":"","after":"","ans":"earth"},{"hint":"藥局","before":"","after":"","ans":"pharmacy"},{"hint":"精準的","before":"","after":"","ans":"precise"},{"hint":"敏捷的","before":"","after":"","ans":"swift"}],"wordBank":["factory","repeat","explore","postcard","summer","autumn","earth","pharmacy","precise","swift"]},{"title":"W11 · 10 個單字","sentences":[{"hint":"輪子","before":"","after":"","ans":"wheels"},{"hint":"鈕扣","before":"","after":"","ans":"button"},{"hint":"螺旋槳","before":"","after":"","ans":"propeller"},{"hint":"待洗衣物","before":"","after":"","ans":"laundry"},{"hint":"初級的","before":"","after":"","ans":"elementary"},{"hint":"濕度","before":"","after":"","ans":"humidity"},{"hint":"羽毛","before":"","after":"","ans":"feather"},{"hint":"危險的","before":"","after":"","ans":"dangerous"},{"hint":"火山","before":"","after":"","ans":"volcano"},{"hint":"把手","before":"","after":"","ans":"handle"}],"wordBank":["wheels","button","propeller","laundry","elementary","humidity","feather","dangerous","volcano","handle"]}]});
+Object.assign(QUIZ_DATA, {"s2phonics":[{"q":"「指 / 點」的英文是？","opts":["point","enjoy","fault","awesome"],"c":0},{"q":"「享受」的英文是？","opts":["because","enjoy","house","flour"],"c":1},{"q":"「因為」的英文是？","opts":["mouth","crown","because","school"],"c":2},{"q":"「嘴巴」的英文是？","opts":["cow","spoon","foot","mouth"],"c":3},{"q":"「牛」的英文是？","opts":["cow","room","packrat","flapjack"],"c":0},{"q":"「房間」的英文是？","opts":["backpack","room","catnap","sister"],"c":1},{"q":"「背包」的英文是？","opts":["plastic","window","backpack","mug"],"c":2},{"q":"「塑膠」的英文是？","opts":["fishstick","rug","luck","plastic"],"c":3},{"q":"「魚條」的英文是？","opts":["fishstick","cub","bus","spot"],"c":0},{"q":"「幼獸」的英文是？","opts":["fussy","cub","lock","bite"],"c":1},{"q":"「挑剔的」的英文是？","opts":["block","dime","fussy","line"],"c":2},{"q":"「積木」的英文是？","opts":["smile","shine","boil","block"],"c":3}],"s2vocab":[{"q":"「一月」的英文是？","opts":["January","August","year","Thailand"],"c":0},{"q":"「十一月」的英文是？","opts":["Mexico","November","Brazil","Saturday"],"c":1},{"q":"「台灣」的英文是？","opts":["Thursday","sleepy","Taiwan","happens"],"c":2},{"q":"「星期日」的英文是？","opts":["boat","teach","play chess","Sunday"],"c":3},{"q":"「改變」的英文是？","opts":["change","skateboard","play volleyball","visit family"],"c":0},{"q":"「釣魚」的英文是？","opts":["paint","fish","DVD player","collection"],"c":1},{"q":"「洲」的英文是？","opts":["turn off","comics","continents","mark"],"c":2},{"q":"「貼紙」的英文是？","opts":["sunset","TV show","rock","sticker"],"c":3},{"q":"「日晷」的英文是？","opts":["sundial","midnight","match","powerful"],"c":0},{"q":"「看時間」的英文是？","opts":["medicine","tell time","explore","precise"],"c":1},{"q":"「最偉大的」的英文是？","opts":["earth","propeller","greatest","volcano"],"c":2},{"q":"「敏捷的」的英文是？","opts":["feather","March","September","swift"],"c":3}]});
+
 var currentSection = null;
+var currentSem = null;
+function enterSemester(sem){
+  currentSem = sem;
+  document.getElementById('sem-select').classList.add('hidden');
+  document.getElementById('landing').classList.toggle('hidden', sem!=='s1');
+  document.getElementById('landing-s2').classList.toggle('hidden', sem!=='s2');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function backToSemester(){
+  currentSem = null;
+  document.getElementById('landing').classList.add('hidden');
+  document.getElementById('landing-s2').classList.add('hidden');
+  document.getElementById('sem-select').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 var fillState = {};
 var fillActive = null;
 var errSel = {};
@@ -409,7 +1071,7 @@ function shuffle(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math
 
 function enterSection(uid){
   currentSection = uid;
-  document.getElementById('landing').classList.add('hidden');
+  ['landing','landing-s2','sem-select'].forEach(function(id){ document.getElementById(id).classList.add('hidden'); });
   document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
   document.getElementById('rv-'+uid).classList.remove('hidden');
   if (FILL_DATA[uid] && FILL_DATA[uid].length) initFill(uid);
@@ -420,7 +1082,7 @@ function enterSection(uid){
 function backToLanding(){
   currentSection = null;
   document.querySelectorAll('[id^="rv-"]').forEach(function(el){ el.classList.add('hidden'); });
-  document.getElementById('landing').classList.remove('hidden');
+  document.getElementById(currentSem==='s2'?'landing-s2':'landing').classList.remove('hidden');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 

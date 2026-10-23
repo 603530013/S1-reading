@@ -55,6 +55,12 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
 .u-ff13{background:linear-gradient(135deg,#ef4444,#dc2626)}
 .u-ff14{background:linear-gradient(135deg,#6366f1,#4f46e5)}
 .u-ff15{background:linear-gradient(135deg,#f97316,#c2410c)}
+.sem-title{grid-column:1/-1;color:white;font-family:'Baloo 2',cursive;font-size:1.05em;font-weight:800;margin:14px 2px 0;padding-bottom:4px;border-bottom:2px solid rgba(255,255,255,.4);text-shadow:1px 1px 0 rgba(0,0,0,.18);position:relative}
+.sem-title:first-child{margin-top:0}
+.sub-title{grid-column:1/-1;color:rgba(255,255,255,.95);font-family:'Baloo 2',cursive;font-size:.92em;font-weight:800;margin:8px 2px 0;text-shadow:1px 1px 0 rgba(0,0,0,.18);position:relative}
+.tp{background:var(--gl);border-left:4px solid var(--green);padding:10px 14px;border-radius:10px;margin-bottom:7px;font-size:.93em;line-height:1.7;color:var(--dark)}
+.tp a{color:var(--green);font-weight:700}
+.story-box{background:#fffbeb;border:2px solid #fde68a;border-radius:14px;padding:14px;line-height:1.9;font-size:.95em;color:var(--dark);margin-top:8px}
 .landing-note{color:rgba(255,255,255,.65);font-size:.78em;margin-top:18px;text-align:center;position:relative}
 
 /* ── APP ── */
@@ -214,36 +220,55 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
 <div id="landing">
   <a class="home-link" href="index.html">← 首頁</a>
   <div class="ltitle">📚 Family and Friends</div>
-  <div class="lsub">選擇 Unit 開始複習！</div>
+  <div class="lsub">選擇學期與 Unit 開始複習！</div>
   <div class="ugrid">
-    <button class="ubtn u-ff1" onclick="enter('ff1')">
-      <span class="icon">🏫</span>
-      <div><div class="un">Unit 1</div><div class="uname">Our new things</div></div>
+    <div class="sem-title">📗 S2-1 · Starter + Unit 1–7</div>
+    <button class="ubtn u-ff8 ugrid-full" onclick="enter('s2st')">
+      <span class="icon">👨‍👩‍👧‍👦</span>
+      <div><div class="un">Starter</div><div class="uname">My family</div></div>
     </button>
-    <button class="ubtn u-ff2" onclick="enter('ff2')">
-      <span class="icon">😊</span>
-      <div><div class="un">Unit 2</div><div class="uname">They're happy now!</div></div>
+    <button class="ubtn u-ff1" onclick="enter('s2u1')">
+      <span class="icon">🌏</span>
+      <div><div class="un">Unit 1</div><div class="uname">They're from Australia!</div></div>
     </button>
-    <button class="ubtn u-ff3" onclick="enter('ff3')">
-      <span class="icon">🚴</span>
-      <div><div class="un">Unit 3</div><div class="uname">I can ride a bike!</div></div>
+    <button class="ubtn u-ff2" onclick="enter('s2u2')">
+      <span class="icon">🎣</span>
+      <div><div class="un">Unit 2</div><div class="uname">My weekend</div></div>
     </button>
-    <button class="ubtn u-ff4" onclick="enter('ff4')">
-      <span class="icon">🍕</span>
-      <div><div class="un">Unit 4</div><div class="uname">Do you have a milkshake?</div></div>
+    <button class="ubtn u-ff3" onclick="enter('s2u3')">
+      <span class="icon">🎧</span>
+      <div><div class="un">Unit 3</div><div class="uname">My things</div></div>
     </button>
-    <button class="ubtn u-ff5" onclick="enter('ff5')">
-      <span class="icon">📚</span>
-      <div><div class="un">Unit 5</div><div class="uname">We have English!</div></div>
+    <button class="ubtn u-ff4" onclick="enter('s2u4')">
+      <span class="icon">🏖️</span>
+      <div><div class="un">Unit 4</div><div class="uname">We're having fun at the beach!</div></div>
     </button>
-    <button class="ubtn u-ff6" onclick="enter('ff6')">
-      <span class="icon">🎒</span>
-      <div><div class="un">Unit 6</div><div class="uname">Let's play after school!</div></div>
+    <button class="ubtn u-ff5" onclick="enter('s2u5')">
+      <span class="icon">🐵</span>
+      <div><div class="un">Unit 5</div><div class="uname">A funny monkey!</div></div>
     </button>
-    <button class="ubtn u-ff7" onclick="enter('ff7')">
-      <span class="icon">🎂</span>
-      <div><div class="un">Unit 7</div><div class="uname">Let's buy presents!</div></div>
+    <button class="ubtn u-ff6" onclick="enter('s2u6')">
+      <span class="icon">⏰</span>
+      <div><div class="un">Unit 6</div><div class="uname">Jim's day</div></div>
     </button>
+    <button class="ubtn u-ff7 ugrid-full" onclick="enter('s2u7')">
+      <span class="icon">🎬</span>
+      <div><div class="un">Unit 7</div><div class="uname">Places to go!</div></div>
+    </button>
+    <div class="sub-title">🏆 S2-1 期中考專區（範圍：Unit 1–4）</div>
+    <button class="ubtn u-g2 ugrid-full" onclick="enterGroup('s2mid',['s2u1','s2u2','s2u3','s2u4'],'🏆 S2-1 期中考 U1~4 總複習','S2-1 期中考')">
+      <span class="icon">🏆</span>
+      <div><div class="un">期中考範圍 Unit 1–4</div><div class="uname">期中考總複習！</div></div>
+    </button>
+    <button class="ubtn u-g1 ugrid-full" onclick="enterGroup('s2late',['s2u5','s2u6','s2u7'],'📗 S2-1 U5~7 總複習','S2-1 U5~7')">
+      <span class="icon">📗</span>
+      <div><div class="un">Unit 5–7 總複習</div><div class="uname">期中考後的範圍！</div></div>
+    </button>
+    <button class="ubtn u-all ugrid-full" onclick="enterGroup('s2all',['s2st','s2u1','s2u2','s2u3','s2u4','s2u5','s2u6','s2u7'],'⭐ S2-1 全部複習','S2-1 全部')">
+      <span class="icon">⭐</span>
+      <div><div class="un">S2-1 全部</div><div class="uname">Starter + Unit 1–7 一起複習！</div></div>
+    </button>
+    <div class="sem-title">📘 S1-2 · Unit 8–15</div>
     <button class="ubtn u-ff8" onclick="enter('ff8')">
       <span class="icon">⏰</span>
       <div><div class="un">Unit 8</div><div class="uname">What time is it?</div></div>
@@ -272,24 +297,90 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
       <span class="icon">📷</span>
       <div><div class="un">Unit 14</div><div class="uname">Look at the photos!</div></div>
     </button>
-    <button class="ubtn u-ff15 ugrid-full" onclick="enter('ff15')">
+    <button class="ubtn u-ff15" onclick="enter('ff15')">
       <span class="icon">🏆</span>
       <div><div class="un">Unit 15</div><div class="uname">Good job!</div></div>
     </button>
-    <button class="ubtn u-g1 ugrid-full" onclick="enterGroup('ff1to7',['ff1','ff2','ff3','ff4','ff5','ff6','ff7'],'📘 U1~7 總複習','U1~7')">
+    <button class="ubtn u-g2 ugrid-full" onclick="enterGroup('ff8to15',['ff8','ff9','ff10','ff11','ff12','ff13','ff14','ff15'],'📘 S1-2 U8~15 總複習','S1-2 U8~15')">
       <span class="icon">📘</span>
-      <div><div class="un">Unit 1–7 總複習</div><div class="uname">上半段全部複習！</div></div>
+      <div><div class="un">S1-2 · Unit 8–15 總複習</div><div class="uname">下半段全部複習！</div></div>
     </button>
-    <button class="ubtn u-g2 ugrid-full" onclick="enterGroup('ff8to15',['ff8','ff9','ff10','ff11','ff12','ff13','ff14','ff15'],'📙 U8~15 總複習','U8~15')">
+    <div class="sub-title">🏆 S1-2 期中考專區</div>
+    <button class="ubtn u-ff10" onclick="enter('s1mphonics')">
+      <span class="icon">🔤</span>
+      <div><div class="un">發音規則</div><div class="uname">Phonics</div></div>
+    </button>
+    <button class="ubtn u-ff9" onclick="enter('s1mvocabulary')">
+      <span class="icon">📘</span>
+      <div><div class="un">單字</div><div class="uname">Vocabulary</div></div>
+    </button>
+    <button class="ubtn u-ff3" onclick="enter('s1msentences')">
+      <span class="icon">💬</span>
+      <div><div class="un">句型</div><div class="uname">Sentence Patterns</div></div>
+    </button>
+    <button class="ubtn u-ff5" onclick="enter('s1mproofreading')">
+      <span class="icon">✏️</span>
+      <div><div class="un">改錯</div><div class="uname">Proofreading</div></div>
+    </button>
+    <button class="ubtn u-ff2" onclick="enter('s1mgrammar')">
+      <span class="icon">🧠</span>
+      <div><div class="un">文法</div><div class="uname">Grammar</div></div>
+    </button>
+    <button class="ubtn u-ff8" onclick="enter('s1mreading')">
+      <span class="icon">📖</span>
+      <div><div class="un">閱讀單字</div><div class="uname">Reading Vocab</div></div>
+    </button>
+    <button class="ubtn u-ff15" onclick="enter('s1mstory')">
+      <span class="icon">🧤</span>
+      <div><div class="un">課文閱讀</div><div class="uname">The Lost Mitten</div></div>
+    </button>
+    <button class="ubtn u-ff7" onclick="enter('s1msubject')">
+      <span class="icon">🎨</span>
+      <div><div class="un">學科單字</div><div class="uname">Subject Learning</div></div>
+    </button>
+    <button class="ubtn u-all ugrid-full" onclick="enterGroup('s1mall',['s1mphonics','s1mvocabulary','s1msentences','s1mproofreading','s1mgrammar','s1mreading','s1mstory','s1msubject'],'🏆 S1-2 期中考 全部複習','S1-2 期中考')">
+      <span class="icon">🏆</span>
+      <div><div class="un">S1-2 期中考</div><div class="uname">全部項目一起複習！</div></div>
+    </button>
+    <div class="sem-title">📙 S1-1 · Unit 1–7</div>
+    <button class="ubtn u-ff1" onclick="enter('ff1')">
+      <span class="icon">🏫</span>
+      <div><div class="un">Unit 1</div><div class="uname">Our new things</div></div>
+    </button>
+    <button class="ubtn u-ff2" onclick="enter('ff2')">
+      <span class="icon">😊</span>
+      <div><div class="un">Unit 2</div><div class="uname">They're happy now!</div></div>
+    </button>
+    <button class="ubtn u-ff3" onclick="enter('ff3')">
+      <span class="icon">🚴</span>
+      <div><div class="un">Unit 3</div><div class="uname">I can ride a bike!</div></div>
+    </button>
+    <button class="ubtn u-ff4" onclick="enter('ff4')">
+      <span class="icon">🍕</span>
+      <div><div class="un">Unit 4</div><div class="uname">Do you have a milkshake?</div></div>
+    </button>
+    <button class="ubtn u-ff5" onclick="enter('ff5')">
+      <span class="icon">📚</span>
+      <div><div class="un">Unit 5</div><div class="uname">We have English!</div></div>
+    </button>
+    <button class="ubtn u-ff6" onclick="enter('ff6')">
+      <span class="icon">🎒</span>
+      <div><div class="un">Unit 6</div><div class="uname">Let's play after school!</div></div>
+    </button>
+    <button class="ubtn u-ff7 ugrid-full" onclick="enter('ff7')">
+      <span class="icon">🎂</span>
+      <div><div class="un">Unit 7</div><div class="uname">Let's buy presents!</div></div>
+    </button>
+    <button class="ubtn u-g1 ugrid-full" onclick="enterGroup('ff1to7',['ff1','ff2','ff3','ff4','ff5','ff6','ff7'],'📙 S1-1 U1~7 總複習','S1-1 U1~7')">
       <span class="icon">📙</span>
-      <div><div class="un">Unit 8–15 總複習</div><div class="uname">下半段全部複習！</div></div>
+      <div><div class="un">S1-1 · Unit 1–7 總複習</div><div class="uname">上半段全部複習！</div></div>
     </button>
     <button class="ubtn u-all ugrid-full" onclick="enterAll()">
       <span class="icon">⭐</span>
-      <div><div class="un">全部 Unit 1–15</div><div class="uname">一起複習！</div></div>
+      <div><div class="un">S1 全部 Unit 1–15</div><div class="uname">一起複習！</div></div>
     </button>
   </div>
-  <p class="landing-note">Family and Friends · Unit 1–15</p>
+  <p class="landing-note">Family and Friends · S2-1 · S1-2 · S1-1</p>
 </div>
 
 <!-- APP -->
@@ -974,6 +1065,833 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
       </div>
     </div>
 
+    <!-- ═════ S2-1 ═════ -->
+    <div id="rv-s2st" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Family 家人</h2>
+        <div class="pill">9 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">👵</span><div><div class="en">grandma</div><div class="zh">奶奶／外婆</div></div></li>
+          <li><span class="num">👴</span><div><div class="en">grandpa</div><div class="zh">爺爺／外公</div></div></li>
+          <li><span class="num">👩</span><div><div class="en">mom</div><div class="zh">媽媽</div></div></li>
+          <li><span class="num">👨</span><div><div class="en">dad</div><div class="zh">爸爸</div></div></li>
+          <li><span class="num">👩‍🦰</span><div><div class="en">aunt</div><div class="zh">阿姨／姑姑</div></div></li>
+          <li><span class="num">👨‍🦱</span><div><div class="en">uncle</div><div class="zh">叔叔／舅舅</div></div></li>
+          <li><span class="num">👦</span><div><div class="en">brother</div><div class="zh">兄弟</div></div></li>
+          <li><span class="num">👧</span><div><div class="en">sister</div><div class="zh">姊妹</div></div></li>
+          <li><span class="num">🧒</span><div><div class="en">cousin</div><div class="zh">堂（表）兄弟姊妹</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：比較級 Comparatives</h2>
+        <div class="pill">形容詞 + er + than</div>
+        <table class="gtable">
+          <thead><tr><th>原形</th><th>比較級</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>big</b></td><td>bigger（雙寫 g）</td><td><span class="en">The elephant is bigger than the monkey.</span><br><span class="zh">大象比猴子大。</span></td></tr>
+            <tr><td><b>tall</b></td><td>taller</td><td><span class="en">The giraffe is taller than the zebra.</span><br><span class="zh">長頸鹿比斑馬高。</span></td></tr>
+            <tr><td><b>fast</b></td><td>faster</td><td><span class="en">The donkey is faster than the cow.</span><br><span class="zh">驢子比牛快。</span></td></tr>
+            <tr><td><b>small</b></td><td>smaller</td><td><span class="en">The goat is smaller than the horse.</span><br><span class="zh">山羊比馬小。</span></td></tr>
+            <tr><td><b>slow</b></td><td>slower</td><td><span class="en">The blue car is slower than the green car.</span><br><span class="zh">藍色車比綠色車慢。</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 比較兩個東西時，形容詞後面加 <b>-er</b>，再接 <b>than</b>。</p>
+      </div>
+      <div class="card">
+        <h2>📅 月份與年齡</h2>
+        <div class="pill">12 個月份</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1</span><div><div class="en">January</div><div class="zh">一月</div></div></li>
+          <li><span class="num">2</span><div><div class="en">February</div><div class="zh">二月</div></div></li>
+          <li><span class="num">3</span><div><div class="en">March</div><div class="zh">三月</div></div></li>
+          <li><span class="num">4</span><div><div class="en">April</div><div class="zh">四月</div></div></li>
+          <li><span class="num">5</span><div><div class="en">May</div><div class="zh">五月</div></div></li>
+          <li><span class="num">6</span><div><div class="en">June</div><div class="zh">六月</div></div></li>
+          <li><span class="num">7</span><div><div class="en">July</div><div class="zh">七月</div></div></li>
+          <li><span class="num">8</span><div><div class="en">August</div><div class="zh">八月</div></div></li>
+          <li><span class="num">9</span><div><div class="en">September</div><div class="zh">九月</div></div></li>
+          <li><span class="num">10</span><div><div class="en">October</div><div class="zh">十月</div></div></li>
+          <li><span class="num">11</span><div><div class="en">November</div><div class="zh">十一月</div></div></li>
+          <li><span class="num">12</span><div><div class="en">December</div><div class="zh">十二月</div></div></li>
+        </ul>
+        <div class="pill pill-gold">❓ 常用問答</div>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">A</div><div class="dtext"><b>When's your birthday?</b></div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">B</div><div class="dtext">My birthday is <b>in</b> June.</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">A</div><div class="dtext"><b>How old are you?</b></div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">B</div><div class="dtext">I'm nine.</div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🔢 數字 10–100</h2>
+        <div class="pill">整十 + 個位</div>
+        <table class="gtable">
+          <thead><tr><th>數字</th><th>英文</th><th>數字</th><th>英文</th></tr></thead>
+          <tbody>
+            <tr><td><b>10</b></td><td>ten</td><td>60</td><td>sixty</td></tr>
+            <tr><td><b>20</b></td><td>twenty</td><td>70</td><td>seventy</td></tr>
+            <tr><td><b>30</b></td><td>thirty</td><td>80</td><td>eighty</td></tr>
+            <tr><td><b>40</b></td><td>forty</td><td>90</td><td>ninety</td></tr>
+            <tr><td><b>50</b></td><td>fifty</td><td>100</td><td>one hundred</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 21–99：整十 + 連字號 + 個位，例如 <b>twenty-one</b>、<b>sixty-three</b>、<b>ninety-four</b>。<br>注意拼字：four（4）、forty（40）、fourteen（14）不一樣！</p>
+      </div>
+    </div>
+
+    <div id="rv-s2u1" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Countries 國家 & Seasons 季節</h2>
+        <div class="pill">8 個國家 + 4 個季節</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🇰🇷</span><div><div class="en">South Korea</div><div class="zh">南韓</div></div></li>
+          <li><span class="num">🇻🇳</span><div><div class="en">Vietnam</div><div class="zh">越南</div></div></li>
+          <li><span class="num">🇲🇽</span><div><div class="en">Mexico</div><div class="zh">墨西哥</div></div></li>
+          <li><span class="num">🇪🇸</span><div><div class="en">Spain</div><div class="zh">西班牙</div></div></li>
+          <li><span class="num">🇹🇭</span><div><div class="en">Thailand</div><div class="zh">泰國</div></div></li>
+          <li><span class="num">🇦🇺</span><div><div class="en">Australia</div><div class="zh">澳洲</div></div></li>
+          <li><span class="num">🇺🇸</span><div><div class="en">the U.S.A.</div><div class="zh">美國</div></div></li>
+          <li><span class="num">🇧🇷</span><div><div class="en">Brazil</div><div class="zh">巴西</div></div></li>
+          <li><span class="num">🌱</span><div><div class="en">spring</div><div class="zh">春天</div></div></li>
+          <li><span class="num">☀️</span><div><div class="en">summer</div><div class="zh">夏天</div></div></li>
+          <li><span class="num">🍂</span><div><div class="en">fall</div><div class="zh">秋天</div></div></li>
+          <li><span class="num">❄️</span><div><div class="en">winter</div><div class="zh">冬天</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：be 動詞 + from</h2>
+        <div class="pill">Where are you from?</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定句</th><th>問句</th></tr></thead>
+          <tbody>
+            <tr><td><b>I</b></td><td><span class="en">I'm from South Korea.</span><br><span class="zh">我來自南韓。</span></td><td><span class="en">Where are you from?</span><br><span class="zh">你來自哪裡？</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He's from Brazil.</span><br><span class="zh">他來自巴西。</span></td><td><span class="en">Where is he from?</span><br><span class="zh">他來自哪裡？</span></td></tr>
+            <tr><td><b>You / We / They</b></td><td><span class="en">They're from Mexico.</span><br><span class="zh">他們來自墨西哥。</span></td><td><span class="en">Where are they from?</span><br><span class="zh">他們來自哪裡？</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 回答也可以說：<b>We're from Spain.</b>（我們來自西班牙）</p>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：Consonant blends</h2>
+        <div class="pill">子音組合</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">cr</span><div><div class="en">crayon</div><div class="zh">蠟筆</div></div></li>
+          <li><span class="num">br</span><div><div class="en">brush</div><div class="zh">刷子</div></div></li>
+          <li><span class="num">dr</span><div><div class="en">drink</div><div class="zh">喝</div></div></li>
+          <li><span class="num">sp</span><div><div class="en">spoon</div><div class="zh">湯匙</div></div></li>
+          <li><span class="num">sn</span><div><div class="en">snake</div><div class="zh">蛇</div></div></li>
+          <li><span class="num">pl</span><div><div class="en">play</div><div class="zh">玩</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：什麼時候要大寫？</h2>
+        <div class="pill pill-gold">Capital letters</div>
+        <table class="gtable">
+          <thead><tr><th>要大寫</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>國家</b></td><td>Spain, Brazil, Thailand</td></tr>
+            <tr><td><b>月份</b></td><td>April, December</td></tr>
+            <tr><td><b>人名</b></td><td>Billy, Jenny</td></tr>
+            <tr><td><b>句子開頭</b></td><td>My name is Helen.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🎭 故事對話：They're from Australia!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Holly</div><div class="dtext">Where are those people from?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">They aren't from Australia. <b>They're from Mexico.</b></div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Holly</div><div class="dtext">Look! Are they our cousins?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">No, Holly. <b>They're from Vietnam.</b> Our cousins are from Australia.</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Look behind you, Holly! I'm Amy and this is Leo.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Leo</div><div class="dtext">We're your cousins. It's nice to meet you!</div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>🐻 閱讀：The Lazy Bear</h2>
+        <div class="pill">四季的故事</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🌱</span><div><div class="en">Spring：warm and sunny</div><div class="zh">動物們都醒了，但熊 Bruno 還在睡。</div></div></li>
+          <li><span class="num">☀️</span><div><div class="en">Summer：hot, lots of flowers</div><div class="zh">動物們很開心，Bruno 還在睡。</div></div></li>
+          <li><span class="num">🍂</span><div><div class="en">Fall：red, yellow, and orange leaves</div><div class="zh">動物們想睡了，準備過冬。</div></div></li>
+          <li><span class="num">❄️</span><div><div class="en">Winter：Bruno is awake!</div><div class="zh">Bruno 醒了，但大家都睡了，他很孤單。</div></div></li>
+          <li><span class="num">🌱</span><div><div class="en">Spring again：Bruno is happy and hungry</div><div class="zh">春天又來了，Bruno 醒來想吃早餐！</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🃏 Fluency Time! 1：Playing games</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tom</div><div class="dtext">Let's play Snap!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Anna</div><div class="dtext">OK. That's a great idea. <b>Whose turn is it?</b></div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tom</div><div class="dtext"><b>It's my turn.</b> Snap!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Anna</div><div class="dtext">How many cards do you have?</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">Tom</div><div class="dtext">Ten. <b>I'm the winner!</b> I have more cards than you.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Anna</div><div class="dtext"><b>Congratulations.</b></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rv-s2u2" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Hobbies 興趣</h2>
+        <div class="pill">14 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">📚</span><div><div class="en">read comics</div><div class="zh">看漫畫</div></div></li>
+          <li><span class="num">🛹</span><div><div class="en">skateboard</div><div class="zh">玩滑板</div></div></li>
+          <li><span class="num">🤸</span><div><div class="en">do gymnastics</div><div class="zh">做體操</div></div></li>
+          <li><span class="num">♟️</span><div><div class="en">play chess</div><div class="zh">下西洋棋</div></div></li>
+          <li><span class="num">🎣</span><div><div class="en">fish</div><div class="zh">釣魚</div></div></li>
+          <li><span class="num">🏀</span><div><div class="en">play basketball</div><div class="zh">打籃球</div></div></li>
+          <li><span class="num">📸</span><div><div class="en">take photos</div><div class="zh">拍照</div></div></li>
+          <li><span class="num">🏐</span><div><div class="en">play volleyball</div><div class="zh">打排球</div></div></li>
+          <li><span class="num">🎸</span><div><div class="en">play the guitar</div><div class="zh">彈吉他</div></div></li>
+          <li><span class="num">🛍️</span><div><div class="en">shop</div><div class="zh">購物</div></div></li>
+          <li><span class="num">🍳</span><div><div class="en">cook</div><div class="zh">烹飪</div></div></li>
+          <li><span class="num">🎨</span><div><div class="en">paint</div><div class="zh">畫畫</div></div></li>
+          <li><span class="num">🎹</span><div><div class="en">play the piano</div><div class="zh">彈鋼琴</div></div></li>
+          <li><span class="num">👨‍👩‍👧</span><div><div class="en">visit family</div><div class="zh">拜訪家人</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：like + V-ing</h2>
+        <div class="pill">喜歡做某事</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定 / 否定</th><th>問句與回答</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / You / We / They</b></td><td><span class="en">I like reading.</span><br><span class="zh">我喜歡閱讀。</span><br><span class="en">I don't like fishing.</span><br><span class="zh">我不喜歡釣魚。</span></td><td><span class="en">Do you like playing chess?</span><br><span class="zh">你喜歡下棋嗎？</span><br><span class="en">Yes, I do. / No, I don't.</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He likes skateboarding.</span><br><span class="zh">他喜歡滑板。</span><br><span class="en">He doesn't like fishing.</span><br><span class="zh">他不喜歡釣魚。</span></td><td><span class="en">Does he like playing chess?</span><br><span class="zh">他喜歡下棋嗎？</span><br><span class="en">Yes, he does. / No, he doesn't.</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 <b>like</b> 後面的動詞要加 <b>-ing</b>。<br>第三人稱單數（he / she / it）用 <b>likes</b> / <b>doesn't like</b>，問句用 <b>Does</b> + 動詞原形。</p>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：Magic e</h2>
+        <div class="pill">魔法 e 讓母音念長音</div>
+        <table class="gtable">
+          <thead><tr><th>拼法</th><th>單字</th></tr></thead>
+          <tbody>
+            <tr><td><b>a_e</b></td><td>face（臉）、space（太空）</td></tr>
+            <tr><td><b>i_e</b></td><td>kite（風箏）、bike（腳踏車）</td></tr>
+            <tr><td><b>o_e</b></td><td>rope（繩子）、stone（石頭）</td></tr>
+            <tr><td><b>u_e</b></td><td>June（六月）、cube（立方體）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：縮寫 Short forms</h2>
+        <div class="pill">用 ' 省略符號</div>
+        <table class="gtable">
+          <thead><tr><th>完整形式</th><th>縮寫</th></tr></thead>
+          <tbody>
+            <tr><td><b>I am</b></td><td>I'm</td></tr>
+            <tr><td><b>she is</b></td><td>she's</td></tr>
+            <tr><td><b>it is</b></td><td>it's</td></tr>
+            <tr><td><b>we are</b></td><td>we're</td></tr>
+            <tr><td><b>they are</b></td><td>they're</td></tr>
+            <tr><td><b>is not</b></td><td>isn't</td></tr>
+            <tr><td><b>are not</b></td><td>aren't</td></tr>
+            <tr><td><b>do not</b></td><td>don't</td></tr>
+            <tr><td><b>does not</b></td><td>doesn't</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🌍 Geography Time：Continents 七大洲</h2>
+        <div class="pill">7 個大洲</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🌍</span><div><div class="en">Europe</div><div class="zh">歐洲（例：Spain, Poland）</div></div></li>
+          <li><span class="num">🌎</span><div><div class="en">North America</div><div class="zh">北美洲（例：the U.S.A., Mexico）</div></div></li>
+          <li><span class="num">🌏</span><div><div class="en">Asia</div><div class="zh">亞洲（例：Thailand, South Korea）</div></div></li>
+          <li><span class="num">🌎</span><div><div class="en">South America</div><div class="zh">南美洲（例：Brazil, Peru）</div></div></li>
+          <li><span class="num">🌍</span><div><div class="en">Africa</div><div class="zh">非洲（例：Egypt, Morocco）</div></div></li>
+          <li><span class="num">🦘</span><div><div class="en">Australia</div><div class="zh">大洋洲／澳洲</div></div></li>
+          <li><span class="num">🧊</span><div><div class="en">Antarctica</div><div class="zh">南極洲（很冷，沒有人住）</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🎣 故事對話：My weekend</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">I have lots of fish! Come on, Max!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext"><b>I don't like fishing.</b> I like reading.</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Fishing is easy. You can read your book, too.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">I have a fish! Help!</div></div></div>
+          <div class="dbubble"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">That's a great fish, Max!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">Let's stay! <b>I like fishing now!</b></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rv-s2u3" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：My things 我的東西</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">💻</span><div><div class="en">computer</div><div class="zh">電腦</div></div></li>
+          <li><span class="num">📺</span><div><div class="en">TV</div><div class="zh">電視</div></div></li>
+          <li><span class="num">📀</span><div><div class="en">DVD player</div><div class="zh">DVD 播放機</div></div></li>
+          <li><span class="num">💿</span><div><div class="en">CD player</div><div class="zh">CD 播放機</div></div></li>
+          <li><span class="num">🎵</span><div><div class="en">MP3 player</div><div class="zh">MP3 播放器</div></div></li>
+          <li><span class="num">📷</span><div><div class="en">camera</div><div class="zh">相機</div></div></li>
+          <li><span class="num">🔛</span><div><div class="en">turn on</div><div class="zh">打開（電器）</div></div></li>
+          <li><span class="num">📴</span><div><div class="en">turn off</div><div class="zh">關掉（電器）</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：your / our / their</h2>
+        <div class="pill">「誰的」</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>所有格</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>You</b></td><td>your</td><td><span class="en">This is your CD.</span><br><span class="zh">這是你的 CD。</span></td></tr>
+            <tr><td><b>We</b></td><td>our</td><td><span class="en">That's our computer.</span><br><span class="zh">那是我們的電腦。</span></td></tr>
+            <tr><td><b>They</b></td><td>their</td><td><span class="en">That's their CD player.</span><br><span class="zh">那是他們的 CD 播放機。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🙏 文法：Can 的請求與許可</h2>
+        <div class="pill">Can I ...? / Can you ...?</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">?</span><div><div class="en">Can I use your computer?</div><div class="zh">我可以用你的電腦嗎？</div></div></li>
+          <li><span class="num">✓</span><div><div class="en">Yes, you can.</div><div class="zh">可以。</div></div></li>
+          <li><span class="num">✗</span><div><div class="en">No, you can't.</div><div class="zh">不可以。</div></div></li>
+          <li><span class="num">🙏</span><div><div class="en">Can you turn off the DVD player, please?</div><div class="zh">請你關掉 DVD 播放機好嗎？</div></div></li>
+        </ul>
+        <div class="pill pill-gold">📝 常見請求</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">📺</span><div><div class="en">turn on the TV</div><div class="zh">打開電視</div></div></li>
+          <li><span class="num">🎧</span><div><div class="en">turn off the CD player</div><div class="zh">關掉 CD 播放機</div></div></li>
+          <li><span class="num">🪟</span><div><div class="en">open the window</div><div class="zh">開窗</div></div></li>
+          <li><span class="num">🚪</span><div><div class="en">close the door</div><div class="zh">關門</div></div></li>
+          <li><span class="num">🧥</span><div><div class="en">put on your coat</div><div class="zh">穿上外套</div></div></li>
+          <li><span class="num">📝</span><div><div class="en">help me with my homework</div><div class="zh">幫我寫功課</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：Words with ar</h2>
+        <div class="pill">ar 念 /ɑr/</div>
+        <table class="gtable">
+          <thead><tr><th>單字</th><th>押韻配對</th></tr></thead>
+          <tbody>
+            <tr><td><b>car, park, shark, star, scarf</b></td><td>star ↔ car　｜　shark ↔ park</td></tr>
+            <tr><td><b>art, farm, arm, start</b></td><td>start ↔ art　｜　arm ↔ farm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🗂️ 閱讀：Collections 收藏</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🏷️</span><div><div class="en">stickers</div><div class="zh">貼紙</div></div></li>
+          <li><span class="num">🖼️</span><div><div class="en">posters</div><div class="zh">海報</div></div></li>
+          <li><span class="num">📚</span><div><div class="en">comics</div><div class="zh">漫畫</div></div></li>
+          <li><span class="num">💌</span><div><div class="en">postcards</div><div class="zh">明信片</div></div></li>
+          <li><span class="num">📌</span><div><div class="en">pins</div><div class="zh">別針／徽章</div></div></li>
+          <li><span class="num">🐚</span><div><div class="en">shells</div><div class="zh">貝殼</div></div></li>
+        </ul>
+        <div class="pill pill-blue">👦👧 Our Collections</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">⚽</span><div><div class="en">Tony, 9：loves soccer</div><div class="zh">收集足球貼紙，有 60 張，放在特別的貼紙本裡。</div></div></li>
+          <li><span class="num">📌</span><div><div class="en">Emily, 10：pin collection</div><div class="zh">有 50 個別針，戴在外套、包包和帽子上。</div></div></li>
+          <li><span class="num">🐚</span><div><div class="en">Jon：shell collection</div><div class="zh">有 100 個貝殼。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：標點符號 Punctuation</h2>
+        <div class="pill">. , ?</div>
+        <table class="gtable">
+          <thead><tr><th>符號</th><th>名稱</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>.</b></td><td>period 句號</td><td><span class="en">I collect pins and stickers.</span><br><span class="zh">我收集別針和貼紙。</span></td></tr>
+            <tr><td><b>,</b></td><td>comma 逗號</td><td><span class="en">We have a CD player, a computer, and a television.</span><br><span class="zh">列舉時用逗號隔開。</span></td></tr>
+            <tr><td><b>?</b></td><td>question mark 問號</td><td><span class="en">Can I use your camera?</span><br><span class="zh">問句句尾用問號。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="rv-s2u4" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Water sports 水上運動</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🏊</span><div><div class="en">swim</div><div class="zh">游泳</div></div></li>
+          <li><span class="num">⛵</span><div><div class="en">sail</div><div class="zh">航行／開帆船</div></div></li>
+          <li><span class="num">🤿</span><div><div class="en">dive</div><div class="zh">潛水</div></div></li>
+          <li><span class="num">🏄</span><div><div class="en">surf</div><div class="zh">衝浪</div></div></li>
+          <li><span class="num">🛶</span><div><div class="en">kayak</div><div class="zh">划獨木舟</div></div></li>
+          <li><span class="num">🌬️</span><div><div class="en">windsurf</div><div class="zh">風帆衝浪</div></div></li>
+          <li><span class="num">🐠</span><div><div class="en">snorkel</div><div class="zh">浮潛</div></div></li>
+          <li><span class="num">🎿</span><div><div class="en">waterski</div><div class="zh">滑水</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Adjectives 形容地方</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🚫</span><div><div class="en">polluted</div><div class="zh">被汙染的</div></div></li>
+          <li><span class="num">💧</span><div><div class="en">clean</div><div class="zh">乾淨的</div></div></li>
+          <li><span class="num">⚠️</span><div><div class="en">dangerous</div><div class="zh">危險的</div></div></li>
+          <li><span class="num">🛡️</span><div><div class="en">safe</div><div class="zh">安全的</div></div></li>
+          <li><span class="num">🌅</span><div><div class="en">beautiful</div><div class="zh">美麗的</div></div></li>
+          <li><span class="num">👎</span><div><div class="en">ugly</div><div class="zh">醜的</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：現在進行式 Present progressive</h2>
+        <div class="pill">be + 動詞 -ing</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定</th><th>否定</th></tr></thead>
+          <tbody>
+            <tr><td><b>I</b></td><td><span class="en">I'm swimming.</span><br><span class="zh">我正在游泳。</span></td><td><span class="en">I'm not swimming.</span><br><span class="zh">我沒在游泳。</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He's surfing.</span><br><span class="zh">他正在衝浪。</span></td><td><span class="en">He isn't snorkeling.</span><br><span class="zh">他沒在浮潛。</span></td></tr>
+            <tr><td><b>You / We / They</b></td><td><span class="en">We're sailing.</span><br><span class="zh">我們正在開帆船。</span></td><td><span class="en">They aren't waterskiing.</span><br><span class="zh">他們沒在滑水。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold">✍️ 加 ing 的拼法</div>
+        <table class="gtable">
+          <thead><tr><th>規則</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>直接加 ing</b></td><td>sail → sailing、play → playing、cook → cooking</td></tr>
+            <tr><td><b>短母音 + 一個子音：雙寫子音</b></td><td>swim → swimming、run → running</td></tr>
+            <tr><td><b>字尾 e：去 e 再加 ing</b></td><td>dive → diving、ride → riding、take → taking、write → writing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：all 結尾</h2>
+        <div class="pill">all 念 /ɔl/</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">⚽</span><div><div class="en">ball</div><div class="zh">球</div></div></li>
+          <li><span class="num">🏬</span><div><div class="en">mall</div><div class="zh">購物中心</div></div></li>
+          <li><span class="num">🧱</span><div><div class="en">wall</div><div class="zh">牆</div></div></li>
+          <li><span class="num">🦒</span><div><div class="en">tall</div><div class="zh">高的</div></div></li>
+          <li><span class="num">🐭</span><div><div class="en">small</div><div class="zh">小的</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗣️ Fluency Time! 2：Things in common</h2>
+        <table class="gtable">
+          <thead><tr><th>說法</th><th>意思</th></tr></thead>
+          <tbody>
+            <tr><td><b>I love playing soccer!</b></td><td>我愛踢足球！</td></tr>
+            <tr><td><b>I don't. I prefer playing tennis.</b></td><td>我不愛。我比較喜歡打網球。</td></tr>
+            <tr><td><b>I don't like skateboarding. — <b>Neither do I.</b></b></td><td>我不喜歡滑板。— 我也不喜歡。（否定）</td></tr>
+            <tr><td><b>I like playing volleyball. — <b>So do I!</b></b></td><td>我喜歡打排球。— 我也是！（肯定）</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">💡 同意「喜歡」用 <b>So do I</b>；同意「不喜歡」用 <b>Neither do I</b>。</p>
+      </div>
+      <div class="card">
+        <h2>🏖️ 故事對話：We're having fun at the beach!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">We're having fun at the beach!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👩</div><div><div class="dname">Mom</div><div class="dtext">Is Max in the water?</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">No, he isn't. <b>He's reading his book.</b></div></div></div>
+          <div class="dbubble right"><div class="davatar">👩</div><div><div class="dname">Mom</div><div class="dtext">Is Leo snorkeling?</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">No, he isn't. <b>He's surfing</b> and he's very good!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">Oh, no! Leo is falling!</div></div></div>
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Leo isn't surfing now. <b>He's swimming!</b></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rv-s2u5" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Zoo animals 動物園</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🐧</span><div><div class="en">penguin</div><div class="zh">企鵝</div></div></li>
+          <li><span class="num">🦓</span><div><div class="en">zebra</div><div class="zh">斑馬</div></div></li>
+          <li><span class="num">🐵</span><div><div class="en">monkey</div><div class="zh">猴子</div></div></li>
+          <li><span class="num">🦘</span><div><div class="en">kangaroo</div><div class="zh">袋鼠</div></div></li>
+          <li><span class="num">🐪</span><div><div class="en">camel</div><div class="zh">駱駝</div></div></li>
+          <li><span class="num">🦎</span><div><div class="en">lizard</div><div class="zh">蜥蜴</div></div></li>
+          <li><span class="num">🦩</span><div><div class="en">flamingo</div><div class="zh">紅鶴</div></div></li>
+          <li><span class="num">🐊</span><div><div class="en">crocodile</div><div class="zh">鱷魚</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Emotions 情緒與形容</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">😠</span><div><div class="en">angry</div><div class="zh">生氣的</div></div></li>
+          <li><span class="num">😨</span><div><div class="en">scared</div><div class="zh">害怕的</div></div></li>
+          <li><span class="num">🕊️</span><div><div class="en">free</div><div class="zh">自由的</div></div></li>
+          <li><span class="num">🙇</span><div><div class="en">sorry</div><div class="zh">抱歉的</div></div></li>
+          <li><span class="num">😄</span><div><div class="en">funny</div><div class="zh">好笑的</div></div></li>
+          <li><span class="num">🤗</span><div><div class="en">kind</div><div class="zh">善良的</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：現在進行式問句與簡答</h2>
+        <div class="pill">Be + 主詞 + V-ing ?</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>問句</th><th>簡答</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / you</b></td><td><span class="en">Are you reading?</span><br><span class="zh">你在讀書嗎？</span></td><td><span class="en">Yes, I am. / No, I'm not.</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">Is the monkey eating the sandwich?</span><br><span class="zh">猴子在吃三明治嗎？</span></td><td><span class="en">Yes, it is. / No, it isn't.</span></td></tr>
+            <tr><td><b>You / We / They</b></td><td><span class="en">Are they eating?</span><br><span class="zh">他們在吃東西嗎？</span></td><td><span class="en">Yes, they are. / No, they aren't.</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：or 與 aw</h2>
+        <div class="pill">or / aw</div>
+        <table class="gtable">
+          <thead><tr><th>拼法</th><th>單字</th></tr></thead>
+          <tbody>
+            <tr><td><b>or</b></td><td>fork（叉子）、horse（馬）、corn（玉米）</td></tr>
+            <tr><td><b>aw</b></td><td>straw（吸管）、paw（爪子）、yawn（打哈欠）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🦁 閱讀：The Lion and the Mouse</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">😴</span><div><div class="en">The lion is sleeping. The mouse runs over his nose.</div><div class="zh">獅子在睡覺，老鼠跑過他的鼻子，獅子很生氣。</div></div></li>
+          <li><span class="num">🙇</span><div><div class="en">"I'm very sorry," says the mouse. "I can help you one day."</div><div class="zh">老鼠說對不起，還說有一天可以幫你。</div></div></li>
+          <li><span class="num">🕸️</span><div><div class="en">A big net falls over the lion. The mouse chews the net.</div><div class="zh">大網罩住獅子，老鼠咬破網子，獅子自由了。</div></div></li>
+          <li><span class="num">🤗</span><div><div class="en">"You are little, but you are kind."</div><div class="zh">獅子說：你雖然小，但是很善良。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🐑 Science Time：Farm animals 農場動物</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🐑</span><div><div class="en">sheep</div><div class="zh">綿羊（羊毛、肉）</div></div></li>
+          <li><span class="num">🐷</span><div><div class="en">pig</div><div class="zh">豬（肉）</div></div></li>
+          <li><span class="num">🐄</span><div><div class="en">cow</div><div class="zh">乳牛（牛奶、肉）</div></div></li>
+          <li><span class="num">🐔</span><div><div class="en">chicken</div><div class="zh">雞（蛋）</div></div></li>
+          <li><span class="num">🦃</span><div><div class="en">turkey</div><div class="zh">火雞（肉）</div></div></li>
+          <li><span class="num">🦙</span><div><div class="en">llama</div><div class="zh">羊駝（毛、看守其他動物）</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：引號 Quotation marks</h2>
+        <div class="pill">" "</div>
+        <table class="gtable">
+          <thead><tr><th>用法</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>引號用來表示「有人在說話」</b></td><td><span class="en">"I can help you," says the mouse.</span><br><span class="zh">「我可以幫你，」老鼠說。</span></td></tr>
+            <tr><td><b>說話內容放在引號裡</b></td><td><span class="en">"Thank you," says the lion.</span><br><span class="zh">「謝謝你，」獅子說。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="rv-s2u6" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Daily routine 日常作息</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🚿</span><div><div class="en">have a shower</div><div class="zh">洗澡</div></div></li>
+          <li><span class="num">🪥</span><div><div class="en">brush my teeth</div><div class="zh">刷牙</div></div></li>
+          <li><span class="num">👕</span><div><div class="en">get dressed</div><div class="zh">穿衣服</div></div></li>
+          <li><span class="num">🍳</span><div><div class="en">have breakfast</div><div class="zh">吃早餐</div></div></li>
+          <li><span class="num">💇</span><div><div class="en">brush my hair</div><div class="zh">梳頭髮</div></div></li>
+          <li><span class="num">⏰</span><div><div class="en">get up</div><div class="zh">起床</div></div></li>
+          <li><span class="num">🚌</span><div><div class="en">catch the bus</div><div class="zh">趕公車</div></div></li>
+          <li><span class="num">🚶</span><div><div class="en">walk to school</div><div class="zh">走路上學</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Time words 時間詞</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">1️⃣</span><div><div class="en">first</div><div class="zh">首先</div></div></li>
+          <li><span class="num">2️⃣</span><div><div class="en">then</div><div class="zh">然後</div></div></li>
+          <li><span class="num">3️⃣</span><div><div class="en">next</div><div class="zh">接著</div></div></li>
+          <li><span class="num">🏁</span><div><div class="en">finally</div><div class="zh">最後</div></div></li>
+          <li><span class="num">📆</span><div><div class="en">every day</div><div class="zh">每天</div></div></li>
+          <li><span class="num">🎉</span><div><div class="en">on the weekend</div><div class="zh">在週末</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：簡單現在式</h2>
+        <div class="pill">肯定、否定、問句</div>
+        <table class="gtable">
+          <thead><tr><th>主詞</th><th>肯定 / 否定</th><th>問句與回答</th></tr></thead>
+          <tbody>
+            <tr><td><b>I / You / We / They</b></td><td><span class="en">I have breakfast at eight o'clock.</span><br><span class="zh">我八點吃早餐。</span><br><span class="en">They don't catch the train.</span><br><span class="zh">他們不搭火車。</span></td><td><span class="en">Do you walk to school?</span><br><span class="zh">你走路上學嗎？</span><br><span class="en">Yes, I do. / No, I don't.</span></td></tr>
+            <tr><td><b>He / She / It</b></td><td><span class="en">He gets up early.</span><br><span class="zh">他很早起床。</span><br><span class="en">He doesn't get up late.</span><br><span class="zh">他不會很晚起床。</span></td><td><span class="en">Does he live in a big house?</span><br><span class="zh">他住在大房子嗎？</span><br><span class="en">Yes, he does. / No, he doesn't.</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--gray);font-size:.88em;margin-top:8px;line-height:1.6">🕐 問時間：<b>What time</b> does he start work? / What time do you go to school?</p>
+      </div>
+      <div class="card">
+        <h2>✍️ 第三人稱單數動詞變化</h2>
+        <div class="pill pill-gold">He / She / It + 動詞</div>
+        <table class="gtable">
+          <thead><tr><th>規則</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>一般動詞加 s</b></td><td>get → <b>gets</b>、walk → <b>walks</b>、play → <b>plays</b></td></tr>
+            <tr><td><b>sh / ch 結尾加 es</b></td><td>brush → <b>brushes</b>、watch → <b>watches</b></td></tr>
+            <tr><td><b>特殊：have → has</b></td><td>Tom <b>has</b> breakfast with his family.</td></tr>
+            <tr><td><b>否定與問句：動詞回到原形</b></td><td>He doesn't get up late. / Does he <b>live</b> here?</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：oy 與 oi</h2>
+        <div class="pill">oy / oi</div>
+        <table class="gtable">
+          <thead><tr><th>拼法</th><th>單字</th></tr></thead>
+          <tbody>
+            <tr><td><b>oy</b></td><td>boy（男孩）、toy（玩具）、oyster（牡蠣）</td></tr>
+            <tr><td><b>oi</b></td><td>coin（硬幣）、oil（油）、soil（泥土）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>💻 閱讀：Cyber School（Ellie, 10）</h2>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🏡</span><div><div class="en">Ellie lives on a farm in Australia.</div><div class="zh">離城鎮很遠，所以不用去學校，在家上網路學校。</div></div></li>
+          <li><span class="num">1️⃣</span><div><div class="en">First, I help on the farm.</div><div class="zh">首先，我幫忙農場的工作。</div></div></li>
+          <li><span class="num">2️⃣</span><div><div class="en">Then, I watch my teachers on the Internet.</div><div class="zh">然後，我在網路上看老師。</div></div></li>
+          <li><span class="num">3️⃣</span><div><div class="en">Next, I do my school work.</div><div class="zh">接著，我做功課。</div></div></li>
+          <li><span class="num">4️⃣</span><div><div class="en">Finally, I email my work to my teacher.</div><div class="zh">最後，我把功課用電子郵件寄給老師。</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：Proper nouns 專有名詞</h2>
+        <div class="pill pill-gold">專有名詞要大寫</div>
+        <table class="gtable">
+          <thead><tr><th>一般名詞</th><th>專有名詞</th></tr></thead>
+          <tbody>
+            <tr><td><b>girl</b></td><td>Ellie</td></tr>
+            <tr><td><b>teacher</b></td><td>Mr. Green</td></tr>
+            <tr><td><b>country</b></td><td>Thailand</td></tr>
+            <tr><td><b>city</b></td><td>Chicago</td></tr>
+            <tr><td><b>book</b></td><td>Family and Friends</td></tr>
+            <tr><td><b>movie</b></td><td>Toy Story</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🐑 故事對話：Jim is a jackaroo!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">I have an email from Jim! He's a <b>jackaroo</b>.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">What's a jackaroo?</div></div></div>
+          <div class="dbubble"><div class="davatar">👦</div><div><div class="dname">Leo</div><div class="dtext">Jackaroos work on sheep farms.</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">He <b>gets up early</b> every morning. He rides a horse and looks after the sheep.</div></div></div>
+          <div class="dbubble"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">Does Jim see a lot of snakes?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Amy</div><div class="dtext">Yes, he does.</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rv-s2u7" style="display:none">
+      <div class="card">
+        <h2>🗂️ 單字：Places in town 城鎮裡的地方</h2>
+        <div class="pill">8 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">☕</span><div><div class="en">café</div><div class="zh">咖啡廳</div></div></li>
+          <li><span class="num">📚</span><div><div class="en">library</div><div class="zh">圖書館</div></div></li>
+          <li><span class="num">🏺</span><div><div class="en">museum</div><div class="zh">博物館</div></div></li>
+          <li><span class="num">🛝</span><div><div class="en">playground</div><div class="zh">遊樂場</div></div></li>
+          <li><span class="num">🛍️</span><div><div class="en">shopping mall</div><div class="zh">購物中心</div></div></li>
+          <li><span class="num">🏀</span><div><div class="en">sports center</div><div class="zh">運動中心</div></div></li>
+          <li><span class="num">🏊</span><div><div class="en">swimming pool</div><div class="zh">游泳池</div></div></li>
+          <li><span class="num">🎬</span><div><div class="en">movie theater</div><div class="zh">電影院</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🗂️ 單字：Performances 表演</h2>
+        <div class="pill">6 個單字</div>
+        <ul class="kp-list" style="margin-top:6px">
+          <li><span class="num">🎭</span><div><div class="en">play</div><div class="zh">舞台劇</div></div></li>
+          <li><span class="num">🏛️</span><div><div class="en">theater</div><div class="zh">劇院</div></div></li>
+          <li><span class="num">🎤</span><div><div class="en">concert</div><div class="zh">演唱會</div></div></li>
+          <li><span class="num">🎬</span><div><div class="en">actor</div><div class="zh">演員</div></div></li>
+          <li><span class="num">🍿</span><div><div class="en">movie</div><div class="zh">電影</div></div></li>
+          <li><span class="num">🎶</span><div><div class="en">singer</div><div class="zh">歌手</div></div></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>📐 文法：頻率副詞 always / sometimes / never</h2>
+        <div class="pill">放在動詞前面</div>
+        <table class="gtable">
+          <thead><tr><th>符號</th><th>副詞</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>✓✓</b></td><td>always（總是）</td><td><span class="en">We always go to the sports center.</span><br><span class="zh">我們總是去運動中心。</span></td></tr>
+            <tr><td><b>✓</b></td><td>sometimes（有時）</td><td><span class="en">I sometimes go to the library.</span><br><span class="zh">我有時去圖書館。</span></td></tr>
+            <tr><td><b>✗</b></td><td>never（從不）</td><td><span class="en">She never goes to the shopping mall.</span><br><span class="zh">她從不去購物中心。</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold">⏱️ 時間介系詞 in / on / at</div>
+        <table class="gtable">
+          <thead><tr><th>介系詞</th><th>用在</th><th>例句</th></tr></thead>
+          <tbody>
+            <tr><td><b>in</b></td><td>月份</td><td>My birthday is <b>in</b> May.</td></tr>
+            <tr><td><b>on</b></td><td>星期</td><td>He plays soccer <b>on</b> Fridays.</td></tr>
+            <tr><td><b>at</b></td><td>幾點鐘</td><td>We get up <b>at</b> eight o'clock.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🔤 自然發音：ow 與 ou</h2>
+        <div class="pill">ow / ou 都念 /aʊ/</div>
+        <table class="gtable">
+          <thead><tr><th>拼法</th><th>單字</th></tr></thead>
+          <tbody>
+            <tr><td><b>ow</b></td><td>cow（乳牛）、clown（小丑）、flower（花）、brown（棕色）、down（向下）</td></tr>
+            <tr><td><b>ou</b></td><td>house（房子）、round（圓的）、mouse（老鼠）、out（外面）、shout（大喊）、cloud（雲）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>💪 Fluency Time! 3：Things we are good at</h2>
+        <table class="gtable">
+          <thead><tr><th>說法</th><th>意思</th></tr></thead>
+          <tbody>
+            <tr><td><b>very good at …</b></td><td>很擅長…</td></tr>
+            <tr><td><b>quite good at …</b></td><td>還算擅長…</td></tr>
+            <tr><td><b>very bad at …</b></td><td>很不擅長…</td></tr>
+            <tr><td><b>terrible at …</b></td><td>糟透了</td></tr>
+          </tbody>
+        </table>
+        <div class="pill pill-gold">❓ 常用問答</div>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">A</div><div class="dtext"><b>Are you good at</b> swimming?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">B</div><div class="dtext">Yes, I'm <b>quite good at</b> swimming.</div></div></div>
+          <div class="dbubble"><div class="davatar">🧒</div><div><div class="dname">A</div><div class="dtext">Are you good at cooking?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">B</div><div class="dtext">No, I'm <b>bad at</b> cooking.</div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>✍️ 寫作：動詞、形容詞、介系詞</h2>
+        <table class="gtable">
+          <thead><tr><th>詞類</th><th>功用</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><b>Verbs 動詞</b></td><td>表示動作</td><td>walk, read, cook</td></tr>
+            <tr><td><b>Adjectives 形容詞</b></td><td>描述名詞</td><td>big cake, old house, nice day</td></tr>
+            <tr><td><b>Prepositions 介系詞</b></td><td>表示地點、時間、方向</td><td>on the table, at ten o'clock, to school</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>🎬 故事對話：Places to go!</h2>
+        <div class="dialogue">
+          <div class="dbubble"><div class="davatar">👩</div><div><div class="dname">Mom</div><div class="dtext">What do you want to do today?</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Holly</div><div class="dtext">Can we go to the shopping mall?</div></div></div>
+          <div class="dbubble"><div class="davatar">👦</div><div><div class="dname">Max</div><div class="dtext">But <b>we always go</b> to the playground!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👧</div><div><div class="dname">Holly</div><div class="dtext">I don't like museums!</div></div></div>
+          <div class="dbubble"><div class="davatar">👦</div><div><div class="dname">Leo</div><div class="dtext">We never want to do the same thing!</div></div></div>
+          <div class="dbubble right"><div class="davatar">👨</div><div><div class="dname">Dad</div><div class="dtext">Surprise! I have tickets for the <b>movie theater</b>.</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═════ S1-2 期中考 ═════ -->
+    <div id="rv-s1mphonics" style="display:none">
+      <div class="card">
+        <h2>🔤 Phonics <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(發音規則)</span></h2>
+        <div class="tp">🎵 <b>長母音拼字規則</b></div>
+        <div class="tp"><b>a</b>：a_e (cake)、ai (rain)、ay (play)</div>
+        <div class="tp"><b>e</b>：ee (bee)、ea (meat)、e (he)</div>
+        <div class="tp"><b>i</b>：i_e (bike)、ie (pie)、i (hi)、igh (night)、y (fly)</div>
+        <div class="tp"><b>o</b>：o_e (home)、o (go)、oe (toe)、ow (snow)、oa (boat)</div>
+        <div class="tp"><b>u</b>：u_e (cube)、ui (fruit)、ue (blue)</div>
+        <div class="tp"><br></div>
+        <div class="tp">🔡 <b>Blends 字首組合</b></div>
+        <div class="tp">ch (chair)、sh (ship)、th (thank)</div>
+        <div class="tp">gr (green)、br (bread)、fr (fries)、dr (drink)、tr (truck)、cr (crab)</div>
+        <div class="tp">fl (flower)、pl (plant)、bl (blue)、cl (clock)、gl (glass)、sl (sleep)</div>
+      </div>
+    </div>
+
+    <div id="rv-s1mvocabulary" style="display:none">
+      <div class="card">
+        <h2>📘 Vocabulary <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(單字)</span></h2>
+        <div class="tp">📚 <b>Family and Friends 單字</b></div>
+        <div class="tp">🏫 Classroom：table, computer, coat hook, pencil case, whiteboard, poster, picture, drawers, cabinet</div>
+        <div class="tp">😊 Adjectives：hot, cold, hungry, thirsty, happy, sad, tired, angry, scared, brave, nervous</div>
+        <div class="tp">⚽ Verbs：ride a bike, ride a horse, skate, skateboard, play tennis, play soccer</div>
+        <div class="tp">🍕 Food：salad, fries, pizza, milkshake, cheese, sandwich, chicken</div>
+        <div class="tp">🔢 Numbers：ten, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred</div>
+        <div class="tp">📐 School Subjects：art, math, English, Chinese, science, P.E., music</div>
+        <div class="tp">🏃 School Rooms：school yard, field, art room, computer room, gym</div>
+      </div>
+    </div>
+
+    <div id="rv-s1msentences" style="display:none">
+      <div class="card">
+        <h2>💬 Sentence Patterns <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(句型)</span></h2>
+        <div class="tp">💬 <b>句型複習</b></div>
+        <div class="tp"><b>This / That</b> is + 單數名詞 → This is a table. / That is a chair.</div>
+        <div class="tp"><b>These / Those</b> are + 複數名詞 → These are pencils. / Those are rulers.</div>
+        <div class="tp">Yes/No 問答：<b>Are they happy?</b> → Yes, they are. / No, they aren't.</div>
+        <div class="tp"><b>Can</b> he skateboard? → Yes, he can. / No, he can't.</div>
+        <div class="tp"><b>Does</b> he have milkshake? → Yes, he does. / No, he doesn't.</div>
+        <div class="tp"><b>Is</b> this your book? → Yes, it is. / No, it isn't.</div>
+      </div>
+    </div>
+
+    <div id="rv-s1mproofreading" style="display:none">
+      <div class="card">
+        <h2>✏️ Proofreading <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(改錯)</span></h2>
+        <div class="tp">✏️ <b>改錯 4 大規則</b></div>
+        <div class="tp">1. 句首大寫：<i>this is my book.</i> → <b>T</b>his is my book<b>.</b></div>
+        <div class="tp">2. 人名大寫：<i>she is miss yvonne.</i> → She is <b>M</b>iss <b>Y</b>vonne.</div>
+        <div class="tp">3. 星期大寫：<i>We have art on tuesdays.</i> → ...on <b>T</b>uesdays.</div>
+        <div class="tp">4. 問句加問號：<i>Is this a pen</i> → Is this a pen<b>?</b></div>
+      </div>
+    </div>
+
+    <div id="rv-s1mgrammar" style="display:none">
+      <div class="card">
+        <h2>🧠 Grammar <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(文法)</span></h2>
+        <div class="tp">🧠 <b>Grammar 11 單元重點</b></div>
+        <div class="tp">單元 1-2：代名詞 I/you/he/she/we/they</div>
+        <div class="tp">單元 3-4：反身代名詞 myself~themselves</div>
+        <div class="tp">單元 5-6：this/that/these/those</div>
+        <div class="tp">單元 7-10：名詞（a/an、單複數、不可數、永遠複數）</div>
+        <div class="tp">單元 11：形容詞 adjectives</div>
+        <div class="tp"><br><a href="grammar-review.html" style="color:#db2777;font-weight:700">👉 前往 Grammar 完整複習</a></div>
+      </div>
+    </div>
+
+    <div id="rv-s1mreading" style="display:none">
+      <div class="card">
+        <h2>📖 Reading Vocab <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(閱讀單字)</span></h2>
+        <div class="tp">📖 <b>Reading 課本單字 U1-U6</b></div>
+        <div class="tp"><b>U1</b>：lay (eggs) 下蛋、warm 溫暖的、beak 鳥喙、feather 羽毛、safe 安全的</div>
+        <div class="tp"><b>U2</b>：wake up 起床、take a bath 洗澡、take a nap 午睡、hurry 趕快、early 早、late 遲</div>
+        <div class="tp"><b>U3</b>：plant 植物/種植、watering can 灑水器、grow 生長、vine 藤、vegetables 蔬菜、give 給、seeds 種子、flower 花、pick 摘、taste 嚐、dig 挖</div>
+        <div class="tp"><b>U4</b>：rabbit 兔子、hedgehog 刺蝟、cricket 蟋蟀、bear 熊、mitten 連指手套、lose 遺失、crowded 擁擠、sleep 睡、inside 裡面、friend 朋友</div>
+        <div class="tp"><b>U5</b>：different 不同、same 相同、bigger 較大、cook 煮、stove 爐子、buy 買、sink 水槽、now 現在、in the past 以前、fire 火、store 商店、wash the dishes 洗碗</div>
+        <div class="tp"><b>U6</b>：wheat 小麥、machine 機器、crush 壓碎、flour 麵粉、spread 塗抹、delicious 美味、breakfast 早餐、bread 麵包、jam 果醬、grapes 葡萄、orange 柳橙、drink 喝、juice 果汁、truck 卡車、deliver 遞送</div>
+      </div>
+    </div>
+
+    <div id="rv-s1mstory" style="display:none">
+      <div class="card">
+        <h2>🧤 The Lost Mitten <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(課文閱讀)</span></h2>
+        <div class="tp">🧤 <b>The Lost Mitten 課文</b></div>
+        <div class="tp">Lance gets new mittens. He goes out to find firewood.</div>
+        <div class="tp">But he loses a mitten! Mice find the mitten. They want to hide. They go inside.</div>
+        <div class="tp">Rabbit wants to sleep. He goes in with the mice.</div>
+        <div class="tp">Hedgehog is cold. He goes in with the mice and the rabbit.</div>
+        <div class="tp">Bear is tired. She goes in with the mice, the rabbit, and the hedgehog.</div>
+        <div class="tp">It's crowded in the mitten. Cricket sees his friends. He goes in, too.</div>
+        <div class="tp">Now it's too crowded! Rip! Snap! POP! Poor Lance! His mitten is gone!</div>
+        <div class="story-box">
+        <b>Read aloud:</b><br>
+        Lance gets new mittens. He goes out to find firewood. But he loses a mitten! Mice find the mitten. They want to hide. They go inside. Rabbit wants to sleep. He goes in with the mice. Hedgehog is cold. He goes in with the mice and the rabbit. Bear is tired. She goes in with the mice, the rabbit, and the hedgehog. It's crowded in the mitten. Cricket sees his friends. He goes in, too. Now it's too crowded! Rip! Snap! POP! Poor Lance! His mitten is gone!
+        </div>
+      </div>
+    </div>
+
+    <div id="rv-s1msubject" style="display:none">
+      <div class="card">
+        <h2>🎨 Subject Learning <span style="color:#94a3b8;font-size:.75em;margin-left:6px">(學科單字)</span></h2>
+        <div class="tp">🎨 <b>Subject Learning</b></div>
+        <div class="tp">📐 <b>Math Vocab</b>：whole 整個、half 一半、third 三分之一、quarter 四分之一</div>
+        <div class="tp">🖼️ <b>Art Vocab</b>：artist 藝術家、mirror 鏡子、skin 皮膚、face 臉、background 背景</div>
+      </div>
+    </div>
+
   </div>
 
   <!-- GAMES TAB -->
@@ -1635,6 +2553,502 @@ const QUIZ_DATA = {
 };
 
 // ══════════════════════════════════
+// DATA  (S2-1 · Starter + Unit 1–7)
+// ══════════════════════════════════
+
+const S2_FILL_DATA = {
+  s2st: [
+    {
+      title: 'Comparatives · 比較級（-er than）',
+      sentences: [
+        { hint: '🐘 big',   before: 'The elephant is ', after: ' than the monkey.', ans: 'bigger' },
+        { hint: '🦒 tall',  before: 'The giraffe is ',  after: ' than the zebra.',  ans: 'taller' },
+        { hint: '🫏 fast',  before: 'The donkey is ',   after: ' than the cow.',    ans: 'faster' },
+        { hint: '🐐 small', before: 'The goat is ',     after: ' than the horse.',  ans: 'smaller' }
+      ],
+      wordBank: ['bigger','taller','faster','smaller','slower']
+    },
+    {
+      title: 'Numbers · 數字加法',
+      sentences: [
+        { hint: '➕', before: 'ten + fifty = ',               after: '', ans: 'sixty' },
+        { hint: '➕', before: 'seventy + ten = ',             after: '', ans: 'eighty' },
+        { hint: '➕', before: 'twenty + twenty = ',           after: '', ans: 'forty' },
+        { hint: '➕', before: 'thirty-two + twenty-seven = ', after: '', ans: 'fifty-nine' },
+        { hint: '➕', before: 'ninety-two + eight = ',        after: '', ans: 'one hundred' }
+      ],
+      wordBank: ['sixty','eighty','forty','fifty-nine','one hundred']
+    },
+    {
+      title: 'Family · 家人',
+      sentences: [
+        { hint: '👧👦 Amy & Leo',   before: "Amy is Leo's ",  after: '.', ans: 'sister' },
+        { hint: '👦👧 Max & Holly', before: "Max is Holly's ", after: '.', ans: 'brother' },
+        { hint: '👨 爸爸的兄弟',      before: "Dad's brother is my ", after: '.', ans: 'uncle' },
+        { hint: '👵 媽媽的媽媽',      before: "Mom's mom is my ",     after: '.', ans: 'grandma' },
+        { hint: '🧒🧒 阿姨叔叔的小孩', before: "My aunt and uncle's children are my ", after: '.', ans: 'cousins' }
+      ],
+      wordBank: ['sister','brother','uncle','grandma','cousins']
+    }
+  ],
+  s2u1: [
+    {
+      title: 'Where are you from? · be + from',
+      sentences: [
+        { hint: '👦 Bao · 9 歲',       before: 'Bao is nine. ',                   after: ' from Vietnam. 🇻🇳',   ans: "He's" },
+        { hint: '👧 Jenny · 8 歲',     before: 'Jenny is eight. ',                after: ' from Australia. 🇦🇺', ans: "She's" },
+        { hint: '👭 Maria and I',      before: 'Maria and I are friends. ',       after: ' from Mexico. 🇲🇽',    ans: "We're" },
+        { hint: '👬 Jack and Carl',    before: 'Jack and Carl are brothers. ',    after: ' from the U.S.A. 🇺🇸', ans: "They're" }
+      ],
+      wordBank: ["He's","She's","We're","They're"]
+    },
+    {
+      title: 'The Lazy Bear · 四季',
+      sentences: [
+        { hint: '🌱 溫暖晴朗', before: "It's ",     after: " in the forest. It's warm and sunny.",                ans: 'spring' },
+        { hint: '🌸 很熱很多花', before: "Now it's ", after: ". It's hot and there are lots of flowers.",          ans: 'summer' },
+        { hint: '🍂 葉子變色', before: 'In the ',   after: ', the leaves are red, yellow, and orange.',            ans: 'fall' },
+        { hint: '❄️ 動物都睡了', before: "Now it's ", after: '. The animals are all asleep in their warm homes.', ans: 'winter' }
+      ],
+      wordBank: ['spring','summer','fall','winter']
+    },
+    {
+      title: 'Consonant blends · 子音組合',
+      sentences: [
+        { hint: '🖍️ crayon', before: '', after: 'ayon', ans: 'cr' },
+        { hint: '🥤 drink',  before: '', after: 'ink',  ans: 'dr' },
+        { hint: '🥄 spoon',  before: '', after: 'oon',  ans: 'sp' },
+        { hint: '🐍 snake',  before: '', after: 'ake',  ans: 'sn' },
+        { hint: '🎮 play',   before: '', after: 'ay',   ans: 'pl' }
+      ],
+      wordBank: ['cr','dr','sp','sn','pl']
+    }
+  ],
+  s2u2: [
+    {
+      title: 'like / likes / don\'t like / doesn\'t like',
+      sentences: [
+        { hint: '😊 Lucas ✔ 排球',         before: 'Lucas ',       after: ' playing volleyball.', ans: 'likes' },
+        { hint: '😞 Lucas ✘ 釣魚',         before: 'He ',          after: ' fishing.',            ans: "doesn't like" },
+        { hint: '😞 Jo and Sue ✘ 體操',    before: 'Jo and Sue ',  after: ' doing gymnastics.',   ans: "don't like" },
+        { hint: '😊 Jo and Sue ✔ 鋼琴',    before: 'They ',        after: ' playing the piano.',  ans: 'like' },
+        { hint: '😊 Rosa ✔ 漫畫',          before: 'Rosa ',        after: ' reading comics.',     ans: 'likes' },
+        { hint: '😞 Rosa ✘ 西洋棋',        before: 'She ',         after: ' playing chess.',      ans: "doesn't like" }
+      ],
+      wordBank: ['like','likes',"don't like","doesn't like"]
+    },
+    {
+      title: 'Magic e · 魔法 e',
+      sentences: [
+        { hint: '🚲', before: 'I can ride a ',                  after: '.',            ans: 'bike' },
+        { hint: '🧊', before: "I have a puzzle. It's a ",       after: '.',            ans: 'cube' },
+        { hint: '🪢', before: 'My jump ',                       after: ' is very long.', ans: 'rope' },
+        { hint: '🚀', before: 'Look! This toy is from ',        after: '.',            ans: 'space' },
+        { hint: '🪨', before: 'The dog is sitting on a big ',   after: '.',            ans: 'stone' }
+      ],
+      wordBank: ['bike','cube','rope','space','stone']
+    },
+    {
+      title: 'Continents · 七大洲',
+      sentences: [
+        { hint: '🌮 墨西哥', before: 'Mexico is in ',   after: '.', ans: 'North America' },
+        { hint: '⚽ 巴西',   before: 'Brazil is in ',   after: '.', ans: 'South America' },
+        { hint: '🐘 泰國',   before: 'Thailand is in ', after: '.', ans: 'Asia' },
+        { hint: '🏜️ 埃及',   before: 'Egypt is in ',    after: '.', ans: 'Africa' },
+        { hint: '🏰 西班牙', before: 'Spain is in ',    after: '.', ans: 'Europe' }
+      ],
+      wordBank: ['North America','South America','Asia','Africa','Europe']
+    }
+  ],
+  s2u3: [
+    {
+      title: 'your / our / their',
+      sentences: [
+        { hint: '🙋 you 你的',  before: 'Is this ',     after: ' camera?',       ans: 'your' },
+        { hint: '🙋 we 我們的', before: "Yes, it's ",   after: ' camera.',       ans: 'our' },
+        { hint: '🙋 they 他們的', before: "That's ",    after: ' CD player.',    ans: 'their' },
+        { hint: '🙋 we 我們的', before: 'This is ',     after: ' computer.',     ans: 'our' },
+        { hint: '🙋 you 你的',  before: 'Can I use ',   after: ' MP3 player?',   ans: 'your' }
+      ],
+      wordBank: ['your','our','their']
+    },
+    {
+      title: 'Can I ...? / Can you ...? 請求與許可',
+      sentences: [
+        { hint: '🙏 借用',     before: 'Can I ',   after: ' your computer?',                       ans: 'use' },
+        { hint: '📺 打開',     before: 'Can you ', after: ' on the TV, please?',                   ans: 'turn' },
+        { hint: '🪟 開窗',     before: 'Can you ', after: ' the window, please?',                  ans: 'open' },
+        { hint: '✅ 可以',     before: 'Can I use your camera? — Yes, you ', after: '.',          ans: 'can' },
+        { hint: '🚫 不可以',   before: 'Can we turn on the TV? — No, you ',  after: '.',          ans: "can't" }
+      ],
+      wordBank: ['use','turn','open','can',"can't"]
+    },
+    {
+      title: 'Collections · Tony or Emily?',
+      sentences: [
+        { hint: '⚽',     before: '', after: ' loves soccer.',               ans: 'Tony' },
+        { hint: '📌',     before: '', after: ' has a pin collection.',       ans: 'Emily' },
+        { hint: '5️⃣0️⃣',  before: '', after: ' has 50 pins.',                ans: 'Emily' },
+        { hint: '6️⃣0️⃣',  before: '', after: ' has 60 stickers.',            ans: 'Tony' },
+        { hint: '📒',     before: '', after: ' has a special book.',         ans: 'Tony' },
+        { hint: '🧥',     before: '', after: ' wears pins on her jackets.',  ans: 'Emily' }
+      ],
+      wordBank: ['Tony','Emily']
+    }
+  ],
+  s2u4: [
+    {
+      title: "Present progressive · 's / 're / isn't / aren't",
+      sentences: [
+        { hint: '👫 They · 肯定', before: 'They ', after: ' taking photos.',        ans: "'re" },
+        { hint: '👫 They · 否定', before: 'They ', after: ' drawing pictures.',     ans: "aren't" },
+        { hint: '👧 She · 否定',  before: 'She ',  after: ' playing with a ball.',  ans: "isn't" },
+        { hint: '👧 She · 肯定',  before: 'She ',  after: ' reading a book.',       ans: "'s" },
+        { hint: '🧑‍🤝‍🧑 We · 否定',  before: 'We ',   after: ' swimming.',             ans: "aren't" },
+        { hint: '🧑‍🤝‍🧑 We · 肯定',  before: 'We ',   after: ' windsurfing.',          ans: "'re" }
+      ],
+      wordBank: ["'s","'re","isn't","aren't"]
+    },
+    {
+      title: 'like + V-ing · 動詞加 ing 的拼法',
+      sentences: [
+        { hint: '👀 watch',  before: 'I like ',                 after: ' dolphins.',  ans: 'watching' },
+        { hint: '📸 take（去 e）', before: 'Do you like ',      after: ' photos?',    ans: 'taking' },
+        { hint: '🍳 cook',   before: 'I like ',                 after: '.',           ans: 'cooking' },
+        { hint: '✉️ write（去 e）', before: 'Does Joanna like ', after: ' emails?',    ans: 'writing' },
+        { hint: '🎧 listen', before: "My friend doesn't like ", after: ' to music.',  ans: 'listening' },
+        { hint: '📖 read',   before: 'Do you like ',            after: '?',           ans: 'reading' }
+      ],
+      wordBank: ['watching','taking','cooking','writing','listening','reading']
+    },
+    {
+      title: 'Dolphin Dreams · 形容詞',
+      sentences: [
+        { hint: '🐬 不醜',   before: "Dolphins aren't ugly. They are ", after: '.',           ans: 'beautiful' },
+        { hint: '🚫 髒的',   before: "Dolphins can't live in ",         after: ' water.',     ans: 'polluted' },
+        { hint: '💧 乾淨的', before: 'They can live in ',               after: ' water.',     ans: 'clean' },
+        { hint: '🛡️ 安全',   before: "Dolphins are safe. They aren't ", after: '.',           ans: 'dangerous' }
+      ],
+      wordBank: ['beautiful','polluted','clean','dangerous']
+    },
+    {
+      title: 'all endings · all 結尾',
+      sentences: [
+        { hint: '🧱 牆',   before: '', after: 'all', ans: 'w' },
+        { hint: '🦒 高',   before: '', after: 'all', ans: 't' },
+        { hint: '🐭 小',   before: '', after: 'all', ans: 'sm' },
+        { hint: '🏬 商場', before: '', after: 'all', ans: 'm' },
+        { hint: '⚽ 球',   before: '', after: 'all', ans: 'b' }
+      ],
+      wordBank: ['w','t','sm','m','b']
+    }
+  ],
+  s2u5: [
+    {
+      title: 'Questions and short answers · 現在進行式問答',
+      sentences: [
+        { hint: '👦 男孩在寫筆記',   before: 'Is the boy reading? — No, he ',                           after: '.', ans: "isn't" },
+        { hint: '👭 女孩在下棋',     before: 'Are the girls playing chess? — Yes, they ',               after: '.', ans: 'are' },
+        { hint: '🐵 猴子在玩球',     before: 'Is the monkey playing with a ball? — Yes, it ',           after: '.', ans: 'is' },
+        { hint: '👩‍🍳 媽媽在煮菜',     before: 'Is Mom shopping? — No, she ',                             after: '.', ans: "isn't" },
+        { hint: '🐒🍌 猴子在吃香蕉', before: 'Are the monkeys eating bananas? — Yes, they ',            after: '.', ans: 'are' }
+      ],
+      wordBank: ['is','are',"isn't","aren't"]
+    },
+    {
+      title: 'Zoo animals · 動物園',
+      sentences: [
+        { hint: '☀️ 曬太陽',     before: 'The ', after: ' is sleeping in the sun.',            ans: 'lizard' },
+        { hint: '🌊 在水裡',     before: 'The ', after: ' is swimming in the water.',          ans: 'crocodile' },
+        { hint: '🩷 粉紅色・飛', before: 'The ', after: ' is flying.',                         ans: 'flamingo' },
+        { hint: '🦘 跳',         before: 'The ', after: ' is jumping.',                        ans: 'kangaroo' },
+        { hint: '🦓 條紋・很快', before: 'The ', after: " is running. It's very fast.",        ans: 'zebra' },
+        { hint: '🐪 駝峰・餓了', before: 'The ', after: " is hungry. It's eating.",            ans: 'camel' }
+      ],
+      wordBank: ['lizard','crocodile','flamingo','kangaroo','zebra','camel']
+    },
+    {
+      title: 'The Lion and the Mouse · lion or mouse?',
+      sentences: [
+        { hint: '😴', before: 'The ', after: ' is sleeping.',                    ans: 'lion' },
+        { hint: '😠', before: 'The ', after: ' is angry.',                       ans: 'lion' },
+        { hint: '🤏', before: 'The ', after: ' is little.',                      ans: 'mouse' },
+        { hint: '🗣️', before: 'The ', after: ' opens its mouth and roars.',      ans: 'lion' },
+        { hint: '🏃', before: 'The ', after: ' runs away.',                      ans: 'mouse' },
+        { hint: '🕸️', before: 'The ', after: ' chews a hole in the net.',        ans: 'mouse' }
+      ],
+      wordBank: ['lion','mouse']
+    },
+    {
+      title: 'or / aw spellings',
+      sentences: [
+        { hint: '🥤 straw', before: 'str', after: '',   ans: 'aw' },
+        { hint: '🍴 fork',  before: 'f',   after: 'k',  ans: 'or' },
+        { hint: '🐴 horse', before: 'h',   after: 'se', ans: 'or' },
+        { hint: '🐾 paw',   before: 'p',   after: '',   ans: 'aw' },
+        { hint: '🥱 yawn',  before: 'y',   after: 'n',  ans: 'aw' }
+      ],
+      wordBank: ['or','aw']
+    }
+  ],
+  s2u6: [
+    {
+      title: 'Simple present · 動詞變化',
+      sentences: [
+        { hint: '🛏️ get up',    before: 'Jack ',         after: " at seven o'clock.",              ans: 'gets up' },
+        { hint: '🪥 brush',     before: 'Emma ',         after: ' her teeth every morning.',       ans: 'brushes' },
+        { hint: '🚌 not catch', before: 'Jen and Jo ',   after: ' the bus to school.',             ans: "don't catch" },
+        { hint: '🍳 have',      before: 'Tom ',          after: ' breakfast with his family.',     ans: 'has' },
+        { hint: '🚶 not walk',  before: 'Fred ',         after: ' to school. He takes the bus.',   ans: "doesn't walk" }
+      ],
+      wordBank: ['gets up','brushes',"don't catch",'has',"doesn't walk"]
+    },
+    {
+      title: "Billy's morning · 早上的日常",
+      sentences: [
+        { hint: '🚿', before: "Billy gets up at seven o'clock. He ", after: ' a shower.',                       ans: 'has' },
+        { hint: '👕', before: 'Then he ',                            after: ' dressed.',                        ans: 'gets' },
+        { hint: '🪥', before: 'He ',                                 after: ' his teeth after breakfast.',      ans: 'brushes' },
+        { hint: '🚶', before: 'He ',                                 after: ' to school with his brother.',     ans: 'walks' },
+        { hint: '🌳', before: 'After school, he ',                   after: ' with his friends in the park.',   ans: 'plays' }
+      ],
+      wordBank: ['has','gets','brushes','walks','plays']
+    },
+    {
+      title: 'Cyber School · 順序詞',
+      sentences: [
+        { hint: '1️⃣', before: '', after: ', I help on the farm.',                     ans: 'First' },
+        { hint: '2️⃣', before: '', after: ', I watch my teachers on the Internet.',    ans: 'Then' },
+        { hint: '3️⃣', before: '', after: ', I do my school work.',                    ans: 'Next' },
+        { hint: '4️⃣', before: '', after: ', I email my work to my teacher.',          ans: 'Finally' }
+      ],
+      wordBank: ['First','Then','Next','Finally']
+    },
+    {
+      title: 'oy / oi spellings',
+      sentences: [
+        { hint: '👦 boy',    before: 'b', after: '',     ans: 'oy' },
+        { hint: '🪙 coin',   before: 'c', after: 'n',    ans: 'oi' },
+        { hint: '🌱 soil',   before: 's', after: 'l',    ans: 'oi' },
+        { hint: '🧸 toy',    before: 't', after: '',     ans: 'oy' },
+        { hint: '🦪 oyster', before: '',  after: 'ster', ans: 'oy' },
+        { hint: '🛢️ oil',    before: '',  after: 'l',    ans: 'oi' }
+      ],
+      wordBank: ['oy','oi']
+    }
+  ],
+  s2u7: [
+    {
+      title: 'always / sometimes / never',
+      sentences: [
+        { hint: '✓✓ 每次', before: 'Billy ', after: ' rides his bike to school.',                    ans: 'always' },
+        { hint: '✗ 從不',  before: 'They ',  after: ' watch TV.',                                    ans: 'never' },
+        { hint: '✓ 有時',  before: 'Tom ',   after: ' takes photos.',                                ans: 'sometimes' },
+        { hint: '✓ 有時',  before: 'Mom ',   after: ' listens to music.',                            ans: 'sometimes' },
+        { hint: '✓✓ 每次', before: 'We ',    after: ' go to the playground on Saturdays.',           ans: 'always' }
+      ],
+      wordBank: ['always','sometimes','never']
+    },
+    {
+      title: 'in / on / at · 時間介系詞',
+      sentences: [
+        { hint: '📅 月份',     before: "Emma's birthday is ",              after: ' March.',          ans: 'in' },
+        { hint: '🕐 幾點',     before: 'I always have lunch ',             after: ' one o\'clock.',   ans: 'at' },
+        { hint: '📆 星期',     before: 'Dad never works ',                 after: ' Saturdays.',      ans: 'on' },
+        { hint: '📅 月份',     before: 'We sometimes go to the beach ',    after: ' August.',         ans: 'in' },
+        { hint: '📆 星期',     before: 'You never watch TV ',              after: ' Mondays.',        ans: 'on' },
+        { hint: '🕘 幾點',     before: 'The children always go to bed ',   after: ' nine o\'clock.',  ans: 'at' }
+      ],
+      wordBank: ['in','on','at']
+    },
+    {
+      title: 'Places in town · 城鎮裡的地方',
+      sentences: [
+        { hint: '📚 借書',     before: 'I borrow books at the ',                  after: '.', ans: 'library' },
+        { hint: '🛝 溜滑梯',   before: 'Children play on the slide at the ',      after: '.', ans: 'playground' },
+        { hint: '🛍️ 買衣服',   before: 'We buy clothes at the shopping ',         after: '.', ans: 'mall' },
+        { hint: '🏺 看古老的東西', before: 'We see old things at the ',           after: '.', ans: 'museum' },
+        { hint: '🏀 運動',     before: 'We play basketball at the sports ',       after: '.', ans: 'center' },
+        { hint: '🎬 看電影',   before: 'We watch movies at the movie ',           after: '.', ans: 'theater' }
+      ],
+      wordBank: ['library','playground','mall','museum','center','theater']
+    },
+    {
+      title: 'ow / ou spellings',
+      sentences: [
+        { hint: '🟤 brown',  before: 'br', after: 'n',  ans: 'ow' },
+        { hint: '⬇️ down',   before: 'd',  after: 'n',  ans: 'ow' },
+        { hint: '🤡 clown',  before: 'cl', after: 'n',  ans: 'ow' },
+        { hint: '🌸 flower', before: 'fl', after: 'er', ans: 'ow' },
+        { hint: '☁️ cloud',  before: 'cl', after: 'd',  ans: 'ou' },
+        { hint: '📣 shout',  before: 'sh', after: 't',  ans: 'ou' },
+        { hint: '🏠 house',  before: 'h',  after: 'se', ans: 'ou' },
+        { hint: '🐭 mouse',  before: 'm',  after: 'se', ans: 'ou' }
+      ],
+      wordBank: ['ow','ou']
+    }
+  ]
+};
+
+const S2_ERROR_DATA = {
+  s2st: [
+    { sentence: 'The elephant is biger than the monkey.', errors: [{ word: 'biger', correct: 'bigger', reason: 'big 要雙寫 g 再加 er' }] },
+    { sentence: 'the giraffe is tall than the zebra.', errors: [{ word: 'the', correct: 'The', reason: '句首大寫' },{ word: 'tall', correct: 'taller', reason: '比較級：tall + er' }] },
+    { sentence: 'My birthday is on june.', errors: [{ word: 'on', correct: 'in', reason: '月份前面用 in' },{ word: 'june', correct: 'June', reason: '月份第一個字母要大寫' }] },
+    { sentence: 'sixty-three + thirty-one = ninety-for.', errors: [{ word: 'ninety-for', correct: 'ninety-four', reason: '4 是 four，拼字別寫成 for' }] }
+  ],
+  s2u1: [
+    { sentence: "jenny is ten. she's from brazil.", errors: [{ word: 'jenny', correct: 'Jenny', reason: '人名第一個字母大寫' },{ word: "she's", correct: "She's", reason: '句首大寫' },{ word: 'brazil', correct: 'Brazil', reason: '國家名稱要大寫' }] },
+    { sentence: "Bao are nine. He's from vietnam.", errors: [{ word: 'are', correct: 'is', reason: 'Bao 是單數，用 is' },{ word: 'vietnam', correct: 'Vietnam', reason: '國家名稱要大寫' }] },
+    { sentence: "It's hot in australia in december.", errors: [{ word: 'australia', correct: 'Australia', reason: '國家名稱要大寫' },{ word: 'december', correct: 'December', reason: '月份要大寫' }] },
+    { sentence: 'Where is they from?', errors: [{ word: 'is', correct: 'are', reason: 'they 後面用 are' }] },
+    { sentence: 'is Kim from thailand?', errors: [{ word: 'is', correct: 'Is', reason: '句首大寫' },{ word: 'thailand', correct: 'Thailand', reason: '國家名稱要大寫' }] }
+  ],
+  s2u2: [
+    { sentence: "She don't like fishing.", errors: [{ word: "don't", correct: "doesn't", reason: 'She 是第三人稱單數，用 doesn\'t' }] },
+    { sentence: 'Does he likes playing chess?', errors: [{ word: 'likes', correct: 'like', reason: 'Does 後面動詞用原形' }] },
+    { sentence: 'i like read comics.', errors: [{ word: 'i', correct: 'I', reason: '我 I 永遠大寫' },{ word: 'read', correct: 'reading', reason: 'like 後面接動詞 + ing' }] },
+    { sentence: "They doesn't like skateboarding.", errors: [{ word: "doesn't", correct: "don't", reason: 'They 後面用 don\'t' }] },
+    { sentence: 'My aunt like cooking.', errors: [{ word: 'like', correct: 'likes', reason: 'My aunt 是第三人稱單數，動詞加 s' }] }
+  ],
+  s2u3: [
+    { sentence: 'Can I use you computer?', errors: [{ word: 'you', correct: 'your', reason: '「你的」要用 your' }] },
+    { sentence: 'can i use your camera?', errors: [{ word: 'can', correct: 'Can', reason: '句首大寫' },{ word: 'i', correct: 'I', reason: '我 I 永遠大寫' }] },
+    { sentence: 'Yes, you cant.', errors: [{ word: 'cant', correct: "can't", reason: '縮寫需要省略符號 \'' }] },
+    { sentence: "That's they CD player.", errors: [{ word: 'they', correct: 'their', reason: '「他們的」要用 their' }] },
+    { sentence: 'I collect pins and stickers', errors: [{ word: 'stickers', correct: 'stickers.', reason: '句尾需要句號' }] },
+    { sentence: 'Do you have a sister.', errors: [{ word: 'sister', correct: 'sister?', reason: '問句句尾要用問號' }] }
+  ],
+  s2u4: [
+    { sentence: 'She isnt surfing.', errors: [{ word: 'isnt', correct: "isn't", reason: '縮寫需要省略符號 \'' }] },
+    { sentence: 'They is kayaking.', errors: [{ word: 'is', correct: 'are', reason: 'They 後面用 are' }] },
+    { sentence: "He's swiming.", errors: [{ word: 'swiming', correct: 'swimming', reason: 'swim 要雙寫 m 再加 ing' }] },
+    { sentence: "We're takeing photos.", errors: [{ word: 'takeing', correct: 'taking', reason: 'take 去掉 e 再加 ing' }] },
+    { sentence: "I'm not sail.", errors: [{ word: 'sail', correct: 'sailing', reason: '現在進行式：動詞 + ing' }] }
+  ],
+  s2u5: [
+    { sentence: 'Is the monkey eat the sandwich?', errors: [{ word: 'eat', correct: 'eating', reason: '現在進行式問句：Is + 主詞 + 動詞 ing' }] },
+    { sentence: 'Are the penguins swimming? Yes, they is.', errors: [{ word: 'is', correct: 'are', reason: 'Yes, they are.（they 用 are）' }] },
+    { sentence: "Is the lion sleeping? No, it aren't.", errors: [{ word: "aren't", correct: "isn't", reason: 'it 用 isn\'t' }] },
+    { sentence: 'Im watching the zebras.', errors: [{ word: 'Im', correct: "I'm", reason: '縮寫 I am = I\'m' }] },
+    { sentence: "Are the flamingos fly? No, they aren't.", errors: [{ word: 'fly', correct: 'flying', reason: '現在進行式：動詞 + ing' }] }
+  ],
+  s2u6: [
+    { sentence: "He get up at seven o'clock.", errors: [{ word: 'get', correct: 'gets', reason: 'He 是第三人稱單數，動詞加 s' }] },
+    { sentence: 'Emma brush her teeth every morning.', errors: [{ word: 'brush', correct: 'brushes', reason: 'brush 以 sh 結尾，加 es' }] },
+    { sentence: 'Does he lives in a big house?', errors: [{ word: 'lives', correct: 'live', reason: 'Does 後面動詞用原形' }] },
+    { sentence: "My mom and dad doesn't catch the bus.", errors: [{ word: "doesn't", correct: "don't", reason: 'My mom and dad 是複數，用 don\'t' }] },
+    { sentence: 'ellie lives in australia.', errors: [{ word: 'ellie', correct: 'Ellie', reason: '人名要大寫' },{ word: 'australia', correct: 'Australia', reason: '國家名稱要大寫' }] },
+    { sentence: 'Tom have breakfast with his family.', errors: [{ word: 'have', correct: 'has', reason: 'have 遇到 He/She/Tom 要變成 has' }] }
+  ],
+  s2u7: [
+    { sentence: 'My birthday is on May.', errors: [{ word: 'on', correct: 'in', reason: '月份前面用 in' }] },
+    { sentence: "We get up in eight o'clock.", errors: [{ word: 'in', correct: 'at', reason: '幾點鐘前面用 at' }] },
+    { sentence: 'He plays soccer in Fridays.', errors: [{ word: 'in', correct: 'on', reason: '星期前面用 on' }] },
+    { sentence: 'Mom sometimes listen to music.', errors: [{ word: 'listen', correct: 'listens', reason: 'Mom 是第三人稱單數，動詞加 s' }] },
+    { sentence: "I'm very good in swimming.", errors: [{ word: 'in', correct: 'at', reason: 'be good at ＋ 事情' }] },
+    { sentence: 'Is you good at cooking?', errors: [{ word: 'Is', correct: 'Are', reason: 'you 後面用 are' }] }
+  ]
+};
+
+const S2_QUIZ_DATA = {
+  s2st: [
+    { q: 'The red car is ___ than the blue car. (big)', opts: ['biger','bigger','more big','biggest'], c: 1 },
+    { q: 'The goat is smaller than the horse. So the horse is ___ than the goat.', opts: ['smaller','bigger','slower','taller'], c: 1 },
+    { q: 'twenty + twenty = ?', opts: ['thirty','forty','fifty','fourteen'], c: 1 },
+    { q: 'forty-five + thirty-five = ?', opts: ['seventy','seventy-five','eighty','ninety'], c: 2 },
+    { q: "'When's your birthday?' — 'My birthday is ___ June.'", opts: ['on','at','in','to'], c: 2 },
+    { q: "Amy is Leo's sister. Leo is Amy's ___.", opts: ['brother','cousin','uncle','dad'], c: 0 },
+    { q: "'How old are you?' — '___'", opts: ["I'm nine.","I'm from Spain.","It's June.","Yes, I do."], c: 0 },
+    { q: "Your uncle and aunt's children are your ___.", opts: ['brothers','cousins','grandpas','sisters'], c: 1 }
+  ],
+  s2u1: [
+    { q: "Holly and Max's cousins are from ___.", opts: ['Mexico','Vietnam','Australia','Brazil'], c: 2 },
+    { q: "'Where are you from?' — '___ from Mexico.'", opts: ["I'm","He's","She's","It's"], c: 0 },
+    { q: 'Jack and Carl are brothers. ___ from the U.S.A.', opts: ["He's","She's","We're","They're"], c: 3 },
+    { q: 'Which sentence is correct?', opts: ["she's from brazil.","She's from Brazil.","she's from Brazil.","She's from brazil."], c: 1 },
+    { q: 'Bruno the bear is very ___. He is still asleep in summer!', opts: ['lazy','busy','kind','angry'], c: 0 },
+    { q: '___ink (🥤 drink) — which letters?', opts: ['br','dr','cr','tr'], c: 1 },
+    { q: "'Whose turn is it?' — '___'", opts: ["It's my turn.","It's a card.","I'm nine.","Yes, it is."], c: 0 },
+    { q: 'In the fall, the leaves are ___.', opts: ['green','red, yellow, and orange','white','blue'], c: 1 }
+  ],
+  s2u2: [
+    { q: 'I ___ fishing. I like reading.', opts: ["don't like","doesn't like",'likes','not like'], c: 0 },
+    { q: "Max says: 'I don't like fishing. I like ___.'", opts: ['reading','chess','volleyball','cooking'], c: 0 },
+    { q: 'Does Janet like playing basketball?', opts: ['Yes, she does.',"No, she doesn't.",'Yes, she is.',"No, she isn't."], c: 1 },
+    { q: 'Does Kelly like reading comics?', opts: ['Yes, she does.',"No, she doesn't.",'Yes, she is.',"No, she isn't."], c: 0 },
+    { q: 'Which letters make the word? k_t_ (🪁)', opts: ['a_e','i_e','o_e','u_e'], c: 1 },
+    { q: 'Thailand is in ___.', opts: ['Europe','Asia','Africa','Australia'], c: 1 },
+    { q: 'How many continents are there in the world?', opts: ['five','six','seven','eight'], c: 2 },
+    { q: 'does not → short form', opts: ["don't","doesn't","isn't","aren't"], c: 1 }
+  ],
+  s2u3: [
+    { q: "That's ___ CD player. (they)", opts: ['your','our','their','my'], c: 2 },
+    { q: "'Can I use your camera?' — 'Yes, you ___.'", opts: ['can',"can't",'do','are'], c: 0 },
+    { q: "'Can we turn on the TV?' (✗) — 'No, you ___.'", opts: ['can',"can't","don't","aren't"], c: 1 },
+    { q: 'Which word has ar?', opts: ['car','cow','coin','cube'], c: 0 },
+    { q: 'Which word rhymes with star?', opts: ['car','park','shark','scarf'], c: 0 },
+    { q: 'Tony has a collection of 60 ___.', opts: ['pins','stickers','shells','postcards'], c: 1 },
+    { q: 'Do you have lots of comics__  (which punctuation?)', opts: ['.',',','?','!'], c: 2 },
+    { q: 'Can you ___ off the DVD player, please?', opts: ['turn','put','take','open'], c: 0 }
+  ],
+  s2u4: [
+    { q: "'Is Max in the water?' — 'No, he isn't. He's ___.'", opts: ['reading','swimming','surfing','sailing'], c: 0 },
+    { q: "Leo isn't snorkeling. He's ___.", opts: ['sailing','surfing','reading','diving'], c: 1 },
+    { q: 'They ___ surfing. (✔)', opts: ['is','am','are',"isn't"], c: 2 },
+    { q: 'dive → ?', opts: ['diveing','diving','divving','dives'], c: 1 },
+    { q: 'swim → ?', opts: ['swiming','swimming','swimmming','swimes'], c: 1 },
+    { q: "Dolphins can't live in ___ water.", opts: ['clean','polluted','beautiful','safe'], c: 1 },
+    { q: "Tom: 'I love playing soccer!' Anna: 'I don't. I ___ playing tennis.'", opts: ['prefer','prepare','pray','please'], c: 0 },
+    { q: "'I don't like fishing.' — '___ do I.'", opts: ['So','Neither','Too','Also'], c: 1 }
+  ],
+  s2u5: [
+    { q: "The monkey is taking Max's ___.", opts: ['sandwich','book','bag','ball'], c: 1 },
+    { q: 'The monkey gives the things to ___.', opts: ['Amy','Max','Holly','Leo'], c: 2 },
+    { q: "'Is the crocodile sleeping?' — 'No, ___.'", opts: ["it isn't",'it is',"they aren't","he isn't"], c: 0 },
+    { q: 'Which word has aw?', opts: ['horse','paw','fork','corn'], c: 1 },
+    { q: 'Circle the odd one out.', opts: ['fork','sport','paw'], c: 2 },
+    { q: 'The ___ is angry because the mouse runs over its nose.', opts: ['mouse','lion','monkey','zebra'], c: 1 },
+    { q: 'Llamas eat ___.', opts: ['meat','fish','grass','eggs'], c: 2 },
+    { q: 'Farmers keep chickens for their ___.', opts: ['wool','milk','eggs','meat'], c: 2 }
+  ],
+  s2u6: [
+    { q: 'Jim is a ___ in Australia.', opts: ['teacher','jackaroo','doctor','singer'], c: 1 },
+    { q: 'Jackaroos get up ___ every morning.', opts: ['late','early','slowly','never'], c: 1 },
+    { q: "'Does Jim see a lot of snakes?' — 'Yes, he ___.'", opts: ['do','does','is','has'], c: 1 },
+    { q: 'What time ___ Tom get up?', opts: ['do','does','is','are'], c: 1 },
+    { q: 'Ellie lives on a farm far from town, so she does ___ School.', opts: ['Cyber','City','Sunday','Summer'], c: 0 },
+    { q: 'First, I help on the farm. ___, I watch my teachers on the Internet.', opts: ['Finally','Then','Before','Last'], c: 1 },
+    { q: 'Which word has oi?', opts: ['boy','toy','coin','oyster'], c: 2 },
+    { q: 'Which one is a proper noun?', opts: ['teacher','girl','country','Mr. Green'], c: 3 }
+  ],
+  s2u7: [
+    { q: 'We ___ go to the playground on Saturdays. (✓✓)', opts: ['never','sometimes','always','ever'], c: 2 },
+    { q: 'She ___ goes to the shopping mall. (✗)', opts: ['always','sometimes','never','often'], c: 2 },
+    { q: 'My birthday is ___ May.', opts: ['on','at','in','to'], c: 2 },
+    { q: 'He plays soccer ___ Fridays.', opts: ['in','on','at','to'], c: 1 },
+    { q: "We get up ___ eight o'clock.", opts: ['in','on','at','to'], c: 2 },
+    { q: 'Which word has ow?', opts: ['house','cloud','clown','mouse'], c: 2 },
+    { q: 'In Monsters University, are the monsters good singers?', opts: ['Yes, they are.',"No, they aren't.",'Yes, they do.',"No, they don't."], c: 1 },
+    { q: "Anna: 'I'm very bad at basketball. I'm ___ at throwing!'", opts: ['good','quite good','terrible','very good'], c: 2 }
+  ]
+};
+
+Object.assign(FILL_DATA, S2_FILL_DATA);
+Object.assign(ERROR_DATA, S2_ERROR_DATA);
+Object.assign(QUIZ_DATA, S2_QUIZ_DATA);
+
+// ══════════════════════════════════
+// DATA  (S1-2 期中考 · migrated from the old midterm-review page)
+// ══════════════════════════════════
+const S1M_FILL_DATA = {"s1mphonics":[{"title":"長母音 a (a_e / ai / ay)","sentences":[{"hint":"🎂 長 a","before":"c","after":"ke","ans":"a"},{"hint":"🌧️ 長 a","before":"r","after":"n","ans":"ai"},{"hint":"🎮 長 a","before":"pl","after":"","ans":"ay"},{"hint":"📆 長 a","before":"d","after":"y","ans":"a"}],"wordBank":["a","ai","ay"]},{"title":"長母音 e (ee / ea / e)","sentences":[{"hint":"🐝 長 e","before":"b","after":"","ans":"ee"},{"hint":"🍖 長 e","before":"m","after":"t","ans":"ea"},{"hint":"👦 長 e","before":"h","after":"","ans":"e"},{"hint":"🌳 長 e","before":"tr","after":"","ans":"ee"}],"wordBank":["ee","ea","e"]},{"title":"長母音 i (i_e / ie / i / igh / y)","sentences":[{"hint":"🚲 長 i","before":"b","after":"ke","ans":"i"},{"hint":"🥧 長 i","before":"p","after":"","ans":"ie"},{"hint":"👋 長 i","before":"h","after":"","ans":"i"},{"hint":"🌙 長 i","before":"n","after":"t","ans":"igh"},{"hint":"🪁 長 i","before":"fl","after":"","ans":"y"}],"wordBank":["i","ie","igh","y"]},{"title":"長母音 o (o_e / o / oe / ow / oa)","sentences":[{"hint":"🏠 長 o","before":"h","after":"me","ans":"o"},{"hint":"🦶 長 o","before":"t","after":"","ans":"oe"},{"hint":"❄️ 長 o","before":"sn","after":"","ans":"ow"},{"hint":"⛵ 長 o","before":"b","after":"t","ans":"oa"}],"wordBank":["o","oe","ow","oa"]},{"title":"長母音 u (u_e / ui / ue)","sentences":[{"hint":"🧊 長 u","before":"c","after":"be","ans":"u"},{"hint":"🍊 長 u","before":"fr","after":"t","ans":"ui"},{"hint":"🟦 長 u","before":"bl","after":"","ans":"ue"}],"wordBank":["u","ui","ue"]},{"title":"Blends 字首組合","sentences":[{"hint":"🪑 椅子","before":"","after":"air","ans":"ch"},{"hint":"🚢 船","before":"","after":"ip","ans":"sh"},{"hint":"🙏 謝","before":"","after":"ank","ans":"th"},{"hint":"🍞 麵包","before":"","after":"ead","ans":"br"},{"hint":"🟢 綠色","before":"","after":"een","ans":"gr"},{"hint":"🥤 喝","before":"","after":"ink","ans":"dr"},{"hint":"🚚 卡車","before":"","after":"uck","ans":"tr"},{"hint":"🌸 花","before":"","after":"ower","ans":"fl"},{"hint":"🕘 鐘","before":"","after":"ock","ans":"cl"},{"hint":"🟦 藍色","before":"","after":"ue","ans":"bl"}],"wordBank":["ch","sh","th","gr","br","dr","tr","fl","cl","bl"]}],"s1mvocabulary":[{"title":"Classroom 教室","sentences":[{"hint":"📋 白板","before":"The ","after":" is clean.","ans":"whiteboard"},{"hint":"🖥️ 電腦","before":"I use my ","after":" to do homework.","ans":"computer"},{"hint":"✏️ 鉛筆盒","before":"Pens are in my ","after":".","ans":"pencil case"},{"hint":"🖼️ 海報","before":"Look at the ","after":" on the wall.","ans":"poster"}],"wordBank":["whiteboard","computer","pencil case","poster"]},{"title":"Adjectives 形容詞","sentences":[{"hint":"🥵 熱","before":"I am ","after":".","ans":"hot"},{"hint":"🥶 冷","before":"They are ","after":".","ans":"cold"},{"hint":"🍔 餓","before":"He is ","after":".","ans":"hungry"},{"hint":"💪 勇敢","before":"She is ","after":".","ans":"brave"},{"hint":"😨 害怕","before":"I am ","after":".","ans":"scared"},{"hint":"😰 緊張","before":"He is ","after":".","ans":"nervous"}],"wordBank":["hot","cold","hungry","brave","scared","nervous"]},{"title":"Food 食物","sentences":[{"hint":"🥗 沙拉","before":"I eat a ","after":".","ans":"salad"},{"hint":"🍟 薯條","before":"I have some ","after":".","ans":"fries"},{"hint":"🍕 披薩","before":"She has ","after":".","ans":"pizza"},{"hint":"🥤 奶昔","before":"He drinks a ","after":".","ans":"milkshake"},{"hint":"🧀 起司","before":"I like ","after":".","ans":"cheese"},{"hint":"🥪 三明治","before":"She has a ","after":".","ans":"sandwich"}],"wordBank":["salad","fries","pizza","milkshake","cheese","sandwich"]},{"title":"Numbers 數字 10-100","sentences":[{"hint":"10","before":"","after":"","ans":"ten"},{"hint":"30","before":"","after":"","ans":"thirty"},{"hint":"50","before":"","after":"","ans":"fifty"},{"hint":"70","before":"","after":"","ans":"seventy"},{"hint":"90","before":"","after":"","ans":"ninety"},{"hint":"100","before":"","after":"","ans":"one hundred"}],"wordBank":["ten","thirty","fifty","seventy","ninety","one hundred"]},{"title":"School Subjects 科目","sentences":[{"hint":"🎨 美術","before":"We have ","after":" on Monday.","ans":"art"},{"hint":"➕ 數學","before":"They have ","after":" on Tuesday.","ans":"math"},{"hint":"🔬 自然","before":"We have ","after":" on Friday.","ans":"science"},{"hint":"🏃 體育","before":"I have ","after":" on Wednesday.","ans":"P.E."},{"hint":"🎵 音樂","before":"We have ","after":" on Thursday.","ans":"music"}],"wordBank":["art","math","science","P.E.","music"]},{"title":"School Rooms 教室空間","sentences":[{"hint":"🏫 運動場","before":"We play in the ","after":".","ans":"school yard"},{"hint":"🌳 球場","before":"We run on the ","after":".","ans":"field"},{"hint":"🎨 美術教室","before":"We paint in the ","after":".","ans":"art room"},{"hint":"💻 電腦教室","before":"We type in the ","after":".","ans":"computer room"},{"hint":"🏋️ 體育館","before":"We exercise in the ","after":".","ans":"gym"}],"wordBank":["school yard","field","art room","computer room","gym"]}],"s1msentences":[{"title":"This / That / These / Those","sentences":[{"hint":"🪑 近單","before":"","after":" is a table.","ans":"This"},{"hint":"🪑 遠單","before":"","after":" is a chair.","ans":"That"},{"hint":"✏️ 近複","before":"","after":" are pencils.","ans":"These"},{"hint":"📏 遠複","before":"","after":" are rulers.","ans":"Those"}],"wordBank":["This","That","These","Those"]},{"title":"Are / Can / Does / Is 問句回答","sentences":[{"hint":"Yes 回答 Are they happy?","before":"Yes, they ","after":".","ans":"are"},{"hint":"No 回答 Are they happy?","before":"No, they ","after":".","ans":"aren't"},{"hint":"Yes 回答 Can he skateboard?","before":"Yes, he ","after":".","ans":"can"},{"hint":"No 回答 Can he skateboard?","before":"No, he ","after":".","ans":"can't"},{"hint":"Yes 回答 Does he have milkshake?","before":"Yes, he ","after":".","ans":"does"},{"hint":"No 回答 Does he have milkshake?","before":"No, he ","after":".","ans":"doesn't"},{"hint":"Yes 回答 Is this your book?","before":"Yes, it ","after":".","ans":"is"},{"hint":"No 回答 Is this your book?","before":"No, it ","after":".","ans":"isn't"}],"wordBank":["are","aren't","can","can't","does","doesn't","is","isn't"]}],"s1mproofreading":[],"s1mgrammar":[],"s1mreading":[{"title":"U1 單字","sentences":[{"hint":"🥚 下蛋","before":"Hens ","after":" eggs.","ans":"lay"},{"hint":"🌡️ 溫暖","before":"The nest is ","after":".","ans":"warm"},{"hint":"🐦 鳥喙","before":"The bird's ","after":" is yellow.","ans":"beak"},{"hint":"🪶 羽毛","before":"A ","after":" is soft.","ans":"feather"},{"hint":"🛡️ 安全","before":"Baby birds are ","after":".","ans":"safe"}],"wordBank":["lay","warm","beak","feather","safe"]},{"title":"U2 單字","sentences":[{"hint":"⏰ 起床","before":"I ","after":" at 7.","ans":"wake up"},{"hint":"🛁 洗澡","before":"I ","after":" every day.","ans":"take a bath"},{"hint":"💤 午睡","before":"I ","after":" in the afternoon.","ans":"take a nap"},{"hint":"🏃 趕快","before":"","after":"! We are late.","ans":"Hurry"},{"hint":"🌅 早","before":"I wake up ","after":".","ans":"early"}],"wordBank":["wake up","take a bath","take a nap","Hurry","early"]},{"title":"U3 單字","sentences":[{"hint":"🌱 種植","before":"I ","after":" seeds.","ans":"plant"},{"hint":"🌿 藤","before":"The ","after":" is long.","ans":"vine"},{"hint":"🥕 蔬菜","before":"I eat ","after":".","ans":"vegetables"},{"hint":"🌸 花","before":"A red ","after":" is pretty.","ans":"flower"},{"hint":"✂️ 摘","before":"I ","after":" the flowers.","ans":"pick"}],"wordBank":["plant","vine","vegetables","flower","pick"]},{"title":"U4 單字","sentences":[{"hint":"🐰 兔子","before":"A ","after":" hops.","ans":"rabbit"},{"hint":"🦔 刺蝟","before":"A ","after":" has spikes.","ans":"hedgehog"},{"hint":"🧤 手套","before":"I lost my ","after":".","ans":"mitten"},{"hint":"😟 擁擠","before":"It is ","after":" inside.","ans":"crowded"},{"hint":"🤝 朋友","before":"My ","after":" is kind.","ans":"friend"}],"wordBank":["rabbit","hedgehog","mitten","crowded","friend"]},{"title":"U5 單字","sentences":[{"hint":"❓ 不同","before":"They are ","after":".","ans":"different"},{"hint":"🔥 火","before":"A ","after":" is hot.","ans":"fire"},{"hint":"🏬 商店","before":"I go to the ","after":".","ans":"store"},{"hint":"⏱️ 現在","before":"Things are different ","after":".","ans":"now"},{"hint":"🍳 煮","before":"Mom ","after":" on the stove.","ans":"cooks"}],"wordBank":["different","fire","store","now","cooks"]},{"title":"U6 單字","sentences":[{"hint":"🌾 小麥","before":"Farmers grow ","after":".","ans":"wheat"},{"hint":"🥖 麵包","before":"I eat ","after":" for breakfast.","ans":"bread"},{"hint":"🍓 果醬","before":"Spread ","after":" on bread.","ans":"jam"},{"hint":"🍊 柳橙","before":"I have an ","after":".","ans":"orange"},{"hint":"🧃 果汁","before":"I drink ","after":".","ans":"juice"},{"hint":"🚚 卡車","before":"A ","after":" delivers bread.","ans":"truck"}],"wordBank":["wheat","bread","jam","orange","juice","truck"]}],"s1mstory":[],"s1msubject":[]};
+const S1M_ERROR_DATA = {"s1mphonics":[],"s1mvocabulary":[],"s1msentences":[{"sentence":"This are a table.","errors":[{"word":"are","correct":"is","reason":"This 後面用 is"}]},{"sentence":"These is pencils.","errors":[{"word":"is","correct":"are","reason":"These 後面用 are"}]},{"sentence":"Those is rulers.","errors":[{"word":"is","correct":"are","reason":"複數用 are"}]},{"sentence":"Can he skateboards?","errors":[{"word":"skateboards","correct":"skateboard","reason":"Can 後面用原形動詞"}]},{"sentence":"Does he has milkshake?","errors":[{"word":"has","correct":"have","reason":"Does 後面用原形 have"}]},{"sentence":"Is this you book?","errors":[{"word":"you","correct":"your","reason":"應用所有格 your"}]}],"s1mproofreading":[{"sentence":"this is my book","errors":[{"word":"this","correct":"This","reason":"句首大寫"},{"word":"book","correct":"book.","reason":"句尾加句號"}]},{"sentence":"she is miss yvonne.","errors":[{"word":"she","correct":"She","reason":"句首大寫"},{"word":"miss","correct":"Miss","reason":"名字大寫"},{"word":"yvonne","correct":"Yvonne.","reason":"名字大寫"}]},{"sentence":"We have art on tuesdays.","errors":[{"word":"tuesdays","correct":"Tuesdays.","reason":"星期名大寫"}]},{"sentence":"Is this a pen","errors":[{"word":"pen","correct":"pen?","reason":"問句用問號"}]},{"sentence":"i am hungry","errors":[{"word":"i","correct":"I","reason":"I 永遠大寫"},{"word":"hungry","correct":"hungry.","reason":"句尾加句號"}]},{"sentence":"can he skate","errors":[{"word":"can","correct":"Can","reason":"句首大寫"},{"word":"skate","correct":"skate?","reason":"問句用問號"}]},{"sentence":"my name is mary","errors":[{"word":"my","correct":"My","reason":"句首大寫"},{"word":"mary","correct":"Mary.","reason":"名字大寫；加句號"}]}],"s1mgrammar":[],"s1mreading":[],"s1mstory":[],"s1msubject":[]};
+const S1M_QUIZ_DATA = {"s1mphonics":[{"q":"cake 的長 a 是哪一種拼法？","opts":["a_e","ai","ay","a"],"c":0},{"q":"play 的長 a 拼法是？","opts":["a_e","ai","ay","a"],"c":2},{"q":"meat 的長 e 拼法是？","opts":["ee","ea","e","y"],"c":1},{"q":"night 的長 i 拼法是？","opts":["i_e","ie","igh","y"],"c":2},{"q":"snow 的長 o 拼法是？","opts":["o_e","oe","ow","oa"],"c":2},{"q":"fruit 的長 u 拼法是？","opts":["u_e","ui","ue","u"],"c":1},{"q":"chair 的 blend 是？","opts":["ch","sh","th","gr"],"c":0},{"q":"truck 的 blend 是？","opts":["tr","dr","br","fr"],"c":0},{"q":"flower 的 blend 是？","opts":["fl","pl","bl","cl"],"c":0},{"q":"blue 的 blend 是？","opts":["bl","pl","cl","gl"],"c":0}],"s1mvocabulary":[{"q":"🥗 沙拉 是？","opts":["pizza","salad","cheese","fries"],"c":1},{"q":"🍟 薯條 是？","opts":["fries","chicken","milkshake","cheese"],"c":0},{"q":"🥤 奶昔 是？","opts":["juice","soda","milkshake","milk"],"c":2},{"q":"50 是？","opts":["fifteen","fifty","fivety","five"],"c":1},{"q":"70 是？","opts":["seventeen","sevty","seventy","seven"],"c":2},{"q":"😨 害怕 是？","opts":["scared","angry","tired","brave"],"c":0},{"q":"💪 勇敢 是？","opts":["scared","brave","nervous","sad"],"c":1},{"q":"📋 白板 是？","opts":["poster","whiteboard","drawer","cabinet"],"c":1},{"q":"🎨 美術 是？","opts":["art","music","science","P.E."],"c":0},{"q":"🏃 體育 是？","opts":["gym","field","P.E.","yard"],"c":2},{"q":"🏋️ 體育館 是？","opts":["gym","field","school yard","art room"],"c":0}],"s1msentences":[{"q":"___ is a chair. (遠的一張)","opts":["This","These","That","Those"],"c":2},{"q":"___ are pencils. (近的)","opts":["This","These","That","Those"],"c":1},{"q":"Are they happy? → Yes, they ___.","opts":["is","are","am","aren't"],"c":1},{"q":"Can he skateboard? → No, he ___.","opts":["can","doesn't","can't","isn't"],"c":2},{"q":"Does he have milkshake? → Yes, he ___.","opts":["is","can","does","has"],"c":2},{"q":"Is this your book? → No, it ___.","opts":["aren't","can't","isn't","doesn't"],"c":2}],"s1mproofreading":[{"q":"哪個是「我」，一定要大寫？","opts":["me","I","my","i"],"c":1},{"q":"星期一 Monday 要？","opts":["全大寫","首字大寫","全小寫","不用大寫"],"c":1},{"q":"人名要？","opts":["小寫","首字大寫","全大寫","都可以"],"c":1},{"q":"問句最後要？","opts":["句號 .","問號 ?","驚嘆號 !","什麼都不用"],"c":1},{"q":"陳述句最後要？","opts":["句號 .","問號 ?","驚嘆號 !","什麼都不用"],"c":0}],"s1mgrammar":[{"q":"John can swim → ___ can swim.","opts":["She","I","He","They"],"c":2},{"q":"She hurt ___ (她自己).","opts":["himself","herself","itself","myself"],"c":1},{"q":"___ is a pencil (近).","opts":["That","These","This","Those"],"c":2},{"q":"___ are trees (遠).","opts":["These","Those","This","That"],"c":1},{"q":"___ elephant","opts":["a","an","the","無"],"c":1},{"q":"box 的複數是？","opts":["boxs","boxes","boxies","box"],"c":1},{"q":"water 是？","opts":["可數","不可數","都可以","不知道"],"c":1},{"q":"「眼鏡」是？","opts":["spectacle","spectacles","glass","glasses"],"c":1},{"q":"a ___ cat (胖)","opts":["fats","a fat","fat","fatty"],"c":2}],"s1mreading":[{"q":"🥚 下蛋 lay eggs 的 lay 是？","opts":["吃","放/產","跑","睡"],"c":1},{"q":"🐦 鳥喙 是？","opts":["feather","beak","wing","claw"],"c":1},{"q":"🛁 take a ___","opts":["nap","bath","walk","sleep"],"c":1},{"q":"💤 take a ___ (午睡)","opts":["nap","bath","walk","sleep"],"c":0},{"q":"🌱 植物是？","opts":["plant","flour","vine","seed"],"c":0},{"q":"🦔 刺蝟 是？","opts":["rabbit","hedgehog","cricket","bear"],"c":1},{"q":"🧤 連指手套 是？","opts":["glove","mitten","sock","scarf"],"c":1},{"q":"擁擠 是？","opts":["crowded","empty","cold","warm"],"c":0},{"q":"🌾 小麥 是？","opts":["rice","wheat","flour","bread"],"c":1},{"q":"🚚 卡車 是？","opts":["car","truck","bus","train"],"c":1},{"q":"遞送 是？","opts":["deliver","delicious","taste","pick"],"c":0},{"q":"在過去 in the ___","opts":["now","past","future","ago"],"c":1}],"s1mstory":[{"q":"Who gets new mittens?","opts":["Mice","Lance","Rabbit","Bear"],"c":1},{"q":"What does Lance go out to find?","opts":["food","friends","firewood","flowers"],"c":2},{"q":"Who finds the mitten first?","opts":["Rabbit","Bear","Mice","Cricket"],"c":2},{"q":"Why does Rabbit go in?","opts":["cold","hungry","sleepy","afraid"],"c":2},{"q":"Why does Hedgehog go in?","opts":["cold","hungry","sleepy","afraid"],"c":0},{"q":"Why does Bear go in?","opts":["cold","hungry","tired","angry"],"c":2},{"q":"Who is the last to go in?","opts":["Bear","Cricket","Hedgehog","Rabbit"],"c":1},{"q":"What happens at the end?","opts":["They share food","The mitten breaks","They sleep","Lance finds it"],"c":1},{"q":"What does 'crowded' mean?","opts":["空的","擁擠","冷的","安靜"],"c":1},{"q":"What sound does the mitten make?","opts":["Rip! Snap! POP!","Bang!","Crash!","Boom!"],"c":0}],"s1msubject":[{"q":"1/2 是？","opts":["whole","half","third","quarter"],"c":1},{"q":"1/4 是？","opts":["whole","half","third","quarter"],"c":3},{"q":"1/3 是？","opts":["whole","half","third","quarter"],"c":2},{"q":"整個 是?","opts":["whole","half","third","quarter"],"c":0},{"q":"畫家 是？","opts":["artist","mirror","face","background"],"c":0},{"q":"鏡子 是？","opts":["artist","mirror","skin","face"],"c":1},{"q":"皮膚 是？","opts":["skin","face","background","mirror"],"c":0},{"q":"背景 是？","opts":["skin","face","mirror","background"],"c":3},{"q":"臉 是？","opts":["skin","face","background","mirror"],"c":1}]};
+Object.assign(FILL_DATA, S1M_FILL_DATA);
+Object.assign(ERROR_DATA, S1M_ERROR_DATA);
+Object.assign(QUIZ_DATA, S1M_QUIZ_DATA);
+
+// ══════════════════════════════════
 // STATE
 // ══════════════════════════════════
 let currentUnit = 'ff1';
@@ -1672,6 +3086,42 @@ const UNIT_BADGES = {
   all:'⭐ Unit 1–15'
 };
 const ALL_UNITS = ['ff1','ff2','ff3','ff4','ff5','ff6','ff7','ff8','ff9','ff10','ff11','ff12','ff13','ff14','ff15'];
+
+Object.assign(UNIT_TITLES, {
+  s2st: 'Starter · My family',
+  s2u1: "Unit 1 · They're from Australia!",
+  s2u2: 'Unit 2 · My weekend',
+  s2u3: 'Unit 3 · My things',
+  s2u4: "Unit 4 · We're having fun at the beach!",
+  s2u5: 'Unit 5 · A funny monkey!',
+  s2u6: "Unit 6 · Jim's day",
+  s2u7: 'Unit 7 · Places to go!'
+});
+Object.assign(UNIT_BADGES, {
+  s2st: '📗 S2-1 Starter', s2u1: '📗 S2-1 U1', s2u2: '📗 S2-1 U2', s2u3: '📗 S2-1 U3',
+  s2u4: '📗 S2-1 U4', s2u5: '📗 S2-1 U5', s2u6: '📗 S2-1 U6', s2u7: '📗 S2-1 U7'
+});
+
+Object.assign(UNIT_TITLES, {
+  s1mphonics: "S1-2 期中考 · Phonics 發音規則",
+  s1mvocabulary: "S1-2 期中考 · Vocabulary 單字",
+  s1msentences: "S1-2 期中考 · Sentence Patterns 句型",
+  s1mproofreading: "S1-2 期中考 · Proofreading 改錯",
+  s1mgrammar: "S1-2 期中考 · Grammar 文法",
+  s1mreading: "S1-2 期中考 · Reading Vocab 閱讀單字",
+  s1mstory: "S1-2 期中考 · The Lost Mitten 課文閱讀",
+  s1msubject: "S1-2 期中考 · Subject Learning 學科單字"
+});
+Object.assign(UNIT_BADGES, {
+  s1mphonics: '🏆 S1-2 期中 🔤',
+  s1mvocabulary: '🏆 S1-2 期中 📘',
+  s1msentences: '🏆 S1-2 期中 💬',
+  s1mproofreading: '🏆 S1-2 期中 ✏️',
+  s1mgrammar: '🏆 S1-2 期中 🧠',
+  s1mreading: '🏆 S1-2 期中 📖',
+  s1mstory: '🏆 S1-2 期中 🧤',
+  s1msubject: '🏆 S1-2 期中 🎨'
+});
 
 function enter(key) {
   currentUnit = key;
@@ -1718,7 +3168,7 @@ function enterGroup(groupKey, units, title, badge) {
   document.getElementById('app').style.display = 'block';
   document.getElementById('atitle').textContent = title;
   document.getElementById('abadge').textContent = badge;
-  document.querySelectorAll('[id^="rv-ff"]').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('[id^="rv-"]').forEach(el => el.style.display = 'none');
   units.forEach(u => { const el = document.getElementById('rv-' + u); if (el) el.style.display = 'block'; });
   stab('review', document.querySelectorAll('.tab')[0]);
 }
@@ -1736,6 +3186,10 @@ function stab(id, el) {
 function sgs() {
   document.getElementById('gsel').style.display = 'block';
   document.querySelectorAll('.gamesec').forEach(g => g.classList.remove('active'));
+  [['gsb1', FILL_DATA], ['gsb2', ERROR_DATA], ['gsb3', QUIZ_DATA]].forEach(([cls, data]) => {
+    const b = document.querySelector('.' + cls);
+    if (b) b.style.display = (data[currentUnit] || []).length ? '' : 'none';
+  });
 }
 function sg(g) {
   document.getElementById('gsel').style.display = 'none';
