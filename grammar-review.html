@@ -1208,6 +1208,12 @@ function initFill(uid){
 }
 
 function activateBlank(uid,key,gi,si){
+  var st=fillState['u'+uid]||{};
+  if(st[key]){ // clicking a filled blank cancels it so the word can be used elsewhere
+    delete st[key];
+    var old=document.getElementById('bk-'+uid+'-'+key);
+    if(old){old.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'; old.classList.remove('correct','wrong');}
+  }
   document.querySelectorAll('#rv-'+uid+' .blank').forEach(function(b){b.classList.remove('active');});
   fillActive={uid:uid,key:key,gi:gi,si:si};
   var bk=document.getElementById('bk-'+uid+'-'+key); if(bk)bk.classList.add('active');

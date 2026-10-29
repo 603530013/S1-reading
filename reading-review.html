@@ -158,6 +158,7 @@ body.mu12 .tab.active{color:var(--u12);border-color:var(--u12)}
 @keyframes shk{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
 .sarea{display:flex;flex-direction:column;gap:9px}
 .sitem{background:#f8f9ff;border-radius:11px;padding:11px;border:2px solid #e0e8ff;font-size:.92em;line-height:2.1}
+.bk.filled{background:#e0f2fe;border-color:#38bdf8;color:#075985}.bk.act{background:#fffde7;border-color:#f59e0b}.bk.ok{background:#dcfce7;border-color:var(--grass);color:var(--grass)}.bk.ng{background:#fee2e2;border-color:var(--red);color:var(--red)}.btn:disabled{opacity:.45;cursor:not-allowed}
 .bk{display:inline-block;min-width:72px;text-align:center;border-bottom:3px solid var(--sun);padding:1px 6px;border-radius:5px;cursor:pointer;font-family:'Baloo 2',cursive;font-weight:700;transition:background .2s}
 .wcs{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
 .wchip{background:var(--sun);color:var(--dark);font-family:'Baloo 2',cursive;font-weight:700;padding:4px 11px;border-radius:14px;cursor:pointer;border:none;font-size:.85em;transition:all .16s}
@@ -714,10 +715,11 @@ body.mu24 .tab.active{color:var(--u24);border-color:var(--u24)}
     </div></div>
     <div id="gm-fill" class="gamesec"><div class="card">
       <h2>✏️ 填空遊戲</h2>
-      <p style="color:#888;font-size:.83em;margin-bottom:8px">先點句子裡的空格，再點下面的單字！</p>
+      <p style="color:#888;font-size:.83em;margin-bottom:8px">先點句子裡的空格，再點下面的單字。點已填的空格可以取消；全部填完再按「送出答案」！</p>
       <div class="wcs" id="fchips"></div>
       <div class="sarea" id="fsents" style="margin-top:9px"></div>
       <div class="sboard" id="fscore" style="display:none"><div class="stars">🎉🎉🎉</div><div style="font-weight:700;color:var(--grass)">全部答對啦！太棒了！</div></div>
+      <div id="fprog" style="text-align:center;color:#888;font-size:.85em;margin-top:8px"></div><div style="text-align:center;margin-top:6px"><button class="btn bprim" id="fsubmit" onclick="submitFill()" disabled>✅ 送出答案</button></div>
       <div style="text-align:center;margin-top:10px"><button class="btn bgrn" onclick="rifill()">🔄 再玩</button><button class="btn bgr" onclick="sgs()">← 選遊戲</button></div>
     </div></div>
     <div id="gm-order" class="gamesec"><div class="card">
@@ -982,9 +984,28 @@ function pR(el){if(el.classList.contains('cor'))return;document.querySelectorAll
 function chkM(){if(sL.dataset.v===sR.dataset.v){[sL,sR].forEach(e=>{e.classList.remove('sel');e.classList.add('cor');});mCnt++;if(mCnt===mTot){document.getElementById('mscore').style.display='block';document.getElementById('msnum').textContent=mCnt+'/'+mTot;spop('🏆','全部配對成功！','每個單字都認識了！🎉');}}else{const l=sL,r=sR;[l,r].forEach(e=>e.classList.add('wrg'));setTimeout(()=>{[l,r].forEach(e=>{e.classList.remove('wrg','sel');});sL=null;sR=null;},520);return;}sL=null;sR=null;}
 function rimatch(){initMatch();}
 let _fd=null;function getFD(fresh){if(fresh||!_fd)_fd=getFD0();return _fd;}function getFD0(){if(GROUPS[mode]){const us=GROUPS[mode];return us.length>8?us.reduce((r,u)=>[...r,...shuf(UD[u].f).slice(0,2)],[]):us.reduce((r,u)=>[...r,...UD[u].f],[]);}if(!UD[mode]||!UD[mode].f)return[];return UD[mode].f;}
-function initFill(){const d=getFD(true);fAns={};fActive=null;document.getElementById('fscore').style.display='none';const ws=shuf([...new Set(d.map(x=>x.ans))]);document.getElementById('fchips').innerHTML=ws.map(w=>`<button class="wchip" id="fc-${encodeURIComponent(w)}" onclick="fc('${w.replace(/'/g,"\\'")}')">${w}</button>`).join('');const isGroup=!!GROUPS[mode];document.getElementById('fsents').innerHTML=d.map((x,i)=>{const tag=isGroup?`<span class="utag t${x.u.slice(1)}">${ulbl(x.u)}</span> `:'';return `<div class="sitem">${tag}${x.b}<span id="fb-${i}" class="bk" onclick="fbk(${i})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${x.a}</div>`;}).join('');}
-function fbk(i){document.querySelectorAll('.bk').forEach(b=>{b.style.background='';b.style.borderColor='var(--sun)';});fActive=i;const el=document.getElementById('fb-'+i);el.style.background='#fffde7';el.style.borderColor='#f59e0b';}
-function fc(w){const d=getFD();if(fActive===null){for(let i=0;i<d.length;i++){if(!fAns[i]){fActive=i;break;}}if(fActive===null)return;}if(fAns[fActive]){const old=fAns[fActive];const chip=document.getElementById('fc-'+encodeURIComponent(old));if(chip)chip.classList.remove('used');}fAns[fActive]=w;const chip=document.getElementById('fc-'+encodeURIComponent(w));if(chip)chip.classList.add('used');const el=document.getElementById('fb-'+fActive);el.textContent=w;if(d[fActive].ans===w){el.style.color='var(--grass)';el.style.background='#dcfce7';el.style.borderColor='var(--grass)';}else{el.style.color='var(--red)';el.style.background='#fee2e2';el.style.borderColor='var(--red)';}fActive=null;if(Object.keys(fAns).length===d.length&&d.every((x,i)=>fAns[i]===x.ans)){document.getElementById('fscore').style.display='block';spop('⭐','全部答對了！','超厲害！每個句子都填對了！');}}
+let fW=[];
+function initFill(){const d=getFD(true);fAns={};fActive=null;fW=d.map(x=>x.ans);document.getElementById('fscore').style.display='none';
+  document.getElementById('fchips').innerHTML=shuf(d.map((x,i)=>i)).map(i=>`<button class="wchip" id="fc-${i}" onclick="fc(${i})">${fW[i]}</button>`).join('');
+  const isGroup=!!GROUPS[mode];
+  document.getElementById('fsents').innerHTML=d.map((x,i)=>{const tag=isGroup?`<span class="utag t${x.u.slice(1)}">${ulbl(x.u)}</span> `:'';return `<div class="sitem">${tag}${x.b}<span id="fb-${i}" class="bk" onclick="fbk(${i})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${x.a}</div>`;}).join('');
+  updFill();}
+function updFill(){const t=getFD().length,n=Object.keys(fAns).length;document.getElementById('fprog').textContent='已填 '+n+' / '+t+(n===t?'　👉 可以按「送出答案」了！':'');document.getElementById('fsubmit').disabled=n<t;}
+function fbk(i){
+  if(fAns[i]!==undefined){const c=document.getElementById('fc-'+fAns[i]);if(c)c.classList.remove('used');delete fAns[i];const e=document.getElementById('fb-'+i);e.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';e.className='bk';document.getElementById('fscore').style.display='none';}
+  document.querySelectorAll('.bk').forEach(b=>b.classList.remove('act'));
+  fActive=i;document.getElementById('fb-'+i).classList.add('act');updFill();}
+function fc(id){
+  const d=getFD();
+  if(fActive===null||fAns[fActive]!==undefined){fActive=null;for(let i=0;i<d.length;i++){if(fAns[i]===undefined){fActive=i;break;}}if(fActive===null)return;}
+  const el=document.getElementById('fb-'+fActive);fAns[fActive]=id;document.getElementById('fc-'+id).classList.add('used');
+  el.textContent=fW[id];el.className='bk filled';fActive=null;updFill();}
+function submitFill(){
+  const d=getFD();let ok=0;
+  d.forEach((x,i)=>{const el=document.getElementById('fb-'+i),right=fW[fAns[i]]===x.ans;el.classList.remove('filled','act');el.classList.add(right?'ok':'ng');if(right)ok++;});
+  const all=ok===d.length,sc=document.getElementById('fscore');sc.style.display='block';
+  sc.innerHTML='<div class="stars">'+(all?'🎉🎉🎉':ok/d.length>=.6?'⭐⭐':'💪')+'</div><div style="font-weight:700;color:var(--grass)">'+(all?'全部答對啦！太棒了！':'答對 '+ok+' / '+d.length+'　紅色的空格點一下可以取消，再換別的單字')+'</div>';
+  if(all)spop('⭐','全部答對了！','超厲害！每個句子都填對了！');else spop('💪','答對 '+ok+' / '+d.length,'紅色的空格點一下就能取消重填喔！');}
 function rifill(){initFill();}
 function initOrder(){document.getElementById('ores').style.display='none';const lbl=document.getElementById('oulbl');const groupUnits=GROUPS[mode]||null;if(groupUnits){lbl.innerHTML=`<div style="font-size:.85em;color:#888;margin-bottom:4px">選一個故事：</div><div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px">${groupUnits.map(u=>`<button class="btn" style="padding:3px 10px;font-size:.78em;background:var(--${u});color:white" onclick="lou('${u}')">${UM[u].icon} ${ulbl(u)}</button>`).join('')}</div>`;lou(groupUnits[0]);}else if(!UD[mode]||!UD[mode].o){lbl.innerHTML='';document.getElementById('olist').innerHTML='<p style="color:#888;text-align:center">此單元無排列遊戲</p>';}else{lbl.innerHTML='';lou(mode);}}
 function lou(u){ounit=u;oItems=shuf([...UD[u].o]);document.getElementById('ores').style.display='none';renderO();}

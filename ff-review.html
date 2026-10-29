@@ -157,6 +157,8 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
   cursor:pointer;transition:all .18s;box-shadow:0 2px 6px rgba(22,163,74,.3)}
 .wb-chip:hover{background:var(--gd);transform:scale(1.05)}
 .wb-chip.used{opacity:.32;pointer-events:none;background:#94a3b8}
+.blank.filled{background:#e0f2fe;border-color:#38bdf8;color:#075985}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .wb-label{font-size:.8em;color:var(--gray);font-weight:700;width:100%;margin-bottom:2px}
 
 /* --- GAME 2: ERROR CORRECTION --- */
@@ -1911,13 +1913,12 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;backgrou
     <div id="gm-fill" class="gamesec">
       <div class="card">
         <h2>✏️ 填空練習</h2>
-        <p style="color:var(--gray);font-size:.85em;margin-bottom:12px">先點藍色空格選取，再點下面的單字填入！</p>
+        <p style="color:var(--gray);font-size:.85em;margin-bottom:12px">先點藍色空格選取，再點下面的單字填入。點已填的空格可以取消；全部填完再按「送出答案」一起批改！</p>
         <div id="fill-area"></div>
-        <div class="sboard" id="fill-score" style="display:none">
-          <div class="stars">🎉🎉🎉</div>
-          <div style="font-weight:700;color:var(--green);font-size:1.05em">全部填對了！太棒了！</div>
-        </div>
+        <div id="fill-prog" style="text-align:center;color:var(--gray);font-size:.85em;margin-top:6px"></div>
+        <div class="sboard" id="fill-score" style="display:none"></div>
         <div style="text-align:center;margin-top:12px">
+          <button class="btn bt" id="fill-submit" onclick="submitFill()" disabled>✅ 送出答案</button>
           <button class="btn bg" onclick="resetFill()">🔄 再試一次</button>
           <button class="btn br" onclick="sgs()">← 選遊戲</button>
         </div>
@@ -3209,6 +3210,7 @@ function initFill() {
   fillActive  = null;
   fillAnswers = {};
   document.getElementById('fill-score').style.display = 'none';
+  updFillUI();
 
   const groups = FILL_DATA[currentUnit] || [];
   const area   = document.getElementById('fill-area');
@@ -3261,59 +3263,65 @@ function initFill() {
   });
 }
 
+function blankEmpty(key) {
+  const bk = document.getElementById('bk-' + key);
+  if (bk) { bk.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'; bk.classList.remove('active', 'filled', 'correct', 'wrong'); }
+}
+function fillTotals() {
+  const total = FILL_DATA[currentUnit].reduce((n, g) => n + g.sentences.length, 0);
+  return { total, filled: Object.keys(fillAnswers).length };
+}
+function updFillUI() {
+  const { total, filled } = fillTotals();
+  document.getElementById('fill-prog').textContent = '已填 ' + filled + ' / ' + total + (filled === total ? '　👉 可以按「送出答案」了！' : '');
+  document.getElementById('fill-submit').disabled = filled < total;
+}
 function activateBlank(key, gi, si) {
-  document.querySelectorAll('.blank').forEach(b => {
-    b.classList.remove('active');
-  });
+  if (fillAnswers[key]) {            // clicking a filled blank cancels it
+    delete fillAnswers[key];
+    blankEmpty(key);
+    document.getElementById('fill-score').style.display = 'none';
+  }
+  document.querySelectorAll('.blank').forEach(b => b.classList.remove('active'));
   fillActive = { key, gi, si };
   const bk = document.getElementById('bk-' + key);
   if (bk) bk.classList.add('active');
+  updFillUI();
 }
 
 function pickWord(gi, word) {
   if (!fillActive || fillActive.gi !== gi) {
-    const groups = FILL_DATA[currentUnit];
-    const group  = groups[gi];
+    const group = FILL_DATA[currentUnit][gi];
+    fillActive = null;
     for (let si = 0; si < group.sentences.length; si++) {
       const k = gi + '-' + si;
-      if (!fillAnswers[k]) {
-        fillActive = { key: k, gi, si };
-        break;
-      }
+      if (!fillAnswers[k]) { fillActive = { key: k, gi, si }; break; }
     }
-    if (!fillActive || fillActive.gi !== gi) return;
+    if (!fillActive) return;
   }
-
-  const { key, gi: g, si: s } = fillActive;
-  const groups   = FILL_DATA[currentUnit];
-  const sentence = groups[g].sentences[s];
-  const bk       = document.getElementById('bk-' + key);
-
+  const { key } = fillActive;
+  const bk = document.getElementById('bk-' + key);
   fillAnswers[key] = word;
-
   bk.textContent = word;
   bk.classList.remove('active', 'correct', 'wrong');
-  if (word === sentence.ans) {
-    bk.classList.add('correct');
-  } else {
-    bk.classList.add('wrong');
-  }
+  bk.classList.add('filled');
   fillActive = null;
+  updFillUI();
+}
 
-  const total   = FILL_DATA[currentUnit].reduce((n, g) => n + g.sentences.length, 0);
-  let allCorrect = true;
-  let filled = 0;
-  FILL_DATA[currentUnit].forEach((group, gi) => {
-    group.sentences.forEach((s, si) => {
-      const k = gi + '-' + si;
-      if (fillAnswers[k]) filled++;
-      if (fillAnswers[k] !== s.ans) allCorrect = false;
-    });
-  });
-  if (filled === total && allCorrect) {
-    document.getElementById('fill-score').style.display = 'block';
-    spop('🎉', '全部填對了！', '每個空格都答對了！超厲害！');
-  }
+function submitFill() {
+  let ok = 0, total = 0;
+  FILL_DATA[currentUnit].forEach((group, gi) => group.sentences.forEach((s, si) => {
+    total++;
+    const k = gi + '-' + si, bk = document.getElementById('bk-' + k);
+    bk.classList.remove('filled', 'active', 'correct', 'wrong');
+    if (fillAnswers[k] === s.ans) { bk.classList.add('correct'); ok++; } else bk.classList.add('wrong');
+  }));
+  const all = ok === total, sc = document.getElementById('fill-score');
+  sc.style.display = 'block';
+  sc.innerHTML = '<div class="stars">' + (all ? '🎉🎉🎉' : ok / total >= .6 ? '⭐⭐' : '💪') + '</div>' +
+    '<div style="font-weight:700;color:var(--green);font-size:1.05em">' + (all ? '全部填對了！太棒了！' : '答對 ' + ok + ' / ' + total + '　紅色的空格點一下可以取消，再換別的單字') + '</div>';
+  spop(all ? '🎉' : '💪', all ? '全部填對了！' : ok + ' / ' + total + ' 答對', all ? '每個空格都答對了！超厲害！' : '紅色的空格點一下就能取消重填喔！');
 }
 
 function resetFill() { initFill(); }
