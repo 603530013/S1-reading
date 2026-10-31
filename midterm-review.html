@@ -116,7 +116,7 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
     <button class="s-btn" style="border-left:6px solid #ea580c" onclick="enterSemester('s2')">
       <div class="sicon">📗</div>
       <div class="stit" style="color:#ea580c">S2-1</div>
-      <div class="scn">期中考總複習：Family and Friends U1–4・Reading U1–5・Phonics・Vocabulary</div>
+      <div class="scn">期中考總複習：Family and Friends U1–4・Reading U1–5・Grammar U1–11・Phonics・Vocabulary</div>
     </button>
     <button class="s-btn" style="border-left:6px solid #f59e0b" onclick="enterSemester('s1')">
       <div class="sicon">📙</div>
@@ -177,17 +177,70 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
       <div class="scn">At Work, At Play</div>
     </button>
   </div>
-  <div class="grp-head">📖 Reading（Unit 1–5）／🧠 Grammar</div>
+  <div class="grp-head">📖 Reading（Unit 1–5）</div>
   <div class="landing-grid">
     <button class="s-btn" style="border-left:6px solid #06b6d4" onclick="enterSection('s2reading')">
       <div class="sicon">📖</div>
       <div class="stit" style="color:#06b6d4">Reading</div>
       <div class="scn">課文閱讀 Unit 1–5</div>
     </button>
-    <button class="s-btn" disabled style="border-left:6px solid #cbd5e1;opacity:.55;cursor:not-allowed">
-      <div class="sicon">🧠</div>
-      <div class="stit" style="color:#94a3b8">Grammar</div>
-      <div class="scn">期中範圍確認後加入</div>
+  </div>
+  <div class="grp-head">🧠 Grammar（Unit 1–11）</div>
+  <div class="landing-grid">
+    <button class="s-btn" style="border-left:6px solid #a855f7" onclick="enterSection('s2g1')">
+      <div class="sicon">👉</div>
+      <div class="stit" style="color:#a855f7">Unit 1</div>
+      <div class="scn">Object Pronouns</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #8b5cf6" onclick="enterSection('s2g2')">
+      <div class="sicon">🪞</div>
+      <div class="stit" style="color:#8b5cf6">Unit 2</div>
+      <div class="scn">Reflexive Pronouns</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #6366f1" onclick="enterSection('s2g3')">
+      <div class="sicon">🍅</div>
+      <div class="stit" style="color:#6366f1">Unit 3</div>
+      <div class="scn">Singular and Plural Nouns</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #3b82f6" onclick="enterSection('s2g4')">
+      <div class="sicon">👖</div>
+      <div class="stit" style="color:#3b82f6">Unit 4</div>
+      <div class="scn">Nouns (with No Singular Form)</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #06b6d4" onclick="enterSection('s2g5')">
+      <div class="sicon">🐱</div>
+      <div class="stit" style="color:#06b6d4">Unit 5</div>
+      <div class="scn">Possessive Nouns (Singular)</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #14b8a6" onclick="enterSection('s2g6')">
+      <div class="sicon">🐶</div>
+      <div class="stit" style="color:#14b8a6">Unit 6</div>
+      <div class="scn">Possessive Nouns (Plural)</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #10b981" onclick="enterSection('s2g7')">
+      <div class="sicon">📏</div>
+      <div class="stit" style="color:#10b981">Unit 7</div>
+      <div class="scn">Comparison of Adjectives: Comparative Degree</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #84cc16" onclick="enterSection('s2g8')">
+      <div class="sicon">🏆</div>
+      <div class="stit" style="color:#84cc16">Unit 8</div>
+      <div class="scn">Comparison of Adjectives: Superlative Degree</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #eab308" onclick="enterSection('s2g9')">
+      <div class="sicon">🅱️</div>
+      <div class="stit" style="color:#eab308">Unit 9</div>
+      <div class="scn">"Is", "Are", "Am", "Was" and "Were"</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #f97316" onclick="enterSection('s2g10')">
+      <div class="sicon">🤲</div>
+      <div class="stit" style="color:#f97316">Unit 10</div>
+      <div class="scn">"Has", "Have" and "Had"</div>
+    </button>
+    <button class="s-btn" style="border-left:6px solid #ef4444" onclick="enterSection('s2g11')">
+      <div class="sicon">🛠️</div>
+      <div class="stit" style="color:#ef4444">Unit 11</div>
+      <div class="scn">"Do", "Does" and "Did"</div>
     </button>
   </div>
   <div class="actions" style="margin-top:0"><button class="btn br" onclick="backToSemester()">← 回學期選擇</button></div>
@@ -996,6 +1049,425 @@ body{font-family:'Nunito',sans-serif;min-height:100vh;background:linear-gradient
     <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
   </div>
 </div>
+<div id="rv-s2g1" class="card hidden" style="border-top:6px solid #a855f7">
+  <h2>👉 Grammar Unit 1 · Object Pronouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(受詞代名詞)</span></h2>
+  <div class="tp">受詞代名詞 (object pronouns)：<b>me, you, him, her, it, us, them</b></div>
+  <div class="tp">受詞代名詞通常放在<b>動詞（或介系詞）後面</b></div>
+  <div class="tp">例：This is my mother. She loves <b>me</b>. ／ I am returning it to <b>you</b>.</div>
+  <div class="tp">例：Mr Lee is showing <b>her</b> a picture. ／ Do not disturb <b>them</b>.</div>
+  <div class="tp">例：We like stories. Our teacher is telling <b>us</b> a story.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g1"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g1')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g1')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g1"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g1')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g1')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g1"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g1')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g1')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g1">
+    <div class="stars" id="quiz-stars-s2g1"></div>
+    <div class="snum" id="quiz-snum-s2g1"></div>
+    <div id="quiz-msg-s2g1"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g2" class="card hidden" style="border-top:6px solid #8b5cf6">
+  <h2>🪞 Grammar Unit 2 · Reflexive Pronouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(反身代名詞)</span></h2>
+  <div class="tp">反身代名詞 (reflexive pronouns)：<b>myself, yourself, himself, herself, itself, yourselves, themselves, ourselves</b></div>
+  <div class="tp">反身代名詞<b>指回做動作的人</b>（doer of the action）</div>
+  <div class="tp">例：We enjoyed <b>ourselves</b> at John’s birthday party.</div>
+  <div class="tp">例：The soldiers pulled <b>themselves</b> up the wall. ／ I forced <b>myself</b> through the hole.</div>
+  <div class="tp">例：You can see <b>yourself</b> in this mirror. ／ She rewarded <b>herself</b> with a piece of cake.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g2"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g2')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g2')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g2"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g2')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g2')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g2"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g2')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g2')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g2">
+    <div class="stars" id="quiz-stars-s2g2"></div>
+    <div class="snum" id="quiz-snum-s2g2"></div>
+    <div id="quiz-msg-s2g2"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g3" class="card hidden" style="border-top:6px solid #6366f1">
+  <h2>🍅 Grammar Unit 3 · Singular and Plural Nouns <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數與複數名詞（規則與不規則）)</span></h2>
+  <div class="tp">① 加 <b>s</b>：desk → desks、bag → bags</div>
+  <div class="tp">② 字尾 <b>s, sh, ch, x</b> 加 <b>es</b>：dress → dresses、box → boxes</div>
+  <div class="tp">③ 字尾 <b>o</b> 加 <b>es</b>：tomato → tomatoes、potato → potatoes</div>
+  <div class="tp">④ <b>子音 + y</b>：去 y 加 <b>ies</b>：housefly → houseflies、puppy → puppies</div>
+  <div class="tp">⑤ <b>f / fe</b> 改成 <b>ves</b>：leaf → leaves、knife → knives</div>
+  <div class="tp">⑥ 不規則：child → children、man → men、woman → women、foot → feet、tooth → teeth、mouse → mice</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g3"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g3')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g3')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g3"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g3')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g3')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g3"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g3')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g3')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g3">
+    <div class="stars" id="quiz-stars-s2g3"></div>
+    <div class="snum" id="quiz-snum-s2g3"></div>
+    <div id="quiz-msg-s2g3"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g4" class="card hidden" style="border-top:6px solid #3b82f6">
+  <h2>👖 Grammar Unit 4 · Nouns (with No Singular Form) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(沒有單數形的名詞)</span></h2>
+  <div class="tp">大部分可數名詞的複數是加 <b>s / es</b>：tiger → tigers、brush → brushes、mango → mangoes</div>
+  <div class="tp">有些名詞<b>沒有複數形</b>（不可數）：oil、ice cream、water</div>
+  <div class="tp">有些名詞<b>沒有單數形</b>（成雙的東西）：<b>pants, shorts, pyjamas, socks, trousers, jeans</b></div>
+  <div class="tp">成雙的工具、眼鏡：<b>scissors, glasses, tongs, binoculars, tweezers, clippers, spectacles</b></div>
+  <div class="tp">要數它們時用 <b>a pair of</b>：a pair of scissors、two pairs of socks</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g4"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g4')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g4')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g4"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g4')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g4')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g4"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g4')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g4')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g4">
+    <div class="stars" id="quiz-stars-s2g4"></div>
+    <div class="snum" id="quiz-snum-s2g4"></div>
+    <div id="quiz-msg-s2g4"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g5" class="card hidden" style="border-top:6px solid #06b6d4">
+  <h2>🐱 Grammar Unit 5 · Possessive Nouns (Singular) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(單數所有格名詞)</span></h2>
+  <div class="tp">所有格名詞表示「<b>誰的</b>」（ownership）</div>
+  <div class="tp">單數名詞所有格：在單數名詞後面加 <b>’s</b></div>
+  <div class="tp">例：Peter’s book、this girl’s dress、Mr Lee’s son、the man’s hat、the teacher’s car、the dog’s tail</div>
+  <div class="tp">例：Peter has a new book. → <b>Peter’s</b> new book is on the table.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g5"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g5')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g5')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g5"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g5')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g5')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g5"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g5')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g5')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g5">
+    <div class="stars" id="quiz-stars-s2g5"></div>
+    <div class="snum" id="quiz-snum-s2g5"></div>
+    <div id="quiz-msg-s2g5"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g6" class="card hidden" style="border-top:6px solid #14b8a6">
+  <h2>🐶 Grammar Unit 6 · Possessive Nouns (Plural) <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(複數所有格名詞)</span></h2>
+  <div class="tp">複數名詞以 <b>s</b> 結尾：只加 <b>’</b>（撇號）</div>
+  <div class="tp">例：the boys’ ball、the dogs’ tails、the pupils’ bags、the sisters’ dresses</div>
+  <div class="tp">複數名詞<b>不以 s 結尾</b>：加 <b>’s</b></div>
+  <div class="tp">例：the men’s hats、the children’s balloons、the mice’s tails、the women’s clothes</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g6"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g6')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g6')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g6"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g6')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g6')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g6"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g6')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g6')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g6">
+    <div class="stars" id="quiz-stars-s2g6"></div>
+    <div class="snum" id="quiz-snum-s2g6"></div>
+    <div id="quiz-msg-s2g6"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g7" class="card hidden" style="border-top:6px solid #10b981">
+  <h2>📏 Grammar Unit 7 · Comparison of Adjectives: Comparative Degree <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(形容詞比較級)</span></h2>
+  <div class="tp">形容詞有三個等級：原級 (positive)、比較級 (comparative)、最高級 (superlative)</div>
+  <div class="tp">原級是形容詞的基本形：long、short、thick、clean、beautiful、interesting</div>
+  <div class="tp"><b>比較兩個</b>人、事、物時用<b>比較級</b>：longer、shorter、thicker、cleaner、<b>more</b> beautiful、<b>more</b> interesting</div>
+  <div class="tp">後面通常接 <b>than</b>：The black rope is <b>longer than</b> the white rope.</div>
+  <div class="tp">例：Mary’s dress is <b>more beautiful than</b> May’s dress. ／ The comic book is <b>more interesting than</b> the storybook.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g7"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g7')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g7')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g7"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g7')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g7')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g7"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g7')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g7')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g7">
+    <div class="stars" id="quiz-stars-s2g7"></div>
+    <div class="snum" id="quiz-snum-s2g7"></div>
+    <div id="quiz-msg-s2g7"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g8" class="card hidden" style="border-top:6px solid #84cc16">
+  <h2>🏆 Grammar Unit 8 · Comparison of Adjectives: Superlative Degree <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(形容詞最高級)</span></h2>
+  <div class="tp"><b>比較三個（或以上）</b>的人、事、物時用<b>最高級</b>，前面通常加 <b>the</b></div>
+  <div class="tp">tall → <b>tallest</b>、cheap → <b>cheapest</b>、long → longest、short → shortest、thick → thickest、clean → cleanest</div>
+  <div class="tp">長的形容詞用 <b>most</b>：<b>most</b> beautiful、<b>most</b> interesting</div>
+  <div class="tp">例：These ropes are long. The black one is <b>the longest</b>.</div>
+  <div class="tp">例：The flowers are beautiful. The rose is <b>the most beautiful</b> of all.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g8"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g8')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g8')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g8"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g8')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g8')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g8"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g8')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g8')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g8">
+    <div class="stars" id="quiz-stars-s2g8"></div>
+    <div class="snum" id="quiz-snum-s2g8"></div>
+    <div id="quiz-msg-s2g8"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g9" class="card hidden" style="border-top:6px solid #eab308">
+  <h2>🅱️ Grammar Unit 9 · “Is”, “Are”, “Am”, “Was” and “Were” <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(be 動詞的現在式與過去式)</span></h2>
+  <div class="tp"><b>am, is, are</b> 是現在式，<b>was, were</b> 是過去式</div>
+  <div class="tp"><b>am</b> 搭配 <b>I</b>；<b>is</b> 搭配 she, he 和單數名詞；<b>are</b> 搭配 you, they, we 和複數名詞</div>
+  <div class="tp">過去式：<b>is / am → was</b>；<b>are → were</b></div>
+  <div class="tp">現在：She is seven years old. ／ They are in Primary 2A.</div>
+  <div class="tp">過去：She <b>was</b> six years old last year. ／ They <b>were</b> in Primary 1A last year.</div>
+  <div class="tp">時間提示：this year, now, every morning（現在）／ last year, yesterday, last week, last night（過去）</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g9"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g9')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g9')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g9"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g9')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g9')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g9"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g9')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g9')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g9">
+    <div class="stars" id="quiz-stars-s2g9"></div>
+    <div class="snum" id="quiz-snum-s2g9"></div>
+    <div id="quiz-msg-s2g9"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g10" class="card hidden" style="border-top:6px solid #f97316">
+  <h2>🤲 Grammar Unit 10 · “Has”, “Have” and “Had” <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(have 的現在式與過去式)</span></h2>
+  <div class="tp"><b>has, have</b> 是現在式，<b>had</b> 是過去式</div>
+  <div class="tp"><b>has</b> 搭配 she, he 和單數名詞；<b>have</b> 搭配 I, you, they, we 和複數名詞</div>
+  <div class="tp">過去式：<b>has / have → had</b>（不分主詞）</div>
+  <div class="tp">現在：She has a pencil. ／ They have milk for breakfast every morning.</div>
+  <div class="tp">過去：I <b>had</b> measles last month. ／ They <b>had</b> eggs for breakfast yesterday.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g10"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g10')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g10')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g10"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g10')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g10')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g10"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g10')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g10')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g10">
+    <div class="stars" id="quiz-stars-s2g10"></div>
+    <div class="snum" id="quiz-snum-s2g10"></div>
+    <div id="quiz-msg-s2g10"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
+<div id="rv-s2g11" class="card hidden" style="border-top:6px solid #ef4444">
+  <h2>🛠️ Grammar Unit 11 · “Do”, “Does” and “Did” <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(do 的現在式與過去式)</span></h2>
+  <div class="tp"><b>do, does</b> 是現在式，<b>did</b> 是過去式</div>
+  <div class="tp"><b>do</b> 搭配 I, they, you, we 和複數名詞；<b>does</b> 搭配 he, she 和單數名詞</div>
+  <div class="tp">過去式：<b>do / does → did</b></div>
+  <div class="tp">現在：You do the work here every day. ／ She does the work here every day.</div>
+  <div class="tp">過去：The boys <b>did</b> the work here yesterday.</div>
+  <div class="tp">回答問句：Do they …? → Yes, they <b>do</b>. / No, they <b>don’t</b>.；Does she …? → Yes, she <b>does</b>. / No, she <b>doesn’t</b>.；Did you …? → Yes, I <b>did</b>.</div>
+
+  <h3 style="margin-top:18px;margin-bottom:8px;color:#92400e">📝 填空練習</h3>
+  <div id="fill-s2g11"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkFill('s2g11')">✅ 檢查填空</button>
+    <button class="btn bg" onclick="initFill('s2g11')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#0369a1">🔍 找出錯誤</h3>
+  <div id="err-s2g11"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkErrors('s2g11')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initError('s2g11')">🔄 再玩</button>
+  </div>
+
+  <h3 style="margin-top:22px;margin-bottom:8px;color:#9d174d">🎯 選擇題</h3>
+  <div id="quiz-s2g11"></div>
+  <div class="actions">
+    <button class="btn bt" onclick="checkQuiz('s2g11')">✅ 檢查答案</button>
+    <button class="btn bg" onclick="initQuiz('s2g11')">🔄 再玩</button>
+  </div>
+  <div class="score" id="quiz-score-s2g11">
+    <div class="stars" id="quiz-stars-s2g11"></div>
+    <div class="snum" id="quiz-snum-s2g11"></div>
+    <div id="quiz-msg-s2g11"></div>
+  </div>
+
+  <div class="actions" style="margin-top:22px;border-top:1px dashed #e2e8f0;padding-top:16px">
+    <button class="btn br" onclick="backToLanding()">← 回項目選擇</button>
+  </div>
+</div>
 <div id="rv-s2phonics" class="card hidden" style="border-top:6px solid #f59e0b">
   <h2>🔤 Phonics <span style="color:#94a3b8;font-size:.75em;margin-left:8px">(發音／拼字 · S2-1 W1–W8、W11)</span></h2>
   <div class="tp">🔤 <b>期中考範圍：W1–W8、W11</b></div>
@@ -1133,6 +1605,9 @@ Object.assign(QUIZ_DATA, {"s2u1":[{"q":"Holly and Max's cousins are from ___.","
 Object.assign(FILL_DATA, {"s2phonics":[{"title":"W1 · 10 個單字","sentences":[{"hint":"指 / 點","before":"","after":"","ans":"point"},{"hint":"硬幣","before":"","after":"","ans":"coin"},{"hint":"玩具","before":"","after":"","ans":"toy"},{"hint":"豆漿","before":"","after":"","ans":"soy milk"},{"hint":"吵鬧的","before":"","after":"","ans":"noisy"},{"hint":"煮沸","before":"","after":"","ans":"boil"},{"hint":"豬叫聲","before":"","after":"","ans":"oink"},{"hint":"享受","before":"","after":"","ans":"enjoy"},{"hint":"牛仔","before":"","after":"","ans":"cowboy"},{"hint":"牡蠣","before":"","after":"","ans":"oyster"}],"wordBank":["point","coin","toy","soy milk","noisy","boil","oink","enjoy","cowboy","oyster"]},{"title":"W2 · 10 個單字","sentences":[{"hint":"醬汁","before":"","after":"","ans":"sauce"},{"hint":"暫停","before":"","after":"","ans":"pause"},{"hint":"八月","before":"","after":"","ans":"August"},{"hint":"過錯","before":"","after":"","ans":"fault"},{"hint":"因為","before":"","after":"","ans":"because"},{"hint":"畫","before":"","after":"","ans":"draw"},{"hint":"爪子","before":"","after":"","ans":"paw"},{"hint":"爪","before":"","after":"","ans":"claw"},{"hint":"吸管","before":"","after":"","ans":"straw"},{"hint":"很棒的","before":"","after":"","ans":"awesome"}],"wordBank":["sauce","pause","August","fault","because","draw","paw","claw","straw","awesome"]},{"title":"W3 · 11 個單字","sentences":[{"hint":"房子","before":"","after":"","ans":"house"},{"hint":"嘴巴","before":"","after":"","ans":"mouth"},{"hint":"數","before":"","after":"","ans":"count"},{"hint":"雲","before":"","after":"","ans":"cloud"},{"hint":"彈跳","before":"","after":"","ans":"bounce"},{"hint":"花","before":"","after":"","ans":"flower"},{"hint":"麵粉","before":"","after":"","ans":"flour"},{"hint":"皇冠","before":"","after":"","ans":"crown"},{"hint":"牛","before":"","after":"","ans":"cow"},{"hint":"棕色的","before":"","after":"","ans":"brown"},{"hint":"向下","before":"","after":"","ans":"down"}],"wordBank":["house","mouth","count","cloud","bounce","flower","flour","crown","cow","brown","down"]},{"title":"W4 · 10 個單字","sentences":[{"hint":"靴子","before":"","after":"","ans":"boot"},{"hint":"月亮","before":"","after":"","ans":"moon"},{"hint":"學校","before":"","after":"","ans":"school"},{"hint":"湯匙","before":"","after":"","ans":"spoon"},{"hint":"房間","before":"","after":"","ans":"room"},{"hint":"煮","before":"","after":"","ans":"cook"},{"hint":"木頭","before":"","after":"","ans":"wood"},{"hint":"書","before":"","after":"","ans":"book"},{"hint":"好的","before":"","after":"","ans":"good"},{"hint":"腳","before":"","after":"","ans":"foot"}],"wordBank":["boot","moon","school","spoon","room","cook","wood","book","good","foot"]},{"title":"W5 · 10 個單字","sentences":[{"hint":"囤積狂 / 林鼠","before":"","after":"","ans":"packrat"},{"hint":"背包","before":"","after":"","ans":"backpack"},{"hint":"垃圾桶","before":"","after":"","ans":"trashcan"},{"hint":"磁鐵","before":"","after":"","ans":"magnet"},{"hint":"手提包","before":"","after":"","ans":"handbag"},{"hint":"爆炸","before":"","after":"","ans":"blast"},{"hint":"鬆餅","before":"","after":"","ans":"flapjack"},{"hint":"小睡","before":"","after":"","ans":"catnap"},{"hint":"塑膠","before":"","after":"","ans":"plastic"},{"hint":"沙包","before":"","after":"","ans":"sandbag"}],"wordBank":["packrat","backpack","trashcan","magnet","handbag","blast","flapjack","catnap","plastic","sandbag"]},{"title":"W6 · 10 個單字","sentences":[{"hint":"晚餐","before":"","after":"","ans":"dinner"},{"hint":"昆蟲","before":"","after":"","ans":"insect"},{"hint":"小貓","before":"","after":"","ans":"kitten"},{"hint":"姊妹","before":"","after":"","ans":"sister"},{"hint":"窗戶","before":"","after":"","ans":"window"},{"hint":"魚條","before":"","after":"","ans":"fishstick"},{"hint":"風車","before":"","after":"","ans":"windmill"},{"hint":"大人物","before":"","after":"","ans":"bigwig"},{"hint":"格格不入的人","before":"","after":"","ans":"misfit"},{"hint":"針刺","before":"","after":"","ans":"pinprick"}],"wordBank":["dinner","insect","kitten","sister","window","fishstick","windmill","bigwig","misfit","pinprick"]},{"title":"W7 · 10 個單字","sentences":[{"hint":"馬克杯","before":"","after":"","ans":"mug"},{"hint":"地毯","before":"","after":"","ans":"rug"},{"hint":"幼獸","before":"","after":"","ans":"cub"},{"hint":"浴缸","before":"","after":"","ans":"tub"},{"hint":"太陽","before":"","after":"","ans":"sun"},{"hint":"樂趣","before":"","after":"","ans":"fun"},{"hint":"鴨子","before":"","after":"","ans":"duck"},{"hint":"運氣","before":"","after":"","ans":"luck"},{"hint":"公車","before":"","after":"","ans":"bus"},{"hint":"挑剔的","before":"","after":"","ans":"fussy"}],"wordBank":["mug","rug","cub","tub","sun","fun","duck","luck","bus","fussy"]},{"title":"W8 · 10 個單字","sentences":[{"hint":"庫存","before":"","after":"","ans":"stock"},{"hint":"頂端","before":"","after":"","ans":"top"},{"hint":"停止","before":"","after":"","ans":"stop"},{"hint":"鍋子","before":"","after":"","ans":"pot"},{"hint":"斑點","before":"","after":"","ans":"spot"},{"hint":"鎖","before":"","after":"","ans":"lock"},{"hint":"積木","before":"","after":"","ans":"block"},{"hint":"箱子","before":"","after":"","ans":"box"},{"hint":"圓木","before":"","after":"","ans":"log"},{"hint":"襪子","before":"","after":"","ans":"sock"}],"wordBank":["stock","top","stop","pot","spot","lock","block","box","log","sock"]},{"title":"W11 · 10 個單字","sentences":[{"hint":"腳踏車","before":"","after":"","ans":"bike"},{"hint":"咬","before":"","after":"","ans":"bite"},{"hint":"十分錢硬幣","before":"","after":"","ans":"dime"},{"hint":"微笑","before":"","after":"","ans":"smile"},{"hint":"我的 / 礦坑","before":"","after":"","ans":"mine"},{"hint":"風箏","before":"","after":"","ans":"kite"},{"hint":"松樹","before":"","after":"","ans":"pine"},{"hint":"九","before":"","after":"","ans":"nine"},{"hint":"線","before":"","after":"","ans":"line"},{"hint":"發光","before":"","after":"","ans":"shine"}],"wordBank":["bike","bite","dime","smile","mine","kite","pine","nine","line","shine"]}],"s2vocab":[{"title":"W1 · 15 個單字","sentences":[{"hint":"一月","before":"","after":"","ans":"January"},{"hint":"二月","before":"","after":"","ans":"February"},{"hint":"三月","before":"","after":"","ans":"March"},{"hint":"四月","before":"","after":"","ans":"April"},{"hint":"五月","before":"","after":"","ans":"May"},{"hint":"六月","before":"","after":"","ans":"June"},{"hint":"七月","before":"","after":"","ans":"July"},{"hint":"八月","before":"","after":"","ans":"August"},{"hint":"九月","before":"","after":"","ans":"September"},{"hint":"十月","before":"","after":"","ans":"October"},{"hint":"十一月","before":"","after":"","ans":"November"},{"hint":"十二月","before":"","after":"","ans":"December"},{"hint":"月份","before":"","after":"","ans":"month"},{"hint":"年","before":"","after":"","ans":"year"},{"hint":"月曆 / 日曆","before":"","after":"","ans":"calendar"}],"wordBank":["January","February","March","April","May","June","July","August","September","October","November","December","month","year","calendar"]},{"title":"W2 · 17 個單字","sentences":[{"hint":"南韓","before":"","after":"","ans":"South Korea"},{"hint":"越南","before":"","after":"","ans":"Vietnam"},{"hint":"墨西哥","before":"","after":"","ans":"Mexico"},{"hint":"西班牙","before":"","after":"","ans":"Spain"},{"hint":"泰國","before":"","after":"","ans":"Thailand"},{"hint":"台灣","before":"","after":"","ans":"Taiwan"},{"hint":"澳洲","before":"","after":"","ans":"Australia"},{"hint":"美國","before":"","after":"","ans":"USA"},{"hint":"巴西","before":"","after":"","ans":"Brazil"},{"hint":"星期一","before":"","after":"","ans":"Monday"},{"hint":"星期二","before":"","after":"","ans":"Tuesday"},{"hint":"星期三","before":"","after":"","ans":"Wednesday"},{"hint":"星期四","before":"","after":"","ans":"Thursday"},{"hint":"星期五","before":"","after":"","ans":"Friday"},{"hint":"星期六","before":"","after":"","ans":"Saturday"},{"hint":"星期日","before":"","after":"","ans":"Sunday"}],"wordBank":["South Korea","Vietnam","Mexico","Spain","Thailand","Taiwan","Australia","USA","Brazil","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]},{"title":"W3 · 15 個單字","sentences":[{"hint":"伸展","before":"","after":"","ans":"stretch"},{"hint":"起飛","before":"","after":"","ans":"take off"},{"hint":"想睡覺的","before":"","after":"","ans":"sleepy"},{"hint":"休息","before":"","after":"","ans":"rest"},{"hint":"灰色的","before":"","after":"","ans":"gray"},{"hint":"乾的","before":"","after":"","ans":"dry"},{"hint":"船","before":"","after":"","ans":"boat"},{"hint":"蓬鬆的","before":"","after":"","ans":"fluffy"},{"hint":"發生","before":"","after":"","ans":"happens"},{"hint":"改變","before":"","after":"","ans":"change"},{"hint":"顏色","before":"","after":"","ans":"color"},{"hint":"旅行","before":"","after":"","ans":"trip"},{"hint":"教","before":"","after":"","ans":"teach"},{"hint":"告訴","before":"","after":"","ans":"tell"},{"hint":"雲","before":"","after":"","ans":"clouds"}],"wordBank":["stretch","take off","sleepy","rest","gray","dry","boat","fluffy","happens","change","color","trip","teach","tell","clouds"]},{"title":"W4 · 15 個單字","sentences":[{"hint":"看漫畫","before":"","after":"","ans":"read comics"},{"hint":"玩滑板","before":"","after":"","ans":"skateboard"},{"hint":"做體操","before":"","after":"","ans":"do gymnastics"},{"hint":"下棋","before":"","after":"","ans":"play chess"},{"hint":"釣魚","before":"","after":"","ans":"fish"},{"hint":"打籃球","before":"","after":"","ans":"play basketball"},{"hint":"拍照","before":"","after":"","ans":"take photos"},{"hint":"打排球","before":"","after":"","ans":"play volleyball"},{"hint":"彈吉他","before":"","after":"","ans":"play the guitar"},{"hint":"購物","before":"","after":"","ans":"shop"},{"hint":"烹調","before":"","after":"","ans":"cook"},{"hint":"上漆","before":"","after":"","ans":"paint"},{"hint":"彈鋼琴","before":"","after":"","ans":"play the piano"},{"hint":"探望家人","before":"","after":"","ans":"visit family"},{"hint":"洲","before":"","after":"","ans":"continents"}],"wordBank":["read comics","skateboard","do gymnastics","play chess","fish","play basketball","take photos","play volleyball","play the guitar","shop","cook","paint","play the piano","visit family","continents"]},{"title":"W5 · 16 個單字","sentences":[{"hint":"電腦","before":"","after":"","ans":"computer"},{"hint":"電視","before":"","after":"","ans":"television"},{"hint":"DVD播放器","before":"","after":"","ans":"DVD player"},{"hint":"手機","before":"","after":"","ans":"cellphone"},{"hint":"相機","before":"","after":"","ans":"camera"},{"hint":"打開","before":"","after":"","ans":"turn on"},{"hint":"關掉","before":"","after":"","ans":"turn off"},{"hint":"專題計畫","before":"","after":"","ans":"project"},{"hint":"收藏","before":"","after":"","ans":"collection"},{"hint":"貼紙","before":"","after":"","ans":"sticker"},{"hint":"讓人覺得無聊的","before":"","after":"","ans":"boring"},{"hint":"壞掉的","before":"","after":"","ans":"broken"},{"hint":"漫畫","before":"","after":"","ans":"comics"},{"hint":"圖釘","before":"","after":"","ans":"pin"},{"hint":"貝殼","before":"","after":"","ans":"shell"}],"wordBank":["computer","television","DVD player","cellphone","camera","turn on","turn off","project","collection","sticker","boring","broken","comics","pin","shell"]},{"title":"W6 · 15 個單字","sentences":[{"hint":"日出","before":"","after":"","ans":"sunrise"},{"hint":"日落","before":"","after":"","ans":"sunset"},{"hint":"陽光","before":"","after":"","ans":"sunlight"},{"hint":"標記","before":"","after":"","ans":"mark"},{"hint":"日晷","before":"","after":"","ans":"sundial"},{"hint":"影子","before":"","after":"","ans":"shadow"},{"hint":"正午","before":"","after":"","ans":"noon"},{"hint":"電視節目","before":"","after":"","ans":"TV show"},{"hint":"黎明","before":"","after":"","ans":"dawn"},{"hint":"黃昏","before":"","after":"","ans":"dusk"},{"hint":"暮光","before":"","after":"","ans":"twilight"},{"hint":"半夜","before":"","after":"","ans":"midnight"},{"hint":"隔天","before":"","after":"","ans":"the next day"},{"hint":"岩石","before":"","after":"","ans":"rock"},{"hint":"看時間","before":"","after":"","ans":"tell time"}],"wordBank":["sunrise","sunset","sunlight","mark","sundial","shadow","noon","TV show","dawn","dusk","twilight","midnight","the next day","rock","tell time"]},{"title":"W7 · 10 個單字","sentences":[{"hint":"最喜愛的","before":"","after":"","ans":"favorite"},{"hint":"覺得有趣的","before":"","after":"","ans":"interesting"},{"hint":"配對","before":"","after":"","ans":"match"},{"hint":"平凡的","before":"","after":"","ans":"ordinary"},{"hint":"樓下","before":"","after":"","ans":"downstairs"},{"hint":"最明亮的","before":"","after":"","ans":"brightest"},{"hint":"藥物","before":"","after":"","ans":"medicine"},{"hint":"泳裝","before":"","after":"","ans":"swimsuit"},{"hint":"強大的","before":"","after":"","ans":"powerful"},{"hint":"最偉大的","before":"","after":"","ans":"greatest"}],"wordBank":["favorite","interesting","match","ordinary","downstairs","brightest","medicine","swimsuit","powerful","greatest"]},{"title":"W8 · 10 個單字","sentences":[{"hint":"工廠","before":"","after":"","ans":"factory"},{"hint":"重複","before":"","after":"","ans":"repeat"},{"hint":"探索","before":"","after":"","ans":"explore"},{"hint":"明信片","before":"","after":"","ans":"postcard"},{"hint":"夏天","before":"","after":"","ans":"summer"},{"hint":"秋天","before":"","after":"","ans":"autumn"},{"hint":"地球","before":"","after":"","ans":"earth"},{"hint":"藥局","before":"","after":"","ans":"pharmacy"},{"hint":"精準的","before":"","after":"","ans":"precise"},{"hint":"敏捷的","before":"","after":"","ans":"swift"}],"wordBank":["factory","repeat","explore","postcard","summer","autumn","earth","pharmacy","precise","swift"]},{"title":"W11 · 10 個單字","sentences":[{"hint":"輪子","before":"","after":"","ans":"wheels"},{"hint":"鈕扣","before":"","after":"","ans":"button"},{"hint":"螺旋槳","before":"","after":"","ans":"propeller"},{"hint":"待洗衣物","before":"","after":"","ans":"laundry"},{"hint":"初級的","before":"","after":"","ans":"elementary"},{"hint":"濕度","before":"","after":"","ans":"humidity"},{"hint":"羽毛","before":"","after":"","ans":"feather"},{"hint":"危險的","before":"","after":"","ans":"dangerous"},{"hint":"火山","before":"","after":"","ans":"volcano"},{"hint":"把手","before":"","after":"","ans":"handle"}],"wordBank":["wheels","button","propeller","laundry","elementary","humidity","feather","dangerous","volcano","handle"]}]});
 Object.assign(QUIZ_DATA, {"s2phonics":[{"q":"「指 / 點」的英文是？","opts":["point","enjoy","fault","awesome"],"c":0},{"q":"「享受」的英文是？","opts":["because","enjoy","house","flour"],"c":1},{"q":"「因為」的英文是？","opts":["mouth","crown","because","school"],"c":2},{"q":"「嘴巴」的英文是？","opts":["cow","spoon","foot","mouth"],"c":3},{"q":"「牛」的英文是？","opts":["cow","room","packrat","flapjack"],"c":0},{"q":"「房間」的英文是？","opts":["backpack","room","catnap","sister"],"c":1},{"q":"「背包」的英文是？","opts":["plastic","window","backpack","mug"],"c":2},{"q":"「塑膠」的英文是？","opts":["fishstick","rug","luck","plastic"],"c":3},{"q":"「魚條」的英文是？","opts":["fishstick","cub","bus","spot"],"c":0},{"q":"「幼獸」的英文是？","opts":["fussy","cub","lock","bite"],"c":1},{"q":"「挑剔的」的英文是？","opts":["block","dime","fussy","line"],"c":2},{"q":"「積木」的英文是？","opts":["smile","shine","boil","block"],"c":3}],"s2vocab":[{"q":"「一月」的英文是？","opts":["January","August","year","Thailand"],"c":0},{"q":"「十一月」的英文是？","opts":["Mexico","November","Brazil","Saturday"],"c":1},{"q":"「台灣」的英文是？","opts":["Thursday","sleepy","Taiwan","happens"],"c":2},{"q":"「星期日」的英文是？","opts":["boat","teach","play chess","Sunday"],"c":3},{"q":"「改變」的英文是？","opts":["change","skateboard","play volleyball","visit family"],"c":0},{"q":"「釣魚」的英文是？","opts":["paint","fish","DVD player","collection"],"c":1},{"q":"「洲」的英文是？","opts":["turn off","comics","continents","mark"],"c":2},{"q":"「貼紙」的英文是？","opts":["sunset","TV show","rock","sticker"],"c":3},{"q":"「日晷」的英文是？","opts":["sundial","midnight","match","powerful"],"c":0},{"q":"「看時間」的英文是？","opts":["medicine","tell time","explore","precise"],"c":1},{"q":"「最偉大的」的英文是？","opts":["earth","propeller","greatest","volcano"],"c":2},{"q":"「敏捷的」的英文是？","opts":["feather","March","September","swift"],"c":3}]});
 Object.assign(FILL_DATA, {"s2story1":[{"title":"📜 Read Aloud：The Folk Who Live in Backward Town（詩）","sentences":[{"hint":"","before":"The folk who live in Backward ","after":"","ans":"Town"},{"hint":"","before":"Are inside out and upside ","after":".","ans":"down"},{"hint":"","before":"They wear their ","after":" inside their heads","ans":"hats"},{"hint":"","before":"And go to sleep ","after":" their beds.","ans":"beneath"},{"hint":"","before":"They only eat the apple ","after":"","ans":"peeling"},{"hint":"","before":"And take their walks across the ","after":".","ans":"ceiling"}],"wordBank":["Town","down","hats","beneath","peeling","ceiling"]},{"title":"📖 Take-home book：Home Sweet Home!","sentences":[{"hint":"p.1","before":"Everyone needs a place to ","after":"!","ans":"live"},{"hint":"p.1","before":"In many large ","after":", people live in tall apartment buildings.","ans":"cities"},{"hint":"p.2","before":"In Asia, many herders travel with their goats and ","after":" to find food for them.","ans":"sheep"},{"hint":"p.2","before":"The herders carry their homes, called ","after":", with them.","ans":"yurts"},{"hint":"p.3","before":"A houseboat is a home that stays in the ","after":" all year long.","ans":"water"},{"hint":"p.3","before":"In China these boats are known as ","after":".","ans":"sampans"},{"hint":"p.4","before":"Maybe houses of the ","after":" will be bubbles, towers, or rockets in space.","ans":"future"},{"hint":"p.4","before":"The sun's ","after":" may be used for heat and light.","ans":"energy"}],"wordBank":["live","cities","sheep","yurts","water","sampans","future","energy"]}],"s2story2":[{"title":"📜 Read Aloud：Fun in the Park","sentences":[{"hint":"","before":"New York is a big ","after":". People work hard.","ans":"city"},{"hint":"","before":"Many people go to Central ","after":" to have fun.","ans":"Park"},{"hint":"","before":"The park is in the ","after":" of the city.","ans":"middle"},{"hint":"","before":"Kids play ","after":" in the park.","ans":"baseball"},{"hint":"","before":"Some people sail boats, ride bikes, or ","after":".","ans":"jog"},{"hint":"","before":"Families go to the park to have a ","after":" or visit the zoo.","ans":"picnic"},{"hint":"","before":"In the winter, many families ","after":" on one of two ice-skating rinks.","ans":"skate"},{"hint":"","before":"Others go ","after":" or play in the snow.","ans":"sledding"}],"wordBank":["city","Park","middle","baseball","jog","picnic","skate","sledding"]},{"title":"📖 Take-home book：Hello From Camp!（一封信）","sentences":[{"hint":"p.1","before":"Well, here I am at Camp ","after":"!","ans":"Windsong"},{"hint":"p.1","before":"The bus ","after":" was fun.","ans":"ride"},{"hint":"p.1","before":"We talked and laughed, and I made a new ","after":", Beth.","ans":"friend"},{"hint":"p.2","before":"As soon as we got here, we went up the ","after":" and set up our tents.","ans":"hill"},{"hint":"p.2","before":"Then, we hiked around the ","after":".","ans":"pond"},{"hint":"p.2","before":"I saw a box ","after":" about to dive into the water.","ans":"turtle"},{"hint":"p.3","before":"We used sign ","after":" and made dolls from corn husks.","ans":"language"},{"hint":"p.4","before":"After dinner, we sat around the ","after":", played games, and sang songs.","ans":"campfire"},{"hint":"p.4","before":"I am having a great ","after":". Please write soon.","ans":"time"}],"wordBank":["Windsong","ride","friend","hill","pond","turtle","language","campfire","time"]}]});
+Object.assign(FILL_DATA, {"s2g1":[{"title":"選出正確的受詞代名詞","sentences":[{"hint":"","before":"Mrs Lee is my teacher. Mrs Lee is talking to ","after":".","ans":"me"},{"hint":"","before":"This is your book. I am returning it to ","after":".","ans":"you"},{"hint":"","before":"The boys are running. The dog is chasing ","after":".","ans":"them"},{"hint":"","before":"Mary is upset. The man is scolding ","after":".","ans":"her"},{"hint":"","before":"Mrs Ho is our English teacher. She is telling ","after":" a story.","ans":"us"},{"hint":"","before":"Peter has a parcel. He is tying ","after":" with a string.","ans":"it"},{"hint":"","before":"The boy looks frightened. The man is shouting at ","after":".","ans":"him"}],"wordBank":["me","you","them","her","us","it","him"]},{"title":"Carl the boy scout（故事填空）","sentences":[{"hint":"","before":"Last Sunday, he saw an old man. He helped ","after":" to cross the road.","ans":"him"},{"hint":"","before":"On Monday, he saw an old woman. He helped ","after":" to carry her basket.","ans":"her"},{"hint":"","before":"On Tuesday, he saw a kitten. He helped ","after":" down the tree.","ans":"it"},{"hint":"","before":"On Wednesday, he saw two policemen chasing a thief. He helped ","after":" to catch the thief.","ans":"them"},{"hint":"","before":"Yesterday, a reporter came. Carl spoke to ","after":".","ans":"her"},{"hint":"","before":"The reporter took a photograph of ","after":".","ans":"him"}],"wordBank":["him","her","it","them"]}],"s2g2":[{"title":"課本例句與 Level 1","sentences":[{"hint":"","before":"We enjoyed ","after":" at John’s birthday party.","ans":"ourselves"},{"hint":"","before":"The soldiers pulled ","after":" up the wall.","ans":"themselves"},{"hint":"","before":"I forced ","after":" through the hole.","ans":"myself"},{"hint":"","before":"You can see ","after":" in this mirror.","ans":"yourself"},{"hint":"","before":"She rewarded ","after":" with a piece of yummy chocolate cake.","ans":"herself"},{"hint":"","before":"The playful monkey swings ","after":" from tree to tree.","ans":"itself"},{"hint":"","before":"Sam bought ","after":" a bowl of noodles.","ans":"himself"},{"hint":"","before":"Please help ","after":" to the food on the table.","ans":"yourselves"}],"wordBank":["ourselves","themselves","myself","yourself","herself","itself","himself","yourselves"]},{"title":"Level 2：填入反身代名詞","sentences":[{"hint":"","before":"The children are hiding ","after":" in an old hut.","ans":"themselves"},{"hint":"","before":"The boys have behaved ","after":" very well.","ans":"themselves"},{"hint":"","before":"The bird cleaned ","after":" with its beak.","ans":"itself"},{"hint":"","before":"I know how to look after ","after":".","ans":"myself"},{"hint":"","before":"We should train ","after":" every day.","ans":"ourselves"},{"hint":"","before":"Jane baked ","after":" a loaf of bread.","ans":"herself"},{"hint":"","before":"The gang leader called ","after":" Big Boss.","ans":"himself"}],"wordBank":["themselves","itself","myself","ourselves","herself","himself"]},{"title":"Level 3：Clay animals（故事填空）","sentences":[{"hint":"","before":"The students are making animals with clay. Alex is going to make ","after":" a tiger.","ans":"himself"},{"hint":"","before":"Anne is going to make ","after":" a cat.","ans":"herself"},{"hint":"","before":"Mabel and Kathy are going to make ","after":" some kittens.","ans":"themselves"},{"hint":"","before":"“What are you going to make for ","after":", Max?” asks Mrs Tam.","ans":"yourself"},{"hint":"","before":"“I’m going to make ","after":" a giraffe with a long, long neck,” replies Max.","ans":"myself"}],"wordBank":["himself","herself","themselves","yourself","myself"]}],"s2g3":[{"title":"Level 1：寫出複數","sentences":[{"hint":"","before":"pupil → ","after":"","ans":"pupils"},{"hint":"","before":"party → ","after":"","ans":"parties"},{"hint":"","before":"tooth → ","after":"","ans":"teeth"},{"hint":"","before":"wolf → ","after":"","ans":"wolves"},{"hint":"","before":"mango → ","after":"","ans":"mangoes"},{"hint":"","before":"sweet → ","after":"","ans":"sweets"},{"hint":"","before":"tiger → ","after":"","ans":"tigers"},{"hint":"","before":"class → ","after":"","ans":"classes"},{"hint":"","before":"story → ","after":"","ans":"stories"},{"hint":"","before":"church → ","after":"","ans":"churches"}],"wordBank":["pupils","parties","teeth","wolves","mangoes","sweets","tigers","classes","stories","churches"]},{"title":"Level 2：填入括號內單字的複數","sentences":[{"hint":"toy","before":"Please put the ","after":" away.","ans":"toys"},{"hint":"box","before":"The ","after":" are dirty.","ans":"boxes"},{"hint":"bee","before":"There are ","after":" in the garden.","ans":"bees"},{"hint":"player","before":"The ","after":" are practising in the field.","ans":"players"},{"hint":"branch","before":"The workers are cutting down the ","after":".","ans":"branches"},{"hint":"man","before":"Two ","after":" carried the sofa away.","ans":"men"},{"hint":"grape","before":"These ","after":" are sour.","ans":"grapes"},{"hint":"tooth","before":"Tom brushed his ","after":" carefully.","ans":"teeth"},{"hint":"fireman","before":"Several ","after":" put out the fire quickly.","ans":"firemen"},{"hint":"lady","before":"The ","after":" are waiting in the room.","ans":"ladies"},{"hint":"ant","before":"There are many ","after":" on the cake.","ans":"ants"},{"hint":"mouse","before":"I saw two ","after":" in the kitchen.","ans":"mice"}],"wordBank":["toys","boxes","bees","players","branches","men","grapes","teeth","firemen","ladies","ants","mice"]},{"title":"Level 3：Two friendly women（故事填空）","sentences":[{"hint":"woman","before":"Once upon a time, there were two friendly ","after":".","ans":"women"},{"hint":"pet","before":"They had many ","after":".","ans":"pets"},{"hint":"cat","before":"They had three large ","after":".","ans":"cats"},{"hint":"mouse","before":"They had six white ","after":".","ans":"mice"},{"hint":"bird","before":"They had two black ","after":".","ans":"birds"},{"hint":"goose","before":"They had two noisy ","after":".","ans":"geese"},{"hint":"house","before":"The two old women and their pets lived happily together in two small ","after":".","ans":"houses"},{"hint":"strawberry","before":"The houses were made of bread and ","after":".","ans":"strawberries"}],"wordBank":["women","pets","cats","mice","birds","geese","houses","strawberries"]}],"s2g4":[{"title":"Level 2：填入適合的單字","sentences":[{"hint":"","before":"The cowboy is wearing a pair of blue ","after":".","ans":"jeans"},{"hint":"","before":"You can see the bird in the tree with a pair of ","after":".","ans":"binoculars"},{"hint":"","before":"I cut my finger nails with a pair of ","after":".","ans":"clippers"},{"hint":"","before":"He is using a pair of ","after":" to pick up the ice cubes.","ans":"tongs"},{"hint":"","before":"The man is cutting the cloth with a pair of sharp ","after":".","ans":"scissors"},{"hint":"","before":"Do you wear ","after":" to bed?","ans":"pyjamas"},{"hint":"","before":"Mary plucks her eyebrows with a pair of ","after":".","ans":"tweezers"},{"hint":"","before":"Annabel has only one pair of ","after":".","ans":"shorts"},{"hint":"","before":"My brother bought two new pairs of ","after":" last week.","ans":"socks"},{"hint":"","before":"Can you read that sign with your new ","after":"?","ans":"glasses"}],"wordBank":["jeans","binoculars","clippers","tongs","scissors","pyjamas","tweezers","shorts","socks","glasses"]},{"title":"Level 3：Johnny（選出正確的字）","sentences":[{"hint":"","before":"Johnny works in a ","after":".","ans":"farm"},{"hint":"","before":"He has many pairs of ","after":".","ans":"jeans"},{"hint":"","before":"Johnny also has many pairs of ","after":".","ans":"boots"},{"hint":"","before":"Johnny cannot see very well but he does not want to wear ","after":".","ans":"spectacles"},{"hint":"","before":"Funny Johnny reads with a magnifying ","after":".","ans":"glass"}],"wordBank":["farm","jeans","boots","spectacles","glass"]}],"s2g5":[{"title":"Level 1：選出正確的字","sentences":[{"hint":"","before":"This is ","after":" kite. Sam likes his kite very much.","ans":"Sam’s"},{"hint":"","before":"The ","after":" new toy is on the floor.","ans":"baby’s"},{"hint":"","before":"She is ","after":" sister. She is my classmate.","ans":"Mary’s"},{"hint":"","before":"My ","after":" dog can run fast.","ans":"friend’s"},{"hint":"","before":"","after":" dresses are in the wardrobe.","ans":"Miss Chin’s"},{"hint":"","before":"This is the ","after":" car. He drives it every day.","ans":"man’s"},{"hint":"","before":"Look at ","after":" parrot. It can talk.","ans":"Peter’s"},{"hint":"","before":"","after":" school bag is on the yellow chair.","ans":"Anne’s"},{"hint":"","before":"","after":" cat is sleeping under the table.","ans":"Linda’s"},{"hint":"","before":"","after":" new bicycle is in the storeroom.","ans":"Molly’s"}],"wordBank":["Sam’s","baby’s","Mary’s","friend’s","Miss Chin’s","man’s","Peter’s","Anne’s","Linda’s","Molly’s"]},{"title":"Level 2：寫出正確的所有格","sentences":[{"hint":"John","before":"Where is ","after":" mobile phone?","ans":"John’s"},{"hint":"Melissa","before":"Is that ","after":" pet?","ans":"Melissa’s"},{"hint":"Miss Lee","before":"This is ","after":" new house.","ans":"Miss Lee’s"},{"hint":"Carl","before":"","after":" shoes are behind the door.","ans":"Carl’s"},{"hint":"woman","before":"The ","after":" umbrella has a hole.","ans":"woman’s"},{"hint":"man","before":"That poor ","after":" trousers are torn.","ans":"man’s"},{"hint":"uncle","before":"My ","after":" car is at the car park.","ans":"uncle’s"},{"hint":"pupil","before":"That ","after":" uniform is dirty.","ans":"pupil’s"},{"hint":"bird","before":"This ","after":" beak is strong and sharp.","ans":"bird’s"},{"hint":"butterfly","before":"This ","after":" wings are pretty.","ans":"butterfly’s"},{"hint":"postman","before":"The ","after":" bag is full of letters.","ans":"postman’s"},{"hint":"hawker","before":"This ","after":" stall is clean and tidy.","ans":"hawker’s"}],"wordBank":["John’s","Melissa’s","Miss Lee’s","Carl’s","woman’s","man’s","uncle’s","pupil’s","bird’s","butterfly’s","postman’s","hawker’s"]},{"title":"Level 3：Micky 老鼠對話","sentences":[{"hint":"","before":"This is ","after":" room.","ans":"Tom’s"},{"hint":"","before":"Look, Aunty. Those must be ","after":" sweets. May I have one?","ans":"Tom’s"},{"hint":"","before":"Whose basket is that? It is ","after":" basket.","ans":"Kitty’s"},{"hint":"","before":"She is ","after":" cat.","ans":"Mary’s"},{"hint":"","before":"No, dear. That’s ","after":" milk.","ans":"Kitty’s"},{"hint":"","before":"Do not go near the ","after":" basket. It is dangerous.","ans":"cat’s"}],"wordBank":["Tom’s","Kitty’s","Mary’s","cat’s"]}],"s2g6":[{"title":"Level 1：選出正確的字","sentences":[{"hint":"","before":"The teacher is checking the ","after":" teeth.","ans":"boys’"},{"hint":"","before":"She is marking the ","after":" books.","ans":"pupils’"},{"hint":"","before":"The ","after":" cars are at the car park.","ans":"teachers’"},{"hint":"","before":"The ","after":" caps are crooked.","ans":"soldiers’"},{"hint":"","before":"The ","after":" changing room is there.","ans":"ladies’"},{"hint":"","before":"These are my ","after":" marbles.","ans":"brothers’"},{"hint":"","before":"The ","after":" coach is ready to start the training session.","ans":"players’"},{"hint":"","before":"The ","after":" cage is big and strong.","ans":"animals’"},{"hint":"","before":"The ","after":" shoes are on that shelf.","ans":"workers’"},{"hint":"","before":"They are my ","after":" friends.","ans":"parents’"}],"wordBank":["boys’","pupils’","teachers’","soldiers’","ladies’","brothers’","players’","animals’","workers’","parents’"]},{"title":"Level 2：不規則複數 + 其他","sentences":[{"hint":"children","before":"This shop sells ","after":" toys.","ans":"children’s"},{"hint":"men","before":"The ","after":" boots are black.","ans":"men’s"},{"hint":"policemen","before":"The ","after":" car is at the gate.","ans":"policemen’s"},{"hint":"firemen","before":"The ","after":" boots are heavy.","ans":"firemen’s"},{"hint":"fishermen","before":"The ","after":" boat is sinking.","ans":"fishermen’s"},{"hint":"boys","before":"The ","after":" bicycles are under the trees.","ans":"boys’"},{"hint":"butchers","before":"The ","after":" knives are sharp.","ans":"butchers’"},{"hint":"pupils","before":"Mr Lee is marking the ","after":" compositions.","ans":"pupils’"},{"hint":"dancers","before":"The ","after":" costumes were beautiful.","ans":"dancers’"},{"hint":"visitors","before":"The ","after":" cars are parked along the road.","ans":"visitors’"}],"wordBank":["children’s","men’s","policemen’s","firemen’s","fishermen’s","boys’","butchers’","pupils’","dancers’","visitors’"]},{"title":"Level 3：At the zoo（故事填空）","sentences":[{"hint":"","before":"Today is ","after":" Day.","ans":"Children’s"},{"hint":"","before":"","after":" children are at the zoo.","ans":"Mr Chin’s"},{"hint":"","before":"The children are looking at the tigers. They are afraid of the ","after":" sharp teeth.","ans":"tigers’"},{"hint":"","before":"The children love the elephants. The ","after":" trunks are strong.","ans":"elephants’"},{"hint":"","before":"The children laugh at the monkeys. The ","after":" tails look like walking sticks.","ans":"monkeys’"},{"hint":"","before":"Here are the lions. The ","after":" cubs are sleeping.","ans":"lions’"},{"hint":"","before":"Mr Chin tells his children not to stand too close to the ","after":" cage.","ans":"bears’"}],"wordBank":["Children’s","Mr Chin’s","tigers’","elephants’","monkeys’","lions’","bears’"]}],"s2g7":[{"title":"Level 2：寫出比較級","sentences":[{"hint":"fast","before":"The train is ","after":" than the bus.","ans":"faster"},{"hint":"low","before":"The desk is ","after":" than the table.","ans":"lower"},{"hint":"expensive","before":"The ring is ","after":" than the watch.","ans":"more expensive"},{"hint":"kind","before":"Mrs Lee is ","after":" than Mr Lee.","ans":"kinder"},{"hint":"large","before":"The swan is ","after":" than the duck.","ans":"larger"},{"hint":"light","before":"The tennis ball is ","after":" than the football.","ans":"lighter"},{"hint":"heavy","before":"The cake is ","after":" than the bun.","ans":"heavier"},{"hint":"cheap","before":"The string is ","after":" than the belt.","ans":"cheaper"},{"hint":"old","before":"Mr Chin is ","after":" than Mr Lee.","ans":"older"},{"hint":"beautiful","before":"The butterfly is ","after":" than the moth.","ans":"more beautiful"},{"hint":"long","before":"My fingers are ","after":" than my toes.","ans":"longer"},{"hint":"deep","before":"This hole is ","after":" than that hole.","ans":"deeper"},{"hint":"sweet","before":"The papaya is ","after":" than the mango.","ans":"sweeter"},{"hint":"cool","before":"Today is ","after":" than yesterday.","ans":"cooler"},{"hint":"colourful","before":"Your umbrella is ","after":" than mine.","ans":"more colourful"}],"wordBank":["faster","lower","more expensive","kinder","larger","lighter","heavier","cheaper","older","more beautiful","longer","deeper","sweeter","cooler","more colourful"]},{"title":"Level 3：Mark and Daniel（故事填空）","sentences":[{"hint":"old","before":"Mark and Daniel are brothers. Mark is ","after":" than Daniel.","ans":"older"},{"hint":"tall","before":"But Daniel is ","after":" than Mark.","ans":"taller"},{"hint":"fat","before":"Daniel is also ","after":" than Mark.","ans":"fatter"},{"hint":"thin","before":"Mark is ","after":" than Daniel.","ans":"thinner"},{"hint":"short","before":"Mark is also ","after":" than Daniel.","ans":"shorter"},{"hint":"happy","before":"Mark is usually ","after":" than Daniel too.","ans":"happier"},{"hint":"sad","before":"Daniel usually looks ","after":" than Mark.","ans":"sadder"},{"hint":"smart","before":"Daniel is ","after":" than Mark.","ans":"smarter"},{"hint":"lucky","before":"But Mark is always ","after":" than Daniel.","ans":"luckier"}],"wordBank":["older","taller","fatter","thinner","shorter","happier","sadder","smarter","luckier"]},{"title":"Level 1：看圖選字","sentences":[{"hint":"","before":"The stick is ","after":" than the ruler.","ans":"shorter"},{"hint":"","before":"Mr Lee is ","after":" than Mr Chin.","ans":"taller"},{"hint":"","before":"The woman is ","after":" than the man.","ans":"thinner"},{"hint":"","before":"Anita is ","after":" than Jane.","ans":"more helpful"},{"hint":"","before":"This end of the pool is ","after":" than that end.","ans":"deeper"},{"hint":"","before":"The rock is ","after":" than the stone.","ans":"heavier"},{"hint":"","before":"The bus is ","after":" than the car.","ans":"bigger"},{"hint":"","before":"Miss Hanny is ","after":" than Miss Chin.","ans":"happier"},{"hint":"","before":"The drain is ","after":" than the road.","ans":"narrower"},{"hint":"","before":"The exercise book is ","after":" than the textbook.","ans":"thinner"}],"wordBank":["shorter","taller","thinner","more helpful","deeper","heavier","bigger","happier","narrower"]}],"s2g8":[{"title":"Level 1：選出最高級","sentences":[{"hint":"","before":"Kenny is the ","after":" boy.","ans":"tallest"},{"hint":"","before":"The giraffe has the ","after":" neck.","ans":"longest"},{"hint":"","before":"Mary’s doll is the ","after":".","ans":"smallest"},{"hint":"","before":"Alex has the ","after":" marks.","ans":"highest"},{"hint":"","before":"The water from the tap is the ","after":".","ans":"cleanest"},{"hint":"","before":"The packet of cotton wool is the ","after":".","ans":"lightest"},{"hint":"","before":"The ostrich lays the ","after":" egg.","ans":"biggest"},{"hint":"","before":"The mouse is the ","after":" animal.","ans":"smallest"}],"wordBank":["tallest","longest","smallest","highest","cleanest","lightest","biggest"]},{"title":"Level 2：寫出最高級","sentences":[{"hint":"long","before":"Sarah has the ","after":" hair in her family.","ans":"longest"},{"hint":"clever","before":"George is the ","after":" boy in his class.","ans":"cleverest"},{"hint":"pretty","before":"Miss Chin is the ","after":" teacher in the school.","ans":"prettiest"},{"hint":"interesting","before":"This is the ","after":" film I have watched.","ans":"most interesting"},{"hint":"quiet","before":"Sam is the ","after":" boy in the team.","ans":"quietest"},{"hint":"talkative","before":"Michelle is the ","after":" girl I know.","ans":"most talkative"},{"hint":"dangerous","before":"Of all the animals in the world, I think the snake is the ","after":".","ans":"most dangerous"},{"hint":"fast","before":"Among the girls, Anna is the ","after":" runner.","ans":"fastest"},{"hint":"smart","before":"In my family, my father is the ","after":".","ans":"smartest"},{"hint":"helpful","before":"Dave is the ","after":" pupil in my class.","ans":"most helpful"},{"hint":"cheap","before":"The teddy bear is the ","after":" toy in the shop.","ans":"cheapest"},{"hint":"lazy","before":"James is the ","after":" person at home.","ans":"laziest"},{"hint":"big","before":"This is the ","after":" shop in town.","ans":"biggest"},{"hint":"kind","before":"Among my friends, Mary is the ","after":".","ans":"kindest"},{"hint":"easy","before":"This test is the ","after":".","ans":"easiest"}],"wordBank":["longest","cleverest","prettiest","most interesting","quietest","most talkative","most dangerous","fastest","smartest","most helpful","cheapest","laziest","biggest","kindest","easiest"]},{"title":"Level 3：考試對話","sentences":[{"hint":"","before":"This is the ","after":" test.","ans":"most difficult"},{"hint":"","before":"Yes, it is. I’ve got the ","after":" marks.","ans":"lowest"},{"hint":"","before":"Who has got the ","after":" marks?","ans":"highest"},{"hint":"","before":"May has got the ","after":" marks.","ans":"highest"},{"hint":"","before":"She is the ","after":" pupil in our class.","ans":"smartest"},{"hint":"","before":"She is also the ","after":" monitor.","ans":"most helpful"},{"hint":"","before":"And the ","after":", too.","ans":"prettiest"}],"wordBank":["most difficult","lowest","highest","smartest","most helpful","prettiest"]}],"s2g9":[{"title":"Level 1：選 am / is / are / was / were","sentences":[{"hint":"","before":"Helen ","after":" seven years old this year.","ans":"is"},{"hint":"","before":"My brother ","after":" ten years old last year.","ans":"was"},{"hint":"","before":"I ","after":" a pupil. I go to Riverside School.","ans":"am"},{"hint":"","before":"You ","after":" late yesterday.","ans":"were"},{"hint":"","before":"The principal ","after":" in his office every morning.","ans":"is"},{"hint":"","before":"Yesterday ","after":" Sunday.","ans":"was"},{"hint":"","before":"They ","after":" in the room now.","ans":"are"},{"hint":"","before":"She ","after":" ill last week.","ans":"was"},{"hint":"","before":"Nathan ","after":" Dave’s brother. They go to the same school.","ans":"is"},{"hint":"","before":"I ","after":" at home last night.","ans":"was"}],"wordBank":["is","was","am","were","are"]},{"title":"Level 2：填入 be 動詞","sentences":[{"hint":"","before":"The postman ","after":" here just now.","ans":"was"},{"hint":"","before":"Marilyn and Mathew ","after":" absent yesterday.","ans":"were"},{"hint":"","before":"You ","after":" in the classroom a while ago.","ans":"were"},{"hint":"","before":"Margaret ","after":" my cousin. We like to play together.","ans":"is"},{"hint":"","before":"My uncle ","after":" a doctor. He has a clinic nearby.","ans":"is"},{"hint":"","before":"We ","after":" at the beach last Sunday.","ans":"were"},{"hint":"","before":"Mr Wand ","after":" always very helpful.","ans":"is"},{"hint":"","before":"Peter and Steven ","after":" in the same class last year.","ans":"were"},{"hint":"","before":"Today ","after":" a cold day.","ans":"is"},{"hint":"","before":"Kyle has a new radio. He ","after":" happy.","ans":"is"},{"hint":"","before":"Sunny ","after":" a fierce dog. Do not go near him.","ans":"is"},{"hint":"","before":"Anne ","after":" a quiet girl. She does not like to talk much.","ans":"is"}],"wordBank":["was","were","is"]},{"title":"Level 3：Peter and Anne（故事填空）","sentences":[{"hint":"","before":"Peter and Anne ","after":" at home tonight.","ans":"are"},{"hint":"","before":"Anne ","after":" in her room.","ans":"is"},{"hint":"","before":"Peter ","after":" in his room.","ans":"is"},{"hint":"","before":"Last night, Peter and Anne ","after":" not at home.","ans":"were"},{"hint":"","before":"They ","after":" at the cinema.","ans":"were"},{"hint":"","before":"I ","after":" at the cinema too.","ans":"was"},{"hint":"","before":"The cinema ","after":" crowded.","ans":"was"}],"wordBank":["are","is","were","was"]}],"s2g10":[{"title":"Level 1：選 has / have / had","sentences":[{"hint":"","before":"The monkey ","after":" a long tail.","ans":"has"},{"hint":"","before":"Parrots ","after":" beautiful feathers.","ans":"have"},{"hint":"","before":"May ","after":" a sore throat last week.","ans":"had"},{"hint":"","before":"We ","after":" chicken for dinner last night.","ans":"had"},{"hint":"","before":"A crab ","after":" ten legs.","ans":"has"},{"hint":"","before":"Papayas ","after":" small seeds.","ans":"have"},{"hint":"","before":"George ","after":" a new bicycle.","ans":"has"},{"hint":"","before":"Mr and Mrs Wand ","after":" two children.","ans":"have"},{"hint":"","before":"He ","after":" chickenpox last year.","ans":"had"},{"hint":"","before":"I ","after":" two siblings.","ans":"have"}],"wordBank":["has","have","had"]},{"title":"Level 2：填入 has / have / had","sentences":[{"hint":"","before":"Sandy ","after":" long hair. Her hair is neat.","ans":"has"},{"hint":"","before":"That woman ","after":" a dog. It is a poodle.","ans":"has"},{"hint":"","before":"Last year I ","after":" a parrot. It flew away.","ans":"had"},{"hint":"","before":"He ","after":" a bad cough yesterday.","ans":"had"},{"hint":"","before":"We ","after":" a good teacher. We like her.","ans":"have"},{"hint":"","before":"This tree ","after":" beautiful flowers. The flowers are pink.","ans":"has"},{"hint":"","before":"He ","after":" a fever last night. He did not sleep well.","ans":"had"},{"hint":"","before":"Mrs Fan ","after":" two sons. Their names are John and Peter.","ans":"has"},{"hint":"","before":"She ","after":" a Japanese doll. It is a pretty doll.","ans":"has"},{"hint":"","before":"Winston ","after":" an aquarium. He keeps goldfish in it.","ans":"has"},{"hint":"","before":"That hen ","after":" five chicks. They are all yellow in colour.","ans":"has"},{"hint":"","before":"Rabbits ","after":" long ears.","ans":"have"},{"hint":"","before":"George ","after":" a stomachache just now.","ans":"had"}],"wordBank":["has","had","have"]},{"title":"Level 3：George’s teeth（故事填空）","sentences":[{"hint":"","before":"When George was a baby, he ","after":" no teeth.","ans":"had"},{"hint":"","before":"Now, George ","after":" a set of beautiful teeth.","ans":"has"},{"hint":"","before":"George ","after":" two sisters.","ans":"has"},{"hint":"","before":"His sisters ","after":" beautiful teeth too.","ans":"have"},{"hint":"","before":"George ","after":" a grandmother.","ans":"has"},{"hint":"","before":"His grandmother ","after":" no teeth.","ans":"has"}],"wordBank":["had","has","have"]}],"s2g11":[{"title":"Level 1：選 do / does / did","sentences":[{"hint":"","before":"Kenneth ","after":" his work carefully.","ans":"does"},{"hint":"","before":"Mr Lee always ","after":" his work in the office.","ans":"does"},{"hint":"","before":"We ","after":" our work in the study room.","ans":"do"},{"hint":"","before":"They ","after":" their work there last night.","ans":"did"},{"hint":"","before":"I ","after":" my work in the evening.","ans":"do"},{"hint":"","before":"The workers ","after":" the repair at night.","ans":"do"},{"hint":"","before":"You ","after":" your work well.","ans":"did"},{"hint":"","before":"She ","after":" her work just now.","ans":"did"},{"hint":"","before":"He ","after":" his work yesterday.","ans":"did"},{"hint":"","before":"They usually ","after":" their work carefully.","ans":"do"}],"wordBank":["does","do","did"]},{"title":"Level 2：簡答","sentences":[{"hint":"","before":"Do the pupils know the answer? No, they ","after":".","ans":"don’t"},{"hint":"","before":"Does the old man like children? No, he ","after":".","ans":"doesn’t"},{"hint":"","before":"Does Mrs Lee work here? Yes, she ","after":".","ans":"does"},{"hint":"","before":"Did you watch the programme last night? Yes, I ","after":".","ans":"did"},{"hint":"","before":"Do they understand English? Yes, they ","after":".","ans":"do"},{"hint":"","before":"Does Mrs Honey drink coffee? No, she ","after":".","ans":"doesn’t"},{"hint":"","before":"Does your dog bite strangers? No, it ","after":".","ans":"doesn’t"},{"hint":"","before":"Do the pupils enjoy reading comic books? Yes, they ","after":".","ans":"do"},{"hint":"","before":"Did Miss Chin punish Mike yesterday? Yes, she ","after":".","ans":"did"}],"wordBank":["don’t","doesn’t","does","did","do"]},{"title":"Level 3：Mr Singh and Mrs Wu（故事填空）","sentences":[{"hint":"","before":"This is Mr Singh. He ","after":" not understand Mandarin.","ans":"does"},{"hint":"","before":"This is Mrs Wu. She ","after":" not understand English.","ans":"does"},{"hint":"","before":"Mr Singh and Mrs Wu are neighbours. But they ","after":" not speak to each other.","ans":"do"},{"hint":"","before":"Mr Singh ","after":" not visit Mrs Wu.","ans":"does"},{"hint":"","before":"Mrs Wu ","after":" not visit Mr Singh.","ans":"does"},{"hint":"","before":"Yesterday, Mr Singh ","after":" something kind. He found Mrs Wu’s kitten in a drain.","ans":"did"}],"wordBank":["does","do","did"]}]});
+Object.assign(ERROR_DATA, {"s2g1":[{"sentence":"Miss Lee wants to see I after school.","errors":[{"word":"I","correct":"me","reason":"動詞後面用受詞代名詞"}]},{"sentence":"My mother wants to speak to she alone.","errors":[{"word":"she","correct":"her","reason":"介系詞後面用受詞代名詞"}]},{"sentence":"The policeman is looking at they now.","errors":[{"word":"they","correct":"them","reason":"介系詞後面用 them"}]},{"sentence":"That bully pushed we against the wall.","errors":[{"word":"we","correct":"us","reason":"動詞後面用 us"}]},{"sentence":"The kind man is giving he some money.","errors":[{"word":"he","correct":"him","reason":"動詞後面用 him"}]},{"sentence":"I go to school with they every morning.","errors":[{"word":"they","correct":"them","reason":"with 後面用 them"}]}],"s2g2":[{"sentence":"I introduced me to my new neighbour.","errors":[{"word":"me","correct":"myself","reason":"做動作的人就是接受者，要用反身代名詞"}]},{"sentence":"We hurt us while playing football.","errors":[{"word":"us","correct":"ourselves","reason":"主詞是 We → ourselves"}]},{"sentence":"You can cool you by sitting under the fan.","errors":[{"word":"you","correct":"yourself","reason":"主詞是 You → yourself"}]},{"sentence":"The swimmers are training them at the pool.","errors":[{"word":"them","correct":"themselves","reason":"主詞是 The swimmers → themselves"}]},{"sentence":"That lonely woman likes to talk to she alone.","errors":[{"word":"she","correct":"herself","reason":"woman → herself"}]},{"sentence":"The playful monkey swings it from tree to tree.","errors":[{"word":"it","correct":"itself","reason":"monkey → itself"}]},{"sentence":"She rewarded she with a new dress.","errors":[{"word":"she","correct":"herself","reason":"主詞是 She → herself"}]}],"s2g3":[{"sentence":"There are many ant on the cake.","errors":[{"word":"ant","correct":"ants","reason":"多隻要用複數"}]},{"sentence":"I saw two mouses in the kitchen.","errors":[{"word":"mouses","correct":"mice","reason":"mouse 的複數是 mice"}]},{"sentence":"Tom brushed his tooths carefully.","errors":[{"word":"tooths","correct":"teeth","reason":"tooth 的複數是 teeth"}]},{"sentence":"Mary bought some mangos yesterday.","errors":[{"word":"mangos","correct":"mangoes","reason":"o 結尾加 es"}]},{"sentence":"The storys are interesting.","errors":[{"word":"storys","correct":"stories","reason":"子音 + y → ies"}]},{"sentence":"Several fireman put out the fire quickly.","errors":[{"word":"fireman","correct":"firemen","reason":"fireman 的複數是 firemen"}]},{"sentence":"The ladys are waiting in the room.","errors":[{"word":"ladys","correct":"ladies","reason":"子音 + y → ies"}]},{"sentence":"Two man carried the sofa away.","errors":[{"word":"man","correct":"men","reason":"man 的複數是 men"}]},{"sentence":"There are two wolfs in the zoo.","errors":[{"word":"wolfs","correct":"wolves","reason":"f 改成 ves"}]}],"s2g4":[{"sentence":"Do you wear pyjama to bed every night?","errors":[{"word":"pyjama","correct":"pyjamas","reason":"pyjamas 沒有單數形"}]},{"sentence":"My trouser are too long for me.","errors":[{"word":"trouser","correct":"trousers","reason":"trousers 沒有單數形"}]},{"sentence":"I need to wear glass to see clearly.","errors":[{"word":"glass","correct":"glasses","reason":"眼鏡是 glasses"}]},{"sentence":"Mary plucks her eyebrows with a pair of tweezer carefully.","errors":[{"word":"tweezer","correct":"tweezers","reason":"tweezers 沒有單數形"}]},{"sentence":"My brother bought two new pairs of sock last week.","errors":[{"word":"sock","correct":"socks","reason":"pairs of 後面用複數"}]},{"sentence":"He is using a pair of tong to pick up the ice cubes.","errors":[{"word":"tong","correct":"tongs","reason":"tongs 沒有單數形"}]},{"sentence":"She cut her nails with a pair of clipper yesterday.","errors":[{"word":"clipper","correct":"clippers","reason":"clippers 沒有單數形"}]}],"s2g5":[{"sentence":"This is Sam kite.","errors":[{"word":"Sam","correct":"Sam’s","reason":"要加 ’s 表示「Sam 的」"}]},{"sentence":"The babys new toy is on the floor.","errors":[{"word":"babys","correct":"baby’s","reason":"所有格是 baby’s"}]},{"sentence":"Look at Peter parrot. It can talk.","errors":[{"word":"Peter","correct":"Peter’s","reason":"Peter 的鸚鵡 → Peter’s"}]},{"sentence":"My friend dog can run fast.","errors":[{"word":"friend","correct":"friend’s","reason":"朋友的狗 → friend’s"}]},{"sentence":"That poor mans trousers are torn.","errors":[{"word":"mans","correct":"man’s","reason":"所有格是 man’s"}]},{"sentence":"The postmans bag is full of letters.","errors":[{"word":"postmans","correct":"postman’s","reason":"所有格是 postman’s"}]},{"sentence":"Where is Johns mobile phone?","errors":[{"word":"Johns","correct":"John’s","reason":"所有格是 John’s"}]},{"sentence":"This bird beak is strong and sharp.","errors":[{"word":"bird","correct":"bird’s","reason":"鳥的嘴 → bird’s"}]}],"s2g6":[{"sentence":"The boys bicycles are under the trees.","errors":[{"word":"boys","correct":"boys’","reason":"複數 s 結尾 → 加 ’"}]},{"sentence":"The childrens toys are in the box.","errors":[{"word":"childrens","correct":"children’s","reason":"不規則複數 → 加 ’s"}]},{"sentence":"The mens boots are black.","errors":[{"word":"mens","correct":"men’s","reason":"不規則複數 → 加 ’s"}]},{"sentence":"These are my brothers marbles.","errors":[{"word":"brothers","correct":"brothers’","reason":"複數 s 結尾 → 加 ’"}]},{"sentence":"The fishermens boat is sinking.","errors":[{"word":"fishermens","correct":"fishermen’s","reason":"fishermen 不以 s 結尾 → 加 ’s"}]},{"sentence":"The workers canteen is next to the car park.","errors":[{"word":"workers","correct":"workers’","reason":"複數 s 結尾 → 加 ’"}]},{"sentence":"The womens clothes are pretty.","errors":[{"word":"womens","correct":"women’s","reason":"women 不以 s 結尾 → 加 ’s"}]},{"sentence":"The teachers cars are at the car park.","errors":[{"word":"teachers","correct":"teachers’","reason":"複數 s 結尾 → 加 ’"}]}],"s2g7":[{"sentence":"The swan is large than the duck.","errors":[{"word":"large","correct":"larger","reason":"比較級 + than"}]},{"sentence":"Today is cool than yesterday.","errors":[{"word":"cool","correct":"cooler","reason":"比較級 + than"}]},{"sentence":"My fingers are long than my toes.","errors":[{"word":"long","correct":"longer","reason":"比較級 + than"}]},{"sentence":"The papaya is sweet than the mango.","errors":[{"word":"sweet","correct":"sweeter","reason":"比較級 + than"}]},{"sentence":"Mark is old than Daniel.","errors":[{"word":"old","correct":"older","reason":"比較級 + than"}]},{"sentence":"The butterfly is beautiful than the moth.","errors":[{"word":"beautiful","correct":"more beautiful","reason":"長的形容詞用 more"}]},{"sentence":"The train is fast than the bus.","errors":[{"word":"fast","correct":"faster","reason":"比較級 + than"}]},{"sentence":"The ring is expensiver than the watch.","errors":[{"word":"expensiver","correct":"more expensive","reason":"長的形容詞用 more"}]}],"s2g8":[{"sentence":"Sam is the quiet boy in the team.","errors":[{"word":"quiet","correct":"quietest","reason":"三個以上用最高級"}]},{"sentence":"Anna is the fast runner among the girls.","errors":[{"word":"fast","correct":"fastest","reason":"三個以上用最高級"}]},{"sentence":"Sarah has the long hair in her family.","errors":[{"word":"long","correct":"longest","reason":"the + 最高級"}]},{"sentence":"James is the lazy person at home.","errors":[{"word":"lazy","correct":"laziest","reason":"y 改 i 加 est"}]},{"sentence":"Michelle is the more talkative girl I know.","errors":[{"word":"more","correct":"most","reason":"最高級用 most"}]},{"sentence":"Of all animals, the snake is the dangerousest animal.","errors":[{"word":"dangerousest","correct":"most dangerous","reason":"長的形容詞用 most"}]},{"sentence":"George is the cleverer boy in his class.","errors":[{"word":"cleverer","correct":"cleverest","reason":"全班 → 最高級"}]},{"sentence":"Dave is the helpfulest pupil in my class.","errors":[{"word":"helpfulest","correct":"most helpful","reason":"長的形容詞用 most"}]}],"s2g9":[{"sentence":"Helen were seven years old this year.","errors":[{"word":"were","correct":"is","reason":"this year 是現在，Helen 是單數 → is"}]},{"sentence":"You was late yesterday.","errors":[{"word":"was","correct":"were","reason":"You 的過去式是 were"}]},{"sentence":"They is in the room now.","errors":[{"word":"is","correct":"are","reason":"They → are"}]},{"sentence":"I is a pupil.","errors":[{"word":"is","correct":"am","reason":"I → am"}]},{"sentence":"My brother are ten years old last year.","errors":[{"word":"are","correct":"was","reason":"last year 是過去，單數 → was"}]},{"sentence":"She were ill last week.","errors":[{"word":"were","correct":"was","reason":"She 的過去式是 was"}]},{"sentence":"We was at the beach last Sunday.","errors":[{"word":"was","correct":"were","reason":"We 的過去式是 were"}]},{"sentence":"Today were a cold day.","errors":[{"word":"were","correct":"is","reason":"Today 是現在 → is"}]}],"s2g10":[{"sentence":"The monkey have a long tail.","errors":[{"word":"have","correct":"has","reason":"monkey 是單數 → has"}]},{"sentence":"Parrots has beautiful feathers.","errors":[{"word":"has","correct":"have","reason":"Parrots 是複數 → have"}]},{"sentence":"We has chicken for dinner last night.","errors":[{"word":"has","correct":"had","reason":"last night 是過去 → had"}]},{"sentence":"May have a sore throat last week.","errors":[{"word":"have","correct":"had","reason":"last week 是過去 → had"}]},{"sentence":"A crab have ten legs.","errors":[{"word":"have","correct":"has","reason":"A crab 是單數 → has"}]},{"sentence":"Mr and Mrs Wand has two children.","errors":[{"word":"has","correct":"have","reason":"Mr and Mrs Wand 是複數 → have"}]},{"sentence":"He have chickenpox last year.","errors":[{"word":"have","correct":"had","reason":"last year 是過去 → had"}]},{"sentence":"I has two siblings.","errors":[{"word":"has","correct":"have","reason":"I → have"}]}],"s2g11":[{"sentence":"Kenneth do his work carefully.","errors":[{"word":"do","correct":"does","reason":"Kenneth 是單數 → does"}]},{"sentence":"We does our work in the study room.","errors":[{"word":"does","correct":"do","reason":"We → do"}]},{"sentence":"They does their work there last night.","errors":[{"word":"does","correct":"did","reason":"last night 是過去 → did"}]},{"sentence":"She do her work just now.","errors":[{"word":"do","correct":"did","reason":"just now 是過去 → did"}]},{"sentence":"Mr Lee always do his work in the office.","errors":[{"word":"do","correct":"does","reason":"Mr Lee 是單數 → does"}]},{"sentence":"The workers does the repair at night.","errors":[{"word":"does","correct":"do","reason":"The workers 是複數 → do"}]},{"sentence":"He do his work yesterday.","errors":[{"word":"do","correct":"did","reason":"yesterday 是過去 → did"}]},{"sentence":"You does your work well.","errors":[{"word":"does","correct":"did","reason":"You 不用 does；well 配過去 → did"}]}]});
+Object.assign(QUIZ_DATA, {"s2g1":[{"q":"Mrs Lee is my teacher. Mrs Lee is talking to ___.","opts":["I","me","him","they"],"c":1},{"q":"The boys are running. The dog is chasing ___.","opts":["they","him","it","them"],"c":3},{"q":"Mary is upset. The man is scolding ___.","opts":["she","her","us","him"],"c":1},{"q":"My hands are dirty. I wash ___ with soap and water.","opts":["it","him","they","them"],"c":3},{"q":"The fish are on the table. The cat is looking at ___ hungrily.","opts":["it","them","him","they"],"c":1},{"q":"Mr Lee has a box of sweets. He is giving ___ some sweets.","opts":["we","I","her","us"],"c":3},{"q":"Peter has a parcel. He is tying ___ with a string.","opts":["them","it","him","they"],"c":1},{"q":"下列哪一個是受詞代名詞？","opts":["we","they","I","us"],"c":3}],"s2g2":[{"q":"We enjoyed ___ at John’s birthday party.","opts":["us","ourself","ourselves","myself"],"c":2},{"q":"The soldiers pulled ___ up the wall.","opts":["themselves","them","theirselves","himself"],"c":0},{"q":"I forced ___ through the hole.","opts":["me","I","myself","itself"],"c":2},{"q":"You can see ___ in this mirror.","opts":["yourself","you","yourselves","himself"],"c":0},{"q":"Please help ___ to the food on the table.（對很多人說）","opts":["yourself","ourselves","yourselves","you"],"c":2},{"q":"The bird cleaned ___ with its beak.","opts":["itself","himself","it","themselves"],"c":0},{"q":"She rewarded ___ with a piece of cake.","opts":["her","himself","herself","she"],"c":2},{"q":"反身代名詞 (reflexive pronoun) 是指回哪裡？","opts":["做動作的人","句子的最後一個字","動作的接受者以外的人","名詞的複數"],"c":0}],"s2g3":[{"q":"tooth 的複數是？","opts":["tooths","teeths","tooth","teeth"],"c":3},{"q":"wolf 的複數是？","opts":["wolfs","wolves","wolfes","wolf"],"c":1},{"q":"party 的複數是？","opts":["partys","partyes","partis","parties"],"c":3},{"q":"mango 的複數是？","opts":["mangos","mangoes","mangoies","mangues"],"c":1},{"q":"story 的複數是？","opts":["storys","storyes","storeis","stories"],"c":3},{"q":"class 的複數是？","opts":["class","classes","classs","clases"],"c":1},{"q":"mouse 的複數是？","opts":["mouses","mices","mouse","mice"],"c":3},{"q":"woman 的複數是？","opts":["womans","women","womens","womanes"],"c":1},{"q":"church 的複數是？","opts":["churchs","churchies","churchen","churches"],"c":3},{"q":"knife 的複數是？","opts":["knifes","knives","knifs","knifees"],"c":1}],"s2g4":[{"q":"I cut my finger nails with a pair of ___.","opts":["clippers","clipper","clip","clippering"],"c":0},{"q":"The cowboy is wearing a pair of blue ___.","opts":["jean","jeaning","jeans","jeanes"],"c":2},{"q":"Do you wear ___ to bed?","opts":["pyjamas","pyjama","a pyjama","pyjamases"],"c":0},{"q":"He is using a pair of ___ to pick up the ice cubes.","opts":["tong","tonges","tongs","tonging"],"c":2},{"q":"May I use your pair of ___?","opts":["scissors","scissor","a scissor","scissorses"],"c":0},{"q":"下列哪一個名詞「沒有單數形」？","opts":["tiger","mango","shorts","brush"],"c":2},{"q":"下列哪一個名詞「不可數、沒有複數形」？","opts":["water","socks","pants","glasses"],"c":0},{"q":"Mary plucks her eyebrows with a pair of ___.","opts":["tweezer","tweezeres","tweezers","tweezing"],"c":2}],"s2g5":[{"q":"This is ___ kite.（Sam 的）","opts":["Sams","Sam’s","Sam","Sams’"],"c":1},{"q":"The ___ new toy is on the floor.（baby 的）","opts":["babys","babies","baby","baby’s"],"c":3},{"q":"Where is ___ mobile phone?（John 的）","opts":["Johns","John’s","John","Johns’"],"c":1},{"q":"Look at ___ parrot.（Peter 的）","opts":["Peters","Peter","Peters’","Peter’s"],"c":3},{"q":"The ___ umbrella has a hole.（woman 的）","opts":["womans","woman’s","women","womans’"],"c":1},{"q":"This ___ beak is strong and sharp.（bird 的）","opts":["birds","birds’","bird","bird’s"],"c":3},{"q":"單數名詞所有格要怎麼表示？","opts":["加 s","加 ’s","加 es","加 ’"],"c":1},{"q":"Do not go near the ___ basket.（cat 的）","opts":["cats","cats’","cat","cat’s"],"c":3}],"s2g6":[{"q":"The teacher is checking the ___ teeth.（很多男孩）","opts":["boys","boy’s","boys’","boys’s"],"c":2},{"q":"This shop sells ___ toys.","opts":["children’s","childrens’","childrens","children"],"c":0},{"q":"The ___ boots are black.（很多男人）","opts":["mens’","mens","men’s","men"],"c":2},{"q":"The ___ car is at the gate.（很多警察）","opts":["policemen’s","policemens’","policemen’","policeman’s"],"c":0},{"q":"These are my ___ marbles.（很多兄弟）","opts":["brother’s","brothers’s","brothers’","brothers"],"c":2},{"q":"複數名詞「以 s 結尾」變所有格要怎麼寫？","opts":["只加 ’","加 ’s","加 es","加 s"],"c":0},{"q":"複數名詞「不以 s 結尾」變所有格要怎麼寫？","opts":["只加 ’","加 es","加 ’s","不用變"],"c":2},{"q":"The ___ cage is big and strong.（很多動物）","opts":["animals’","animal’s","animals’s","animals"],"c":0}],"s2g7":[{"q":"The black rope is ___ than the white rope.","opts":["long","longest","more long","longer"],"c":3},{"q":"The Science book is ___ than the Chinese book.","opts":["thick","thicker","thickest","more thick"],"c":1},{"q":"Mary’s dress is ___ than May’s dress.","opts":["beautifuler","most beautiful","beautiful","more beautiful"],"c":3},{"q":"The comic book is ___ than the storybook.","opts":["interestinger","more interesting","most interesting","interesting"],"c":1},{"q":"The train is ___ than the bus.","opts":["fast","fastest","more fast","faster"],"c":3},{"q":"happy 的比較級是？","opts":["more happy","happier","happyer","happiest"],"c":1},{"q":"sad 的比較級是？","opts":["sader","more sad","saddest","sadder"],"c":3},{"q":"比較「兩個」東西時用哪一種等級？","opts":["原級","比較級","最高級","都可以"],"c":1}],"s2g8":[{"q":"Kenny is the ___ boy.","opts":["tallest","taller","tall","most tall"],"c":0},{"q":"The giraffe has the ___ neck.","opts":["longer","long","longest","most long"],"c":2},{"q":"This is the ___ film I have watched.","opts":["most interesting","interestingest","more interesting","interesting"],"c":0},{"q":"Anna is the ___ runner among the girls.","opts":["faster","fast","fastest","most fast"],"c":2},{"q":"happy 的最高級是？","opts":["happiest","most happy","happyest","happier"],"c":0},{"q":"big 的最高級是？","opts":["bigest","most big","biggest","bigger"],"c":2},{"q":"lazy 的最高級是？","opts":["laziest","lazyest","most lazy","lazier"],"c":0},{"q":"比較「三個以上」時用哪一種等級？","opts":["比較級","原級","最高級","都可以"],"c":2}],"s2g9":[{"q":"Helen ___ seven years old this year.","opts":["was","is","are","am"],"c":1},{"q":"My brother ___ ten years old last year.","opts":["is","were","are","was"],"c":3},{"q":"You ___ late yesterday.","opts":["was","were","are","is"],"c":1},{"q":"They ___ in the room now.","opts":["were","is","was","are"],"c":3},{"q":"I ___ at home last night.","opts":["am","was","were","is"],"c":1},{"q":"Peter and Steven ___ in the same class last year.","opts":["was","are","is","were"],"c":3},{"q":"We ___ at the beach last Sunday.","opts":["was","were","are","is"],"c":1},{"q":"am 和 is 的過去式是？","opts":["were","be","been","was"],"c":3}],"s2g10":[{"q":"The monkey ___ a long tail.","opts":["have","had a","has","having"],"c":2},{"q":"Parrots ___ beautiful feathers.","opts":["have","has","having","is"],"c":0},{"q":"May ___ a sore throat last week.","opts":["has","have","had","having"],"c":2},{"q":"We ___ chicken for dinner last night.","opts":["had","have","has","having"],"c":0},{"q":"A crab ___ ten legs.","opts":["have","had","has","are"],"c":2},{"q":"Mr and Mrs Wand ___ two children.","opts":["have","has","is","having"],"c":0},{"q":"I ___ two siblings.","opts":["has","am","have","is"],"c":2},{"q":"has 和 have 的過去式是？","opts":["had","haved","has","having"],"c":0}],"s2g11":[{"q":"Kenneth ___ his work carefully.","opts":["do","did","doing","does"],"c":3},{"q":"We ___ our work in the study room.","opts":["does","do","is","doing"],"c":1},{"q":"They ___ their work there last night.","opts":["do","does","doing","did"],"c":3},{"q":"I ___ my work in the evening.","opts":["does","do","did","doing"],"c":1},{"q":"Does Mrs Lee work here? Yes, she ___.","opts":["do","did","is","does"],"c":3},{"q":"Did you watch the programme last night? Yes, I ___.","opts":["do","did","does","was"],"c":1},{"q":"Do they understand English? Yes, they ___.","opts":["does","did","are","do"],"c":3},{"q":"do 和 does 的過去式是？","opts":["done","did","doed","does"],"c":1}]});
 Object.assign(FILL_DATA, {"s2reading":[{"title":"U1 Mix and Match（混搭配對）","sentences":[{"hint":"","before":"Will needs his ","after":" for the ski trip.","ans":"ski suit"},{"hint":"","before":"Will's ski socks and ski suit are ","after":".","ans":"downstairs"},{"hint":"","before":"Sara ","after":" seven pairs of socks.","ans":"matches"},{"hint":"","before":"Sara packs a ","after":" and a T-shirt.","ans":"swimsuit"},{"hint":"","before":"Will needs sweaters, a ","after":", and a warm hat.","ans":"scarf"},{"hint":"","before":"It is time to ","after":".","ans":"pack"}],"wordBank":["ski suit","downstairs","matches","swimsuit","scarf","pack"]},{"title":"U2 A Bird Named Fern（名叫 Fern 的小鳥）","sentences":[{"hint":"","before":"Fern sees a big, white ","after":" in the sky.","ans":"boat"},{"hint":"","before":"Fern ","after":" her wings and takes off.","ans":"stretches"},{"hint":"","before":"Fern is ","after":". She wants to rest.","ans":"sleepy"},{"hint":"","before":"Fern is sleepy. She wants to ","after":".","ans":"rest"},{"hint":"","before":"The beds change color to ","after":" and it rains.","ans":"gray"},{"hint":"","before":"Mom and Dad ","after":" Fern.","ans":"dry"}],"wordBank":["boat","stretches","sleepy","rest","gray","dry"]},{"title":"U3 Sally's Sundial（莎莉的日晷）","sentences":[{"hint":"","before":"Sally wakes up at ","after":".","ans":"sunrise"},{"hint":"","before":"Sally sees a ","after":" in her room.","ans":"shadow"},{"hint":"","before":"A ","after":" tells the time with shadows.","ans":"sundial"},{"hint":"","before":"Sally can ","after":" the shadow with a rock.","ans":"mark"},{"hint":"","before":"The ","after":" moves and tells the time.","ans":"sunlight"},{"hint":"","before":"Sally can watch her TV show at ","after":".","ans":"sunset"}],"wordBank":["sunrise","shadow","sundial","mark","sunlight","sunset"]},{"title":"U4 Robot Helpers（機器人幫手）","sentences":[{"hint":"","before":"Some jobs in the house are ","after":".","ans":"boring"},{"hint":"","before":"These robots work in a ","after":".","ans":"factory"},{"hint":"","before":"Robots ","after":" the same task many times.","ans":"repeat"},{"hint":"","before":"Robots never take a ","after":".","ans":"break"},{"hint":"","before":"Robots can go near hot ","after":".","ans":"volcanoes"},{"hint":"","before":"Robots can ","after":" space.","ans":"explore"}],"wordBank":["boring","factory","repeat","break","volcanoes","explore"]},{"title":"U5 What's That Sound?（那是什麼聲音？）","sentences":[{"hint":"","before":"Gilbert and Marta hear a ","after":".","ans":"sound"},{"hint":"","before":"Dad is ","after":" wood with a saw.","ans":"cutting"},{"hint":"","before":"Dad uses a ","after":" to cut the wood.","ans":"saw"},{"hint":"","before":"Grandpa is ","after":" with a broom.","ans":"sweeping"},{"hint":"","before":"Grandpa uses a ","after":" to sweep.","ans":"broom"},{"hint":"","before":"A ","after":" is making the sound.","ans":"woodpecker"}],"wordBank":["sound","cutting","saw","sweeping","broom","woodpecker"]}]});
 Object.assign(QUIZ_DATA, {"s2reading":[{"q":"U1: What does Will need for the ski trip?","opts":["A swimsuit and a T-shirt","Sweaters, a scarf, and a warm hat","Sandals and a hat","A beach towel"],"c":1},{"q":"U1: Where are Will's ski suit and ski socks?","opts":["Under the bed","In the car","Downstairs","At the beach"],"c":2},{"q":"U1: Who wants to help Will?","opts":["Mom","Dad","Grandma","Sara"],"c":3},{"q":"U1: Why does Will take out the swimsuit?","opts":["They are not going to the beach.","It is too small.","It is dirty.","It is lost."],"c":0},{"q":"U1: What can Sara do well?","opts":["Ski","Match socks","Swim","Cook"],"c":1},{"q":"U2: What does Fern see in the sky?","opts":["A rainbow","A kite","A big, white boat","A plane"],"c":2},{"q":"U2: Why does Fern want to rest?","opts":["She is hungry.","She is cold.","She is wet.","She is sleepy."],"c":3},{"q":"U2: What happens when Fern tries to rest on the bed?","opts":["She falls through it.","She sleeps well.","She flies home.","She eats it."],"c":0},{"q":"U2: What color do the clouds change to?","opts":["Blue","Gray","Pink","Black"],"c":1},{"q":"U2: Who gets wet?","opts":["Mom","Dad","Fern","The boat"],"c":2},{"q":"U3: Whose shadow does Sally see in her room?","opts":["Grandma's","Dad's","Her own","Bert's"],"c":3},{"q":"U3: When is Bert's shadow short?","opts":["At noon","At sunrise","At sunset","At night"],"c":0},{"q":"U3: Who takes Bert for a walk?","opts":["Sally","Sally and Grandma","Grandma","Dad"],"c":1},{"q":"U3: What does Sally use to mark the shadow?","opts":["A pen","A stick","A rock","A ball"],"c":2},{"q":"U3: When are the shadows long again?","opts":["At noon","At midnight","At lunch","At sunset"],"c":3},{"q":"U4: What robot can do jobs in the house?","opts":["A robot vacuum","A pet robot","A space robot","A hospital robot"],"c":0},{"q":"U4: Where do robots repeat the same task many times?","opts":["At school","In a factory","At the beach","In a park"],"c":1},{"q":"U4: What hot place can robots go near?","opts":["Playgrounds","Kitchens","Volcanoes","Stores"],"c":2},{"q":"U4: Where do robots help doctors and nurses?","opts":["In a factory","At school","At home","In a hospital"],"c":3},{"q":"U4: What robot can sing and dance?","opts":["A pet robot","A robot vacuum","A factory robot","A space robot"],"c":0},{"q":"U5: What is Dad using to cut the wood?","opts":["A broom","A saw","A ball","A beak"],"c":1},{"q":"U5: What is Grandpa doing?","opts":["Cutting wood","Bouncing a ball","Sweeping with a broom","Looking at a tree"],"c":2},{"q":"U5: Who is bouncing a ball?","opts":["Marta","Gilbert","Dad","Ana"],"c":3},{"q":"U5: Which sound is the bouncing ball?","opts":["Bam, bam, bam","Zing, zing, zing","Swish, swish, swish","Tap-tap-tap"],"c":0},{"q":"U5: What is making the sound they hear?","opts":["Dad","A woodpecker","Grandpa","Ana"],"c":1}]});
 
